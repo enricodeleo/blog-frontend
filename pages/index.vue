@@ -1,8 +1,14 @@
 <template>
   <div>
-    <Header />
     <div class="container">
-      &nbsp;
+      <div class="mainheading">
+        <h1 class="sitetitle">
+          Lisergico
+        </h1>
+        <p class="lead">
+          Il blog di Enrico Deleo.
+        </p>
+      </div>
     </div>
   </div>
 </template>
