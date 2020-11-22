@@ -2,6 +2,7 @@
   <div>
     <Header />
     <div class="container">
+      &nbsp;
     </div>
   </div>
 </template>
