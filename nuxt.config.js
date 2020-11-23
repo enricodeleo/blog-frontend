@@ -36,7 +36,8 @@ export default {
     '@nuxtjs/fontawesome',
     ['wp-nuxt', {
       endpoint: 'https://blog.enricodeleo.com/wp-json',
-      extensions: true
+      extensions: true,
+      sitemap: false
       // discover: true
     }]
   ],
