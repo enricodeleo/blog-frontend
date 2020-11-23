@@ -12,8 +12,7 @@ export default {
       { hid: 'author', name: 'author', content: 'Enrico Deleo' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Righteous' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
@@ -34,6 +33,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/fontawesome',
+    '@nuxtjs/google-fonts',
     ['wp-nuxt', {
       endpoint: 'https://blog.enricodeleo.com/wp-json',
       extensions: true,
@@ -50,6 +50,13 @@ export default {
         'faInstagram',
         'faLinkedin'
       ]
+    }
+  },
+
+  googleFonts: {
+    families: {
+      Merriweather: true,
+      Righteous: true
     }
   },
 

@@ -3,6 +3,7 @@
     <Header />
     <Nuxt />
     <Footer />
+    <div id="fb-root" />
   </div>
 </template>
 

@@ -17,7 +17,6 @@
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
-    "fb-sdk-wrapper": "^1.1.0",
     "nuxt": "^2.14.6",
     "reading-time": "^1.2.1",
     "wp-nuxt": "^1.0.27"
@@ -27,6 +26,7 @@
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/fontawesome": "^1.1.2",
+    "@nuxtjs/google-fonts": "^1.2.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.10.0",

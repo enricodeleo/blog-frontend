@@ -130,7 +130,7 @@ const mapPost = (post) => {
 }
 
 export default {
-  async asyncData ({ app, store, params }) {
+  async asyncData ({ app, params }) {
     let posts
     let featured
 
