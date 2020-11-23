@@ -11,9 +11,6 @@ body {
 .mainheading {
 	padding:1rem 0rem;
 }
-a {
-	color:#00ab6b;
-}
 a,a:hover {
 	transition:all 0.2s;
 }
@@ -180,6 +177,7 @@ span.post-name a,span.post-read-more a:hover {
 	color:green;
 }
 .mediumnavigation .navbar-brand {
+  font-family:Righteous;
 	font-weight:500;
 }
 .mediumnavigation .dropdown-menu {
@@ -218,7 +216,7 @@ span.post-name a,span.post-read-more a:hover {
 	color:rgba(0,0,0,.8);
 }
 blockquote {
-	border-left:4px solid #00ab6b;
+	border-left:4px solid color("primary");
 	padding:0 20px;
 	font-style:italic;
 	color:rgba(0,0,0,.5);

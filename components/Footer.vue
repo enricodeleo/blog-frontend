@@ -5,7 +5,7 @@
         <p>Copyright &copy; 2010-{{ currentYear }} Enrico Deleo</p>
       </div>
       <div class="col text-right">
-        <p>Storie di musica, startup, digital, development e qualsiasi cosa mi venga in mente.</p>
+        <p>Storie di musica, startup, digital, coding e qualsiasi cosa mi venga in mente.</p>
       </div>
     </div>
   </div>
