@@ -70,11 +70,11 @@
             no-body
             img-top
           >
-            <a :href="`${websiteUrl}/${post.slug}`" :title="post.title.rendered">
+            <a :href="`/${post.slug}`" :title="post.title.rendered">
               <b-card-img-lazy :src="post.jetpack_featured_media_url" :alt="post.title.rendered" />
             </a>
             <b-card-body>
-              <a :href="`${websiteUrl}/${post.slug}`" class="text-dark">
+              <a :href="`/${post.slug}`" class="text-dark">
                 <b-card-title v-html="post.title.rendered" />
               </a>
 
@@ -89,7 +89,7 @@
                     <span class="post-read">{{ Math.ceil(post.readingTime.minutes) }} minuti di lettura</span>
                   </span>
                   <span class="post-read-more">
-                    <a :href="`${websiteUrl}/${post.slug}`" title="Leggi tutto">
+                    <a :href="`/${post.slug}`" title="Leggi tutto">
                       <svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25">
                         <path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd" />
                       </svg>
@@ -111,57 +111,37 @@
 <script>
 import readingTime from 'reading-time'
 
+const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
+const mapPost = (post) => {
+  const event = new Date(post.date)
+  post.dateLong = event.toLocaleDateString('it-IT', dateOptions)
+  post.readingTime = readingTime(post.content.rendered)
+  return post
+}
+
 export default {
   async asyncData ({ app, store, params }) {
-    const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
     let posts
+    let featured
 
     try {
+      const featuredPosts = await app.$wp.posts().sticky(true).perPage(4)
       const allPosts = await app.$wp.posts().perPage(6)
-      posts = allPosts.map((post) => {
-        const event = new Date(post.date)
-        post.dateLong = event.toLocaleDateString('it-IT', dateOptions)
-        post.readingTime = readingTime(post.content.rendered)
-        return post
-      })
+      posts = allPosts.map(mapPost)
+      featured = featuredPosts.map(mapPost)
     } catch (error) {
       console.error(error)
     }
 
     return {
-      posts
+      posts,
+      featured
     }
   },
   data () {
     return {
-      websiteUrl: process.env.WEBSITE_URL,
       posts: [],
-      featured: [
-        {
-          id: 1,
-          title: 'test',
-          excerpt: 'prova',
-          date: '22 Gennaio 2020'
-        },
-        {
-          id: 2,
-          title: 'test',
-          excerpt: 'prova',
-          date: '22 Gennaio 2020'
-        },
-        {
-          id: 3,
-          title: 'test',
-          excerpt: 'prova',
-          date: '22 Gennaio 2020'
-        },
-        {
-          id: 4,
-          title: 'test',
-          excerpt: 'prova',
-          date: '22 Gennaio 2020'
-        }
-      ]
+      featured: []
     }
   }
 }
