@@ -33,7 +33,12 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    '@nuxtjs/fontawesome'
+    '@nuxtjs/fontawesome',
+    ['wp-nuxt', {
+      endpoint: 'https://blog.enricodeleo.com/wp-json',
+      extensions: true
+      // discover: true
+    }]
   ],
 
   fontawesome: {
