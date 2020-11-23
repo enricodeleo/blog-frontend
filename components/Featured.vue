@@ -1,0 +1,95 @@
+<template>
+  <section class="featured-posts">
+    <div class="section-title">
+      <h2><span>In primo piano</span></h2>
+    </div>
+    <div class="card-columns listfeaturedtag">
+      <!-- begin post -->
+      <div v-for="post of featured" :key="post.id" class="card">
+        <div class="row">
+          <div class="col-md-5 wrapthumbnail">
+            <a :href="`/${post.slug}`" :title="post.title.rendered">
+              <div class="thumbnail" :style="{'background-image': `url(${post.jetpack_featured_media_url})`}" />
+            </a>
+          </div>
+          <div class="col-md-7">
+            <div class="card-block">
+              <h2 class="card-title pr-4 pt-4">
+                <a :href="`/${post.slug}`" v-html="post.title.rendered" />
+              </h2>
+              <p class="card-text pr-4 text-muted">
+                {{ post.meta._yoast_wpseo_metadesc[0] }}
+              </p>
+              <div class="metafooter">
+                <div class="wrapfooter">
+                  <span class="author-meta">
+                    <span class="post-name">
+                      Pubblicato in
+                      <span v-for="(category, index) of post.categories" :key="category.id">
+                        <a :href="`/categories/${category.slug}`" class="text-primary">{{ category.name }}</a><span v-if="index+1 !== post.categories.length">, </span>
+                      </span>
+                    </span>
+                    <br>
+                    <span class="post-date">{{ post.dateLong }}</span>
+                    <span class="dot" />
+                    <span class="post-read">{{ Math.ceil(post.readingTime.minutes) }} minuti di lettura</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- end post -->
+    </div>
+  </section>
+</template>
+
+<script>
+import readingTime from 'reading-time'
+
+const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
+
+export default {
+  props: {
+    posts: {
+      type: Array,
+      default () { return [] },
+      required: true
+    }
+  },
+
+  data () {
+    return {
+      featured: []
+    }
+  },
+
+  async mounted () {
+    this.featured = this.posts.map((post) => {
+      const event = new Date(post.date)
+      post.dateLong = event.toLocaleDateString('it-IT', dateOptions)
+      post.readingTime = readingTime(post.content.rendered)
+
+      return post
+    })
+
+    try {
+      await Promise.all(this.featured.map(async (post) => {
+        try {
+          post.categories = await this.$wp.categories().post(post.id)
+        } catch (error) {
+          console.error(error)
+        }
+        return post
+      }))
+    } catch (error) {
+      console.error(error)
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
