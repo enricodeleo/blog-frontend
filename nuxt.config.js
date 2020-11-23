@@ -55,7 +55,6 @@ export default {
 
   googleFonts: {
     families: {
-      Merriweather: true,
       Righteous: true
     }
   },
