@@ -33,6 +33,7 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/fontawesome',
     '@nuxtjs/google-fonts',
+    'nuxt-purgecss',
     ['wp-nuxt', {
       endpoint: 'https://blog.enricodeleo.com/wp-json',
       extensions: true,
@@ -69,14 +70,22 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
     'nuxt-logger'
   ],
 
   pwa: {
     meta: {
       lang: 'it',
-      ogSiteName: 'Lisergico'
+      ogSiteName: 'Lisergico',
+      ogHost: process.env.NUXT_ENV_FRONTEND_URL
     }
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '/'
   },
 
   bootstrapVue: {
