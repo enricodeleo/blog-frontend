@@ -1,3 +1,5 @@
+import wpNuxtFeed from 'wp-nuxt/lib/rss'
+
 const isDev = process.env.NODE_ENV !== 'production'
 
 export default {
@@ -34,12 +36,7 @@ export default {
     '@nuxtjs/fontawesome',
     '@nuxtjs/google-fonts',
     'nuxt-purgecss',
-    ['wp-nuxt', {
-      endpoint: 'https://blog.enricodeleo.com/wp-json',
-      extensions: true,
-      sitemap: false
-      // discover: true
-    }]
+    'wp-nuxt'
   ],
 
   fontawesome: {
@@ -74,6 +71,21 @@ export default {
     '@nuxtjs/robots',
     'nuxt-logger'
   ],
+
+  feed: [
+    wpNuxtFeed({
+      baseUrl: 'http://localhost:3000'
+    })
+  ],
+
+  wp: {
+    endpoint: 'https://blog.enricodeleo.com/wp-json',
+    extensions: true,
+    // discover: true,
+    sitemap: {
+      hostname: process.env.NUXT_ENV_FRONTEND_URL || 'http://localhost:3000'
+    }
+  },
 
   pwa: {
     meta: {

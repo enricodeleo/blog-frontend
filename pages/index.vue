@@ -30,6 +30,9 @@
       </section>
       <!-- End List Posts
       ================================================== -->
+      <NuxtLink to="/page/2" class="btn btn-outline-primary btn-block btn-lg">
+        Altri post
+      </NuxtLink>
     </div>
   </div>
 </template>
