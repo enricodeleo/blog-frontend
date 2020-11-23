@@ -12,9 +12,6 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant' },
       { hid: 'author', name: 'author', content: 'Enrico Deleo' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
@@ -74,6 +71,13 @@ export default {
     '@nuxt/content',
     'nuxt-logger'
   ],
+
+  pwa: {
+    meta: {
+      lang: 'it',
+      ogSiteName: 'Lisergico'
+    }
+  },
 
   bootstrapVue: {
     bootstrapCSS: false,

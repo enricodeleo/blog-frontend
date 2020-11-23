@@ -11,12 +11,9 @@
         <b-collapse id="nav-collapse" is-nav>
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
-            <b-nav-item href="#" class="active">
+            <!-- <b-nav-item href="#" class="active">
               Articoli
-            </b-nav-item>
-            <b-nav-item href="#">
-              Categorie
-            </b-nav-item>
+            </b-nav-item> -->
             <b-nav-item href="https://www.facebook.com/therealenricodeleo/" target="_blank">
               <font-awesome-icon :icon="['fab', 'facebook']" />
             </b-nav-item>

@@ -1,7 +1,13 @@
 {
   "name": "lisergico",
+  "description": "Il blog di Enrico Deleo",
   "version": "1.0.0",
   "private": true,
+  "author": {
+    "name": "Enrico Deleo",
+    "email": "hello@enricodeleo.com",
+    "url": "https://enricodeleo.com/"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",

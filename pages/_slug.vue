@@ -143,6 +143,7 @@ export default {
     return {
       script: [
         {
+          body: true,
           async: true,
           defer: true,
           crossorigin: 'anonymous',
