@@ -62,19 +62,14 @@
               <p>
                 Pubblicato in
                 <span v-for="(category, index) of categories" :key="category.id">
-                  <a :href="`${websiteUrl}/categories/${category.slug}`">{{ category.name }}</a>
-                  <span v-if="index+1 !== categories.length">, </span>
+                  <a :href="`${websiteUrl}/categories/${category.slug}`">{{ category.name }}</a><span v-if="index+1 !== categories.length">, </span>
                 </span>
               </p>
             </div>
           </div>
           <div class="row align-items-center">
             <div class="col-md-8">
-              <ul class="tags">
-                <li v-for="tag of tags" :key="tag.id" class="mr-1">
-                  <a :href="`${websiteUrl}/tags/${tag.slug}`">{{ tag.name }}</a>
-                </li>
-              </ul>
+              <a v-for="tag of tags" :key="tag.id" class="btn btn-outline-secondary btn-sm mr-1" :href="`${websiteUrl}/tags/${tag.slug}`">#{{ tag.name }}</a>
             </div>
             <div class="col-md-4 text-right">
               <a target="_blank" :href="`https://www.facebook.com/sharer/sharer.php?u=${postUrlEncoded}`">
