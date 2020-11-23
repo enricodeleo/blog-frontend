@@ -115,7 +115,7 @@ export default {
       tags = await app.$wp.tags().post(post.id)
       categories = await app.$wp.categories().post(post.id)
     } catch (error) {
-      console.error(error)
+      app.$log.error(error)
     }
     return {
       post,

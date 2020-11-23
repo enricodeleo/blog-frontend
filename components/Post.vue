@@ -63,7 +63,7 @@ export default {
     try {
       this.categories = await this.$wp.categories().post(this.post.id)
     } catch (error) {
-      console.error(error)
+      this.$log.error(error)
     }
   }
 }

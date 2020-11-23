@@ -44,7 +44,7 @@ export default {
       featured = await app.$wp.posts().sticky(true).perPage(4)
       posts = await app.$wp.posts().perPage(6)
     } catch (error) {
-      console.error(error)
+      app.$log.error(error)
     }
 
     return {

@@ -7249,6 +7249,11 @@ number-is-nan@^1.0.0:
   resolved "https://npm.enricodeleo.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
+nuxt-logger@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nuxt-logger/-/nuxt-logger-0.2.0.tgz#60aa0e67918267387b1219c582df563c21c5839e"
+  integrity sha512-0bWt2GLUTCCAuT+ZkpXHW/XtVxuWlMWsKH3AgrT3fG/ZNDKrnV8uPGSIXv0RgVojeWggHbjIk2nVsjn3m2vmcA==
+
 nuxt@^2.14.6:
   version "2.14.7"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.14.7.tgz#041bb3f5c659b1fec80042d974f68a0ed4e93aa9"

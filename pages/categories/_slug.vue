@@ -15,38 +15,7 @@
       <div class="col-md-8 offset-md-2">
         <div class="listrecent listrelated">
           <!-- begin post -->
-          <b-card
-            v-for="post of posts"
-            :key="post.id"
-            tag="article"
-            no-body
-            img-top
-            class="mb-5"
-          >
-            <a :href="`/${post.slug}`" :title="post.title.rendered">
-              <b-card-img-lazy :src="post.jetpack_featured_media_url" :alt="post.title.rendered" />
-            </a>
-            <b-card-body>
-              <a :href="`/${post.slug}`" class="text-dark">
-                <b-card-title v-html="post.title.rendered" />
-              </a>
-
-              <b-card-text class="text-muted">
-                {{ post.meta._yoast_wpseo_metadesc[0] }}
-              </b-card-text>
-
-              <div class="metafooter">
-                <div class="wrapfooter">
-                  <span class="author-meta">
-                    <span class="post-name"><a href="author.html">Sal</a></span><br>
-                    <span class="post-date">{{ post.dateLong }}</span>
-                    <span class="dot" />
-                    <span class="post-read">{{ Math.ceil(post.readingTime.minutes) }} minuti di lettura</span>
-                  </span>
-                </div>
-              </div>
-            </b-card-body>
-          </b-card>
+          <Post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
           <!-- end post -->
         </div>
       </div>
@@ -75,7 +44,7 @@ export default {
       const allPosts = await app.$wp.posts().categories(category.id)
       posts = allPosts.map(mapPost)
     } catch (error) {
-      console.error(error)
+      app.$log.error(error)
     }
     return {
       posts,

@@ -1,3 +1,5 @@
+const isDev = process.env.NODE_ENV !== 'production'
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -69,7 +71,8 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    'nuxt-logger'
   ],
 
   bootstrapVue: {
@@ -91,5 +94,11 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+  },
+
+  // nuxt-logger (https://www.npmjs.com/package/nuxt-logger)
+  logger: {
+    isEnabled: isDev,
+    logLevel: isDev ? 'debug' : 'error'
   }
 }
