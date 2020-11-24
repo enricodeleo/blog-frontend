@@ -1,10 +1,10 @@
 ---
 title: "Bob Marley Tribute"
 date: "2011-05-11T10:50:12.000Z"
-categories: 
+categories:
   - "flusso"
   - "musica"
-tags: 
+tags:
   - "anniversario"
   - "bob-marley"
   - "memoria"
@@ -20,7 +20,7 @@ L'11 Maggio 1981, infatti, si spegneva prematuramente uno dei più grandi artist
 
 Fu Bob infatti a **reinventare quella che era la reggae dei primi tempi**, trasformandola in culto, **creando una fusione con la religione rastafariana e stringendo un forte legame tra i testi ed i temi sociali**, in particolar modo riguardanti la situazione Giamaicana dell'epoca ma spaziando verso i temi generali dei diritti civili eguali per tutti. Non tutti sanno, infatti che prima dell'avvento di Bob Marley il reggae era ritmicamente diverso e sostenuto principalmente da skinhead e rudboy.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/05/Bob_Marley_by_aidan8500-565x434.jpg" "Bob Marley Portrait")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/05/Bob_Marley_by_aidan8500-565x434.jpg "Bob Marley Portrait")
 
 Rolling Stone lo ha posizionato al 19° posto tra i 100 migliori cantanti ed annovera **9 dei suoi brani tra la lista delle 500 migliori canzoni** di sempre.
 
@@ -30,10 +30,10 @@ Certo spiace ricordare che la morte è avvenuta a causa di un cancro che sarebbe
 
 Chiudo con una delle sue migliori tracce vocali, Redemption Song. R.I.P.
 
-http://www.youtube.com/watch?v=V9RHq8InYzE
+[![Redemption Song](https://img.youtube.com/vi/kOFu6b3w6c0/0.jpg)](https://www.youtube.com/watch?v=kOFu6b3w6c0)
 
 ## Special
 
 Il bravissimo Francesco Zappalà ([Zaplanet](http://soundcloud.com/zaplanet)) ha pubblicato un suo omaggio con **download gratuito** su SoundCloud. Grazie Francesco.
 
-  [Bob Marley-Kaya-30 Bob Marley tribute-zapparmx](http://soundcloud.com/zaplanet/bob-marley-kaya-30-bob-marley-tribute-zapparmx) by [zaplanet](http://soundcloud.com/zaplanet)
+[Bob Marley-Kaya-30 Bob Marley tribute-zapparmx](http://soundcloud.com/zaplanet/bob-marley-kaya-30-bob-marley-tribute-zapparmx) by [zaplanet](http://soundcloud.com/zaplanet)

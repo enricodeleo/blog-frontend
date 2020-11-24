@@ -13,7 +13,7 @@ Continua la [sperimentazione del Lunedì a Catania](http://blog.enricodeleo.com/
 
 **Lunedì 5 Marzo 2012** ospitiamo presso _**La Chiave**_ (Catania) l'_infosession_ di Red Bull Music Academy, durante la quale verranno illustrate le attività della Music Academy e le modalità di selezione ed ammissione.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/03/478395_3154764882006_1651720365_2727919_242013595_o1.jpg" "red bull music academy a catania con il garage e deeds.it")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/03/478395_3154764882006_1651720365_2727919_242013595_o1.jpg "red bull music academy a catania con il garage e deeds.it")
 
 Per chi non lo sapesse la Red Bull Music Academy è un **workshop musicale internazionale ed itinerante** che ogni anno fa tappa in una città diversa (quest'anno la destinazione è **New York**) raccogliendo giovani produttori, musicisti, vocalists e DJ. Un'occasione importante per chi cerca di emergere in questo ambiente, quindi fatevi avanti!
 

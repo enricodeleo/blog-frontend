@@ -1,10 +1,10 @@
 ---
 title: "Esperimenti live a Catania"
 date: "2012-02-14T12:31:28.000Z"
-categories: 
+categories:
   - "flusso"
   - "musica"
-tags: 
+tags:
   - "bass-music"
   - "catania"
   - "deeds"
@@ -20,7 +20,7 @@ Ieri con i ragazzi di [Deeds.it](http://deeds.it) abbiamo improvvisato un **bel
 
 Armati di webcam, ripetitore wifi e scheda di acquisizione abbiamo, penso, creato il primo evento musicale in Sicilia **in diretta web**.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/02/429274_368860036457697_1338768308_n-565x423.jpg" "429274_368860036457697_1338768308_n")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/02/429274_368860036457697_1338768308_n-565x423.jpg "429274_368860036457697_1338768308_n")
 
 Quando dico live, intendo dire che tutto è stato dal vivo a 360°. Oltre alla trasmissione in diretta streaming anche **la performance è stata tutta totalmente dal vivo ed improvvisata**.
 
@@ -36,5 +36,5 @@ Di seguito gli ultimi 5 minuti di concerto, purtroppo è il massimo che sono riu
 
 <iframe width="480" height="296" src="http://www.ustream.tv/embed/recorded/20433044" scrolling="no" frameborder="0" style="border: 0px none transparent;"><other/> </iframe>
 
-  
+
 [Video streaming by Ustream](http://www.ustream.tv/)

@@ -1,9 +1,9 @@
 ---
 title: "Introducing: Midi Matilda [Indie/Pop]"
 date: "2012-01-22T12:31:29.000Z"
-categories: 
+categories:
   - "musica"
-tags: 
+tags:
   - "fresh"
   - "indie"
   - "music"
@@ -13,7 +13,7 @@ tags:
 excerpt: ""
 ---
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/01/matidla.jpg" "matidla")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/01/matidla.jpg "matidla")
 
 Un gruppo molto promettente, i **[Midi Matilda](http://midimatilda.com/)**.
 
@@ -23,4 +23,4 @@ Le tracce pubblicate al momento sono: **_Red Light District, Stranger, Day Dream
 
 <iframe width="300" height="260" style="position: relative; display: block; width: 300px; height: 260px;" src="http://bandcamp.com/EmbeddedPlayer/v=2/album=4089481596/size=grande3/bgcol=FFFFFF/linkcol=4285BB/" allowtransparency="true" frameborder="0"><a href="http://midimatilda.bandcamp.com/album/red-light-district">Red Light District by Midi Matilda</a></iframe>
 
-http://youtu.be/lugfAWYmeJs
+[![](https://img.youtube.com/vi/lugfAWYmeJs/0.jpg)](https://www.youtube.com/watch?v=lugfAWYmeJs)

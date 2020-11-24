@@ -1,9 +1,9 @@
 ---
 title: "Ciao Ciao 2011"
 date: "2011-12-31T03:55:12.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "2011"
   - "2012"
   - "avvenimenti-2011"
@@ -19,7 +19,7 @@ Cari ragazzi e ragazze ebbene si, come avrete capito è giunto il momento: **il 
 
 Lo fanno tutti: i giornali, la chiesa, la politica e si lo faccio pure io (mica penserete che sono da meno, eh!)
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/12/newyear-565x233.jpg" "happy new year")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/12/newyear-565x233.jpg "happy new year")
 
 ## Cosa andrà nei libri di storia
 
@@ -41,7 +41,7 @@ Sono ancora scosso per questo, ma **CAZZO, HANNO RUBATO LA SALMA DI MIKE BONGIO
 - **Il Cern afferma che la materia può superare la velocità della luce**.
 - **E' finita la guerra in Iraq.**
 
-http://www.youtube.com/watch?feature=player\_embedded&v=SAIEamakLoY
+[![](https://img.youtube.com/vi/SAIEamakLoY/0.jpg)](https://www.youtube.com/watch?v=SAIEamakLoY)
 
 ## Cosa NON passerà alla storia
 

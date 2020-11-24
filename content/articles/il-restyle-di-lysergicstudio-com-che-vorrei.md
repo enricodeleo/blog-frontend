@@ -1,9 +1,9 @@
 ---
 title: "Il restyle di lysergicstudio.com che vorrei..."
 date: "2010-11-17T08:40:40.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "design-2"
   - "grafica"
   - "idee"
@@ -17,7 +17,7 @@ Nel frattempo però mi faccio un'idea.
 
 Ma tipo l'home tutta super-bianca che più bianco non si può ed al centro qualcosa del genere?
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/lysergic_studio_splash_screen_by_lysergicstudio-d3232xd.jpg" "lysergic_studio_splash_screen_by_lysergicstudio-d3232xd")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/lysergic_studio_splash_screen_by_lysergicstudio-d3232xd.jpg "lysergic_studio_splash_screen_by_lysergicstudio-d3232xd")
 
 Non so neanche io dove voglio arrivare però già una cosa così non mi disgusterebbe...
 

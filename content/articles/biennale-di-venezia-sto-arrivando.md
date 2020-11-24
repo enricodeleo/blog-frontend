@@ -18,13 +18,13 @@ Questa della Biennale è stata un'occasione inaspettata ma graditissima. Quando 
 
 Noi si che siamo persone impegnate, mica cazzi.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/biennale-venezia.jpg" "biennale venezia")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/biennale-venezia.jpg "biennale venezia")
 
 E' la prima volta che vado, ed a parte sapere stronzate del tipo che la Biennale ha 115 anni, che quest'anno gli olandesi spaccano (notizia questa sentita dire da chi l'ha sentita dire) ed altre cosette così non ho idea di come effettivamente sarà. Sono certo però che rimarremo sbalorditi (beh, almeno lo spero).
 
 Principalmente andiamo per la parte dedicata all'architettura (4/6 del gruppo sono aspiranti ingegneri edili/architetti), ma visto che io alla fine faccio Economia e non-so-come provo a fare grafica, non credo si offenda nessuno se mi metto a girare un po' per i fatti miei ed allargo gli orizzonti verso musica, teatro, cinema che sono sempre di ispirazione.
 
-\[caption id="" align="aligncenter" width="400" caption="Non c'entra un cazzo, però è la prima immagine che c'era su Google"\]![](https://enricodeleo.s3.eu-south-1.amazonaws.com/images/Il%20Mercante%20di%20Venezia.jpg "venezia")\[/caption\]
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/images/Il-Mercante-di-Venezia.jpg)
 
 Insomma tutto bello direte. E VI SBAGLIATE.
 

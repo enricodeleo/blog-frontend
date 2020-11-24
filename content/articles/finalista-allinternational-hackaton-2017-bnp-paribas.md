@@ -15,7 +15,7 @@ Si è trattato di un **hackaton** prolungato grazie al quale abbiamo avuto modo 
 
 Qui un sunto delle fasi nazionali di questo hackaton:
 
-https://youtu.be/0jusRembztw
+[![BNP Paribas Hackaton](https://img.youtube.com/vi/0jusRembztw/0.jpg)](https://www.youtube.com/watch?v=0jusRembztw)
 
 Dopo alcuni passaggi al cardiopalma siamo riusciti a piazzarci per la **finale di Parigi**, insieme ai team finalisti dei rispettivi paesi nei quali il gruppo ha indetto l'hackaton ( Germania, Belgio, Turchia, Lussemburgo, Cina, Francia, Italia, USA, Singapore, Polonia).
 

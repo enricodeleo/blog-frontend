@@ -1,9 +1,9 @@
 ---
 title: "Google e quel qualcosa in \"Plus\""
 date: "2011-07-01T21:42:24.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "alternativa"
   - "beta"
   - "facebook"
@@ -17,7 +17,7 @@ Oggi sono entrato su invito in **Google Plus**, l'alternativa Googoliana allo st
 
 Devo dire che ho subito apprezzato la gestione di questo social. La grafica è molto più morbida e "cicciottosa", **tutto è integrato con i vari servizi di Google** e**,** per il momento, è **libero dalla presenza di inutili sedicenti fan pages dedicate a questa o quella frase banale**. Il fatto che sia su invito, insomma, per ora tiene alla larga i famigerati bimbiminkia, ormai ahimè veri padroni del web.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/07/google-plus1.jpg" "google-plus1")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/07/google-plus1.jpg "google-plus1")
 
 Ovviamente in questa fase mancano le applicazioni terze, le fan pages ed i gruppi, ma si apprezza già il sistema di chat e **videochat integrato** (si chiama **videoritrovo**) così come quello delle foto.
 

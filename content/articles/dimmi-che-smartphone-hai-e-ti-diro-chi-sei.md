@@ -15,7 +15,7 @@ excerpt: ""
 
 Io mi ci sono un po' ritrovato :) Voi?
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/ev17d3-723x1024.jpg" "ev17d3")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/ev17d3-723x1024.jpg "ev17d3")
 
 E **così è come tutti gli utenti smartphone vedono chi utilizza ancora un telefono 2g**...
 

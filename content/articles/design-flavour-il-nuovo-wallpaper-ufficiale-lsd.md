@@ -1,9 +1,9 @@
 ---
 title: "Design Flavour - il nuovo wallpaper ufficiale LSD"
 date: "2011-04-17T16:23:09.000Z"
-categories: 
+categories:
   - "design"
-tags: 
+tags:
   - "ape"
   - "bianco-e-nero"
   - "fiori"
@@ -24,6 +24,6 @@ Lo **stile minimale** richiama quello che sarà il nuovo design del sito così c
 
 Cliccando sull'immagine verrete portati alla [mia pagina su DeviantART](http://lysergicstudio.deviantart.com/ "Profilo DeviantART Lysergic Studio"), dalla quale è possibile scaricare l'immagine a dimensioni naturali 1280x800 (in alto a destra trovate _download image_).
 
-[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/04/wallpaper_lsd-565x353.jpg" "wallpaper_lsd")](http://lysergicstudio.deviantart.com/art/Design-Flavour-LSD-wallpaper-205251862)
+[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/04/wallpaper_lsd-565x353.jpg "wallpaper_lsd")](http://lysergicstudio.deviantart.com/art/Design-Flavour-LSD-wallpaper-205251862)
 
 Spero vi piaccia e che qualcuno mi onorerà di utilizzarlo come sfondo per il proprio desktop :)

@@ -1,9 +1,9 @@
 ---
 title: "Dopo 16 anni i cittadini ci sono di nuovo"
 date: "2011-06-14T08:12:26.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "acqua"
   - "aggiornamenti"
   - "andamento"
@@ -19,7 +19,7 @@ Il **referendum 2011** è passato, assegnando la vittoria per il **SI** a tutti 
 
 Mi trovo d'accordo con l'amico **Rudy Bandiera** che considera questa esperienza come propedeutica alla creazione di **[anticorpi della democrazia](http://www.rudybandiera.com/12-13-giugno-referendum-si-0614.html).**
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/06/img_606X341_1303-italia-referendum-565x317.jpg" "img_606X341_1303-italia-referendum")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/06/img_606X341_1303-italia-referendum-565x317.jpg "img_606X341_1303-italia-referendum")
 
 **La democrazia dunque ha vinto.** Non è stata una questione di squadra o di parte politica. Molti uomini di governo o sostenitori dello stesso sono andati a votare, nonostante l'esempio del premier e gli appelli di svariati gruppi a non ritirare questa o quella scheda. Io per primo che uomo di sinistra non lo sono stato mai ho sostenuto con forza i 4 si, perchè non c'è bandiera nel **non desiderare le scorie sotto il culo tuo e delle generazioni a venire** o l'**obbligo a vendere la gestione di un bene primario come l'acqua** (se vi sono sprechi che gli amministratori facciano il loro dovere invece di lavarsene le mani), o nel **desiderio di vedere un imputato di reati penali presentarsi ogni tanto in tribunale** (un conto è essere garantisti, un conto è regalare immunità).
 

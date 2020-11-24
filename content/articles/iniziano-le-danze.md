@@ -1,9 +1,9 @@
 ---
 title: "Iniziano le danze"
 date: "2010-11-04T01:10:30.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "benvenuto"
   - "introduzione"
   - "news"
@@ -18,6 +18,6 @@ Sia Facebook che Twitter mi stavano troppo stretti, per cui ho deciso di aprire 
 
 Qui via libera a stupidaggini, riflessioni, aggiornamenti, e vabbè anche a qualche parolaccia ;)
 
-\[caption id="attachment\_11" align="alignnone" width="550" caption="Purtroppo la mia partenza è "un tantino" diversa da questa..."\][![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/umbrella-girl-40.jpg" "umbrella girls")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/umbrella-girl-40.jpg")\[/caption\]
+[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/umbrella-girl-40.jpg "umbrella girls")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/umbrella-girl-40.jpg")
 
 In effetti non vedo perchè qualcuno voglia leggerlo, a parte qualche amico ovviamente. Ma questo è quanto, chi ne avrà voglia/stomaco/pazienza da adesso sa dove sbirciare insomma.

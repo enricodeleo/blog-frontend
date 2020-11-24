@@ -1,9 +1,9 @@
 ---
 title: "Hot Tub Time Machine"
 date: "2010-11-04T12:36:56.000Z"
-categories: 
+categories:
   - "film"
-tags: 
+tags:
   - "cinema"
   - "film-2"
   - "opinione"
@@ -17,7 +17,7 @@ Avevamo appena superato il trauma **Inception**, che ci ha lasciati con un'unic
 
 Che dire? **Veramente simpatico**. Nulla di mai visto, ma sicuramente un buon modo per passare **101 minuti** del tuo tempo libero...
 
-[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/Hot-Tub-Time-Machine_510.jpg" "Hot-Tub-Time-Machine_510")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/Hot-Tub-Time-Machine_510.jpg")
+[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/Hot-Tub-Time-Machine_510.jpg "Hot-Tub-Time-Machine_510")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/Hot-Tub-Time-Machine_510.jpg")
 
 Non racconto niente perchè magari vi capiterà di vederlo, ma stamattina pensavo "_io ancora uso la doccia?_". Dopo aver visto questo film davvero, capisci l'importanza di **un buon bagno caldo e di una sana lattina di simil-Red Bull**:)
 
