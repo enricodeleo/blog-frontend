@@ -1,5 +1,3 @@
-import wpNuxtFeed from 'wp-nuxt/lib/rss'
-
 const isDev = process.env.NODE_ENV !== 'production'
 
 export default {
@@ -35,8 +33,7 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/fontawesome',
     '@nuxtjs/google-fonts',
-    'nuxt-purgecss',
-    'wp-nuxt'
+    'nuxt-purgecss'
   ],
 
   fontawesome: {
@@ -72,21 +69,6 @@ export default {
     'nuxt-logger'
   ],
 
-  feed: [
-    wpNuxtFeed({
-      baseUrl: 'http://localhost:3000'
-    })
-  ],
-
-  wp: {
-    endpoint: 'https://blog.enricodeleo.com/wp-json',
-    extensions: true,
-    // discover: true,
-    sitemap: {
-      hostname: process.env.NUXT_ENV_FRONTEND_URL || 'http://localhost:3000'
-    }
-  },
-
   pwa: {
     meta: {
       lang: 'it',
@@ -109,13 +91,10 @@ export default {
     scss: '@/assets/styles/_variables.scss'
   },
 
-  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {
-    baseURL: 'https://blog.enricodeleo.com/wp-json/wp/v2'
-  },
-
   // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
+  content: {
+    nestedProperties: ['categories', 'tag']
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

@@ -18,9 +18,12 @@
 <script>
 export default {
   async asyncData ({ app, params }) {
+    const limit = 6
+    const skip = limit * (params.page - 1)
     let posts
+
     try {
-      posts = await app.$wp.posts().perPage(6).page(params.page)
+      posts = await app.$content('articles', { text: true }).sortBy('date', 'desc').limit(limit).skip(skip).fetch()
     } catch (error) {
       app.$log.error(error)
     }

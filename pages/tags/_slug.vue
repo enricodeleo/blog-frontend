@@ -5,7 +5,7 @@
         <div class="mainheading">
           <div class="row post-top-meta authorpage">
             <div class="col">
-              <h1>{{ tag.name }}</h1>
+              <h1>{{ tag }}</h1>
             </div>
           </div>
         </div>
@@ -26,12 +26,11 @@
 <script>
 export default {
   async asyncData ({ app, params }) {
+    const tag = params.slug
     let posts
-    let tag
+
     try {
-      const tags = await app.$wp.tags().slug(params.slug)
-      tag = tags[0]
-      posts = await app.$wp.posts().tags(tag.id)
+      posts = await app.$content('articles', { text: true }).where({ tags: { $contains: tag } }).sortBy('date', 'desc').fetch()
     } catch (error) {
       app.$log.error(error)
     }
@@ -45,7 +44,7 @@ export default {
     return {
       websiteUrl: process.env.NUXT_ENV_FRONTEND_URL,
       posts: [],
-      tag: {}
+      tag: ''
     }
   }
 }

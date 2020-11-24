@@ -27,8 +27,7 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "nuxt-logger": "^0.2.0",
-    "reading-time": "^1.2.1",
-    "wp-nuxt": "^1.0.27"
+    "reading-time": "^1.2.1"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.1",

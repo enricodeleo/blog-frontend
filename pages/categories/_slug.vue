@@ -5,7 +5,7 @@
         <div class="mainheading">
           <div class="row post-top-meta authorpage">
             <div class="col">
-              <h1>{{ category.name }}</h1>
+              <h1>{{ category }}</h1>
             </div>
           </div>
         </div>
@@ -26,12 +26,11 @@
 <script>
 export default {
   async asyncData ({ app, params }) {
+    const category = params.slug
     let posts
-    let category
+
     try {
-      const categories = await app.$wp.categories().slug(params.slug)
-      category = categories[0]
-      posts = await app.$wp.posts().categories(category.id)
+      posts = await app.$content('articles', { text: true }).where({ categories: { $contains: category } }).sortBy('date', 'desc').fetch()
     } catch (error) {
       app.$log.error(error)
     }
@@ -45,7 +44,7 @@ export default {
     return {
       websiteUrl: process.env.NUXT_ENV_FRONTEND_URL,
       posts: [],
-      category: {}
+      category: ''
     }
   }
 }
