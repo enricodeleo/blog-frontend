@@ -25,7 +25,7 @@
                   <span class="author-meta">
                     <span class="post-name">
                       Pubblicato in
-                      <span v-for="(category, index) of post.categories" :key="category.id">
+                      <span v-for="(category, index) of post.categories" :key="index">
                         <a :href="`/categories/${category}`" class="text-primary">{{ category }}</a><span v-if="index+1 !== post.categories.length">, </span>
                       </span>
                     </span>

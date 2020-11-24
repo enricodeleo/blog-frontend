@@ -5,7 +5,7 @@ categories:
   - "fumetti"
 tags:
   - "comics"
-  - "fumetti-2"
+  - "fumetti"
   - "innovazione"
   - "novita"
   - "rivoluzione"

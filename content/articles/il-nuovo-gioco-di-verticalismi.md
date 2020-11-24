@@ -1,11 +1,11 @@
 ---
 title: "Il nuovo gioco di Verticalismi"
 date: "2010-12-02T18:18:04.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "bacheca"
-  - "fumetti-2"
+  - "fumetti"
   - "gioco"
   - "grafica"
   - "verticalismi"

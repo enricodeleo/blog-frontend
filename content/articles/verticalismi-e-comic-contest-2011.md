@@ -1,13 +1,13 @@
 ---
 title: "Verticalismi E-Comic Contest 2011"
 date: "2011-06-30T22:55:31.000Z"
-categories: 
+categories:
   - "fumetti"
-tags: 
+tags:
   - "concorso-2011"
   - "contest"
   - "e-comics"
-  - "fumetti-2"
+  - "fumetti"
   - "opere"
   - "verticalismi"
 excerpt: "Finito il contest annuale su Verticalismi, l'elenco ufficiale delle opere in concorso quest'anno. Tema: la donna."

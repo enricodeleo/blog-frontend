@@ -5,7 +5,7 @@ categories:
   - "fumetti"
 tags:
   - "comicon"
-  - "fumetti-2"
+  - "fumetti"
   - "micheluzzi"
   - "premio"
   - "verticalismi"

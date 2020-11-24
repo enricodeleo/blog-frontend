@@ -1,11 +1,11 @@
 ---
 title: "La 24hic di quest'anno..."
 date: "2011-11-14T11:27:33.000Z"
-categories: 
+categories:
   - "fumetti"
-tags: 
+tags:
   - "david-messina"
-  - "fumetti-2"
+  - "fumetti"
   - "manifestazione"
   - "marvel"
   - "sara-pichelli"
