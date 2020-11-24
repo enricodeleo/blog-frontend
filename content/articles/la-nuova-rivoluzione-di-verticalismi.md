@@ -14,7 +14,7 @@ excerpt: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/20130501-121458.jpg"
 ---
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2013/05/20130501-122545.jpg")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2013/05/20130501-122545.jpg)
 
 Sicuramente saprete quanto teniamo alla novità su **Verticalismi**. Non cerchiamo solo roba fresca da proporre ma anche modi nuovi per coinvolgere artisti e lettori.
 

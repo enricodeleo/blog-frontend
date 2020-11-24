@@ -15,13 +15,13 @@ excerpt: ""
 
 [Come avevo preannunciato](http://blog.enricodeleo.com/su-verticalismi-sara-nuovamente-24hic/) Sabato scorso si è tenuta la **24 hour italy comics** su verticalismi.it. Devo dire che quest'anno la manifestazione ha suscitato grandi soddisfazioni sia da parte nostra che da parte dei partecipanti che sono accorsi numerosi per affrontare questa sfida.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/11/24hic-565x448.jpg" "24hic")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/11/24hic-565x448.jpg "24hic")
 
 Il tema scelto è stato "_**dinamico duo**_", il quale si è prestato alle più svariate interpretazioni, producendo alla fine ben 32 opere, e cioè:
 
 1) [MOSTRuOsamente in ritardo](http://www.verticalismi.it/mostruosamente-in-ritardo-di-sara-pichelli-e-david-messina/) di Sara Pichelli e David Messina
 
-2) [trovami, tròvati](http://www.verticalismi.it/trovami-trovati-di-federica-manfredi-e-andrea-leghissa/) di Federica Manfredi e Andrea Leghissa
+1) [trovami, tròvati](http://www.verticalismi.it/trovami-trovati-di-federica-manfredi-e-andrea-leghissa/) di Federica Manfredi e Andrea Leghissa
 
 3) [c’est ça l’amour](http://www.verticalismi.it/24-hic-online-2011/) di Silvia Pacucci
 

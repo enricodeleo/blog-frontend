@@ -1,9 +1,9 @@
 ---
 title: "La mia playlist Dubstep di questo inizio Luglio [Dubstep]"
 date: "2011-07-02T10:16:00.000Z"
-categories: 
+categories:
   - "musica"
-tags: 
+tags:
   - "dubstep"
   - "luglio"
   - "musica-2"
@@ -16,7 +16,7 @@ Luglio è ormai iniziato prepotentemente ed io corro ai ripari. **Il periodo è 
 
 Che siate amanti del genere oppure no, provate un paio di questi pezzi ad un wattaggio sostenuto e ditemi se non sentite una bella spinta :)
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/07/Dubstep-Wallpaper-Orange-565x353.png" "Dubstep-Wallpaper-Orange")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/07/Dubstep-Wallpaper-Orange-565x353.png "Dubstep-Wallpaper-Orange")
 
  
 

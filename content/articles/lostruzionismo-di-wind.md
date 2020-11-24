@@ -1,9 +1,9 @@
 ---
 title: "L'ostruzionismo di Wind"
 date: "2012-01-13T15:54:27.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "internet"
   - "mobile"
   - "sms"
@@ -14,7 +14,7 @@ excerpt: ""
 
 Il nostro simpatico operatore (dicono) low cost, già tristemente noto per [gli eventi Fringe](http://blog.enricodeleo.com/la-wind-e-gli-eventi-fringe/) che genera, è tornato di nuovo nelle mie preghierine serali da quando ha deciso di **rivaleggiare con il mago Gandalf**.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/01/wind.jpg" "wind")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/01/wind.jpg "wind")
 
 A cosa mi riferisco?  Come ogni altro operatore, Wind, offre un piano mobile di connessione ad internet che, alla cifra di 9 euro mensili **promette connessione illimitata** (in termini di tempo) ad internet dal cellulare.
 

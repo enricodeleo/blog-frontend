@@ -1,9 +1,9 @@
 ---
 title: "It's my f#*@in’ Bday"
 date: "2011-06-04T09:45:11.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "4-giugno"
   - "birthday"
   - "compleanno"
@@ -11,7 +11,7 @@ tags:
 excerpt: ""
 ---
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/06/fckbday-565x289.png" "fckbday")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/06/fckbday-565x289.png "fckbday")
 
 **...e 23!**
 

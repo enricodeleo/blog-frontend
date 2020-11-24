@@ -1,9 +1,9 @@
 ---
 title: "Logo identity per Orange"
 date: "2011-01-24T19:20:02.000Z"
-categories: 
+categories:
   - "design"
-tags: 
+tags:
   - "design-2"
   - "grafica"
   - "lavori"
@@ -19,10 +19,10 @@ Per questo motivo ecco che sorge dal suo nome, _Orange_, il logo che spero **cre
 
 Per chi fosse curioso ecco in anteprima il risultato del design.
 
-[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/logo.jpg" "logo")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/logo.jpg")
+[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/logo.jpg "logo")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/logo.jpg")
 
-[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/bigliettino-1024x724.jpg" "bigliettino")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/bigliettino.jpg")
+[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/bigliettino-1024x724.jpg "bigliettino")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/bigliettino.jpg")
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/look.png" "look")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/look.png "look")
 
 ### **Commenti? Opinioni?**

@@ -1,9 +1,9 @@
 ---
 title: "Notorious B.I.G. – Gimme The Loot (Superginger Remix) [Dubstep]"
 date: "2011-05-22T19:21:22.000Z"
-categories: 
+categories:
   - "musica"
-tags: 
+tags:
   - "dubstep"
   - "hip-hop"
   - "mp3"
@@ -16,7 +16,7 @@ _Gimme The Loot_ è senza dubbio un grande pezzo e credo che fan o meno di Notor
 
 Quello che è riuscito ad ottenere questo giovanissimo produttore svedese (17 anni appena) è **una fusione perfetta tra hip hop e dubstep**.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/05/540.jpg" "superginger remix notorious big")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/05/540.jpg "superginger remix notorious big")
 
 **Il risultato è grandioso**. Solitamente quando ascolto un remix dubstep (ma la sensazione è la stessa anche per altri generi) riesco a distinguere nettamente le due parti del pezzo: traccia melodica e voce originale, bassi di sottofondo. Banale, no?
 

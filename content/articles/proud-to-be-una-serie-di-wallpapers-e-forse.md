@@ -23,7 +23,7 @@ Direte voi "_e non ti puoi sforzare a dormire?_". Beh, non è proprio così semp
 
 Ad ogni modo, visto che abbiamo scoperto che sono nerd nel corpo e nello spirito, ieri per passarmi il tempo ho fatto 'sto personaggetto un po' nerdy, che con una fortissima dose di narcotici fantasia dovrebbe assomigliarmi.
 
-[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/nerd.jpg" "nerd")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/nerd.jpg")
+[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/nerd.jpg "nerd")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/nerd.jpg")
 
 La notte era ancora giovane, così ho sviluppato un po' la cosa e ne ho ottenuto un wallpaper che mi è sembrato davvero carino (me la canto e me la suono). Ovviamente l'ho firmato [**Lysergic**](http://www.lysergicstudio.com), che da sempre quel tocco di professionalità/creatività, no?
 
@@ -35,6 +35,8 @@ Ora: visto che **l'idea è veramente figa**, e non ditemi di no (ok, ditemelo se
 
 Mentre pensate alla convenienza di questo investimento vi lascio allo sfondo che tanto questo è aggratis :)
 
-\[caption id="" align="aligncenter" width="480" caption="Sfondo figo, eh? Clicca sull'immagine per il download."\][![](https://enricodeleo.s3.eu-south-1.amazonaws.com/images/proud_to_be__nerd_by_lysergicstudio-d3256c9.jpg "proud to be: NERD")](http://fav.me/d3256c9)\[/caption\]
+Clicca sull'immagine per il download.
+
+[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/images/proud_to_be__nerd_by_lysergicstudio-d3256c9.jpg "proud to be: NERD")](http://fav.me/d3256c9)
 
 [Ho caricato lo sfondo sul mio profilo di DeviantArt](http://fav.me/d3256c9), per scaricarlo basta cliccare sulla destra su **Download Image**.

@@ -1,9 +1,9 @@
 ---
 title: "Music is everything to me"
 date: "2011-02-11T00:55:09.000Z"
-categories: 
+categories:
   - "design"
-tags: 
+tags:
   - "catania"
   - "electro"
   - "events"
@@ -20,7 +20,7 @@ Da oggi pomeriggio è online il sito [musiciseverythingtome.com](http://musicise
 
 Questo sito nasce grazie ad associazione Prometheus per portare una ventata di freschezza nel panorama giovanile e studentesco catanese e non solo. Aggiornamenti su **trend, prodotti hi tech e musica**, l'**organizzazione di serate**, nasce tutto con la voglia di scevvhiare il panorama musicale e dell'intrattenimento di Catania.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/02/Schermata-2011-02-11-a-01.57.18-565x305.png" "music is")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/02/Schermata-2011-02-11-a-01.57.18-565x305.png "music is")
 
 Il progetto è piuttosto ambizioso, ed i ragazzi impegnati a metterlo in atto hanno voglia di portare novità, guardando alle richieste locali, tenendo però un occhio puntato sul nord europa e le nuove tendenze.
 

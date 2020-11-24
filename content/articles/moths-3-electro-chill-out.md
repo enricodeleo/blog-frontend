@@ -1,9 +1,9 @@
 ---
 title: "Moths - <3 [Electro Chill Out]"
 date: "2011-02-23T09:51:54.000Z"
-categories: 
+categories:
   - "musica"
-tags: 
+tags:
   - "alternative"
   - "chill-out"
   - "electro"
@@ -12,7 +12,7 @@ tags:
 excerpt: ""
 ---
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/02/1648007_300.jpg" "Moths")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/02/1648007_300.jpg "Moths")
 
 Generalmente non mi piacciono i video musicali presi "pari pari" da spezzoni di vecchi film, ma devo dire che in questo caso il risultato è indubbiamente positivo.
 

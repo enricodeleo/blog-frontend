@@ -1,9 +1,9 @@
 ---
 title: "Rare Exports Inc."
 date: "2011-03-01T12:23:51.000Z"
-categories: 
+categories:
   - "film"
-tags: 
+tags:
   - "cortometraggio"
   - "exports"
   - "father-christmas"
@@ -15,7 +15,7 @@ excerpt: ""
 
 Tre abilissimi cacciatori battono le remote lande della **Lapponia** alla ricerca della creatura selvatica più ambita e pericolosa. **La loro presenza incute timore in ogni essere vivente**, ma la loro preda è una sola. Un rarissimo esemplare che riesce a vivere centinaia di anni ed in possesso di una forza spropositata. Insomma una creatura ferocissima **capace di fare a brandelli un orso adulto** e che può correre chilometri anche dopo essere colpito...
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/03/photo-Rare-Exports-Inc-2003-1-565x423.jpg" "Rare Exports Inc.")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/03/photo-Rare-Exports-Inc-2003-1-565x423.jpg "Rare Exports Inc.")
 
 **Chi è la creatura?**
 

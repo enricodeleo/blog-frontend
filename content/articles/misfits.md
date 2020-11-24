@@ -15,7 +15,7 @@ excerpt: ""
 
 In occasione dell'inizio della seconda stagione, di cui ho già avuto modo di vedere il primo episodio, mi è venuto in mente di scrivere due righe sulla serie tv **[Misfits](http://www.channel4.com/programmes/misfits)**.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/2yosb6e.png" "2yosb6e")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/2yosb6e.png "2yosb6e")
 
 Ho scoperto la serie **Misfits** da poco grazie al consiglio di amici. Mi sono fidato e sono corso a procurarmi tutta la prima stagione. Risultato? Ho visto tutta la prima serie (6 episodi) in una sola notte.
 

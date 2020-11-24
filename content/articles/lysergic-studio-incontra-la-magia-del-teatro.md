@@ -1,9 +1,9 @@
 ---
 title: "Lysergic Studio incontra la magia del teatro"
 date: "2011-01-08T15:33:12.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "compagnia-eva-duarte"
   - "comunicazione"
   - "lysergic"
@@ -16,7 +16,7 @@ excerpt: ""
 
 Qualche mese fa sono stato contattato da alcuni amici di Agrigento che mi proponevano di realizzare un sito internet per una compagnia teatrale.
 
-[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/13533_1252305997251_1517570971_30641109_5054977_n.jpg" "locandina dreambot")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/13533_1252305997251_1517570971_30641109_5054977_n.jpg")
+[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/13533_1252305997251_1517570971_30641109_5054977_n.jpg "locandina dreambot")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/13533_1252305997251_1517570971_30641109_5054977_n.jpg)
 
 Dico "_ok, vediamo cosa si può fare_" non considerando, mea culpa, la reale portata di questo progetto.
 

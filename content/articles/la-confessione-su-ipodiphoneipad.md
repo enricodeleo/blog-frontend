@@ -1,9 +1,9 @@
 ---
 title: "La confessione su iPod/iPhone/iPad"
 date: "2011-02-06T11:25:01.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "applicazioni"
   - "chiesa-cattolica"
   - "confessione"
@@ -18,7 +18,9 @@ Dire che sono **al limite tra la risata ed il pianto è poco**. Non sono un ferv
 
 OVVIAMENTE al "modico" prezzo di **1,99 dollari.** E **ci mancherebbe**. Chi non vorrebbe addirittura pagare per una applicazione che **ti permette di confessarti**? **Macchecculo**!
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/02/mzl.ntslkbpc.320x480-75.jpg" "mzl.ntslkbpc.320x480-75") ![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/02/lh_confession_app-300x450.png" "lh_confession_app-300x450")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/02/mzl.ntslkbpc.320x480-75.jpg "mzl.ntslkbpc.320x480-75")
+
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/02/lh_confession_app-300x450.png "lh_confession_app-300x450")
 
 L'app consente di farsi un esame della coscienza, personalizzato in base all'età, al sesso, e la vocazione (single, sposato, sacerdote o religioso) ed è protetto da una password, e permette di aggiungere "peccati che non figurano in un esame standard di coscienza" e si può poi scegliere tra **7 diversi atti di contrizione.**
 

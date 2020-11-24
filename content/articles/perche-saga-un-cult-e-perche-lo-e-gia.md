@@ -14,7 +14,7 @@ Non scrivo sul blog da eoni, e prometto di scrivere qualche riga a riguardo il p
 
 In una intervista Vaughan stesso la definisce come **un incrocio tra Star Wars e Games of Thrones**, mentre [**WIRED**](https://www.wired.it/play/fumetti/2016/07/26/saga-fumetto-star-wars-romeo-giulietta/) ci vede anche qualcosa di Romeo e Giulietta (mentre scrivo mi rendo conto che in Italia siamo sempre stati femministi invertendo il nome in Giulietta e Romeo, o forse era solo l'ordine alfabetico... vabbè). Il punto è che quale che siano le influenze o somiglianze **Saga è Saga**, e per milioni di lettori nel mondo è semplicemente **uno dei migliori fumetti di sempre**.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2017/01/saga-fighters.jpg")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2017/01/saga-fighters.jpg)
 
 Il perché è presto detto: Saga non è - soltanto - una storia. Saga è un vero e proprio universo narrativo, una grande epopea che ti catapulterà in uno spazio fatto di fazioni in guerra, mercenari senza scrupoli, politica e sentimenti fortissimi.
 
@@ -24,7 +24,7 @@ In questo sfondo, Vaughan colloca storie di popoli e personali con un ritmo inca
 
 La figata è che il linguaggio e le scene sono di quelle che **non le mandano a dire**.
 
-[![Saga techno blowjob](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2017/01/blowjob-saga-1024x616.jpg")](https://verticomics.com/landing/vaughan/?aff_ref=127)
+[![Saga techno blowjob](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2017/01/blowjob-saga-1024x616.jpg)](https://verticomics.com/landing/vaughan/?aff_ref=127)
 
 I disegni sono di **Fiona Staples** ed i colori sono un piacere, specialmente sul mio iPad con la luminosità sparata al massimo.
 

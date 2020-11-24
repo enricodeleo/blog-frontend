@@ -1,9 +1,9 @@
 ---
 title: "Lemâitre [electro/pop]"
 date: "2010-11-05T18:28:10.000Z"
-categories: 
+categories:
   - "musica"
-tags: 
+tags:
   - "electro"
   - "musica-2"
   - "novita"
@@ -17,7 +17,7 @@ Mi limiterò a dire che **l'elettronica** è tra i generi che apprezzo di più i
 
 Trovo che in questo genere si trovi quel sound che ti fa ballare se vuoi, ma che puoi anche ascoltare stando seduto a chiacchierare per alcuni pezzi. Insomma **un genere figo** :)
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/41160_120119154705840_110144622369960_136523_791686_n.jpg" "41160_120119154705840_110144622369960_136523_791686_n")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/41160_120119154705840_110144622369960_136523_791686_n.jpg "41160_120119154705840_110144622369960_136523_791686_n")
 
 Un mesetto o due addietro, girando per la rete, mi sono imbattuto in un duo che si fa chiamare **Lemâitre**. Il duo, che in un primo momento avevo creduto francese (ingannato anche dal nome), proviene da Oslo.
 
@@ -27,7 +27,7 @@ Vi sembrano poche come informazioni?
 
 Si, è vero, ma sappiate che al momento è difficile trovare fonti o siti che ne parlino più approfonditamente. La loro home page non è neanche tra i risultati di Google e per trovare [**il loro orribile sito internet**](http://www.lemaitremusic.com/LEMAITRE.html)**,** fatto certamente con iWeb, ho dovuto cercare il canale ufficiale di YouTube che a sua volta collega alla pagina fan di Facebook che a sua volta riporta all'indirizzo del sito...
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/60867_125390594178696_110144622369960_163596_507755_n.jpg" "60867_125390594178696_110144622369960_163596_507755_n")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/60867_125390594178696_110144622369960_163596_507755_n.jpg "60867_125390594178696_110144622369960_163596_507755_n")
 
 Non credo sia necessario sapere più di tanto tutto sommato, visto che saranno le orecchie a giudicare.
 

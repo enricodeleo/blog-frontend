@@ -1,9 +1,9 @@
 ---
 title: "Nuovo restyle per Lysergic Studio in vista"
 date: "2010-11-06T00:12:32.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "grafica"
   - "lysergic"
   - "restyle"
@@ -17,7 +17,7 @@ Chissà se anche i miei lettori su **[Erriko.it](http://www.erriko.it)** hanno c
 
 Comunque sia, **si dà il caso che da circa un anno abbia aperto il sito [lysergicstudio.com](http://www.lysergicstudio.com)** proprio per pubblicizzare questa attività (a dire il vero mi contattano di più come Enrico Deleo che come Lysergic Studio). Da circa un anno quindi il sito è più o meno lo stesso e si presenta così:
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/webdesignfactory-1024x942.png" "lysergic studio webdesignfactory")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/webdesignfactory-1024x942.png "lysergic studio webdesignfactory")
 
 Ora, non che questa grafica non mi piaccia più, ma più che altro mi ha stancato ed i miei gusti sono cambiati. Sono ancora combattuto perchè so che ci vorrà un bel po' di lavoro per rifarlo. In questo mi ero dato ad alcune "finezze" come un sistema di gestione dinamica dei meta tags, url rewrite, redirect automatico alla pagina inglese o italiana in base alla lingua del browser utilizzato ed altri paroloni simili, per cui...
 

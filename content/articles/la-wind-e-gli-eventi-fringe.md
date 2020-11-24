@@ -1,9 +1,9 @@
 ---
 title: "La Wind e gli eventi Fringe"
 date: "2011-11-16T11:36:51.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "cellulare"
   - "eventi"
   - "fringe"
@@ -16,13 +16,13 @@ excerpt: "Fenomeni paranormali avvengono sulle linee wind mobili. E' a rischio l
 
 Se sei possessore di una scheda mobile **Wind** a quanto pare puoi vivere _**esperienze extra dimensionali**_.
 
-Io ad esempio ho assistito in prima persona a svariati fenomeni _**Fringe.**_ 
+Io ad esempio ho assistito in prima persona a svariati fenomeni _**Fringe.**_
 
 Chiami la tua ragazza e ti risponde un certo Carmelo? Sei convinto che ti stia chiamando tua nonna ed invece è Jonathan, un body builder semi-professionista?
 
 Puoi stare tranquillo, le donne della tua vita non stanno intrattenendo rapporti fedifraghi con degli uomini non meglio specificati (_o almeno spero per te che non sia così!_)
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/11/fringe.png" "fringe")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/11/fringe.png "fringe")
 
 ## La mia teoria
 

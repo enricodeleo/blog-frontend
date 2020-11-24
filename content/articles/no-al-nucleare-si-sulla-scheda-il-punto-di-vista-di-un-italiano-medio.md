@@ -1,9 +1,9 @@
 ---
 title: "No al Nucleare [si sulla scheda]: il punto di vista di un italiano medio"
 date: "2011-06-10T21:28:01.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "centrali"
   - "elettricita"
   - "giugno"
@@ -43,7 +43,7 @@ _\- piccolo inciso 2 - il quesito sul legittimo impedimento ti fa capire come fu
 
 Mi sento buono. Voglio dare ragione a che è per il si al nucleare e dare per scontato che l'Italia sia in grado di trovare siti opportuni, il consenso delle popolazioni della zona, appaltatori onesti, ingegneri eccelsi, che tutto venga costruito a regola d'arte (non come i vari ospedali che si sbriciolano o ponti che si incrinano dopo 3-4 anni). E' un ragionamento per assurdo, ma mi serve per affrontare il resto dell'argomento, che altrimenti cadrebbe subito.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/06/r742108_6080651-565x424.jpg" "nucleare simpson")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/06/r742108_6080651-565x424.jpg "nucleare simpson")
 
 ## Inquinamento
 
