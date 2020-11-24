@@ -13,7 +13,7 @@ tags:
 excerpt: "Finito il contest annuale su Verticalismi, l'elenco ufficiale delle opere in concorso quest'anno. Tema: la donna."
 ---
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/07/fumetti-digitali-565x242.jpg" "fumetti-digitali")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/07/fumetti-digitali-565x242.jpg "fumetti-digitali")
 
 E' appena terminato il contest annuale di [Verticalismi](http://www.verticalismi.it). L'appuntamento ormai annuale dedicato ai fumettisti emergenti che ha visto per il 2011 il tema della **donna**.
 

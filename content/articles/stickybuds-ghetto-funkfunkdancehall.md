@@ -1,9 +1,9 @@
 ---
 title: "Stickybuds [Ghetto Funk/Funk/Dancehall]"
 date: "2010-12-08T18:26:13.000Z"
-categories: 
+categories:
   - "musica"
-tags: 
+tags:
   - "dancehall"
   - "funk"
   - "ghetto-funk"
@@ -15,7 +15,7 @@ Un genere che non sapevo neanche esistesse, il _**Ghetto Funk**_, un nuovo artis
 
 _Tyler Martens_ (aka Stickybuds) è un dj canadese che ultimamente sta girando mezzo mondo collaborando con i più importanti dj già presenti nella scena _funk_, _hip hop_, _reggae_, _breaks_, _big basslines_ e _glitch_.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/12/stickybuds-6.jpg" "stickybuds")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/12/stickybuds-6.jpg "stickybuds")
 
 Il suo stile mescola ad un sound piuttosto "nero" l'utilizzo di loop e suoni elettronici, "ravvivando" a volte pezzi storici come _Come Together_. E' già uscito diverse volte su cd sia con mix che con produzioni proprie abbastanza valide.
 

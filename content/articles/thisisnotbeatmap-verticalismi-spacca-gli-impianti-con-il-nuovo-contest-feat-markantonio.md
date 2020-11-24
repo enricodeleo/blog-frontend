@@ -15,7 +15,7 @@ Il concetto base è simile a quello già visto per il contest con Brunori SAS. I
 
 Il patrocinio artistico è affidato al grande **Alberto Ponticelli.**
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/02/thisisnotbeatmap.jpg" "thisisnotbeatmap")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/02/thisisnotbeatmap.jpg "thisisnotbeatmap")
 
 Il nome **THISISNOTBEATMAP** l'ho coniato io mentre montavo l'illustrazione del nostro bravissimo **Filippo Curzi** (aka _Fill Good_), e sembra essere piaciuto all'etichetta di Markantonio, la **Analytic Trail Rec**,che per l'occasione ha **messo in palio per**  **il vincitore un ingaggio retribuito** per **realizzare la copertina del prossimo disco dell'etichetta**. Queste opportunità non capitano tutti i giorni!
 

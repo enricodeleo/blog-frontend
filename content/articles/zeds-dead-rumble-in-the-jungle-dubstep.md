@@ -1,9 +1,9 @@
 ---
 title: "Zeds Dead - Rumble In The Jungle [Dubstep/Drum 'n Bass]"
 date: "2011-09-28T10:15:06.000Z"
-categories: 
+categories:
   - "musica"
-tags: 
+tags:
   - "drum-and-bass"
   - "dubstep"
   - "recensione"
@@ -11,7 +11,7 @@ tags:
 excerpt: ""
 ---
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/09/zeds_dead_cover-565x565.jpg" "zeds_dead_cover")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/09/zeds_dead_cover-565x565.jpg "zeds_dead_cover")
 
 Il duo canadese degli _**Zeds Dead**_ si sta rivelando davvero interessante.
 

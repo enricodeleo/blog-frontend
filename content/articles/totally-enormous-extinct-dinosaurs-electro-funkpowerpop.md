@@ -1,9 +1,9 @@
 ---
 title: "Totally Enormous Extinct Dinosaurs [Electro Funk/Powerpop]"
 date: "2011-01-03T18:04:58.000Z"
-categories: 
+categories:
   - "musica"
-tags: 
+tags:
   - "electro"
   - "funk"
   - "musica-2"
@@ -12,7 +12,7 @@ excerpt: ""
 
 Questo post se lo meritava non fosse altro per il nome: **[Totally Enormous Extinct Dinosaurs](http://www.myspace.com/totallyenormousextinctdinosaurs)**.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/Totally-Enormous-Extinct-Dinosaurs.jpg" "Totally-Enormous-Extinct-Dinosaurs")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/Totally-Enormous-Extinct-Dinosaurs.jpg "Totally-Enormous-Extinct-Dinosaurs")
 
 Mi è stato difficile trovare uno straccio di _bio_ di questo tizio. So solo che è in attività già da un po' (anche se i suoi pezzi passati non mi hanno entusiasmato particolarmente), è inglese e che se continua sulla scia del pezzo che ti vado a presentare, a mio modesto modo di vedere, **spacca**.
 

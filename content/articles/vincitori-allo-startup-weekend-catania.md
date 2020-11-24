@@ -15,7 +15,7 @@ excerpt: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/cover.jpg"
 ---
 
-![cover](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2013/05/cover-565x209.jpg")
+![cover](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2013/05/cover-565x209.jpg)
 
 L'esperienza di **Verticalismi** continua a dare grandi soddisfazioni. Ieri 26 Maggio siamo usciti tra i vincitori dello **Startup Weekend di Catania**. Cosa vuol dire? Beh, al momento ancora poco ma di certo ho in parte sperimentato quello che credo sia **orgoglio paterno** :) oltre ad una nuova spinta nella direzione dell'innovazione e  nella voglia di fare ed imparare.
 

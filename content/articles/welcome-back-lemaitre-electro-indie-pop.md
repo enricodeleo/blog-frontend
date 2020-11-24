@@ -1,9 +1,9 @@
 ---
 title: "Welcome back Lemâitre [Electro Indie Pop]"
 date: "2012-01-20T13:01:02.000Z"
-categories: 
+categories:
   - "musica"
-tags: 
+tags:
   - "bass"
   - "electro"
   - "elettronica"
@@ -21,7 +21,7 @@ E' passato un anno da quando [vi ho presentato i Lemaitre](http://blog.enricodel
 
 Relativity 1 è in [vendita su iTunes](http://itunes.apple.com/gb/album/relativity-1-ep/id494298063) dalla mezzanotte del 20 Gennaio 2012, con quattro nuovi e vibranti pezzi.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/01/relativity.jpg" "relativity")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/01/relativity.jpg "relativity")
 
 ## Tracklist
 

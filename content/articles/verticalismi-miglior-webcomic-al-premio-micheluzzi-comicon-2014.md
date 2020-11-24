@@ -19,7 +19,7 @@ Anche quest'anno, [come l'anno scorso](http://blog.enricodeleo.com/verticalismi-
 
 La differenza con la nomination dell'anno scorso? Beh, quest'anno **abbiamo vinto!**
 
-![comicon](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2014/05/comicon-565x157.png")
+![comicon](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2014/05/comicon-565x157.png)
 
 Alla notizia, per altro rimbalzata da più o meno qualsiasi testata tra le quali [Wired](http://www.wired.it/play/fumetti/2014/05/04/vincitori-premi-micheluzzi/), sono quasi saltato in aria, anche a causa dell'incredibile picco di accessi sul sito che mi ha dato qualche grattacapo dal punto di vista tecnico... Fortuna che i ragazzi della crew sono dei veri maghi nel gestire le situazioni di emergenza!
 

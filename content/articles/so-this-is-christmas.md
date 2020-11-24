@@ -1,9 +1,9 @@
 ---
 title: "So this is Christmas"
 date: "2010-12-24T03:14:58.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "natale"
   - "penseri"
   - "resoconto"
@@ -25,4 +25,4 @@ Cosa vorrei? Non lo so neanch'io. Aspetto che qualcosa mi cada in testa (e con l
 
 E che lagne che butto oggi eh? Magari incanalassi queste stronzate almeno in un pensiero profondo, in una verità universale in qualcosa che possa interessarti. E invece niente. Il massimo che posso fare è regalarti uno sfondino che ho fatto poco fa così, in _**una botta di vita** :D_
 
-_[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/12/thisisxmas-1024x640.jpg" "thisisxmas")](http://lysergicstudio.deviantart.com/art/So-this-is-Christmas-190694829)_
+[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/12/thisisxmas-1024x640.jpg "thisisxmas")](http://lysergicstudio.deviantart.com/art/So-this-is-Christmas-190694829)

@@ -18,4 +18,4 @@ Magari gli avventori di questo blog sanno già cos'è [Verticalismi](http://vert
 
 In occasione di questa stessa intervista riveliamo il vincitore dell'ultimo contest Verticalismi, vinto da **Spugna** con il suo [Into Deep](http://www.verticalismi.it/into-deep-hd/).
 
-http://www.youtube.com/watch?v=riw3DlmGg2s
+[![](https://img.youtube.com/vi/riw3DlmGg2s/0.jpg)](https://www.youtube.com/watch?v=riw3DlmGg2s)

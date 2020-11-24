@@ -1,9 +1,9 @@
 ---
 title: "The Walking Dead: un vero horror, a puntate"
 date: "2010-11-04T17:03:26.000Z"
-categories: 
+categories:
   - "serie-tv"
-tags: 
+tags:
   - "horror"
   - "recensione"
   - "serie-tv-2"
@@ -18,7 +18,7 @@ Il 31 Ottobre negli USA (guarda caso), ed il 1 Novembre in Italia è uscita la p
 
 Il fatto che sia uscito in italiano l'indomani della prima mondiale, fa pensare Sky abbia capito che gli utenti non hanno molta pazienza nell'aspettare i doppiaggi, e ricorrono sempre più spesso al video-streaming sottotitolato. Qualche sforzo in più da parte di Sky nei confronti dei clienti paganti ci voleva proprio, altrimenti che senso avrebbe fare un abbonamento se con lo streaming non solo vedi le puntate prima, ma lo fai pure "gratis"...
 
-[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/The_Walking_Dead_2010_Intertitle.png" "The_Walking_Dead_2010_Intertitle")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/The_Walking_Dead_2010_Intertitle.png")
+[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/The_Walking_Dead_2010_Intertitle.png "The_Walking_Dead_2010_Intertitle")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/The_Walking_Dead_2010_Intertitle.png")
 
 ## In breve
 
@@ -34,7 +34,8 @@ Ora: chiunque si armerebbe di fucile a pompa (Resident Evil docet), lanciafiamme
 
 **Nessuno è al sicuro. Mai.**
 
-\[caption id="attachment\_46" align="alignnone" width="550" caption="I personaggi della serie e del fumetto a confronto"\]![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/ZombieKB-The-Walking-Dead-Banner.jpg" "ZombieKB-The-Walking-Dead-Banner")\[/caption\]
+I personaggi della serie e del fumetto a confronto
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/ZombieKB-The-Walking-Dead-Banner.jpg" "ZombieKB-The-Walking-Dead-Banner")
 
 ## Tutto ciò per dire?
 

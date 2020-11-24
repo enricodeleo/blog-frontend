@@ -20,7 +20,7 @@ Questa commissione, presa grazie al mio amico, compaesano e promettente arbitro 
 
 Come al solito mi sono sbizzarrito a manipolare WordPress per ottenere il risultato finale che è stato questo:
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/12/Schermata-2010-12-02-a-17.06.23-1024x594.png" "aia agrigento")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/12/Schermata-2010-12-02-a-17.06.23-1024x594.png "aia agrigento")
 
 Ovviamente dato il ruolo istituzionale del sito non mi sono potuto sbizzarrire in chissà-che-voli-pindarici, ma alla fine il committente era contento e questo (ahimè) è quello che conta.
 
