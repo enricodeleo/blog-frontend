@@ -69,6 +69,12 @@ export default {
     'nuxt-logger'
   ],
 
+  sitemap: {
+    hostname: process.env.NUXT_ENV_FRONTEND_URL,
+    gzip: true,
+    cacheTime: 1000 * 60 * 24
+  },
+
   pwa: {
     meta: {
       lang: 'it',
