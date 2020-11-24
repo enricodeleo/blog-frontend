@@ -8,17 +8,17 @@
       <div v-for="post of featured" :key="post.id" class="card">
         <div class="row">
           <div class="col-md-5 wrapthumbnail">
-            <a :href="`/${post.slug}`" :title="post.title.rendered">
-              <div class="thumbnail" :style="{'background-image': `url(${post.jetpack_featured_media_url})`}" />
+            <a :href="`/${post.slug}`" :title="post.title">
+              <div class="thumbnail" :style="{'background-image': `url(${post.coverImage})`}" />
             </a>
           </div>
           <div class="col-md-7">
             <div class="card-block">
               <h2 class="card-title pr-4 pt-4">
-                <a :href="`/${post.slug}`" v-html="post.title.rendered" />
+                <a :href="`/${post.slug}`">{{ post.title }}</a>
               </h2>
               <p class="card-text pr-4 text-muted">
-                {{ post.meta._yoast_wpseo_metadesc[0] }}
+                {{ post.excerpt }}
               </p>
               <div class="metafooter">
                 <div class="wrapfooter">
@@ -26,7 +26,7 @@
                     <span class="post-name">
                       Pubblicato in
                       <span v-for="(category, index) of post.categories" :key="category.id">
-                        <a :href="`/categories/${category.slug}`" class="text-primary">{{ category.name }}</a><span v-if="index+1 !== post.categories.length">, </span>
+                        <a :href="`/categories/${category}`" class="text-primary">{{ category }}</a><span v-if="index+1 !== post.categories.length">, </span>
                       </span>
                     </span>
                     <br>
@@ -65,27 +65,14 @@ export default {
     }
   },
 
-  async mounted () {
+  mounted () {
     this.featured = this.posts.map((post) => {
       const event = new Date(post.date)
       post.dateLong = event.toLocaleDateString('it-IT', dateOptions)
-      post.readingTime = readingTime(post.content.rendered)
+      post.readingTime = readingTime(post.text)
 
       return post
     })
-
-    try {
-      await Promise.all(this.featured.map(async (post) => {
-        try {
-          post.categories = await this.$wp.categories().post(post.id)
-        } catch (error) {
-          this.$log.error(error)
-        }
-        return post
-      }))
-    } catch (error) {
-      this.$log.error(error)
-    }
   }
 }
 </script>

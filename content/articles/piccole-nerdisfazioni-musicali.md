@@ -7,6 +7,7 @@ categories:
 tags:
 excerpt: "Ho appena scoperto che posso controllare l'app Spotify e la riproduzione della mia musica senza staccarmi dal mio amato terminale."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/Screen-Shot-2018-03-08-at-19.12.43.png"
+sticky: true
 ---
 
 Probabilmente l'accezione più aggiornata di _**nerd**_ (che è una delle parole dal significato più mutevole nel tempo degli ultimi anni) probabilmente potrebbe essere: **colui a cui piacciono le cazzate**.

@@ -50,7 +50,7 @@
         </div>
 
         <!-- Begin Featured Image -->
-        <img class="featured-image img-fluid" :src="post.coverImage" :alt="post.title">
+        <img v-if="post.coverImage" :src="post.coverImage" :alt="post.title" class="featured-image img-fluid">
         <!-- End Featured Image -->
 
         <!-- Begin Post Content -->

@@ -12,6 +12,7 @@ tags:
   - "vue"
 excerpt: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/pov-thumb.jpg"
+sticky: true
 ---
 
 _In questo post vorrei parlare delle caratteristiche che mi hanno fatto innamorare di Vue.js e che a mio avviso sono alla base dell'incredibile tasso di crescita di questo framework su GitHub e non solo._

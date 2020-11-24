@@ -44,8 +44,8 @@ export default {
     let featured
 
     try {
-      featured = await app.$wp.posts().sticky(true).perPage(4)
-      posts = await app.$wp.posts().perPage(6)
+      featured = await app.$content('articles', { text: true }).where({ sticky: true }).sortBy('date', 'desc').limit(4).fetch()
+      posts = await app.$content('articles', { text: true }).sortBy('date', 'desc').limit(6).fetch()
     } catch (error) {
       app.$log.error(error)
     }

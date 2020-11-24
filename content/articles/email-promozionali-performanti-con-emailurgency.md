@@ -14,6 +14,7 @@ tags:
   - "tools"
 excerpt: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/emailurgency-mailchimp-cover.jpg"
+sticky: true
 ---
 
 Negli anni credo di aver inviato qualche milioncino di email promozionali per conto mio o dei miei clienti e mi sono reso conto che praticamente in tutte (ecco la scoperta dell'acqua calda) il miglior modo per ottenere risultati è quello di **spingere il più possibile la call to action**.

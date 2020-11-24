@@ -4,16 +4,16 @@
     no-body
     img-top
   >
-    <a :href="`/${post.slug}`" :title="post.title.rendered">
-      <b-card-img-lazy :src="post.jetpack_featured_media_url" :alt="post.title.rendered" />
+    <a :href="`/${post.slug}`" :title="post.title">
+      <b-card-img-lazy :src="post.coverImage" :alt="post.title" />
     </a>
     <b-card-body>
       <a :href="`/${post.slug}`" class="text-dark">
-        <b-card-title v-html="post.title.rendered" />
+        <b-card-title>{{ post.title }}</b-card-title>
       </a>
 
       <b-card-text class="text-muted">
-        {{ post.meta._yoast_wpseo_metadesc[0] }}
+        {{ post.excerpt }}
       </b-card-text>
 
       <div class="metafooter">
@@ -21,8 +21,8 @@
           <span class="author-meta">
             <span class="post-name">
               Pubblicato in
-              <span v-for="(category, index) of categories" :key="category.id">
-                <a :href="`/categories/${category.slug}`" class="text-primary">{{ category.name }}</a><span v-if="index+1 !== categories.length">, </span>
+              <span v-for="(category, index) of post.categories" :key="index">
+                <a :href="`/categories/${category}`" class="text-primary">{{ category }}</a><span v-if="index+1 !== post.categories.length">, </span>
               </span>
             </span>
             <br>
@@ -56,15 +56,10 @@ export default {
     }
   },
 
-  async mounted () {
+  mounted () {
     const event = new Date(this.post.date)
     this.$set(this.post, 'dateLong', event.toLocaleDateString('it-IT', dateOptions))
-    this.$set(this.post, 'readingTime', readingTime(this.post.content.rendered))
-    try {
-      this.categories = await this.$wp.categories().post(this.post.id)
-    } catch (error) {
-      this.$log.error(error)
-    }
+    this.$set(this.post, 'readingTime', readingTime(this.post.text))
   }
 }
 </script>
