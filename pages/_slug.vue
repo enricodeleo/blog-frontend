@@ -39,7 +39,9 @@
       <!-- Begin Post -->
       <div class="col-md-10 col-xs-12">
         <div class="mainheading">
-          <h1 class="posttitle" v-html="post.title.rendered" />
+          <h1 class="posttitle">
+            {{ post.title }}
+          </h1>
           <span class="author-meta">
             <span class="post-date">{{ post.dateLong }}</span>
             <span class="dot" />
@@ -48,11 +50,13 @@
         </div>
 
         <!-- Begin Featured Image -->
-        <img class="featured-image img-fluid" :src="post.jetpack_featured_media_url" :alt="post.title.rendered">
+        <img class="featured-image img-fluid" :src="post.coverImage" :alt="post.title">
         <!-- End Featured Image -->
 
         <!-- Begin Post Content -->
-        <div class="article-post" v-html="post.content.rendered" />
+        <div class="article-post">
+          <nuxt-content :document="post" />
+        </div>
         <!-- End Post Content -->
 
         <!-- Begin Tags -->
@@ -61,15 +65,15 @@
             <div class="col">
               <p>
                 Pubblicato in
-                <span v-for="(category, index) of categories" :key="category.id">
-                  <a :href="`${websiteUrl}/categories/${category.slug}`">{{ category.name }}</a><span v-if="index+1 !== categories.length">, </span>
+                <span v-for="(category, index) of post.categories" :key="index">
+                  <a :href="`${websiteUrl}/categories/${category}`">{{ category }}</a><span v-if="index+1 !== post.categories.length">, </span>
                 </span>
               </p>
             </div>
           </div>
           <div class="row align-items-center">
             <div class="col-md-8">
-              <a v-for="tag of tags" :key="tag.id" class="btn btn-outline-secondary btn-sm mr-1" :href="`${websiteUrl}/tags/${tag.slug}`">#{{ tag.name }}</a>
+              <a v-for="(tag, index) of post.tags" :key="index" class="btn btn-outline-secondary btn-sm mr-1" :href="`${websiteUrl}/tags/${tag}`">#{{ tag }}</a>
             </div>
             <div class="col-md-4 text-right">
               <a target="_blank" :href="`https://www.facebook.com/sharer/sharer.php?u=${postUrlEncoded}`">
@@ -102,31 +106,29 @@ import readingTime from 'reading-time'
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
 export default {
-  async asyncData ({ app, params }) {
+  async asyncData ({ app, $content, params, error }) {
+    const slug = params.slug || 'index'
     let post
-    let tags
-    let categories
+
     try {
-      const request = await app.$wp.posts().slug(params.slug)
-      const event = new Date(request[0].date)
-      request[0].dateLong = event.toLocaleDateString('it-IT', dateOptions)
-      request[0].readingTime = readingTime(request[0].content.rendered)
-      post = request[0]
-      tags = await app.$wp.tags().post(post.id)
-      categories = await app.$wp.categories().post(post.id)
-    } catch (error) {
-      app.$log.error(error)
+      post = await $content('articles', slug, { text: true }).fetch()
+      const event = new Date(post.date)
+      post.dateLong = event.toLocaleDateString('it-IT', dateOptions)
+      post.readingTime = readingTime(post.text)
+    } catch (err) {
+      app.$log.warn(err)
+      error({ statusCode: 404, message: 'Pagina non trovata.' })
     }
+
     return {
-      post,
-      tags,
-      categories
+      post
     }
   },
 
   data () {
     return {
-      websiteUrl: process.env.NUXT_ENV_FRONTEND_URL
+      websiteUrl: process.env.NUXT_ENV_FRONTEND_URL,
+      post: {}
     }
   },
 
