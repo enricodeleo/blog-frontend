@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="lg" type="light" class="bg-white fixed-top mediumnavigation">
       <div class="container">
-        <b-navbar-brand href="/">
+        <b-navbar-brand nuxt-link to="/">
           Lisergico
         </b-navbar-brand>
         <b-navbar-toggle target="nav-collapse">

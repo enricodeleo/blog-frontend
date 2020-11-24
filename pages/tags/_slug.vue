@@ -24,16 +24,6 @@
 </template>
 
 <script>
-import readingTime from 'reading-time'
-
-const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
-const mapPost = (post) => {
-  const event = new Date(post.date)
-  post.dateLong = event.toLocaleDateString('it-IT', dateOptions)
-  post.readingTime = readingTime(post.content.rendered)
-  return post
-}
-
 export default {
   async asyncData ({ app, params }) {
     let posts
@@ -41,8 +31,7 @@ export default {
     try {
       const tags = await app.$wp.tags().slug(params.slug)
       tag = tags[0]
-      const allPosts = await app.$wp.posts().tags(tag.id)
-      posts = allPosts.map(mapPost)
+      posts = await app.$wp.posts().tags(tag.id)
     } catch (error) {
       app.$log.error(error)
     }

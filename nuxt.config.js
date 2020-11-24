@@ -1,3 +1,5 @@
+import wpNuxtFeed from 'wp-nuxt/lib/rss'
+
 const isDev = process.env.NODE_ENV !== 'production'
 
 export default {
@@ -33,12 +35,8 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/fontawesome',
     '@nuxtjs/google-fonts',
-    ['wp-nuxt', {
-      endpoint: 'https://blog.enricodeleo.com/wp-json',
-      extensions: true,
-      sitemap: false
-      // discover: true
-    }]
+    'nuxt-purgecss',
+    'wp-nuxt'
   ],
 
   fontawesome: {
@@ -69,14 +67,37 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
     'nuxt-logger'
   ],
+
+  feed: [
+    wpNuxtFeed({
+      baseUrl: 'http://localhost:3000'
+    })
+  ],
+
+  wp: {
+    endpoint: 'https://blog.enricodeleo.com/wp-json',
+    extensions: true,
+    // discover: true,
+    sitemap: {
+      hostname: process.env.NUXT_ENV_FRONTEND_URL || 'http://localhost:3000'
+    }
+  },
 
   pwa: {
     meta: {
       lang: 'it',
-      ogSiteName: 'Lisergico'
+      ogSiteName: 'Lisergico',
+      ogHost: process.env.NUXT_ENV_FRONTEND_URL
     }
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '/'
   },
 
   bootstrapVue: {
