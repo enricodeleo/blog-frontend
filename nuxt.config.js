@@ -20,6 +20,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
+    __dangerouslyDisableSanitizers: ['script'],
     title: 'Lisergico',
     meta: [
       { name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' },
@@ -28,6 +29,19 @@ export default {
       { hid: 'google-site-verification', name: 'google-site-verification', content: 'lieXQeLzlhgoNXt_8gPsuRPJnkH0AgbaclRzO7O1cRg' },
       { hid: 'yandex-verification', name: 'yandex-verification', content: '262e8bf99b1d7507' },
       { hid: 'msvalidate.01', name: 'msvalidate.01', content: '364E09277CBE057A910EC10CF39F59C4' }
+    ],
+    script: [
+      {
+        hid: 'iubenda-privacy',
+        innerHTML: `
+          (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8',
+        body: true,
+        defer: true,
+        async: true
+      }
     ]
   },
 
@@ -58,8 +72,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    '@nuxtjs/fontawesome',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/fontawesome'
   ],
 
   fontawesome: {
@@ -75,14 +88,6 @@ export default {
         'faLinkedin'
       ]
     }
-  },
-
-  googleFonts: {
-    families: {
-      Righteous: true
-    },
-    useStylesheet: true,
-    display: 'swap'
   },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
