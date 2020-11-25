@@ -73,7 +73,7 @@
           </div>
           <div class="row align-items-center">
             <div class="col-md-8">
-              <a v-for="(tag, index) of post.tags" :key="index" class="btn btn-outline-secondary btn-sm mr-1 mb-1" :href="`${websiteUrl}/tags/${tag}`">#{{ tag }}</a>
+              <a v-for="(tag, index) of post.tags" :key="index" class="btn btn-outline-secondary btn-sm mr-1 mb-1" :href="`${websiteUrl}/tag/${tag}`">#{{ tag }}</a>
             </div>
             <div class="col-md-4 text-right">
               <a target="_blank" :href="`https://www.facebook.com/sharer/sharer.php?u=${postUrlEncoded}`">
