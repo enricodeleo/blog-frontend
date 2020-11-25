@@ -26,7 +26,7 @@
                     <span class="post-name">
                       Pubblicato in
                       <span v-for="(category, index) of post.categories" :key="index">
-                        <a :href="`/categories/${category}`" class="text-primary text-capitalize">{{ category.replace('-', ' ') }}</a><span v-if="index+1 !== post.categories.length">, </span>
+                        <NuxtLink :to="`/category/${category}`" class="text-primary text-capitalize">{{ category.replace('-', ' ') }}</NuxtLink><span v-if="index+1 !== post.categories.length">, </span>
                       </span>
                     </span>
                     <br>

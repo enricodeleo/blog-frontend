@@ -66,7 +66,7 @@
               <p>
                 Pubblicato in
                 <span v-for="(category, index) of post.categories" :key="index">
-                  <NuxtLink :to="`/categories/${category}`" class="text-capitalize">{{ category }}</NuxtLink><span v-if="index+1 !== post.categories.length">, </span>
+                  <NuxtLink :to="`/category/${category}`" class="text-capitalize">{{ category }}</NuxtLink><span v-if="index+1 !== post.categories.length">, </span>
                 </span>
               </p>
             </div>
