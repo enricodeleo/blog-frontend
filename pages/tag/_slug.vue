@@ -51,12 +51,12 @@ export default {
   },
 
   head: {
-    title: `Articoli con tag #${this.tag}`,
+    title: 'Articoli con questo tag',
     meta: [
       {
         hid: 'description',
         name: 'description',
-        content: `'Sfoglia tutti gli articoli con tag "${this.tag}"`
+        content: 'Sfoglia tutti gli articoli con questo tag'
       }
     ]
   }

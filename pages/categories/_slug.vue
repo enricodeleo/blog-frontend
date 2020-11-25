@@ -51,12 +51,12 @@ export default {
   },
 
   head: {
-    title: `Articoli categorizzati in ${this.category}`,
+    title: 'Archivio categoria',
     meta: [
       {
         hid: 'description',
         name: 'description',
-        content: `'Sfoglia tutti gli articoli nella categoria "${this.category}"`
+        content: 'Sfoglia tutti gli articoli nella categoria'
       }
     ]
   }

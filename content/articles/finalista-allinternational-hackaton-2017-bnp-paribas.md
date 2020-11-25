@@ -5,7 +5,7 @@ categories:
   - "digital-life"
   - "rewards"
 tags:
-description: ""
+description: "È successo: sono arrivato in finale mondiale all'hackaton fintech più grande del mondo."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/24177364_144922952820613_4874779265255604224_n-e1519783771843.jpg"
 ---
 

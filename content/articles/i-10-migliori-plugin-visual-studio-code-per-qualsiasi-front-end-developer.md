@@ -11,7 +11,7 @@ tags:
   - "frontend"
   - "ide"
   - "vscode"
-description: ""
+description: "A grande richiesta 10 dei plugin che più raccomando per una esperinza di coding veramente zen."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/vscode-plugins.jpg"
 sticky: true
 ---

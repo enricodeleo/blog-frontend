@@ -58,7 +58,7 @@ export default {
   },
 
   head: {
-    title: `Tutti gli articoli - pagina ${this.page}`,
+    title: 'Tutti gli articoli',
     meta: [
       {
         hid: 'description',

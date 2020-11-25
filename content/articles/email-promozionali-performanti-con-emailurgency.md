@@ -12,7 +12,7 @@ tags:
   - "marketing"
   - "software-as-a-service"
   - "tools"
-description: ""
+description: "Il SaaS che ho rilasciato per aiutare chiunque voglia mostrare countdown reali e personalizzati nelle proprie email commerciali."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/emailurgency-mailchimp-cover.jpg"
 sticky: true
 ---
