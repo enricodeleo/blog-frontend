@@ -13,7 +13,7 @@ excerpt: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/varticalismi_micheluzzi-2013.png"
 ---
 
-![varticalismi_micheluzzi-2013](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2013/04/varticalismi_micheluzzi-2013.png")
+![varticalismi_micheluzzi-2013](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2013/04/varticalismi_micheluzzi-2013.png)
 
 [Verticalismi](http://www.verticalismi.it) quest'anno concorre in nomination nella categoria "miglior blog o webcomic" per i **Premi Attilio Micheluzzi-COMICON 2013**.
 

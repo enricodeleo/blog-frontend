@@ -1,4 +1,15 @@
 const isDev = process.env.NODE_ENV !== 'production'
+const createSitemapRoutes = async () => {
+  const routes = []
+  const { $content } = require('@nuxt/content')
+  const posts = await $content('articles').fetch()
+
+  for (const post of posts) {
+    routes.push(`articles/${post.slug}`)
+  }
+
+  return routes
+}
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -72,7 +83,8 @@ export default {
   sitemap: {
     hostname: process.env.NUXT_ENV_FRONTEND_URL,
     gzip: true,
-    cacheTime: 1000 * 60 * 24
+    cacheTime: 1000 * 60 * 24,
+    routes: createSitemapRoutes
   },
 
   pwa: {
