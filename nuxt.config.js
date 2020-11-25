@@ -49,7 +49,7 @@ export default {
           _iub.csConfiguration = {"consentOnContinuedBrowsing":false,"ccpaAcknowledgeOnDisplay":true,"whitelabel":false,"lang":"it","siteId":2076706,"enableCcpa":true,"countryDetection":true,"perPurposeConsent":true,"gdprAppliesGlobally":false,"cookiePolicyId":13699998, "banner":{ "position":"float-top-center","acceptButtonDisplay":true,"customizeButtonDisplay":true }};
         `,
         type: 'text/javascript',
-        charset: 'utf-8',
+        charset: 'utf-8'
       },
       {
         hid: 'iubenda-cookie2',
