@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="d-flex flex-column min-vh-100">
     <Header />
     <Nuxt keep-alive />
-    <Footer />
+    <Footer class="mt-auto" />
     <div id="fb-root" />
   </div>
 </template>

@@ -2,3 +2,8 @@
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
 @import './mediumish.scss';
+
+html,
+body {
+  min-height: 100vh;
+}
