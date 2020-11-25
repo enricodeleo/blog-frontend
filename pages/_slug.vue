@@ -91,6 +91,16 @@
           </div>
         </div>
         <!-- End Tags -->
+
+        <!-- Begin related posts -->
+        <div v-if="related.length" class="mt-5">
+          <h4>Sullo stesso argomento:</h4>
+          <div class="card-deck">
+            <Post v-for="article of related" :key="article.id" :post="article" />
+          </div>
+        </div>
+        <!-- End related posts -->
+
         <!-- Begin Comments -->
         <div id="comments" class="fb-comments mt-5" :data-href="postUrl" data-numposts="5" data-width="100%" />
         <!-- End Comments -->
@@ -128,7 +138,8 @@ export default {
   data () {
     return {
       websiteUrl: process.env.NUXT_ENV_FRONTEND_URL,
-      post: {}
+      post: {},
+      related: []
     }
   },
 
@@ -138,6 +149,14 @@ export default {
     },
     postUrlEncoded () {
       return encodeURIComponent(this.postUrl)
+    }
+  },
+
+  async mounted () {
+    try {
+      this.related = await this.$content('articles', { text: true }).where({ categories: { $contains: this.post.categories[0] } }).limit(2).sortBy('date', 'desc').fetch()
+    } catch (error) {
+      this.$log.error(error)
     }
   },
 

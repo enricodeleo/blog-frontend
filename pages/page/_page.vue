@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mt-5">
     <div class="row align-items-end">
       <div class="col-md-2 order-2 order-md-1">
         <NuxtLink v-if="count > 6 && page > 1" :to="`/page/${page-1}`" class="btn btn-outline-link btn-block btn-lg">

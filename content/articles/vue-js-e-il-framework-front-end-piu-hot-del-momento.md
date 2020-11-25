@@ -17,7 +17,7 @@ sticky: true
 
 _In questo post vorrei parlare delle caratteristiche che mi hanno fatto innamorare di Vue.js e che a mio avviso sono alla base dell'incredibile tasso di crescita di questo framework su GitHub e non solo._
 
-_Questo non significa che strumenti c_ome _React ed Angular (2+) non siano a mio avviso validi, ma semplicemente che t_rovo che Vue.js _sia la soluzione più bilanciata per iniziare un nuovo progetto._
+_Questo non significa che strumenti come React ed Angular (2+) non siano a mio avviso validi, ma semplicemente che trovo che Vue.js sia la soluzione più bilanciata per iniziare un nuovo progetto._
 
 La scelta di un framework o di una libreria per lo sviluppo di un nuovo progetto (ad esempio una web app) non è solo una scelta personale.
 
