@@ -30,7 +30,7 @@
     "@nuxt/content": "^1.9.0",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/eslint-config": "^3.1.0",
-    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/eslint-module": "^3.0.1",
     "@nuxtjs/feed": "^2.0.0",
     "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/google-gtag": "^1.0.4",
