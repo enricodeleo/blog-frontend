@@ -52,6 +52,10 @@ export default {
 
   fontawesome: {
     icons: {
+      solid: [
+        'faBars',
+        'faTimes'
+      ],
       brands: [
         'faFacebook',
         'faGithub',
@@ -176,6 +180,7 @@ export default {
   },
 
   bootstrapVue: {
+    components: ['BNavbar', 'BNavbarNav', 'BNavbarBrand', 'BNavbarToggle', 'BCollapse', 'BNavItem', 'BNavForm', 'BFormInput', 'BButton', 'BCard', 'BCardText', 'BCardImgLazy', 'BCardTitle', 'BCardBody', 'BCardText', 'BImgLazy'],
     bootstrapCSS: false,
     bootstrapVueCSS: false
   },

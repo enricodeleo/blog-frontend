@@ -5,7 +5,10 @@
         Lisergico
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse">
-        &nbsp;
+        <template #default="{ expanded }">
+          <font-awesome-icon v-show="expanded" :icon="['fas', 'times']" />
+          <font-awesome-icon v-show="!expanded" :icon="['fas', 'bars']" />
+        </template>
       </b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
