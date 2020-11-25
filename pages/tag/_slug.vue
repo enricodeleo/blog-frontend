@@ -48,6 +48,17 @@ export default {
       posts: [],
       tag: ''
     }
+  },
+
+  head: {
+    title: `Articoli con tag #${this.tag}`,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: `'Sfoglia tutti gli articoli con tag "${this.tag}"`
+      }
+    ]
   }
 }
 </script>

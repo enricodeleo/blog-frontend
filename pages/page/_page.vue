@@ -55,6 +55,17 @@ export default {
     } catch (error) {
       this.$log.warn(error)
     }
+  },
+
+  head: {
+    title: `Tutti gli articoli - pagina ${this.page}`,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Sfoglia tutti gli articoli del blog di Enrico'
+      }
+    ]
   }
 }
 </script>

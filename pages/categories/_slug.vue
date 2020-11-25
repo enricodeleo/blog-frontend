@@ -48,6 +48,17 @@ export default {
       posts: [],
       category: ''
     }
+  },
+
+  head: {
+    title: `Articoli categorizzati in ${this.category}`,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: `'Sfoglia tutti gli articoli nella categoria "${this.category}"`
+      }
+    ]
   }
 }
 </script>

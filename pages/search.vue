@@ -53,6 +53,17 @@ export default {
     }
 
     this.loaded = true
+  },
+
+  head: {
+    title: 'Cerca un articolo',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Cerca tra gli articoli scritti da Enrico'
+      }
+    ]
   }
 }
 </script>
