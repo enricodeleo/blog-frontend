@@ -1,7 +1,9 @@
+import { $content } from '@nuxt/content'
+
 const isDev = process.env.NODE_ENV !== 'production'
+
 const createSitemapRoutes = async () => {
   const routes = []
-  const { $content } = require('@nuxt/content')
   const posts = await $content('articles').fetch()
 
   for (const post of posts) {
@@ -22,7 +24,11 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant' },
-      { hid: 'author', name: 'author', content: 'Enrico Deleo' }
+      { hid: 'author', name: 'author', content: 'Enrico Deleo' },
+      { hid: 'alternate', name: 'alternate', type: 'application/rss+xml', title: 'Lisergico &raquo; Feed', href: `${process.env.NUXT_ENV_FRONTEND_URL}/feed.xml` },
+      { hid: 'google-site-verification', name: 'google-site-verification', content: 'lieXQeLzlhgoNXt_8gPsuRPJnkH0AgbaclRzO7O1cRg' },
+      { hid: 'yandex-verification', name: 'yandex-verification', content: '262e8bf99b1d7507' },
+      { hid: 'msvalidate.01', name: 'msvalidate.01', content: '364E09277CBE057A910EC10CF39F59C4' }
     ]
   },
 
@@ -74,9 +80,44 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/feed',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
     'nuxt-logger'
+  ],
+
+  feed: [
+    {
+      path: '/feed.xml', // The route to your feed.
+      async create (feed) {
+        feed.options = {
+          title: 'Lisergico',
+          link: `${process.env.NUXT_ENV_FRONTEND_URL}/feed.xml`,
+          description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant'
+        }
+        const posts = await $content('articles').fetch()
+
+        posts.forEach((post) => {
+          feed.addItem({
+            title: post.title,
+            id: `${process.env.NUXT_ENV_FRONTEND_URL}/${post.slug}`,
+            link: `${process.env.NUXT_ENV_FRONTEND_URL}/${post.slug}`,
+            description: post.description,
+            content: post.description
+          })
+        })
+
+        // feed.addCategory('Nuxt.js')
+
+        // feed.addContributor({
+        //   name: 'Enrico Deleo',
+        //   email: 'hello@enricodeleo.com',
+        //   link: 'https://enricodeleo.com'
+        // })
+      }, // The create function (see below)
+      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
+      type: 'rss2' // Can be: rss2, atom1, json1
+    }
   ],
 
   sitemap: {
