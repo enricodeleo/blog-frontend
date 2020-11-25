@@ -45,7 +45,6 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    'nuxt-purgecss',
     '@nuxtjs/fontawesome',
     '@nuxtjs/google-fonts'
   ],
