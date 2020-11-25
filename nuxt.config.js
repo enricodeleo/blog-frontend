@@ -67,7 +67,9 @@ export default {
   googleFonts: {
     families: {
       Righteous: true
-    }
+    },
+    useStylesheet: true,
+    display: 'swap'
   },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
