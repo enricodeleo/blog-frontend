@@ -46,6 +46,7 @@
     "markdown-it": "^12.0.2",
     "node-sass": "^5.0.0",
     "nuxt-facebook-pixel-module": "^1.5.0",
+    "nuxt-seo": "^1.5.0",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0"
   }

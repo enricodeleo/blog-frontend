@@ -50,15 +50,11 @@ export default {
     }
   },
 
-  head: {
-    title: 'Archivio categoria',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Sfoglia tutti gli articoli nella categoria'
-      }
-    ]
+  head ({ $seo }) {
+    return this.$seo({
+      title: `Archivio categoria ${this.category}`,
+      description: `Sfoglia tutti gli articoli nella categoria "${this.category}"`
+    })
   }
 }
 </script>

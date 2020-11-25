@@ -165,16 +165,14 @@ export default {
     }
   },
 
-  head () {
+  head ({ $seo }) {
     return {
-      title: this.post.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.post.description
-        }
-      ],
+      ...this.$seo({
+        title: this.post.title,
+        description: this.post.description,
+        keywords: this.post.tags,
+        image: this.post.coverImage
+      }),
       script: [
         {
           body: true,

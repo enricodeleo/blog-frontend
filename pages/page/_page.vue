@@ -57,15 +57,11 @@ export default {
     }
   },
 
-  head: {
-    title: 'Tutti gli articoli',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Sfoglia tutti gli articoli del blog di Enrico'
-      }
-    ]
+  head ({ $seo }) {
+    return this.$seo({
+      title: `Tuttli gli articoli di pagina ${this.page}`,
+      description: 'Sfoglia tutti gli articoli del blog di Enrico'
+    })
   }
 }
 </script>

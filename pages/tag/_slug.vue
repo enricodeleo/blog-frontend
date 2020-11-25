@@ -36,6 +36,7 @@ export default {
     } catch (error) {
       app.$log.error(error)
     }
+
     return {
       posts,
       tag
@@ -50,15 +51,11 @@ export default {
     }
   },
 
-  head: {
-    title: 'Articoli con questo tag',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Sfoglia tutti gli articoli con questo tag'
-      }
-    ]
+  head ({ $seo }) {
+    return this.$seo({
+      title: `Articoli con tag #${this.tag}`,
+      description: `Sfoglia tutti gli articoli con tag "${this.tag}"`
+    })
   }
 }
 </script>

@@ -22,15 +22,28 @@ export default {
   head: {
     title: 'Lisergico',
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant' },
+      { name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' },
       { hid: 'author', name: 'author', content: 'Enrico Deleo' },
       { hid: 'alternate', name: 'alternate', type: 'application/rss+xml', title: 'Lisergico &raquo; Feed', href: `${process.env.NUXT_ENV_FRONTEND_URL}/feed.xml` },
       { hid: 'google-site-verification', name: 'google-site-verification', content: 'lieXQeLzlhgoNXt_8gPsuRPJnkH0AgbaclRzO7O1cRg' },
       { hid: 'yandex-verification', name: 'yandex-verification', content: '262e8bf99b1d7507' },
       { hid: 'msvalidate.01', name: 'msvalidate.01', content: '364E09277CBE057A910EC10CF39F59C4' }
     ]
+  },
+
+  seo: {
+    // Module options
+    baseUrl: process.env.NUXT_ENV_FRONTEND_URL,
+    name: 'Lisergico',
+    title: 'Il blog di Enrico Deleo',
+    lang: 'it-IT',
+    language: 'Italian',
+    templateTitle: '%title% | %name%',
+    description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant',
+    facebook: {
+      pageId: '358373644189796',
+      appId: '103937073008677'
+    }
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -76,6 +89,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    'nuxt-seo',
     '@nuxtjs/style-resources',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',

@@ -55,11 +55,18 @@ export default {
       featured
     }
   },
+
   data () {
     return {
       posts: [],
       featured: []
     }
+  },
+
+  head ({ $seo }) {
+    return this.$seo({
+      title: 'Il blog di Enrico Deleo'
+    })
   }
 }
 </script>
