@@ -41,6 +41,28 @@ export default {
         body: true,
         defer: true,
         async: true
+      },
+      {
+        hid: 'iubenda-cookie',
+        innerHTML: `
+          var _iub = _iub || [];
+          _iub.csConfiguration = {"consentOnContinuedBrowsing":false,"ccpaAcknowledgeOnDisplay":true,"whitelabel":false,"lang":"it","siteId":2076706,"enableCcpa":true,"countryDetection":true,"perPurposeConsent":true,"gdprAppliesGlobally":false,"cookiePolicyId":13699998, "banner":{ "position":"float-top-center","acceptButtonDisplay":true,"customizeButtonDisplay":true }};
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8',
+      },
+      {
+        hid: 'iubenda-cookie2',
+        type: 'text/javascript',
+        charset: 'utf-8',
+        src: '//cdn.iubenda.com/cs/ccpa/stable/stub.js'
+      },
+      {
+        hid: 'iubenda-cookie3',
+        type: 'text/javascript',
+        charset: 'utf-8',
+        src: '//cdn.iubenda.com/cs/stable/iubenda_cs.js',
+        async: true
       }
     ]
   },
