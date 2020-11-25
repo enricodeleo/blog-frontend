@@ -38,9 +38,6 @@ export default {
     '~/assets/styles/main.scss'
   ],
 
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [{ src: '~plugins/mautic.js', mode: 'client' }],
-
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
@@ -85,8 +82,24 @@ export default {
     '@nuxtjs/feed',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
+    '@nuxtjs/google-gtag',
+    'nuxt-facebook-pixel-module',
     'nuxt-logger'
   ],
+
+  facebook: {
+    /* module options */
+    track: 'PageView',
+    pixelId: '1039271313132410',
+    autoPageView: true,
+    disabled: false
+  },
+
+  'google-gtag': {
+    id: 'G-TPN05GHCDK',
+    debug: isDev, // enable to track in dev mode
+    disableAutoPageTrack: false
+  },
 
   feed: [
     {
