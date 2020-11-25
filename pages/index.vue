@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="container mt-3">
       <div class="mainheading">
         <h1 class="sitetitle">
           Lisergico

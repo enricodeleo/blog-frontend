@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mt-3">
     <div class="row">
       <!-- Begin Fixed Left Share -->
       <div class="col-md-2 col-xs-12">
@@ -60,7 +60,7 @@
         <!-- End Post Content -->
 
         <!-- Begin Tags -->
-        <div class="after-post-tags">
+        <div class="after-post-tags mt-5">
           <div class="row">
             <div class="col">
               <p>
@@ -154,7 +154,11 @@ export default {
 
   async mounted () {
     try {
-      this.related = await this.$content('articles', { text: true }).where({ categories: { $contains: this.post.categories[0] } }).limit(2).sortBy('date', 'desc').fetch()
+      this.related = await this.$content('articles', { text: true })
+        .where({ categories: { $contains: this.post.categories[0] }, slug: { $ne: this.post.slug } })
+        .limit(2)
+        .sortBy('date', 'desc')
+        .fetch()
     } catch (error) {
       this.$log.error(error)
     }

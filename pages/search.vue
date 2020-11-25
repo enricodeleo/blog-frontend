@@ -1,5 +1,5 @@
 <template>
-  <div class="container h-100">
+  <div class="container mt-3">
     <div class="row">
       <div class="col-md-8 offset-md-2">
         <div class="mainheading">
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="row h-100">
+    <div class="row">
       <div class="col-md-8 offset-md-2">
         <div class="listrecent listrelated">
           <!-- begin post -->

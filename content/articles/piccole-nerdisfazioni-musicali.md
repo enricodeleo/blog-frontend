@@ -22,4 +22,5 @@ Le mie giornate sono scandite da un numero imprecisato di ore passate davanti co
 
 Ecco che ad un certo punto fa capolino sul mio terminale preferito una risorsa di cui fin ora sconoscevo l'esistenza: **[Shpotify](https://github.com/hnarayanan/shpotify)** grazie al quale finalmente posso **controllare l'applicazione Spotify dal terminale** darmi la carica con l'ultimo album del mio amicone [Razza Krasta](http://razzakrasta.altervista.org/).
 
-http://open.spotify.com/track/6VxwJyQl1Cc6fEOTfB2oBq
+<iframe src="https://open.spotify.com/embed/album/43Ym2fk46OEejyl54lbash" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
