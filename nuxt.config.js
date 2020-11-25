@@ -109,11 +109,11 @@ export default {
 
         // feed.addCategory('Nuxt.js')
 
-        // feed.addContributor({
-        //   name: 'Enrico Deleo',
-        //   email: 'hello@enricodeleo.com',
-        //   link: 'https://enricodeleo.com'
-        // })
+        feed.addContributor({
+          name: 'Enrico Deleo',
+          email: 'hello@enricodeleo.com',
+          link: 'https://enricodeleo.com'
+        })
       }, // The create function (see below)
       cacheTime: 1000 * 60 * 15, // How long should the feed be cached
       type: 'rss2' // Can be: rss2, atom1, json1
