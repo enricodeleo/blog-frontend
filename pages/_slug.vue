@@ -171,7 +171,13 @@ export default {
         title: this.post.title,
         description: this.post.description,
         keywords: this.post.tags,
-        image: this.post.coverImage
+        image: this.post.coverImage,
+        openGraph: {
+          type: 'article',
+          title: this.post.title,
+          description: this.post.description,
+          image: this.post.coverImage
+        }
       }),
       script: [
         {
