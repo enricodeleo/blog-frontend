@@ -1,10 +1,11 @@
-import { $content } from '@nuxt/content'
+import nuxtContent from '@nuxt/content'
+import MarkdownIt from 'markdown-it'
 
 const isDev = process.env.NODE_ENV !== 'production'
 
 const createSitemapRoutes = async () => {
   const routes = []
-  const posts = await $content('articles').fetch()
+  const posts = await nuxtContent.$content('articles').fetch()
 
   for (const post of posts) {
     routes.push(post.slug)
@@ -92,10 +93,21 @@ export default {
       async create (feed) {
         feed.options = {
           title: 'Lisergico',
-          link: `${process.env.NUXT_ENV_FRONTEND_URL}/feed.xml`,
-          description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant'
+          id: process.env.NUXT_ENV_FRONTEND_URL,
+          link: process.env.NUXT_ENV_FRONTEND_URL,
+          description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant',
+          language: 'it-IT',
+          feedLinks: {
+            rss: `${process.env.NUXT_ENV_FRONTEND_URL}/feed.xml`
+          },
+          author: {
+            name: 'Enrico Deleo',
+            email: 'hello@enricodeleo.com',
+            link: 'https://enricodeleo.com'
+          }
         }
-        const posts = await $content('articles').fetch()
+        const md = new MarkdownIt()
+        const posts = await nuxtContent.$content('articles', { text: true }).sortBy('date', 'desc').fetch()
 
         posts.forEach((post) => {
           feed.addItem({
@@ -103,19 +115,27 @@ export default {
             id: `${process.env.NUXT_ENV_FRONTEND_URL}/${post.slug}`,
             link: `${process.env.NUXT_ENV_FRONTEND_URL}/${post.slug}`,
             description: post.description,
-            content: post.description
+            image: post.coverImage,
+            date: new Date(post.date),
+            category: post.categories,
+            author: [
+              {
+                name: 'Enrico Deleo',
+                email: 'hello@enricodeleo.com',
+                link: 'https://enricodeleo.com'
+              }
+            ],
+            content: md.render(post.text)
           })
         })
 
         // feed.addCategory('Nuxt.js')
 
         feed.addContributor({
-          name: 'Enrico Deleo',
-          email: 'hello@enricodeleo.com',
-          link: 'https://enricodeleo.com'
+
         })
       }, // The create function (see below)
-      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
+      cacheTime: -1, // How long should the feed be cached
       type: 'rss2' // Can be: rss2, atom1, json1
     }
   ],

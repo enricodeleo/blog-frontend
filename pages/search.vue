@@ -25,26 +25,21 @@
 
 <script>
 export default {
-  async asyncData ({ app, params }) {
-    const term = params.term
-    let posts
-
-    try {
-      posts = await app.$content('articles', { text: true }).search(term).sortBy('date', 'desc').fetch()
-    } catch (error) {
-      app.$log.error(error)
-    }
-    return {
-      posts,
-      term
-    }
-  },
-
   data () {
     return {
       websiteUrl: process.env.NUXT_ENV_FRONTEND_URL,
       posts: [],
       term: ''
+    }
+  },
+
+  async mounted () {
+    this.term = this.$route.query.term
+
+    try {
+      this.posts = await this.$content('articles', { text: true }).search(this.term).sortBy('date', 'desc').fetch()
+    } catch (error) {
+      this.$log.error(error)
     }
   }
 }
