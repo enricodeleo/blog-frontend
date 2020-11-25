@@ -26,7 +26,7 @@
             <b-nav-item href="https://github.com/enricodeleo/" target="_blank">
               <font-awesome-icon :icon="['fab', 'github']" />
             </b-nav-item>
-            <b-nav-form class="my-2 my-lg-0">
+            <b-nav-form @submit="onSearcb" class="my-2 my-lg-0">
               <b-form-input size="sm" class="mr-sm-2" placeholder="Search" />
               <b-button size="sm" class="my-2 my-sm-0" type="submit" variant="link">
                 <span class="search-icon">
@@ -42,6 +42,14 @@
     </b-navbar>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    onSearch () {}
+  }
+}
+</script>
 
 <style>
 </style>

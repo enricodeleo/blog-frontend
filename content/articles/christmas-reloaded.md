@@ -9,7 +9,7 @@ tags:
   - "natale"
   - "renna"
   - "xmas"
-excerpt: ""
+description: ""
 ---
 
 Come ogni anno in questo periodo mi va di spendere un paio di parole sul (Santo?) Natale.

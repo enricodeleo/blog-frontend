@@ -13,7 +13,7 @@ tags:
   - "music"
   - "new"
   - "web-design"
-excerpt: ""
+description: ""
 ---
 
 Da oggi pomeriggio è online il sito [musiciseverythingtome.com](http://musiciseverythingtome.com/), di cui [vi avevo già parlato](http://blog.enricodeleo.com/light-house-e-musiciseverythingtome-com-stanno-per-partire/) tempo fa.

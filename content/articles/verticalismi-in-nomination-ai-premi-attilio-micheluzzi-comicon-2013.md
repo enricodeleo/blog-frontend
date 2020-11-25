@@ -9,7 +9,7 @@ tags:
   - "micheluzzi"
   - "premio"
   - "verticalismi"
-excerpt: ""
+description: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/varticalismi_micheluzzi-2013.png"
 ---
 

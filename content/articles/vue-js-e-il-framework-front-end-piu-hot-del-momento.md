@@ -10,7 +10,7 @@ tags:
   - "javascript"
   - "react"
   - "vue"
-excerpt: ""
+description: "prova che ti riprova"
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/pov-thumb.jpg"
 sticky: true
 ---

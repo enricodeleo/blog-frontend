@@ -5,7 +5,7 @@
         <div class="mainheading">
           <div class="row post-top-meta authorpage">
             <div class="col">
-              <h1 class="text-capitalize">{{ tag }}</h1>
+              <h1>Risultati della ricerca <em>{{ term }}</em></h1>
             </div>
           </div>
         </div>
@@ -26,17 +26,17 @@
 <script>
 export default {
   async asyncData ({ app, params }) {
-    const tag = params.slug
+    const term = params.term
     let posts
 
     try {
-      posts = await app.$content('articles', { text: true }).where({ tags: { $contains: tag } }).sortBy('date', 'desc').fetch()
+      posts = await app.$content('articles', { text: true }).search(term).sortBy('date', 'desc').fetch()
     } catch (error) {
       app.$log.error(error)
     }
     return {
       posts,
-      tag
+      term
     }
   },
 
@@ -44,7 +44,7 @@ export default {
     return {
       websiteUrl: process.env.NUXT_ENV_FRONTEND_URL,
       posts: [],
-      tag: ''
+      term: ''
     }
   }
 }

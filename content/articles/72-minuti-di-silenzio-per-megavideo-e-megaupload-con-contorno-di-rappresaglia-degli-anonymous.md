@@ -1,9 +1,9 @@
 ---
 title: "72 minuti di silenzio per Megavideo e Megaupload con contorno di rappresaglia degli Anonymous"
 date: "2012-01-20T00:02:51.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "attualita"
   - "chiusura"
   - "copyright"
@@ -15,7 +15,7 @@ tags:
   - "streaming"
   - "usa"
   - "web"
-excerpt: ""
+description: ""
 ---
 
 _**"72 minuti di silenzio per Megavideo"**_, questo il tormentone alle prime ore dalla **chiusura del colosso mondiale dello streaming e del file sharing**.

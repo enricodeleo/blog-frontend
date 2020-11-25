@@ -1,16 +1,16 @@
 ---
 title: "Morto un talebano se ne fa un altro"
 date: "2011-05-18T09:52:40.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "al-qaeda"
   - "capo"
   - "cospirazione"
   - "news"
   - "notizie"
   - "terrorismo"
-excerpt: "Scoperto il nuovo capo di Al Qaeda. Chi è, e qual'è il vero motivo della pubblicazione immediata della sua identità."
+description: "Scoperto il nuovo capo di Al Qaeda. Chi è, e qual'è il vero motivo della pubblicazione immediata della sua identità."
 ---
 
 Non voglio entrare nel merito dell'**uccisione di Bin Laden**, perchè riguardo quello c'è poco da dire: dieci anni, due guerre, tre mandati presidenziali USA, tutta la macchina bellica e (possiamo dare per scontato) il fior fior dell'intelligence a stelle e strisce e non solo impiegata nella ricerca di quest'uomo e poi lo trovano dove doveva essere, raccontandoci l'accaduto per "ricostruzioni".

@@ -4,7 +4,7 @@ date: "2011-03-11T11:02:41.000Z"
 categories:
   - "serie-tv"
 tags:
-excerpt: ""
+description: ""
 ---
 
 Non parlo di una serie nuovissima. Difatti siamo già alla seconda stagione, ma era il caso di parlarne vista la poca diffusione che sta avendo in Italia, e che invece ci starebbe tutta.

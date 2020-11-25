@@ -4,7 +4,7 @@ date: "2017-01-31T10:38:45.000Z"
 categories:
   - "fumetti"
 tags:
-excerpt: "Cosa racconta Saga di Brian K. Vaughan e perchè questo lo rende un cult che sarà conosciuto anche ai nostri figli."
+description: "Cosa racconta Saga di Brian K. Vaughan e perchè questo lo rende un cult che sarà conosciuto anche ai nostri figli."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/saga-fighters.jpg"
 ---
 

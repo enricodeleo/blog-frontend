@@ -7,7 +7,7 @@ tags:
   - "benvenuto"
   - "introduzione"
   - "news"
-excerpt: ""
+description: ""
 ---
 
 Probabilmente sarà il post meno letto della storia. Pazienza :)

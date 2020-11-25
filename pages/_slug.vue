@@ -66,7 +66,7 @@
               <p>
                 Pubblicato in
                 <span v-for="(category, index) of post.categories" :key="index">
-                  <a :href="`${websiteUrl}/categories/${category}`">{{ category }}</a><span v-if="index+1 !== post.categories.length">, </span>
+                  <a :href="`${websiteUrl}/categories/${category}`" class="text-capitalize">{{ category }}</a><span v-if="index+1 !== post.categories.length">, </span>
                 </span>
               </p>
             </div>

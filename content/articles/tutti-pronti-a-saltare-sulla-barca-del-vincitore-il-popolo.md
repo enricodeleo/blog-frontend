@@ -12,7 +12,7 @@ tags:
   - "percentuali"
   - "referendum-2011"
   - "voto"
-excerpt: "Ultime battute sul referendum 2011 a pochi minuti dalla chiusura dei seggi. In attesa dei risultati finali il popolo si fa sentire, il governo cerca di recuperare."
+description: "Ultime battute sul referendum 2011 a pochi minuti dalla chiusura dei seggi. In attesa dei risultati finali il popolo si fa sentire, il governo cerca di recuperare."
 ---
 
 In queste ore più o meno tutti gli esponenti del governo si stanno prodigando **a rivalutare questo referendum**. Tutti pronti a recuperare nei confronti dei cittadini, tutti che corrono a dire "l'avevo detto", "sono d'accordo" e via dicendo.

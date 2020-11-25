@@ -11,7 +11,7 @@ tags:
   - "napoli"
   - "premio"
   - "verticalismi"
-excerpt: "Verticalismi ha vinto come miglior Webcomic al Premio Micheluzzi 2014."
+description: "Verticalismi ha vinto come miglior Webcomic al Premio Micheluzzi 2014."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/comicon.png"
 ---
 

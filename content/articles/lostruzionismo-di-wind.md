@@ -9,7 +9,7 @@ tags:
   - "sms"
   - "viber-voip"
   - "wind"
-excerpt: ""
+description: ""
 ---
 
 Il nostro simpatico operatore (dicono) low cost, già tristemente noto per [gli eventi Fringe](http://blog.enricodeleo.com/la-wind-e-gli-eventi-fringe/) che genera, è tornato di nuovo nelle mie preghierine serali da quando ha deciso di **rivaleggiare con il mago Gandalf**.

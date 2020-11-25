@@ -11,7 +11,7 @@ tags:
   - "sito"
   - "web-design"
   - "wordpress"
-excerpt: ""
+description: ""
 ---
 
 Finalmente ho terminato il nuovo sito internet dell'_**[Associazione Italiana Arbitri Sezione di Agrigento](http://www.aia-agrigento.it/sito/)**._

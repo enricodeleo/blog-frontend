@@ -10,7 +10,7 @@ tags:
   - "fumetti"
   - "opere"
   - "verticalismi"
-excerpt: "Finito il contest annuale su Verticalismi, l'elenco ufficiale delle opere in concorso quest'anno. Tema: la donna."
+description: "Finito il contest annuale su Verticalismi, l'elenco ufficiale delle opere in concorso quest'anno. Tema: la donna."
 ---
 
 ![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/07/fumetti-digitali-565x242.jpg "fumetti-digitali")

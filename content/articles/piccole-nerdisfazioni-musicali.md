@@ -5,7 +5,7 @@ categories:
   - "musica"
   - "nerd"
 tags:
-excerpt: "Ho appena scoperto che posso controllare l'app Spotify e la riproduzione della mia musica senza staccarmi dal mio amato terminale."
+description: "Ho appena scoperto che posso controllare l'app Spotify e la riproduzione della mia musica senza staccarmi dal mio amato terminale."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/Screen-Shot-2018-03-08-at-19.12.43.png"
 sticky: true
 ---

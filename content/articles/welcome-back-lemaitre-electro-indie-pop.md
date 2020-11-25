@@ -14,7 +14,7 @@ tags:
   - "norvegia"
   - "pop"
   - "soundcloud"
-excerpt: ""
+description: ""
 ---
 
 E' passato un anno da quando [vi ho presentato i Lemaitre](http://blog.enricodeleo.com/lemaitre-electropop/).  Da allora è stata (almeno per me) una trepidante attesa, e finalmente il duo electro-indie-pop norvegese ci ha accontentati: è **appena uscito il nuovo EP del gruppo**, _**Relativity 1**_.

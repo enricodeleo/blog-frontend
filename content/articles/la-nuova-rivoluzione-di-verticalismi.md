@@ -10,7 +10,7 @@ tags:
   - "novita"
   - "rivoluzione"
   - "webcomic"
-excerpt: ""
+description: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/20130501-121458.jpg"
 ---
 

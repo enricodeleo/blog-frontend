@@ -5,7 +5,7 @@ categories:
   - "digital-life"
   - "rewards"
 tags:
-excerpt: ""
+description: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/24177364_144922952820613_4874779265255604224_n-e1519783771843.jpg"
 ---
 

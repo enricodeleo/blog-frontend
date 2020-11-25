@@ -5,7 +5,7 @@
         <div class="mainheading">
           <div class="row post-top-meta authorpage">
             <div class="col">
-              <h1>{{ category }}</h1>
+              <h1 class="text-capitalize">{{ category }}</h1>
             </div>
           </div>
         </div>

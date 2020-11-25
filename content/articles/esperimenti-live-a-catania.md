@@ -13,7 +13,7 @@ tags:
   - "musica-2"
   - "performance"
   - "synth"
-excerpt: ""
+description: ""
 ---
 
 Ieri con i ragazzi di [Deeds.it](http://deeds.it) abbiamo improvvisato un **bell'esperimento live alla Chiave di Catania**.

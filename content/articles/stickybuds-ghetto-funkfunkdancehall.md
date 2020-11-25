@@ -8,7 +8,7 @@ tags:
   - "funk"
   - "ghetto-funk"
   - "musica-2"
-excerpt: ""
+description: ""
 ---
 
 Un genere che non sapevo neanche esistesse, il _**Ghetto Funk**_, un nuovo artista che ho scoperto per caso girovagando sul web: **[Stickybuds](http://www.stickybuds.com/)**.

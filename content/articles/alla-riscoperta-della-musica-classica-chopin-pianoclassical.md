@@ -1,15 +1,15 @@
 ---
 title: "Alla (ri)scoperta della musica classica: Chopin [Piano/Classical]"
 date: "2010-11-22T01:15:46.000Z"
-categories: 
+categories:
   - "musica"
-tags: 
+tags:
   - "chopin"
   - "classica"
   - "composizioni"
   - "piano"
   - "romanticismo"
-excerpt: ""
+description: ""
 ---
 
 Non so perchè ma mi è venuta voglia di riscoprire un po' di geni del passato. Cazzo se erano **geni**. 100 dei moderni sintetizzatori non riescono a ricreare 5 minuti dell'ambiente che crea un'opera di un maestro come **Chopin**, ovviamente interpretata da chi ha le capacità per farlo.

@@ -10,7 +10,7 @@ tags:
   - "intervista-tv"
   - "occupy-deejay"
   - "verticalismi"
-excerpt: ""
+description: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/524160_10151422820959947_973497252_n.jpg"
 ---
 

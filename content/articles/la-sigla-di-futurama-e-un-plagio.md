@@ -12,7 +12,7 @@ tags:
   - "futurama"
   - "musica-2"
   - "plagio"
-excerpt: ""
+description: ""
 ---
 
 Ovviamente si tratta di un titolo provocatorio. O meglio: **è certo che la sigla di Futurama sia un rework di un altro brano**. Il fatto però che sia ammesso **non lo rende in effetti un plagio nel vero senso della parola**.

@@ -8,7 +8,7 @@ tags:
   - "lysergic"
   - "restyle"
   - "sito-web"
-excerpt: ""
+description: ""
 ---
 
 Qualcuno di voi sa già (o avrà notato vedendo la scritta Lysergic campeggiare in alto su questo blog) che mi sono inventato questo nome per firmare siti, flayer e quant'altro io produca nel mondo web/grafico.

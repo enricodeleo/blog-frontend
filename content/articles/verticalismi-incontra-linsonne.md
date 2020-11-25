@@ -8,7 +8,7 @@ tags:
   - "linsonne"
   - "laboratorio"
   - "verticalismi"
-excerpt: ""
+description: ""
 ---
 
 Come alcuni di voi sapranno la parte grafico/tecnica di [**Verticalismi**](http://www.verticalismi.it) è mio esclusivo appannaggio. Che vuol dire questo? Che si, da un lato c'è lo sbattimento di dover seguire costantemente il funzionamento della piattaforma e pensare a cosa aggiungere/migliorare per far trovare a proprio agio chi decide di cimentarsi a fare l_'autore di fumetti_, ma è pur vero che sono tutte piccole e grandi soddisfazioni ed bello essere tirato dentro a **megafigate** dai ragazzi più verticali del web, primo tra tutti il mio amico **Mirko** che di Verticalismi è praticamente **il capo spirituale** oltre che direttore editoriale, e Roberto ([fumettopoli.net](http://www.fumettopoli.net)) che spesso e volentieri ci toglie le castagne dal fuoco occupandosi di contattare autori ed editori alla ricerca della joint venture giusta.

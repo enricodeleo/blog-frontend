@@ -10,7 +10,7 @@ tags:
   - "riflessioni"
   - "sfondo"
   - "wallpaper"
-excerpt: ""
+description: ""
 ---
 
 Cari amici ebbene si, **è Natale**.

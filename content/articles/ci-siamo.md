@@ -5,7 +5,7 @@ categories:
   - "flusso"
 tags:
   - "aggiornamento"
-excerpt: ""
+description: ""
 ---
 
 Dopo aver messo su il blog la scorsa notte, stamattina ho fatto tutte quelle cosucce superflue ma mai inutili del tipo feed su [Feedburner](http://feeds.feedburner.com/EnricoDeleo), bottoni "seguimi" con i vari links ai social, il widget di [Twitter](http://www.twitter.com/errikodotit) e altre cosette...

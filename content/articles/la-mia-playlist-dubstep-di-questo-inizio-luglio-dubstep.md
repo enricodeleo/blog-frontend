@@ -9,7 +9,7 @@ tags:
   - "musica-2"
   - "playlist"
   - "selezione"
-excerpt: ""
+description: ""
 ---
 
 Luglio è ormai iniziato prepotentemente ed io corro ai ripari. **Il periodo è caldo** (in tutti i sensi) ed io ho selezionato un po' di **energia musicale** da sfruttare nei momenti di necessità.

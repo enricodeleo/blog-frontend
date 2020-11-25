@@ -8,7 +8,7 @@ tags:
   - "birthday"
   - "compleanno"
   - "enrico"
-excerpt: ""
+description: ""
 ---
 
 ![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/06/fckbday-565x289.png "fckbday")

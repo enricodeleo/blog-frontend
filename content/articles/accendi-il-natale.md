@@ -7,7 +7,7 @@ tags:
   - "natale"
   - "sfondo"
   - "wallpaper"
-excerpt: ""
+description: ""
 ---
 
 Il Natale è un periodo dell'anno strano. E francamente a me sta un po' sulle balle. No, non un po' tanto.

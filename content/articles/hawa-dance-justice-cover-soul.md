@@ -12,7 +12,7 @@ tags:
   - "recensione"
   - "remake"
   - "soul"
-excerpt: "La famosissima \"D.A.N.C.E\" dei Justice totalmente riarrangiata da Hawa in versione soult/r&b. Come una cover dovrebbe essere fatta."
+description: "La famosissima \"D.A.N.C.E\" dei Justice totalmente riarrangiata da Hawa in versione soult/r&b. Come una cover dovrebbe essere fatta."
 ---
 
 Girovagando su SoundCloud mi sono imbattuto in questa versione reinventata e totalmente riarrangiata di **_D.A.N.C.E._** dei **Justice**.

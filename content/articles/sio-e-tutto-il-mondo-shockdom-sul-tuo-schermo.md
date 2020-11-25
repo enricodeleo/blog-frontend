@@ -4,7 +4,7 @@ date: "2018-04-02T01:50:59.000Z"
 categories:
   - "fumetti"
 tags:
-excerpt: "Shockdom4You arriva su Android ed iOS con offerte esclusive su tutto il catalogo Shockdom powered by VERTICOMICS."
+description: "Shockdom4You arriva su Android ed iOS con offerte esclusive su tutto il catalogo Shockdom powered by VERTICOMICS."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/900x0w-e1522631972419.jpg"
 ---
 

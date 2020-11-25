@@ -12,7 +12,7 @@ tags:
   - "referendum"
   - "scorie"
   - "uranio"
-excerpt: "Ragionamento libero sull'opportunità del nucleare prendendo spunto da varie fonti. Fatto da un italiano medio per italiani medi."
+description: "Ragionamento libero sull'opportunità del nucleare prendendo spunto da varie fonti. Fatto da un italiano medio per italiani medi."
 ---
 
 A poco tempo dall'inizio del referendum volevo condividere il ragionamento riguardo il no al nucleare (**che sulla scheda dovrà essere espresso con un SI**) da parte di un italiano medio, come tanti, io. :)

@@ -8,7 +8,7 @@ tags:
   - "donazioni"
   - "enciclopedia"
   - "wikipedia"
-excerpt: ""
+description: ""
 ---
 
 **Wikipedia ha decisamente rivoluzionato il mondo negli ultimi anni**. Se prima l'accesso ad informazioni e nozioni era appannaggio di pochi che potevano permettersi l'acquisto di enciclopedie cartacee o digitali, oggi il "bene cultura" è alla portata di tutti. Alcune aziende, come Microsoft, addirittura hanno chiuso i propri progetti commerciali (parliamo di Encarta in questo caso) per via dello **stradominio di Wikipedia nel settore**.

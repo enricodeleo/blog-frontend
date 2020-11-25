@@ -11,7 +11,7 @@ tags:
   - "paranormale"
   - "spazio-tempo"
   - "wind"
-excerpt: "Fenomeni paranormali avvengono sulle linee wind mobili. E' a rischio l'integrità del nostro tessuto spazio-temporale? Gli eventi fringe esistono davvero?"
+description: "Fenomeni paranormali avvengono sulle linee wind mobili. E' a rischio l'integrità del nostro tessuto spazio-temporale? Gli eventi fringe esistono davvero?"
 ---
 
 Se sei possessore di una scheda mobile **Wind** a quanto pare puoi vivere _**esperienze extra dimensionali**_.

@@ -8,7 +8,7 @@ tags:
   - "biennale"
   - "design-2"
   - "venezia"
-excerpt: ""
+description: ""
 ---
 
 ![ingresso biennale](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/40138_173287319348304_100000011101157_615251_5297210_n.jpg" "40138_173287319348304_100000011101157_615251_5297210_n")Sono appena rientrato dalla Biennale di Venezia. I due giorni passati lì sono stati a dir poco distruttivi. Una corsa contro il tempo continua!

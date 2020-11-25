@@ -11,7 +11,7 @@ tags:
   - "musica-2"
   - "reggae"
   - "tributo"
-excerpt: "11 Maggio 2011 In memoria del trentennale dalla morte di Bob Nesta Marley."
+description: "11 Maggio 2011 In memoria del trentennale dalla morte di Bob Nesta Marley."
 ---
 
 Oggi vorrei spendere un paio righe in memoria del trentennale dalla morte di **Robert Nesta Marley.**

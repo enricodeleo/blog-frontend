@@ -12,7 +12,7 @@ tags:
   - "pop"
   - "preview"
   - "singolo"
-excerpt: ""
+description: ""
 ---
 
 Ne ho già parlato in [un post su musiciseverythingtome](http://musiciseverythingtome.com/surface-to-air-x-justice-artwork-aspettando-civilization/ "urface to Air x Justice: Artwork aspettando “Civilization”"), è in arrivo il **nuovo album** dei **Justice**, che per inciso sono tra i miei artisti preferiti. Come già annunciato, la pubblicazione del disco è preceduta dall'uscita del nuovo singolo _**Civilization**_, che ovviamente ha già fatto il giro tra i fan del duo francese.

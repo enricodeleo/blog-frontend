@@ -11,7 +11,7 @@ tags:
   - "ipad"
   - "iphone"
   - "ipod"
-excerpt: ""
+description: ""
 ---
 
 Dire che sono **al limite tra la risata ed il pianto è poco**. Non sono un fervente cattolico (anzi!) ma una cosa del genere non poteva non colpirmi: ho appena letto che gli sviluppatori della **LittleiApps** hanno realizzato "**_Confession: a Roman Catholic App_**", un'applicazione pensata per i credenti cattolici, che consente di **farsi un esame della coscienza preliminare alla confessione** attraverso **iPhone, iPod o iPad**.

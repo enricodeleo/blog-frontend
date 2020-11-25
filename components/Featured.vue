@@ -18,7 +18,7 @@
                 <a :href="`/${post.slug}`">{{ post.title }}</a>
               </h2>
               <p class="card-text pr-4 text-muted">
-                {{ post.excerpt }}
+                {{ post.description }}
               </p>
               <div class="metafooter">
                 <div class="wrapfooter">

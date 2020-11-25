@@ -5,7 +5,7 @@ categories:
   - "flusso"
   - "musica"
 tags:
-excerpt: ""
+description: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/478395_3154764882006_1651720365_2727919_242013595_o1.jpg"
 ---
 

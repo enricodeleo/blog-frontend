@@ -11,7 +11,7 @@ tags:
   - "startup"
   - "sviluppo"
   - "verticalismi"
-excerpt: ""
+description: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/cover.jpg"
 ---
 

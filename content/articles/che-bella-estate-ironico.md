@@ -4,7 +4,7 @@ date: "2011-08-20T19:14:34.000Z"
 categories:
   - "flusso"
 tags:
-excerpt: ""
+description: ""
 ---
 
 Per noi universitari l'Estate si può considerare già finita. Esami i primi di settembre e via sui libri con 37° all'ombra. E **meno male** direi.

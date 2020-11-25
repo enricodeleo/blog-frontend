@@ -1,9 +1,9 @@
 ---
 title: "Biennale di Venezia, riflessioni postume"
 date: "2010-11-13T00:34:49.000Z"
-categories: 
+categories:
   - "flusso"
-tags: 
+tags:
   - "architettura"
   - "arte"
   - "biennale"
@@ -11,7 +11,7 @@ tags:
   - "pensieri"
   - "riflessioni"
   - "venezia"
-excerpt: ""
+description: ""
 ---
 
 Mi hanno chiesto di buttare giù un breve pensiero sull'esperienza fatta alla Biennale di Venezia. Una cosa veloce da pubblicare in un sito. L'ho fatto, e probabilmente **sono riuscito a confezionare una bella paginetta di aria fritta**. Chi sono io per sintetizzare un'esperienza del genere? Ed anche volendo farlo, come potevo far entrare descrizioni e pensieri su opere ed artisti in poche righe?

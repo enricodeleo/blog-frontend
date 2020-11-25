@@ -12,7 +12,7 @@ tags:
   - "nuovo-anno"
   - "riflessioni"
   - "storia"
-excerpt: ""
+description: ""
 ---
 
 Cari ragazzi e ragazze ebbene si, come avrete capito è giunto il momento: **il fatidico momento del polpettone di fine anno**, il discorso ispirato che chiude l'anno in corso e da un caloroso benvenuto al nuovo.

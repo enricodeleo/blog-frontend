@@ -13,7 +13,7 @@
       </a>
 
       <b-card-text class="text-muted">
-        {{ post.excerpt }}
+        {{ post.description }}
       </b-card-text>
 
       <div class="metafooter">

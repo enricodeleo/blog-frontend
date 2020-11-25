@@ -5,7 +5,7 @@ categories:
   - "flusso"
   - "fumetti"
 tags:
-excerpt: ""
+description: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/thisisnotbeatmap.jpg"
 ---
 

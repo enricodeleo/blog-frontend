@@ -13,7 +13,7 @@ tags:
   - "logo"
   - "music"
   - "urban"
-excerpt: ""
+description: ""
 ---
 
 Questa nuovo logo è per Urban Beat, un artista che si sta facendo largo nel panorama underground musicale del Catanese. Oltre ad essere un amico è proprio bravo per cui mi auguro si senta parlare presto di lui anche fuori dalla Milano del sud :)

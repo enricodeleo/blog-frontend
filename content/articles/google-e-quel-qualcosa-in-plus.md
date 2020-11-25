@@ -10,7 +10,7 @@ tags:
   - "google-plus"
   - "prova"
   - "social-network"
-excerpt: ""
+description: ""
 ---
 
 Oggi sono entrato su invito in **Google Plus**, l'alternativa Googoliana allo strapotere di Facebook.

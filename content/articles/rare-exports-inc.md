@@ -10,7 +10,7 @@ tags:
   - "finlandia"
   - "natale"
   - "rare"
-excerpt: ""
+description: ""
 ---
 
 Tre abilissimi cacciatori battono le remote lande della **Lapponia** alla ricerca della creatura selvatica più ambita e pericolosa. **La loro presenza incute timore in ogni essere vivente**, ma la loro preda è una sola. Un rarissimo esemplare che riesce a vivere centinaia di anni ed in possesso di una forza spropositata. Insomma una creatura ferocissima **capace di fare a brandelli un orso adulto** e che può correre chilometri anche dopo essere colpito...

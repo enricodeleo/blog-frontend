@@ -12,7 +12,7 @@ tags:
   - "percentuali"
   - "referendum-2011"
   - "voto"
-excerpt: ""
+description: ""
 ---
 
 Il **referendum 2011** è passato, assegnando la vittoria per il **SI** a tutti e quattro i quesiti. [Come ho già detto](http://blog.enricodeleo.com/un-paese-che-si-risveglia/),  questo referendum è servito, oltre che per aggiustare il tiro su delle scelte prese dal governo secondo me errate, ed a risvegliare un senso civico che sembrava essere andato perduto.

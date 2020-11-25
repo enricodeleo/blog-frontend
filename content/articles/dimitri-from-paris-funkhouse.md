@@ -9,7 +9,7 @@ tags:
   - "musica-2"
   - "recensione"
   - "soul"
-excerpt: ""
+description: ""
 ---
 
 Probabilmente non si tratta di un nome noto ai più, eppure qui parliamo di un grande artista nel suo genere. [**Dimitri From Paris**](http://www.dimitrifromparis.com/) è un DJ specializzato nel **funk** che passa per **il jazz, soul, house, lounge** che è in grado a mio avviso di fare set particolarmente gradevoli. Negli anni '90 è stato un mostro sacro del **_french touch_**.

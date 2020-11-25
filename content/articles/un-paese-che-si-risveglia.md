@@ -12,7 +12,7 @@ tags:
   - "percentuali"
   - "referendum-2011"
   - "voto"
-excerpt: ""
+description: ""
 ---
 
 Dopo aver fatto il mio dovere di cittadino, [sulla scorta di quanto mi hanno insegnato](https://www.facebook.com/notes/enrico-deleo/diritto-al-voto/10150330304335620), tra il viaggio di ritorno a Catania ed impegni vari ho continuato a seguire l'andamento del referendum.

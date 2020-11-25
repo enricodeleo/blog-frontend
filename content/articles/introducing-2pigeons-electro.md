@@ -4,7 +4,7 @@ date: "2012-05-04T02:22:18.000Z"
 categories:
   - "musica"
 tags:
-excerpt: ""
+description: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/l_cbe85887b719459796d9054862718055.jpg"
 ---
 

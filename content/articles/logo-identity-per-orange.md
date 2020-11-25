@@ -10,7 +10,7 @@ tags:
   - "logo"
   - "mockup"
   - "orange"
-excerpt: ""
+description: ""
 ---
 
 Il mio grandissimo amico Calogero mi ha chiesto di realizzare il logo per la sua associazione. Ovviamente **non potevo deluderlo**.

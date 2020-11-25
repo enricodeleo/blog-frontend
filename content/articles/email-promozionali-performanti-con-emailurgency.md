@@ -12,7 +12,7 @@ tags:
   - "marketing"
   - "software-as-a-service"
   - "tools"
-excerpt: ""
+description: ""
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/emailurgency-mailchimp-cover.jpg"
 sticky: true
 ---

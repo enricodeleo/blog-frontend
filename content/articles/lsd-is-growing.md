@@ -12,7 +12,7 @@ tags:
   - "news"
   - "novita"
   - "stampa"
-excerpt: "Nuovo ingresso in Lysergic Studio ed espansione dei servizi offerti ai clienti. Robe fresche per chi pensa futuristico."
+description: "Nuovo ingresso in Lysergic Studio ed espansione dei servizi offerti ai clienti. Robe fresche per chi pensa futuristico."
 ---
 
 [Lysergic Studio](http://lysergicstudio.com "LSD lysergic studio deleo") cresce forte e sana. Oggi è ufficialmente entrato a far parte di questo progetto **Giovanni Famà**, nella posizione di **INCH executive manager**.

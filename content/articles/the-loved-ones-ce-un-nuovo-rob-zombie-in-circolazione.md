@@ -9,7 +9,7 @@ tags:
   - "horror"
   - "recensione"
   - "torture"
-excerpt: ""
+description: ""
 ---
 
 Inizio con il dare a Cesare quel che è di Cesare. La frase "_c'è un nuovo Rob Zombie in circolazion_e" è una citazione tratta da una delle prime frasi pronunciate da **Mirko** di [Verticalismi.it](http://www.verticalismi.it) subito dopo la visione del film.

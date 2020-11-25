@@ -9,7 +9,7 @@ tags:
   - "mp3"
   - "notorious-b-i-g"
   - "remix"
-excerpt: "La celeberrima Gimme The Loot di Notorious B.I.G. reinterpretata in maniera eccezionale in chiave dubstep dal giovanissimo Superginger."
+description: "La celeberrima Gimme The Loot di Notorious B.I.G. reinterpretata in maniera eccezionale in chiave dubstep dal giovanissimo Superginger."
 ---
 
 _Gimme The Loot_ è senza dubbio un grande pezzo e credo che fan o meno di Notorious B.I.G. non se ne possa dubitare. Che poi questo pezzo si possa a dirittura migliorare penso lo credano in pochi (per i fan sicuramente sarà un'eresia). Beh, se non vogliamo dire che è stato migliorato, certamente possiamo dire che è stato **arricchito** in un **notevole remix dubstep di [Superginger](http://www.facebook.com/supergingermusic "fan page superginger")**.
