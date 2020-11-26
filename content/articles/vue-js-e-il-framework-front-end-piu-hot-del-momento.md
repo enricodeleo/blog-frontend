@@ -4,12 +4,14 @@ date: "2020-01-26T13:09:09.000Z"
 categories:
   - "dev"
 tags:
-  - "angular"
-  - "es6"
+  - "vue"
   - "frontend"
   - "javascript"
+  - "es6"
+  - "development"
+  - "code"
   - "react"
-  - "vue"
+  - "angular"
 description: "Vue è il framework frontend con il tasso d'adozione più alto tra gli sviluppatori, e per ottime ragioni."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/pov-thumb.jpg"
 sticky: true
