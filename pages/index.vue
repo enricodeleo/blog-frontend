@@ -24,7 +24,7 @@
         </div>
         <div class="card-columns listrecent">
           <!-- begin post -->
-          <Post v-for="post of posts" :key="post.id" :post="post" />
+          <lazy-post v-for="post of posts" :key="post.id" :post="post" />
           <!-- end post -->
         </div>
       </section>

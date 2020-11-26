@@ -201,10 +201,6 @@ export default {
     color: rgba(0,0,0,.8);
   }
 
-  .article-post img {
-    max-width: 100%;
-  }
-
   blockquote {
     border-left:4px solid color("primary");
     padding:0 20px;

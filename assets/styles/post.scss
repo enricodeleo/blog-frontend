@@ -6,6 +6,10 @@
 	overflow:hidden!important;
 }
 
+.article-post img {
+  max-width: 100%;
+}
+
 span.post-name,span.post-date,
 span.author-meta {
 	display:inline-block;

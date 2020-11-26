@@ -17,7 +17,7 @@
       <div class="col-md-8 offset-md-2">
         <div class="listrecent listrelated">
           <!-- begin post -->
-          <Post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
+          <lazy-post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
           <!-- end post -->
         </div>
       </div>

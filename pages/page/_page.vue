@@ -9,7 +9,7 @@
       <div class="col-md-9 offset-md-1 order-1 order-md-2">
         <div class="listrecent listrelated">
           <!-- begin post -->
-          <Post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
+          <lazy-post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
           <!-- end post -->
           <NuxtLink v-if="count > currentArticles" :to="`/page/${page+1}`" class="btn btn-outline-primary btn-block btn-lg">
             Altri post
