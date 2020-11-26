@@ -1,9 +1,7 @@
 // Bootstrap and BootstrapVue SCSS files
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
-@import './mediumish.scss';
-
-html,
-body {
-  min-height: 100vh;
-}
+@import './body.scss';
+@import './cards.scss';
+@import './post.scss';
+@import './general.scss';

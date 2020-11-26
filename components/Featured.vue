@@ -77,6 +77,73 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  @media (min-width:576px) {
+    .card-columns.listfeaturedtag {
+      column-count:2;
+    }
+  }
 
+  .listfeaturedtag .wrapthumbnail {
+    height: 278px;
+    flex: 0 0 auto;
+  }
+
+  .listfeaturedtag .card {
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 2px;
+    height: 280px;
+    padding-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .listfeaturedtag .thumbnail {
+    background-size: cover;
+    height: 100%;
+    display: block;
+    background-position: 38% 22% !important;
+    background-origin: border-box!important;
+    border-top-left-radius: 2px;
+  }
+
+  .listfeaturedtag .card-block {
+    padding-left: 0;
+  }
+
+  .listfeaturedtag h4.card-text,.listrecent h4.card-text {
+    color: rgba(0,0,0,.44);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+
+  .listfeaturedtag .wrapfooter {
+    position: absolute;
+    bottom: 20px;
+    font-size: 12px;
+    display: block;
+    width: 85%;
+  }
+
+  @media (max-width:999px) {
+    .listfeaturedtag .wrapthumbnail,
+    .listfeaturedtag .col-md-7 {
+      width:100%;
+      max-width:100%;
+      flex: 100%;
+    }
+    .listfeaturedtag .wrapthumbnail {
+      height:250px;
+    }
+    .listfeaturedtag .card {
+      height:auto;
+    }
+    .listfeaturedtag .wrapfooter {
+      position:relative;
+      margin-top:30px;
+    }
+    .listfeaturedtag .card-block {
+      padding:20px;
+    }
+  }
 </style>

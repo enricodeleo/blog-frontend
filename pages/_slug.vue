@@ -194,6 +194,80 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  .article-post {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgba(0,0,0,.8);
+  }
 
+  .article-post img {
+    max-width: 100%;
+  }
+
+  blockquote {
+    border-left:4px solid color("primary");
+    padding:0 20px;
+    font-style:italic;
+    color:rgba(0,0,0,.5);
+  }
+
+  .article-post p,
+  .article-post blockquote {
+    margin:0 0 1.5rem 0;
+  }
+
+  .featured-image {
+    display: block;
+    margin:0px auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .share {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .share p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+
+  .share {
+    display: none;
+  }
+
+  .share ul li {
+    display:inline-block;
+    margin-bottom:5px;
+  }
+
+  .share ul {
+    padding-left:0;
+    margin-left:0;
+  }
+
+  @media (min-width:1024px) {
+    .share {
+      position:fixed;
+      display:block;
+    }
+    .share ul li {
+      display:block;
+    }
+  }
+
+  .share,
+  .share a {
+    color:rgba(0,0,0,.44);
+    fill:rgba(0,0,0,.44);
+  }
+
+  .sep {
+    height: 1px;
+    width: 20px;
+    background: #999;
+    margin: 0px auto;
+    margin-bottom: 1.2rem;
+  }
 </style>

@@ -1,0 +1,74 @@
+
+.author-meta {
+	flex:1 1 auto;
+	white-space:nowrap!important;
+	text-overflow:ellipsis!important;
+	overflow:hidden!important;
+}
+
+span.post-name,span.post-date,
+span.author-meta {
+	display:inline-block;
+}
+
+span.post-date,
+span.post-read {
+	color:rgba(0,0,0,.44);
+}
+
+span.post-read-more {
+	display:inline-block;
+}
+
+span.post-read-more a {
+	color:rgba(0,0,0,.44);
+}
+
+span.post-name a,
+span.post-read-more a:hover {
+	color:rgba(0,0,0,.8);
+}
+
+.dot:after {
+	content:"·";
+	margin-left:3px;
+	margin-right:3px;
+}
+
+.mainheading h1.posttitle {
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.listrelated .card {
+	box-shadow: 0 1px 7px rgba(0,0,0,.05);
+	border: 0;
+}
+
+ul.tags {
+	list-style:none;
+	padding-left:0;
+	margin: 0;
+}
+
+ul.tags li {
+	display:inline-block;
+	font-size:0.9rem;
+}
+
+ul.tags li a {
+	background:rgba(0,0,0,.05);
+	color:rgba(0,0,0,.6);
+	border-radius:3px;
+	padding:5px 10px;
+}
+
+ul.tags li a:hover {
+	background:rgba(0,0,0,.07);
+	text-decoration:none;
+}
+
+.authorpage h1 {
+	font-weight:700;
+	font-size:30px;
+}

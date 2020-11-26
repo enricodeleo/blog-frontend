@@ -23,5 +23,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  .footer {
+    border-top: 1px solid rgba(0,0,0,.05)!important;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    font-size: 0.8rem;
+    color: rgba(0,0,0,.44);
+    margin-top: 50px;
+  }
 </style>

@@ -52,5 +52,59 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  .mediumnavigation {
+    background:rgba(255,255,255,.97);
+    box-shadow:0 2px 2px -2px rgba(0,0,0,.15);
+  }
+  .mediumnavigation .form-control {
+    font-size:0.8rem;
+    border-radius:30px;
+    overflow:hidden;
+    border:1px solid rgba(0,0,0,0.04);
+  }
+  .mediumnavigation .form-inline {
+    margin-left:15px;
+  }
+  .mediumnavigation .form-inline .btn {
+    margin-left:-50px;
+    border:0;
+    border-radius:30px;
+    cursor:pointer;
+  }
+  .mediumnavigation .form-inline .btn:hover,
+  .mediumnavigation .form-inline .btn:active {
+    background:transparent;
+    color:green;
+  }
+  .mediumnavigation .navbar-brand {
+    font-weight:500;
+  }
+  .mediumnavigation .dropdown-menu {
+    border:1px solid rgba(0,0,0,0.08);
+    margin:.5rem 0 0;
+  }
+  .mediumnavigation .nav-item,.dropdown-menu {
+    font-size:0.9rem;
+  }
+  .mediumnavigation .navbar-brand img {
+    max-height:30px;
+    margin-right:5px;
+  }
+
+  .form-control::-webkit-input-placeholder {
+    color: rgba(0,0,0,.5);
+  }
+  .form-control:-moz-placeholder {
+    color: rgba(0,0,0,.5);
+  }
+  .form-control::-moz-placeholder {
+    color: rgba(0,0,0,.5);
+  }
+  .form-control:-ms-input-placeholder {
+    color: rgba(0,0,0,.5);
+  }
+  .form-control::-ms-input-placeholder {
+    color: rgba(0,0,0,.5);
+  }
 </style>
