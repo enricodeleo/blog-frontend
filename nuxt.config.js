@@ -238,7 +238,11 @@ export default {
   },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
+  content: {
+    markdown: {
+      remarkPlugins: ['remark-oembed']
+    }
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
