@@ -4,13 +4,13 @@
     no-body
     img-top
   >
-    <a :href="`/${post.slug}`" :title="post.title">
+    <NuxtLink :to="`/${post.slug}`" :title="post.title">
       <b-card-img-lazy :src="post.coverImage" :alt="post.title" />
-    </a>
+    </NuxtLink>
     <b-card-body>
-      <a :href="`/${post.slug}`" class="text-dark">
+      <NuxtLink :to="`/${post.slug}`" class="text-dark">
         <b-card-title>{{ post.title }}</b-card-title>
-      </a>
+      </NuxtLink>
 
       <b-card-text class="text-muted">
         {{ post.description }}

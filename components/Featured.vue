@@ -8,14 +8,16 @@
       <div v-for="post of featured" :key="post.id" class="card">
         <div class="row">
           <div class="col-md-5 wrapthumbnail">
-            <a :href="`/${post.slug}`" :title="post.title">
+            <NuxtLink :to="`/${post.slug}`" :title="post.title">
               <div class="thumbnail" :style="{'background-image': `url(${post.coverImage})`}" />
-            </a>
+            </NuxtLink>
           </div>
           <div class="col-md-7">
             <div class="card-block">
               <h2 class="card-title pr-4 pt-4">
-                <a :href="`/${post.slug}`">{{ post.title }}</a>
+                <NuxtLink :to="`/${post.slug}`">
+                  {{ post.title }}
+                </NuxtLink>
               </h2>
               <p class="card-text pr-4 text-muted">
                 {{ post.description }}
