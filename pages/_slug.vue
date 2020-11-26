@@ -163,6 +163,15 @@ export default {
     } catch (error) {
       this.$log.error(error)
     }
+
+    if (window && window.FB) {
+      window.FB.init({
+        appId: '103937073008677',
+        status: true,
+        xfbml: true,
+        version: 'v3.3'
+      })
+    }
   },
 
   head ({ $seo }) {
