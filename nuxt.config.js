@@ -234,8 +234,17 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    splitChunks: {
+      layouts: true
+    },
+    optimization: {
+      runtimeChunk: true,
+      splitChunks: {
+        name: true
+      }
+    },
     babel: {
-      presets({ envName }) {
+      presets ({ envName }) {
         const envTargets = {
           client: { browsers: ['last 2 versions'], ie: 11 },
           server: { node: 'current' }
