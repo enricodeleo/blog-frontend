@@ -17,18 +17,18 @@
             Articoli
           </b-nav-item> -->
           <b-nav-item href="https://www.facebook.com/therealenricodeleo/" target="_blank">
-            <font-awesome-icon :icon="['fab', 'facebook']" />
+            <font-awesome-icon :icon="['fab', 'facebook']" /> Facebook
           </b-nav-item>
           <b-nav-item href="https://www.instagram.com/enricodeleo/" target="_blank">
-            <font-awesome-icon :icon="['fab', 'instagram']" />
+            <font-awesome-icon :icon="['fab', 'instagram']" /> Instagram
           </b-nav-item>
           <b-nav-item href="https://www.linkedin.com/in/enricodeleo/" target="_blank">
-            <font-awesome-icon :icon="['fab', 'linkedin']" />
+            <font-awesome-icon :icon="['fab', 'linkedin']" /> LinkedIn
           </b-nav-item>
           <b-nav-item href="https://github.com/enricodeleo/" target="_blank">
-            <font-awesome-icon :icon="['fab', 'github']" />
+            <font-awesome-icon :icon="['fab', 'github']" /> GitHub
           </b-nav-item>
-          <b-nav-form class="my-2 my-lg-0" action="/search">
+          <b-nav-form class="ml-0" action="/search">
             <b-form-input size="sm" class="mr-sm-2" name="term" placeholder="Search" />
             <b-button size="sm" class="my-2 my-sm-0" type="submit" variant="link">
               <span class="search-icon">
@@ -58,13 +58,10 @@ export default {
     box-shadow:0 2px 2px -2px rgba(0,0,0,.15);
   }
   .mediumnavigation .form-control {
-    font-size:0.8rem;
+    /* font-size:0.8rem; */
     border-radius:30px;
     overflow:hidden;
     border:1px solid rgba(0,0,0,0.04);
-  }
-  .mediumnavigation .form-inline {
-    margin-left:15px;
   }
   .mediumnavigation .form-inline .btn {
     margin-left:-50px;
