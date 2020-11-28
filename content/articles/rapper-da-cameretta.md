@@ -17,16 +17,11 @@ coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/rapper-da-ca
 
 # Rapper da cameretta
 
-
-https://www.youtube.com/watch?v=Brp7tRVI764&list=OLAK5uy_kmrEAyFMSByXBXc6RzU1Ve0CDVKv3mH5E
-
-
-Molti sanno che ho un affetto particolare per RazzaKrasta per motivi personali che mi legano alla persona prima che all'artista, ma poi boh ogni tanto senza 
-preavviso esce fuori con novità che portano una luce in un pomeriggio altrimenti anonimo.
+Molti sanno che ho un affetto particolare per __RazzaKrasta__ per motivi personali che mi legano alla persona prima che all'artista, ma poi boh ogni tanto senza preavviso esce fuori con novità che portano una luce in un pomeriggio altrimenti anonimo.
 
 Lungo la decade che stiamo archiviando si è parlato così tanto di indie elevandolo ad un genere a sé, dal quale ci si aspetta un particolare sound e contenuto.
-Ciononostante cosa è un pezzo indie se non una proposta innovativa, indipendente, che al di là del gusto riconosciuto dalle major intercetta un pubblico di
-curiosi alla ricerca di nuovi contenuti? Ecco, secondo me Razza è la sintesi di ciò. Proposte sempre sempre innovative, basi inedite compose dal medesimo, testi
-intrisi di significato.
+Ciononostante cosa è un pezzo indie se non una proposta innovativa, indipendente, che al di là del gusto riconosciuto dalle major intercetta un pubblico di curiosi alla ricerca di nuovi contenuti? Ecco, secondo me Razza è la sintesi di ciò. Proposte sempre innovative, basi inedite composte dal medesimo, testi intrisi di significato.
 
 Che dire: buon ascolto.
+
+https://www.youtube.com/watch?v=Brp7tRVI764&list=OLAK5uy_kmrEAyFMSByXBXc6RzU1Ve0CDVKv3mH5E
