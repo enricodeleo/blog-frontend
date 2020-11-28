@@ -17,7 +17,9 @@ coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/rapper-da-ca
 
 # Rapper da cameretta
 
+
 https://www.youtube.com/watch?v=Brp7tRVI764&list=OLAK5uy_kmrEAyFMSByXBXc6RzU1Ve0CDVKv3mH5E
+
 
 Molti sanno che ho un affetto particolare per RazzaKrasta per motivi personali che mi legano alla persona prima che all'artista, ma poi boh ogni tanto senza 
 preavviso esce fuori con novità che portano una luce in un pomeriggio altrimenti anonimo.
