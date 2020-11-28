@@ -25,10 +25,7 @@ export default {
     meta: [
       { name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' },
       { hid: 'author', name: 'author', content: 'Enrico Deleo' },
-      { hid: 'alternate', name: 'alternate', type: 'application/rss+xml', title: 'Lisergico &raquo; Feed', href: `${process.env.NUXT_ENV_FRONTEND_URL}/feed.xml` },
-      { hid: 'google-site-verification', name: 'google-site-verification', content: 'lieXQeLzlhgoNXt_8gPsuRPJnkH0AgbaclRzO7O1cRg' },
-      { hid: 'yandex-verification', name: 'yandex-verification', content: '262e8bf99b1d7507' },
-      { hid: 'msvalidate.01', name: 'msvalidate.01', content: '364E09277CBE057A910EC10CF39F59C4' }
+      { hid: 'alternate', name: 'alternate', type: 'application/rss+xml', title: 'Lisergico &raquo; Feed', href: `${process.env.NUXT_ENV_FRONTEND_URL}/feed.xml` }
     ],
     script: [
       {
