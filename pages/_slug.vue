@@ -155,10 +155,17 @@ export default {
 
   async mounted () {
     try {
+      const itemsInThisCategory = await this.$content('articles')
+        .only(['slug'])
+        .where({ categories: { $contains: this.post.categories[0] }, slug: { $ne: this.post.slug } })
+        .fetch()
+      const maxSkip = itemsInThisCategory.length - 2 // do not skip too much, we need at least 2 items
+      const skip = maxSkip > 0 ? Math.floor(maxSkip * Math.random()) : 0 // skip by a random number of items
       this.related = await this.$content('articles', { text: true })
         .where({ categories: { $contains: this.post.categories[0] }, slug: { $ne: this.post.slug } })
-        .limit(2)
         .sortBy('date', 'desc')
+        .skip(skip)
+        .limit(2)
         .fetch()
     } catch (error) {
       this.$log.error(error)

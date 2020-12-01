@@ -14,6 +14,7 @@ tags:
   - "performance"
   - "synth"
 description: ""
+coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/02/429274_368860036457697_1338768308_n-565x423.jpg"
 ---
 
 Ieri con i ragazzi di [Deeds.it](http://deeds.it) abbiamo improvvisato un **bell'esperimento live alla Chiave di Catania**.
