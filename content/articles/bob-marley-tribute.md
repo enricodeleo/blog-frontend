@@ -30,7 +30,7 @@ Certo spiace ricordare che la morte è avvenuta a causa di un cancro che sarebbe
 
 Chiudo con una delle sue migliori tracce vocali, Redemption Song. R.I.P.
 
-https://www.youtube.com/watch?v=kOFu6b3w6c0
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kOFu6b3w6c0?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Special
 

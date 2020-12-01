@@ -24,4 +24,4 @@ Ciononostante cosa è un pezzo indie se non una proposta innovativa, indipendent
 
 Che dire: buon ascolto.
 
-https://www.youtube.com/watch?v=Brp7tRVI764&list=OLAK5uy_kmrEAyFMSByXBXc6RzU1Ve0CDVKv3mH5E
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Brp7tRVI764?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
