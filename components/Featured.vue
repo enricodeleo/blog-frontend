@@ -42,7 +42,18 @@
           </div>
         </div>
       </div>
-    <!-- end post -->
+      <!-- end post -->
+      <!-- begin ad -->
+      <div class="card overflow-hidden">
+        <div class="row">
+          <div class="col">
+            <a ref="noopener" href="https://amzn.to/2VrreCI" target="_blank">
+              <img src="~/assets/images/point-of-vue.jpg" class="img-fluid" alt="Point Of Vue">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- end ad -->
     </div>
   </section>
 </template>

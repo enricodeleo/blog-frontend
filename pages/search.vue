@@ -1,26 +1,29 @@
 <template>
-  <div class="container mt-3">
+  <div class="container mt-5">
     <div class="row">
-      <div class="col-md-8 offset-md-2">
-        <div class="mainheading">
+      <div class="col-md-3">
+        <div class="card border-primary">
+          <a ref="noopener" href="https://amzn.to/2VrreCI" target="_blank">
+            <img src="~/assets/images/point-of-vue.jpg" class="card-img-top" width="100%" height="auto" alt="Point Of Vue">
+          </a>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="mainheading mt-0 pt-0">
           <div class="row post-top-meta authorpage">
             <div class="col">
-              <h1 v-if="loaded && posts.length">
+              <h1 v-if="loaded && posts.length" class="mt-0 pt-0">
                 Risultati della ricerca <em>{{ term }}</em>
               </h1>
-              <h1 v-if="!loaded">
+              <h1 v-if="!loaded" class="mt-0 pt-0">
                 🤓 Sto cercando articoli su <em>{{ term }}</em> che possano interessarti...
               </h1>
-              <h1 v-if="loaded && !posts.length">
+              <h1 v-if="loaded && !posts.length" class="mt-0 pt-0">
                 😵 Mi spiace non ho nulla su <em>{{ term }}</em>, prova un altro termine
               </h1>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
         <div class="listrecent listrelated">
           <!-- begin post -->
           <lazy-post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />

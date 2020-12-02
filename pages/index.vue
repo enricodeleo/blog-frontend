@@ -44,7 +44,7 @@ export default {
     let featured
 
     try {
-      featured = await app.$content('articles', { text: true }).where({ sticky: true }).sortBy('date', 'desc').limit(4).fetch()
+      featured = await app.$content('articles', { text: true }).where({ sticky: true }).sortBy('date', 'desc').limit(3).fetch()
       posts = await app.$content('articles', { text: true }).sortBy('date', 'desc').limit(6).fetch()
     } catch (error) {
       app.$log.error(error)

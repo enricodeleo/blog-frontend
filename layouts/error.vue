@@ -39,7 +39,10 @@
 <script>
 export default {
   props: {
-    error: Number
+    error: {
+      type: Number,
+      default: 404
+    }
   }
 }
 </script>
