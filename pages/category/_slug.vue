@@ -4,7 +4,7 @@
       <div class="col-md-3 order-2 order-md-1">
         <div class="card border-primary">
           <a ref="noopener" href="https://amzn.to/2VrreCI" target="_blank">
-            <img src="~/assets/images/point-of-vue.jpg" class="card-img-top" width="100%" height="auto" alt="Point Of Vue">
+            <b-img-lazy src="~/assets/images/point-of-vue.jpg" fluid alt="Point Of Vue" />
           </a>
         </div>
       </div>
