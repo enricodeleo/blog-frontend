@@ -9,16 +9,16 @@
       <div class="flex flex-row items-center">
         <!-- <font-awesome-icon v-show="expanded" :icon="['fas', 'times']" />
         <font-awesome-icon v-show="!expanded" :icon="['fas', 'bars']" /> -->
-        <a rel="noopner noreferrer" href="https://www.facebook.com/therealenricodeleo/" target="_blank" class="text-gray-600 text-sm mr-3">
+        <a rel="noopner noreferrer" href="https://www.facebook.com/therealenricodeleo/" target="_blank" class="text-gray-600 hover:text-blue-500 text-sm mr-3">
           <font-awesome-icon :icon="['fab', 'facebook']" /> Facebook
         </a>
-        <a rel="noopner noreferrer" href="https://www.instagram.com/enricodeleo/" target="_blank" class="text-gray-600 text-sm mr-3">
+        <a rel="noopner noreferrer" href="https://www.instagram.com/enricodeleo/" target="_blank" class="text-gray-600 hover:text-pink-500 text-sm mr-3">
           <font-awesome-icon :icon="['fab', 'instagram']" /> Instagram
         </a>
-        <a rel="noopner noreferrer" href="https://www.linkedin.com/in/enricodeleo/" target="_blank" class="text-gray-600 text-sm mr-3">
+        <a rel="noopner noreferrer" href="https://www.linkedin.com/in/enricodeleo/" target="_blank" class="text-gray-600 hover:text-blue-800 text-sm mr-3">
           <font-awesome-icon :icon="['fab', 'linkedin']" /> LinkedIn
         </a>
-        <a rel="noopner noreferrer" href="https://github.com/enricodeleo/" target="_blank" class="text-gray-600 text-sm mr-3">
+        <a rel="noopner noreferrer" href="https://github.com/enricodeleo/" target="_blank" class="text-gray-600 hover:text-black text-sm mr-3">
           <font-awesome-icon :icon="['fab', 'github']" /> GitHub
         </a>
         <form action="/search" class="flex flex-row items-center border px-3 py-1 rounded-full">
