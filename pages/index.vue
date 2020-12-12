@@ -1,16 +1,16 @@
 <template>
   <div>
-    <div class="container mt-3">
+    <div class="container py-6 mx-auto">
       <div class="mainheading">
-        <h1 class="sitetitle">
+        <h1 class="text-4xl font-semibold">
           Lisergico
         </h1>
-        <p class="lead">
+        <p class="text-xl">
           Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant
         </p>
       </div>
     </div>
-    <div class="container">
+    <div class="container mx-auto">
       <!-- Begin Featured
       ================================================== -->
       <Featured :posts="featured" />
@@ -70,6 +70,3 @@ export default {
   }
 }
 </script>
-
-<style>
-</style>

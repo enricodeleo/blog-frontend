@@ -99,7 +99,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    '@nuxtjs/fontawesome'
+    '@nuxtjs/fontawesome',
+    '@nuxtjs/tailwindcss'
   ],
 
   fontawesome: {
@@ -119,8 +120,6 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
     'nuxt-seo',
     '@nuxtjs/style-resources',
     // https://go.nuxtjs.dev/axios
@@ -136,6 +135,30 @@ export default {
     'nuxt-facebook-pixel-module',
     'nuxt-logger'
   ],
+
+  tailwindcss: {
+    theme: {
+      fontFamily: {
+        display: ['system-ui', 'sans-serif'],
+        body: ['system-ui', 'sans-serif']
+      }
+    },
+    variants: {},
+    plugins: [],
+    purge: {
+      enabled: process.env.NODE_ENV === 'production',
+      content: [
+        'components/**/*.vue',
+        'layouts/**/*.vue',
+        'pages/**/*.vue',
+        'plugins/**/*.js',
+        'nuxt.config.js',
+        // TypeScript
+        'plugins/**/*.ts',
+        'nuxt.config.ts'
+      ]
+    }
+  },
 
   facebook: {
     /* module options */
@@ -222,12 +245,6 @@ export default {
   robots: {
     UserAgent: '*',
     Allow: '/'
-  },
-
-  bootstrapVue: {
-    components: ['BNavbar', 'BNavbarNav', 'BNavbarBrand', 'BNavbarToggle', 'BCollapse', 'BNavItem', 'BNavForm', 'BFormInput', 'BButton', 'BCard', 'BCardText', 'BCardImgLazy', 'BCardTitle', 'BCardBody', 'BCardText', 'BImgLazy'],
-    bootstrapCSS: false,
-    bootstrapVueCSS: false
   },
 
   styleResources: {

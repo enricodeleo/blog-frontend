@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column min-vh-100">
+  <div class="flex flex-col min-h-screen antialiased sm:subpixel-antialiased md:antialiased">
     <Header />
     <Nuxt keep-alive class="pb-5" />
     <Footer class="mt-auto" />

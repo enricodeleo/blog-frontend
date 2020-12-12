@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-3">
+  <div class="container mt-3 mx-auto">
     <div class="row">
       <!-- Begin Fixed Left Share -->
       <div class="col-md-2 col-xs-12">
