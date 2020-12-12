@@ -138,32 +138,6 @@ export default {
     'nuxt-logger'
   ],
 
-  tailwindcss: {
-    theme: {
-      fontFamily: {
-        display: ['system-ui', 'sans-serif'],
-        body: ['system-ui', 'sans-serif']
-      }
-    },
-    variants: {},
-    plugins: [
-      tailwindTypography
-    ],
-    purge: {
-      enabled: process.env.NODE_ENV === 'production',
-      content: [
-        'components/**/*.vue',
-        'layouts/**/*.vue',
-        'pages/**/*.vue',
-        'plugins/**/*.js',
-        'nuxt.config.js',
-        // TypeScript
-        'plugins/**/*.ts',
-        'nuxt.config.ts'
-      ]
-    }
-  },
-
   facebook: {
     /* module options */
     track: 'PageView',
