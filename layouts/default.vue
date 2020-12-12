@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col min-h-screen antialiased sm:subpixel-antialiased md:antialiased">
-    <Header />
-    <Nuxt keep-alive class="pb-5" />
-    <Footer class="mt-auto" />
+    <Header class="px-6 md:px-0" />
+    <Nuxt keep-alive class="pb-5 px-6 md:px-0" />
+    <Footer class="mt-auto px-6 md:px-0" />
     <div id="fb-root" />
   </div>
 </template>

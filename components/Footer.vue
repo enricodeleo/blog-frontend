@@ -1,15 +1,17 @@
 <template>
-  <div class="footer container">
-    <div class="row">
-      <div class="col">
-        <p>Copyright &copy; 2010-{{ currentYear }} Enrico Deleo</p>
-        <p><a href="https://www.iubenda.com/privacy-policy/13699998" class="iubenda-black iubenda-embed" title="Privacy Policy ">Privacy Policy</a></p>
-      </div>
-      <div class="col text-right">
-        <p>Storie di musica, startup, digital, coding e qualsiasi cosa mi venga in mente.</p>
-      </div>
+  <footer class="container mx-auto grid grid-cols-2 space-between border-t border-gray-300 pt-4 pb-6">
+    <div class="text-xs">
+      <p class="text-gray-600">
+        Copyright &copy; 2010-{{ currentYear }} Enrico Deleo
+      </p>
+      <p class="mt-2">
+        <a href="https://www.iubenda.com/privacy-policy/13699998" class="iubenda-black iubenda-embed" title="Privacy Policy ">Privacy Policy</a>
+      </p>
     </div>
-  </div>
+    <div class="text-right text-xs text-gray-600">
+      <p>Storie di musica, startup, digital, coding e qualsiasi cosa mi venga in mente.</p>
+    </div>
+  </footer>
 </template>
 
 <script>

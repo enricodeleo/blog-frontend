@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="mb-8">
     <div class="container py-6 mx-auto">
       <div class="mainheading">
         <h1 class="text-4xl font-semibold">
           Lisergico
         </h1>
-        <p class="text-xl">
-          Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant
+        <p class="text-xl font-light">
+          Il blog di <a rel="noopener" href="https://enricodeleo.com" class="font-semibold text-green-600">Enrico Deleo</a>. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant
         </p>
       </div>
     </div>
@@ -19,10 +19,12 @@
       <!-- Begin List Posts
       ================================================== -->
       <section class="recent-posts">
-        <div class="section-title">
-          <h2><span>Altre storie</span></h2>
-        </div>
-        <div class="card-columns listrecent">
+        <h2 class="text-xl font-bold border-gray-300 border-b leading-10">
+          <span class="border-gray-700 border-b-2 py-2">
+            Altre storie
+          </span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-4">
           <!-- begin post -->
           <lazy-post v-for="post of posts" :key="post.id" :post="post" />
           <!-- end post -->
@@ -30,7 +32,7 @@
       </section>
       <!-- End List Posts
       ================================================== -->
-      <NuxtLink to="/page/2" class="btn btn-outline-primary btn-block btn-lg">
+      <NuxtLink to="/page/2" class="border border-green-600 text-green-600 text-center p-3 w-full text-lg rounded-md block mt-6 font-semibold">
         Altri post
       </NuxtLink>
     </div>
