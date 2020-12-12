@@ -51,7 +51,7 @@
         <!-- End Featured Image -->
 
         <!-- Begin Post Content -->
-        <div class="prose prose-xl">
+        <div class="prose prose-xl max-w-none">
           <nuxt-content :document="post" />
         </div>
         <!-- End Post Content -->

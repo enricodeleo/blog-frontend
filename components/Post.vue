@@ -20,7 +20,7 @@
         <span>
           Pubblicato in
           <span v-for="(category, index) of post.categories" :key="index">
-            <NuxtLink :to="`/category/${category}`" class="capitalize text-green-600">{{ category.replace('-', ' ') }}</NuxtLink><span v-if="index+1 !== post.categories.length">, </span>
+            <NuxtLink :to="`/category/${category}`" class="capitalize text-green-600 hover:text-green-800">{{ category.replace('-', ' ') }}</NuxtLink><span v-if="index+1 !== post.categories.length">, </span>
           </span>
         </span>
         <br>
