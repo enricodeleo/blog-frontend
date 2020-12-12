@@ -1,5 +1,5 @@
 <template>
-  <footer class="container mx-auto grid grid-cols-2 space-between border-t border-gray-300 pt-4 pb-6">
+  <footer class="container max-w-screen-xl mx-auto grid grid-cols-2 space-between border-t border-gray-300 pt-4 pb-6">
     <div class="text-xs">
       <p class="text-gray-600">
         Copyright &copy; 2010-{{ currentYear }} Enrico Deleo

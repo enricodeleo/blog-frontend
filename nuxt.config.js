@@ -1,5 +1,6 @@
 import nuxtContent from '@nuxt/content'
 import MarkdownIt from 'markdown-it'
+import tailwindTypography from '@tailwindcss/typography'
 
 const isDev = process.env.NODE_ENV !== 'production'
 
@@ -89,7 +90,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '~/assets/styles/main.scss'
+    // '~/assets/styles/main.scss'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -145,7 +146,9 @@ export default {
       }
     },
     variants: {},
-    plugins: [],
+    plugins: [
+      tailwindTypography
+    ],
     purge: {
       enabled: process.env.NODE_ENV === 'production',
       content: [
@@ -246,10 +249,6 @@ export default {
   robots: {
     UserAgent: '*',
     Allow: '/'
-  },
-
-  styleResources: {
-    scss: '@/assets/styles/_variables.scss'
   },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)

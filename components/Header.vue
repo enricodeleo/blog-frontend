@@ -1,6 +1,6 @@
 <template>
   <header class="bg-white sticky z-50 top-0 border-gray-300 border-b py-3">
-    <nav class="container mx-auto flex flex-row justify-between">
+    <nav class="container max-w-screen-xl mx-auto flex flex-row justify-between">
       <div>
         <NuxtLink to="/" class="text-xl font-semibold">
           Lisergico

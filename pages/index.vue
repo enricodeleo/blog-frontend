@@ -2,7 +2,7 @@
   <div class="mb-8">
     <div class="container py-6 mx-auto">
       <div class="mainheading">
-        <h1 class="text-4xl font-semibold">
+        <h1 class="text-4xl font-semibold mb-2">
           Lisergico
         </h1>
         <p class="text-xl font-light">
