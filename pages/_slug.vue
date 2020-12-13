@@ -1,5 +1,5 @@
 <template>
-  <div class="relative py-8">
+  <div class="relative py-8 mb-8">
     <!-- Begin Fixed Left Share -->
     <div class="share text-center hidden md:block fixed z-30 top-0 py-24 text-gray-400">
       <p class="mb-2">

@@ -8,7 +8,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
       <!-- begin post -->
-      <article v-for="post of featured" :key="post.id" class="flex flex-row border-gray-300 border rounded-md h-72">
+      <article v-for="post of featured" :key="post.id" class="flex flex-row border-gray-300 border rounded-md min-h-72">
         <NuxtLink :to="`/${post.slug}`" :title="post.title" :style="{'background-image': `url(${post.coverImage})`}" class="h-full w-1/3 bg-no-repeat bg-center bg-cover rounded-l-md">
           &nbsp;
         </NuxtLink>
@@ -24,7 +24,7 @@
             </p>
           </div>
 
-          <footer class="text-sm">
+          <footer class="text-sm mt-4">
             <span>
               Pubblicato in
               <span v-for="(category, index) of post.categories" :key="index">
