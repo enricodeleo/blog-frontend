@@ -40,8 +40,8 @@
       </article>
       <!-- end post -->
       <!-- begin ad -->
-      <a ref="noopener" href="https://amzn.to/2VrreCI" target="_blank">
-        <img src="~/assets/images/point-of-vue.jpg" fluid alt="Point Of Vue" class="h-72 border-gray-300 border">
+      <a rel="noopener noreferrer" href="https://amzn.to/2VrreCI" target="_blank">
+        <img src="~/assets/images/point-of-vue.jpg" fluid alt="Point Of Vue" class="border-gray-300 border">
       </a>
       <!-- end ad -->
     </div>

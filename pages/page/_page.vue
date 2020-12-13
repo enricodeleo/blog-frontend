@@ -1,7 +1,7 @@
 <template>
   <div class="py-12 mb-8 flex flex-col md:flex-row md:space-x-10">
     <div class="flex flex-col justify-between md:max-w-xs order-2 md:order-1">
-      <a ref="noopener" href="https://amzn.to/2VrreCI" target="_blank" class="order-2 md:order-1">
+      <a rel="noopener noreferrer" href="https://amzn.to/2VrreCI" target="_blank" class="order-2 md:order-1">
         <img src="~/assets/images/point-of-vue.jpg" alt="Point Of Vue" class="border border-green-600 rounded-md">
       </a>
       <NuxtLink
@@ -79,7 +79,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

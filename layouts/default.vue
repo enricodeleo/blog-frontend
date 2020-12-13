@@ -6,6 +6,3 @@
     <div id="fb-root" />
   </div>
 </template>
-
-<style>
-</style>

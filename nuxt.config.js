@@ -23,7 +23,7 @@ export default {
     __dangerouslyDisableSanitizers: ['script'],
     title: 'Lisergico',
     meta: [
-      { name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0' },
       { hid: 'author', name: 'author', content: 'Enrico Deleo' },
       { hid: 'alternate', name: 'alternate', type: 'application/rss+xml', title: 'Lisergico &raquo; Feed', href: `${process.env.NUXT_ENV_FRONTEND_URL}/feed.xml` }
     ],

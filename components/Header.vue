@@ -8,6 +8,7 @@
         <a
           href="#"
           class="visible lg:invisible w-10 h-10 flex flex-col items-center justify-center text-center rounded-md border border-gray-300"
+          title="Menu"
           @click.prevent="expanded=!expanded"
         >
           <font-awesome-icon v-show="expanded" :icon="['fas', 'times']" />
