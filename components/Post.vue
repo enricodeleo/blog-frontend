@@ -1,7 +1,10 @@
 <template>
   <article class="flex flex-wrap flex-col border-gray-300 border rounded-md">
     <NuxtLink :to="`/${post.slug}`" :title="post.title">
-      <img :src="post.coverImage" :alt="post.title" class="rounded-t-md">
+      <img v-if="post.coverImage" :src="post.coverImage" :alt="post.title" class="rounded-t-md">
+      <div v-else class="flex flex-col justify-center items-center w-full h-72 bg-gradient-to-br from-green-400 to-blue-500 rounded-t-md text-white text-2xl font-semibold">
+        {{ post.title }}
+      </div>
     </NuxtLink>
 
     <div class="flex-grow flex flex-wrap flex-col place-content-between p-6">
@@ -24,9 +27,9 @@
           </span>
         </span>
         <br>
-        <time :datetime="post.date" class="text-gray-600">{{ post.dateLong }}</time>
+        '<time :datetime="post.date" class="text-gray-600">{{ post.dateLong }}</time>
         <span class="text-gray-600 px-1">•</span>
-        <span class="text-gray-600">{{ Math.ceil((post.readingTime || {}).minutes) }} minuti di lettura</span>
+        <span class="text-gray-600">{{ Math.ceil((post.readingTime || {}).minutes) }} minuti di lettura</span>'
       </footer>
     </div>
   </article>
