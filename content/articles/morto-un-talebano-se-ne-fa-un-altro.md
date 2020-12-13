@@ -21,7 +21,7 @@ Ma su questo stendiamo veli su veli...
 
 ## And the winner is...
 
-\[caption id="attachment\_379" align="aligncenter" width="475" caption="per la categoria jihadisti emergenti: ladies and gentlemen, mister Saif Al-Adel!"\]![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/05/alkaheda.jpg" "Al Qaeda")\[/caption\]
+\[caption id="attachment\_379" align="aligncenter" width="475" caption="per la categoria jihadisti emergenti: ladies and gentlemen, mister Saif Al-Adel!"\]![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/05/alkaheda.jpg "Al Qaeda")\[/caption\]
 
 Eccolo qui. Bello, eh? Questo è il volto che nei momenti politicamente più opportuni ci vedremo presentare nel prossimo futuro come **nemico pubblico numero #1**.
 

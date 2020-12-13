@@ -35,7 +35,7 @@ Ora: chiunque si armerebbe di fucile a pompa (Resident Evil docet), lanciafiamme
 **Nessuno è al sicuro. Mai.**
 
 I personaggi della serie e del fumetto a confronto
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/ZombieKB-The-Walking-Dead-Banner.jpg" "ZombieKB-The-Walking-Dead-Banner")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/ZombieKB-The-Walking-Dead-Banner.jpg "ZombieKB-The-Walking-Dead-Banner")
 
 ## Tutto ciò per dire?
 

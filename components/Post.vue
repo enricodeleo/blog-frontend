@@ -2,7 +2,7 @@
   <article class="flex flex-wrap flex-col border-gray-300 border rounded-md">
     <NuxtLink :to="`/${post.slug}`" :title="post.title">
       <img v-if="post.coverImage" :src="post.coverImage" :alt="post.title" class="rounded-t-md">
-      <div v-else class="flex flex-col justify-center items-center w-full h-72 bg-gradient-to-br from-green-400 to-blue-500 rounded-t-md text-white text-2xl font-semibold">
+      <div v-else class="flex flex-col justify-center items-center w-full h-72 bg-gradient-to-br from-green-400 to-blue-500 rounded-t-md text-white text-2xl font-semibold p-12">
         {{ post.title }}
       </div>
     </NuxtLink>

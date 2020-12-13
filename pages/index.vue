@@ -62,10 +62,29 @@ export default {
     }
   },
 
-  head ({ $seo }) {
-    return this.$seo({
-      title: 'Il blog di Enrico Deleo'
-    })
+  head () {
+    return {
+      ...this.$seo({
+        title: 'Il blog di Enrico Deleo'
+      })
+    }
+  },
+
+  jsonld () {
+    return {
+      '@context': 'http://schema.org',
+      '@type': 'WebSite',
+      author: {
+        '@type': 'Person',
+        name: 'Enrico Deleo'
+      },
+      url: process.env.NUXT_ENV_FRONTEND_URL,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${process.env.NUXT_ENV_FRONTEND_URL}/search?term={search_term_string}`,
+        'query-input': 'required name=search_term_string'
+      }
+    }
   }
 }
 </script>

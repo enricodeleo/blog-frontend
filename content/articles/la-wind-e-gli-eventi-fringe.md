@@ -36,7 +36,7 @@ Puoi stare tranquillo, le donne della tua vita non stanno intrattenendo rapporti
 
 \- Il numero che hai chiamato/ti sta chiamando viene quindi connesso con **il sistema di un universo parallelo** nel quale è stato assegnato ad un'altra persona.
 
-\[caption id="attachment\_475" align="aligncenter" width="355" caption="due responsabili delle centrali durante una pausa caffè"\]![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/11/lamantino.jpg" "lamantino")\[/caption\]
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/11/lamantino.jpg""lamantino")
 
  
 

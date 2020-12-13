@@ -174,7 +174,7 @@ export default {
     }
   },
 
-  head ({ $seo }) {
+  head () {
     return {
       ...this.$seo({
         title: this.post.title,
@@ -198,6 +198,23 @@ export default {
           src: 'https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v9.0&appId=103937073008677&autoLogAppEvents=1'
         }
       ]
+    }
+  },
+
+  jsonld () {
+    return {
+      '@context': 'http://schema.org',
+      '@type': 'Article',
+      author: {
+        '@type': 'Person',
+        name: 'Enrico Deleo'
+      },
+      headline: this.post.title,
+      tags: this.post.tags,
+      wordcount: this.post.text.split(' ').length,
+      image: [this.post.coverImage],
+      datePublished: this.post.date,
+      description: this.post.description
     }
   }
 }

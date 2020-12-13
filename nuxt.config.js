@@ -106,6 +106,8 @@ export default {
     }
   },
 
+  plugins: ['~/plugins/jsonld'],
+
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     'nuxt-seo',
