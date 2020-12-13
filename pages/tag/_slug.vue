@@ -1,29 +1,16 @@
 <template>
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-3">
-        <div class="card border-primary">
-          <a ref="noopener" href="https://amzn.to/2VrreCI" target="_blank">
-            <b-img-lazy src="~/assets/images/point-of-vue.jpg" fluid alt="Point Of Vue" />
-          </a>
-        </div>
-      </div>
-      <div class="col-md-9">
-        <div class="mainheading mt-0 pt-0">
-          <div class="row post-top-meta authorpage">
-            <div class="col">
-              <h1 class="mt-0 pt-0">
-                Post con tag <em class="text-capitalize ">{{ tag }}</em>
-              </h1>
-            </div>
-          </div>
-        </div>
-        <div class="listrecent listrelated">
-          <!-- begin post -->
-          <lazy-post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
-          <!-- end post -->
-        </div>
-      </div>
+  <div class="py-12 mb-8 flex flex-col md:flex-row md:space-x-10">
+    <a ref="noopener" href="https://amzn.to/2VrreCI" target="_blank" class="order-2 md:order-1 max-w-xs">
+      <img src="~/assets/images/point-of-vue.jpg" alt="Point Of Vue" class="border border-green-600 rounded-md">
+    </a>
+    <div class="flex-grow order-1 md:order-2">
+      <h1 class="text-3xl font-bold mb-5">
+        Post con tag <em class="text-capitalize ">{{ tag }}</em>
+      </h1>
+
+      <!-- begin post -->
+      <lazy-post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
+      <!-- end post -->
     </div>
   </div>
 </template>

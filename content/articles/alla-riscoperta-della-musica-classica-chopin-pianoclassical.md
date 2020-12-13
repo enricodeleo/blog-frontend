@@ -20,7 +20,7 @@ Oggi ti propongo qualche brano di quelli che portano bene i propri **150 anni s
 
 Non fare quella faccia, dai. **La musica classica spacca, sul serio**. **Prova**.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/469-2111_frederic-chopin.jpg" "469-2111_frederic-chopin")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/469-2111_frederic-chopin.jpg "469-2111_frederic-chopin")
 
 Chopin è un romantico, tuttavia conserva alcune caratteristiche dei classici e fu l' iniziatore di un suono pianistico ricco di espressività, di leggerezza di tocco e di inconsuete caratteristiche timbriche; per questo fu considerato anche il precursore dell' impressionismo musicale.
 

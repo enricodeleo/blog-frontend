@@ -1,58 +1,48 @@
 <template>
-  <section class="featured-posts">
-    <div class="section-title">
-      <h2><span>In primo piano</span></h2>
-    </div>
-    <div class="card-columns listfeaturedtag">
+  <section>
+    <h2 class="text-xl font-bold border-gray-300 border-b leading-10">
+      <span class="border-gray-700 border-b-2 py-2">
+        In primo piano
+      </span>
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
       <!-- begin post -->
-      <div v-for="post of featured" :key="post.id" class="card">
-        <div class="row">
-          <div class="col-md-5 wrapthumbnail">
-            <NuxtLink :to="`/${post.slug}`" :title="post.title">
-              <div class="thumbnail" :style="{'background-image': `url(${post.coverImage})`}" />
-            </NuxtLink>
-          </div>
-          <div class="col-md-7">
-            <div class="card-block">
-              <h2 class="card-title pr-4 pt-4">
-                <NuxtLink :to="`/${post.slug}`">
-                  {{ post.title }}
-                </NuxtLink>
+      <article v-for="post of featured" :key="post.id" class="flex flex-row border-gray-300 border rounded-md min-h-72">
+        <NuxtLink :to="`/${post.slug}`" :title="post.title" :style="{'background-image': `url(${post.coverImage})`}" class="h-full w-1/3 bg-no-repeat bg-center bg-cover rounded-l-md">
+          &nbsp;
+        </NuxtLink>
+        <div class="py-6 px-8 h-full w-2/3 flex flex-wrap flex-col place-content-between">
+          <div>
+            <NuxtLink :to="`/${post.slug}`">
+              <h2 class="text-xl font-bold">
+                {{ post.title }}
               </h2>
-              <p class="card-text pr-4 text-muted">
-                {{ post.description }}
-              </p>
-              <div class="metafooter">
-                <div class="wrapfooter">
-                  <span class="author-meta">
-                    <span class="post-name">
-                      Pubblicato in
-                      <span v-for="(category, index) of post.categories" :key="index">
-                        <NuxtLink :to="`/category/${category}`" class="text-primary text-capitalize">{{ category.replace('-', ' ') }}</NuxtLink><span v-if="index+1 !== post.categories.length">, </span>
-                      </span>
-                    </span>
-                    <br>
-                    <span class="post-date">{{ post.dateLong }}</span>
-                    <span class="dot" />
-                    <span class="post-read">{{ Math.ceil(post.readingTime.minutes) }} minuti di lettura</span>
-                  </span>
-                </div>
-              </div>
-            </div>
+            </NuxtLink>
+            <p class="text-gray-600 leading-relaxed mt-2">
+              {{ post.description }}
+            </p>
           </div>
+
+          <footer class="text-sm mt-4">
+            <span>
+              Pubblicato in
+              <span v-for="(category, index) of post.categories" :key="index">
+                <NuxtLink :to="`/category/${category}`" class="capitalize text-green-600">{{ category.replace('-', ' ') }}</NuxtLink><span v-if="index+1 !== post.categories.length">, </span>
+              </span>
+            </span>
+            <br>
+            <time :datetime="post.date" class="text-gray-600">{{ post.dateLong }}</time>
+            <span class="text-gray-600 px-1">•</span>
+            <span class="text-gray-600">{{ Math.ceil((post.readingTime || {}).minutes) }} minuti di lettura</span>
+          </footer>
         </div>
-      </div>
+      </article>
       <!-- end post -->
       <!-- begin ad -->
-      <div class="card overflow-hidden">
-        <div class="row">
-          <div class="col">
-            <a ref="noopener" href="https://amzn.to/2VrreCI" target="_blank">
-              <img src="~/assets/images/point-of-vue.jpg" fluid alt="Point Of Vue">
-            </a>
-          </div>
-        </div>
-      </div>
+      <a ref="noopener" href="https://amzn.to/2VrreCI" target="_blank">
+        <img src="~/assets/images/point-of-vue.jpg" fluid alt="Point Of Vue" class="h-72 border-gray-300 border">
+      </a>
       <!-- end ad -->
     </div>
   </section>

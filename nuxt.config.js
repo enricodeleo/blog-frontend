@@ -1,5 +1,6 @@
 import nuxtContent from '@nuxt/content'
 import MarkdownIt from 'markdown-it'
+import tailwindTypography from '@tailwindcss/typography'
 
 const isDev = process.env.NODE_ENV !== 'production'
 
@@ -89,7 +90,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '~/assets/styles/main.scss'
+    // '~/assets/styles/main.scss'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -128,6 +129,7 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    'nuxt-lazy-load',
     '@nuxtjs/feed',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
@@ -135,30 +137,6 @@ export default {
     'nuxt-facebook-pixel-module',
     'nuxt-logger'
   ],
-
-  tailwindcss: {
-    theme: {
-      fontFamily: {
-        display: ['system-ui', 'sans-serif'],
-        body: ['system-ui', 'sans-serif']
-      }
-    },
-    variants: {},
-    plugins: [],
-    purge: {
-      enabled: process.env.NODE_ENV === 'production',
-      content: [
-        'components/**/*.vue',
-        'layouts/**/*.vue',
-        'pages/**/*.vue',
-        'plugins/**/*.js',
-        'nuxt.config.js',
-        // TypeScript
-        'plugins/**/*.ts',
-        'nuxt.config.ts'
-      ]
-    }
-  },
 
   facebook: {
     /* module options */
@@ -245,10 +223,6 @@ export default {
   robots: {
     UserAgent: '*',
     Allow: '/'
-  },
-
-  styleResources: {
-    scss: '@/assets/styles/_variables.scss'
   },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)

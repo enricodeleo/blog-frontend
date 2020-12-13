@@ -1,36 +1,35 @@
 <template>
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-3 order-2 order-md-1">
-        <div
-          class="d-flex flex-column justify-content-between w-100 h-100"
-        >
-          <div class="card border-primary order-2 order-md-1">
-            <a ref="noopener" href="https://amzn.to/2VrreCI" target="_blank">
-              <b-img-lazy src="~/assets/images/point-of-vue.jpg" fluid alt="Point Of Vue" />
-            </a>
-          </div>
-          <div class="order-1 order-md-2 mt-3 mb-5 mb-md-0">
-            <NuxtLink
-              v-if="count > 6 && page > 1"
-              :to="`/page/${page-1}`"
-              class="btn btn-outline-link btn-block w-100 btn-lg"
-            >
-              👈 Indietro
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-9 order-1 order-md-2">
-        <div class="listrecent listrelated">
-          <!-- begin post -->
-          <lazy-post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
-          <!-- end post -->
-          <NuxtLink v-if="count > currentArticles" :to="`/page/${page+1}`" class="btn btn-outline-primary btn-block btn-lg">
-            Altri post
-          </NuxtLink>
-        </div>
-      </div>
+  <div class="py-12 mb-8 flex flex-col md:flex-row md:space-x-10">
+    <div class="flex flex-col justify-between md:max-w-xs order-2 md:order-1">
+      <a ref="noopener" href="https://amzn.to/2VrreCI" target="_blank" class="order-2 md:order-1">
+        <img src="~/assets/images/point-of-vue.jpg" alt="Point Of Vue" class="border border-green-600 rounded-md">
+      </a>
+      <NuxtLink
+        v-if="count > 6 && page > 1"
+        :to="`/page/${page-1}`"
+        class="order-1 md:order-2 hover:text-green-800 text-center p-3 w-full text-lg block"
+      >
+        👈 Indietro
+      </NuxtLink>
+      <NuxtLink
+        v-else
+        to="/"
+        class="order-1 md:order-2 hover:text-green-800 text-center p-3 w-full text-lg block"
+      >
+        👈 Indietro
+      </NuxtLink>
+    </div>
+    <div class="flex-grow order-1 md:order-2">
+      <!-- begin post -->
+      <lazy-post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
+      <!-- end post -->
+      <NuxtLink
+        v-if="count > currentArticles"
+        :to="`/page/${page+1}`"
+        class="border border-green-600 hover:border-green-800 text-green-600 hover:text-green-800 text-center p-3 w-full text-lg rounded-md block mt-6 font-semibold"
+      >
+        Altri post
+      </NuxtLink>
     </div>
   </div>
 </template>
