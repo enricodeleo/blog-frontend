@@ -1,6 +1,5 @@
 import nuxtContent from '@nuxt/content'
 import MarkdownIt from 'markdown-it'
-import tailwindTypography from '@tailwindcss/typography'
 
 const isDev = process.env.NODE_ENV !== 'production'
 
