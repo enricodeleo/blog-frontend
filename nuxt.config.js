@@ -23,7 +23,6 @@ export default {
     __dangerouslyDisableSanitizers: ['script'],
     title: 'Lisergico',
     meta: [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0' },
       { hid: 'author', name: 'author', content: 'Enrico Deleo' },
       { hid: 'alternate', name: 'alternate', type: 'application/rss+xml', title: 'Lisergico &raquo; Feed', href: `${process.env.NUXT_ENV_FRONTEND_URL}/feed.xml` }
     ],
@@ -74,21 +73,6 @@ export default {
         async: true
       }
     ]
-  },
-
-  seo: {
-    // Module options
-    baseUrl: process.env.NUXT_ENV_FRONTEND_URL,
-    name: 'Lisergico',
-    title: 'Il blog di Enrico Deleo',
-    lang: 'it-IT',
-    language: 'Italian',
-    templateTitle: '%title% | %name%',
-    description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant',
-    facebook: {
-      pageId: '358373644189796',
-      appId: '103937073008677'
-    }
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -214,9 +198,23 @@ export default {
 
   pwa: {
     meta: {
-      lang: 'it',
       ogSiteName: 'Lisergico',
       ogHost: process.env.NUXT_ENV_FRONTEND_URL
+    }
+  },
+
+  seo: {
+    // Module options
+    baseUrl: process.env.NUXT_ENV_FRONTEND_URL,
+    name: 'Lisergico',
+    title: 'Il blog di Enrico Deleo',
+    lang: 'it-IT',
+    language: 'Italian',
+    templateTitle: '%title% | %name%',
+    description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant',
+    facebook: {
+      pageId: '358373644189796',
+      appId: '103937073008677'
     }
   },
 
@@ -231,7 +229,6 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    analyze: true,
     splitChunks: {
       layouts: true
     },
