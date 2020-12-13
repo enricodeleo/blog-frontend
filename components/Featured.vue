@@ -9,7 +9,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
       <!-- begin post -->
       <article v-for="post of featured" :key="post.id" class="flex flex-row border-gray-300 border rounded-md min-h-72">
-        <NuxtLink :to="`/${post.slug}`" :title="post.title" :style="{'background-image': `url(${post.coverImage})`}" class="h-full w-1/3 bg-no-repeat bg-center bg-cover rounded-l-md">
+        <NuxtLink :to="`/${post.slug}`" :title="post.title" :lazy-background="post.coverImage" class="h-full w-1/3 bg-no-repeat bg-center bg-cover rounded-l-md">
           &nbsp;
         </NuxtLink>
         <div class="py-6 px-8 h-full w-2/3 flex flex-wrap flex-col place-content-between">

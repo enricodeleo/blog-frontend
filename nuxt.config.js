@@ -113,7 +113,9 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    'nuxt-lazy-load',
+    ['nuxt-lazy-load', {
+      defaultImage: '/images/default-image.jpg'
+    }],
     '@nuxtjs/feed',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
