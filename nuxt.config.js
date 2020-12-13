@@ -238,6 +238,11 @@ export default {
     splitChunks: {
       layouts: true
     },
+    optimization: {
+      splitChunks: {
+        name: true
+      }
+    },
     babel: {
       presets ({ envName }) {
         const envTargets = {
