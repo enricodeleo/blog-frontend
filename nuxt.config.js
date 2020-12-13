@@ -199,7 +199,13 @@ export default {
   pwa: {
     meta: {
       ogSiteName: 'Lisergico',
-      ogHost: process.env.NUXT_ENV_FRONTEND_URL
+      ogHost: process.env.NUXT_ENV_FRONTEND_URL,
+      theme_color: '#000000'
+    },
+    manifest: {
+      name: 'Lisergico',
+      lang: 'it',
+      useWebmanifestExtension: false
     }
   },
 
