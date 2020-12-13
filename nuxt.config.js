@@ -114,7 +114,7 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     ['nuxt-lazy-load', {
-      defaultImage: '/images/default-image.jpg'
+      defaultImage: '/default-image.jpg'
     }],
     '@nuxtjs/feed',
     '@nuxtjs/sitemap',
