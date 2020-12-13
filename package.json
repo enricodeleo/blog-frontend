@@ -20,14 +20,14 @@
     "core-js": "3",
     "nuxt": "^2.14.6",
     "nuxt-logger": "^0.2.0",
-    "reading-time": "^1.2.1"
+    "reading-time": "^1.2.1",
+    "vue-lazy-hydration": "^2.0.0-beta.4"
   },
   "devDependencies": {
     "@babel/runtime-corejs3": "^7.12.5",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@nuxt/content": "^1.9.0",
-    "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/feed": "^2.0.0",
@@ -36,7 +36,6 @@
     "@nuxtjs/pwa": "^3.0.2",
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.4.0",
-    "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/tailwindcss": "^3.3.4",
     "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^9",

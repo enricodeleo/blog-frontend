@@ -27,6 +27,10 @@ export default {
       { hid: 'author', name: 'author', content: 'Enrico Deleo' },
       { hid: 'alternate', name: 'alternate', type: 'application/rss+xml', title: 'Lisergico &raquo; Feed', href: `${process.env.NUXT_ENV_FRONTEND_URL}/feed.xml` }
     ],
+    link: [
+      { hid: 'dns-googletagmanager', rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+      { hid: 'dns-facebook', rel: 'dns-prefetch', href: 'https://connect.facebook.net' }
+    ],
     script: [
       {
         hid: 'iubenda-privacy',
@@ -121,9 +125,6 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     'nuxt-seo',
-    '@nuxtjs/style-resources',
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
@@ -230,13 +231,9 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    analyze: true,
     splitChunks: {
       layouts: true
-    },
-    optimization: {
-      splitChunks: {
-        name: true
-      }
     },
     babel: {
       presets ({ envName }) {
