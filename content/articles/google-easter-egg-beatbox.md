@@ -15,7 +15,7 @@ description: ""
 
 Google ogni tanto regala qualche piccola sorpresa. A volte propone itinerari a piedi di percorsi come Palermo - New York, altre volte _sorprese sonore_ come questa.
 
-[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/12/google2.jpg "google2")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/12/google2.jpg")
+[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/12/google2.jpg "google2")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/12/google2.jpg)
 
 Prova ad andare su Google Translate e digita come testo da tradurre:
 

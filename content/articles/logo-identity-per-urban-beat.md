@@ -22,4 +22,4 @@ Questa nuovo logo è per Urban Beat, un artista che si sta facendo largo nel pan
 
 [![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/logo1_wall-1024x780.jpg "logo1_wall")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/logo1_wall.jpg)
 
-[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/logo1_stencil-1024x755.jpg "logo1_stencil")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/logo1_stencil.jpg")
+[![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/logo1_stencil-1024x755.jpg "logo1_stencil")](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/01/logo1_stencil.jpg)

@@ -16,7 +16,7 @@ description: ""
 
 Mi hanno chiesto di buttare giù un breve pensiero sull'esperienza fatta alla Biennale di Venezia. Una cosa veloce da pubblicare in un sito. L'ho fatto, e probabilmente **sono riuscito a confezionare una bella paginetta di aria fritta**. Chi sono io per sintetizzare un'esperienza del genere? Ed anche volendo farlo, come potevo far entrare descrizioni e pensieri su opere ed artisti in poche righe?
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/149975_173778802632489_100000011101157_619075_276261_n.jpg" "biennale venezia 1")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2010/11/149975_173778802632489_100000011101157_619075_276261_n.jpg "biennale venezia 1")
 
 Ora, visto che ho già premesso che trattasi di un pensiero povero, e che probabilmente quello che ho scritto non vuol dire niente, se continuate a leggere sono fatti vostri :). Io vi ho avvertiti.
 

@@ -107,6 +107,8 @@ export default {
     }
   },
 
+  plugins: ['~/plugins/jsonld'],
+
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     'nuxt-seo',
@@ -114,7 +116,9 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    'nuxt-lazy-load',
+    ['nuxt-lazy-load', {
+      defaultImage: '/default-image.jpg'
+    }],
     '@nuxtjs/feed',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',

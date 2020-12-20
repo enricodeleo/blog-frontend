@@ -9,7 +9,7 @@ description: ""
 
 Non parlo di una serie nuovissima. Difatti siamo già alla seconda stagione, ma era il caso di parlarne vista la poca diffusione che sta avendo in Italia, e che invece ci starebbe tutta.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/03/archer.jpg" "archer")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/03/archer.jpg "archer")
 
 James Bond e, a seguire, tutti gli spy movies che in cicli e ricicli hanno calcato gli schermi ci hanno abituato a vedere figure di **_spie super fighe e super attrezzate_** che da sole sbaragliano complotti internazionali. **"Archer"** riprende e fa un po il verso a questi personaggi. La sua educazione e la condizione agiata lo dipingerebbero come una sorta di James Bond, ma estremizzato. Tanto che il classico fascino da spia si trasforma in atteggiamenti da donnaiolo menefreghista. La figaggine diventa figaggine consapevole, che lo rende pieno di se ed esagerato. Le super attrezzature vengono messe in dubbio dai frequenti dissesti finanziari dell'agenzia per la quale lavora (**l'ISIS**).
 

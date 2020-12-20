@@ -24,7 +24,7 @@ E' la prima volta che assisto in tempo reale alla caduta di un colosso del web. 
 
 **Il sito è stato oscurato dal Dipartimento di Giustizia degli Stati Uniti d'America per violazione di copyright e pirateria**, mentre l'FBI ha reso noto l'arresto del proprietario e di parte dello staff. Le majors dichiarano danni per 500 milioni di dollari a causa del servizio.
 
-![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/01/megavideo.jpg" "megavideo")
+![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/01/megavideo.jpg "megavideo")
 
 Il **buzz sulla rete è stato immediato e massiccio**, tutti sono corsi ad approfittare della morte del colosso per creare il proprio gruppo o la propria pagina di Facebook e godersi il proprio quarto d'ora di celebrità. Anche [Wikipedia è stata aggiornata](http://it.wikipedia.org/wiki/Megavideo) per riportare l'accaduto.
 
