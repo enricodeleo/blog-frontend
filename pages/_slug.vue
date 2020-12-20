@@ -176,8 +176,9 @@ export default {
         appId: '103937073008677',
         status: true,
         xfbml: true,
-        version: 'v3.3'
+        version: 'v4.0'
       })
+      setTimeout(window.FB.XFBML.parse, 100)
     }
   },
 
