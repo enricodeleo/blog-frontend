@@ -41,9 +41,9 @@
             {{ post.title }}
           </h1>
 
-          <time :datetime="post.date" class="text-gray-600">{{ post.dateLong }}</time>
-          <span class="text-gray-600 px-1">•</span>
-          <span class="text-gray-600">{{ Math.ceil((post.readingTime || {}).minutes) }} minuti di lettura</span>
+          <time :datetime="post.date" class="text-gray-600 dark:text-gray-400">{{ post.dateLong }}</time>
+          <span class="text-gray-600 dark:text-gray-400 px-1">•</span>
+          <span class="text-gray-600 dark:text-gray-400">{{ Math.ceil((post.readingTime || {}).minutes) }} minuti di lettura</span>
         </header>
 
         <!-- Begin Featured Image -->
@@ -51,7 +51,7 @@
         <!-- End Featured Image -->
 
         <!-- Begin Post Content -->
-        <div class="prose prose-xl max-w-none">
+        <div class="prose prose-xl prose-green dark:prose-dark max-w-none">
           <nuxt-content :document="post" />
         </div>
         <!-- End Post Content -->
@@ -99,7 +99,14 @@
       <!-- End related posts -->
 
       <!-- Begin Comments -->
-      <div id="comments" class="fb-comments mt-10" :data-href="postUrl" data-numposts="5" data-width="100%" />
+      <div
+        id="comments"
+        class="fb-comments mt-10"
+        :data-href="postUrl"
+        :data-colorscheme="$colorMode.value === 'dark' ? 'dark' : 'light'"
+        data-numposts="5"
+        data-width="100%"
+      />
       <!-- End Comments -->
     </div>
   </div>

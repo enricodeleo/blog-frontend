@@ -19,7 +19,7 @@
                 {{ post.title }}
               </h2>
             </NuxtLink>
-            <p class="text-gray-600 leading-relaxed mt-2">
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mt-2">
               {{ post.description }}
             </p>
           </div>
@@ -32,9 +32,9 @@
               </span>
             </span>
             <br>
-            <time :datetime="post.date" class="text-gray-600">{{ post.dateLong }}</time>
-            <span class="text-gray-600 px-1">•</span>
-            <span class="text-gray-600">{{ Math.ceil((post.readingTime || {}).minutes) }} minuti di lettura</span>
+            <time :datetime="post.date" class="text-gray-600 dark:text-gray-400">{{ post.dateLong }}</time>
+            <span class="text-gray-600 dark:text-gray-400 px-1">•</span>
+            <span class="text-gray-600 dark:text-gray-400">{{ Math.ceil((post.readingTime || {}).minutes) }} minuti di lettura</span>
           </footer>
         </div>
       </article>
