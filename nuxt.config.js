@@ -88,7 +88,8 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/fontawesome',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode'
   ],
 
   fontawesome: {
@@ -121,6 +122,21 @@ export default {
     'nuxt-facebook-pixel-module',
     'nuxt-logger'
   ],
+
+  colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'light', // fallback value if not system preference found
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    classSuffix: '-mode',
+    storageKey: 'color-mode'
+  },
+
+  purgeCSS: {
+    whitelist: ['dark-mode']
+  },
 
   facebook: {
     /* module options */

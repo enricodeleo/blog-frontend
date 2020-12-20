@@ -1,14 +1,14 @@
 <template>
   <section>
-    <h2 class="text-xl font-bold border-gray-300 border-b leading-10">
-      <span class="border-gray-700 border-b-2 py-2">
+    <h2 class="text-xl font-bold border-gray-300 dark:border-gray-500 border-b leading-10">
+      <span class="border-gray-700 dark:border-gray-300 border-b-2 py-2 pr-1">
         In primo piano
       </span>
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
       <!-- begin post -->
-      <article v-for="post of featured" :key="post.id" class="flex flex-row border-gray-300 border rounded-md min-h-72">
+      <article v-for="post of featured" :key="post.id" class="flex flex-row border-gray-300 dark:border-gray-600 border rounded-md min-h-72">
         <NuxtLink :to="`/${post.slug}`" :title="post.title" :style="{'background-image': `url(${post.coverImage})`}" class="h-full w-1/3 bg-no-repeat bg-center bg-cover rounded-l-md">
           &nbsp;
         </NuxtLink>

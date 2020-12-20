@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="container max-w-screen-xl mx-auto grid grid-cols-2 space-between border-t border-gray-300 pt-4 pb-6 text-xs text-gray-600"
+    class="container max-w-screen-xl mx-auto grid grid-cols-2 space-between border-t border-gray-300 dark:border-gray-700 pt-4 pb-6 text-xs text-gray-600 dark:text-gray-400"
   >
     <div>
       <p>

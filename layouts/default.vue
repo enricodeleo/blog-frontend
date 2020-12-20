@@ -1,7 +1,9 @@
 <template>
-  <div class="flex flex-col min-h-screen antialiased sm:subpixel-antialiased md:antialiased">
+  <div
+    class="flex flex-col min-h-screen antialiased sm:subpixel-antialiased md:antialiased dark:bg-gray-800 dark:text-gray-300"
+  >
     <LazyHydrate on-interaction>
-      <Header class="px-6 lg:px-0" />
+      <Header class="px-6 lg:px-0 bg-white dark:bg-gray-800" />
     </LazyHydrate>
     <LazyHydrate when-visible>
       <Nuxt keep-alive class="pb-5 px-6 lg:px-0 container max-w-screen-xl mx-auto" />

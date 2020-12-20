@@ -6,12 +6,35 @@
  */
 module.exports = {
   theme: {
+    darkSelector: '.dark-mode',
     fontFamily: {
       display: ['system-ui', 'sans-serif'],
       body: ['system-ui', 'sans-serif']
     }
   },
-  plugins: [require('@tailwindcss/typography')],
+  variants: {
+    backgroundColor: [
+      'dark',
+      'dark-hover',
+      'dark-group-hover',
+      'dark-even',
+      'dark-odd',
+      'hover',
+      'responsive'
+    ],
+    borderColor: [
+      'dark',
+      'dark-focus',
+      'dark-focus-within',
+      'hover',
+      'responsive'
+    ],
+    textColor: ['dark', 'dark-hover', 'dark-active', 'hover', 'responsive']
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('tailwindcss-dark-mode')()
+  ],
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: [

@@ -17,8 +17,8 @@
     <!-- Begin List Posts
     ================================================== -->
     <section class="recent-posts">
-      <h2 class="text-xl font-bold border-gray-300 border-b leading-10">
-        <span class="border-gray-700 border-b-2 py-2">
+      <h2 class="text-xl font-bold border-gray-300 dark:border-gray-500 border-b leading-10">
+        <span class="border-gray-700 dark:border-gray-300 border-b-2 py-2 pr-1">
           Altre storie
         </span>
       </h2>
