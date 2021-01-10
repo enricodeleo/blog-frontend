@@ -71,12 +71,6 @@ export default {
         body: true,
         defer: true,
         async: true
-      },
-      {
-        hid: 'adsbygoogle',
-        src: '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-        'data-ad-client': 'ca-pub-9077296244618291',
-        async: true
       }
     ]
   },
