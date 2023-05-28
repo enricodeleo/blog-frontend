@@ -26,8 +26,6 @@ sviluppo (Dev) e le operazioni IT (Ops), permette alle aziende di sviluppare e d
 efficientemente. Ma come in ogni campo tecnologico, le tendenze DevOps stanno costantemente evolvendo. 
 Oggi vorrei fare un riassunto delle ultime tendenze nel DevOps che possono influenzare le performance del tuo prossimo progetto.
 
-![DevOps](https://i2.wp.com/enricodeleo.s3.eu-south-1.amazonaws.com/images/pexels-realtoughcandycom-11035393.jpg)
-
 ## Automazione su larga scala
 
 L'automazione è sempre stata al cuore del DevOps, ma ora stiamo vedendo un'espansione dell'automazione a quasi ogni aspetto 
