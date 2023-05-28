@@ -45,8 +45,7 @@ cloud-native. Questa tendenza può aiutare a gestire in modo efficiente i worklo
 
 La sicurezza sta diventando sempre più integrata nel ciclo di vita dello sviluppo delle applicazioni. DevSecOps, l'incorporamento 
 delle pratiche di sicurezza nel processo DevOps, sta diventando una necessità piuttosto che un'opzione. Questo significa che la 
-sicurezza non è più solo un pensiero successivo, ma un aspetto centrale di tutto il processo di sviluppo e distribuzione. Questa 
-tendenza può aiutare a ridurre i rischi di sicurezza e a migliorare la conformità.
+sicurezza non è più solo un pensiero successivo, ma un aspetto centrale di tutto il processo di sviluppo e distribuzione. Security-by-design è il mantra di questi anni.
 
 ## Intelligenza Artificiale e Machine Learning nel DevOps
 
@@ -56,12 +55,20 @@ Inoltre, possono aiutare a prevedere problemi prima che accadano, migliorando la
 
 ## Microservizi e Serverless
 
-L'architettura basata su microservizi e l'informatica serverless stanno cambiando il modo in cui costruiamo e implementiamo le 
-applicazioni. Offrono un alto livello di scalabilità e rendono più facile l'aggiornamento e la manutenzione delle applicazioni.
+Sia i microservizi che l'architettura serverless rappresentano due approcci importanti per lo sviluppo e il deployment di applicazioni.
 
-Queste sono solo alcune delle tendenze emergenti nel DevOps. È importante tenere d'occhio queste tendenze e considerare come possono 
-essere applicate al tuo progetto. Ricorda, il DevOps non è soloEcco l'articolo in formato Markdown. Le parti tra parentesi quadre 
-seguite da parentesi tonde rappresentano i collegamenti alle immagini.
+I **microservizi** sono un modello di architettura del software che suddivide un'applicazione in una serie di servizi più piccoli e gestibili. Questi servizi funzionano in modo indipendente l'uno dall'altro e comunicano attraverso un protocollo comune come ad esempio le richieste http oppure pub/sub su una coda condivisa. Ogni microservizio può essere sviluppato, implementato e scalato in modo indipendente, il che offre una serie di vantaggi:
+
+- Scalabilità: Poiché ogni servizio può essere scalato in modo indipendente, le risorse possono essere allocate in modo più efficiente.
+- Flessibilità di sviluppo: Diversi team possono lavorare su diversi servizi in parallelo.
+- Isolamento: Se un servizio fallisce, non influisce sugli altri servizi.
+- Velocità di implementazione: I servizi più piccoli possono essere sviluppati e implementati più rapidamente.
+
+Il computing **serverless** è un modello di esecuzione di codice in cui il provider di cloud gestisce l'infrastruttura del server. Gli sviluppatori scrivono solo il codice dell'applicazione, e il provider del cloud si occupa dell'allocazione delle risorse, della scalabilità e della manutenzione del server. I vantaggi del serverless includono:
+
+- Nessuna gestione dei server: gli sviluppatori possono concentrarsi sulla scrittura del codice invece che sulla gestione dell'infrastruttura.
+- Scalabilità automatica: l'infrastruttura può scalare automaticamente in base al carico di lavoro.
+- Costi basati sull'utilizzo: si paga solo per il tempo durante il quale il codice è in esecuzione.
 
 ## Observability
 
