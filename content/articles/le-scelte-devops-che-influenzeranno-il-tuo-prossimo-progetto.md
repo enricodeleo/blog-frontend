@@ -16,7 +16,7 @@ tags:
   - "git"
   - "DevSecOps"
 description: "DevOps unisce sviluppo e operazioni, accelerando il rilascio di software, migliorando la qualità e promuovendo la collaborazione interfunzionale."
-coverImage: "https://i2.wp.com/enricodeleo.s3.eu-south-1.amazonaws.com/images/pexels-realtoughcandycom-11035393.jpg"
+coverImage: "https://i2.wp.com/enricodeleo.s3.eu-south-1.amazonaws.com/images/pexels-realtoughcandycom-11035393.jpg?resize=1088,612"
 ---
 
 # Le scelte DevOps che influenzeranno il tuo prossimo progetto
