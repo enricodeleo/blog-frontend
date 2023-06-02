@@ -241,6 +241,15 @@ export default {
     facebook: {
       pageId: '358373644189796',
       appId: '103937073008677'
+    },
+    openGraph: {
+      type: 'website',
+      image: {
+        url: '~/assets/images/cover.jpg',
+        alt: 'Lisergico',
+        width: '1200',
+        height: '630'
+      }
     }
   },
 

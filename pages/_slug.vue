@@ -193,7 +193,10 @@ export default {
           type: 'article',
           title: this.post.title,
           description: this.post.description,
-          image: this.post.coverImage
+          image: {
+            url: this.post.coverImage,
+            alt: this.post.title
+          }
         }
       }),
       script: [
