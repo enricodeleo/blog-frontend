@@ -12,66 +12,54 @@ description: "La vera sfida nel rendere fluida la migrazione tra Magento e WooCo
 coverImage: "https://i2.wp.com/enricodeleo.s3.eu-south-1.amazonaws.com/images/migration.jpeg?resize=1088,612"
 ---
 
-Mi sono imbattuto in una sfida interessante: creare un plugin per WordPress che permettesse una migrazione senza soluzione di continuità degli utenti da Magento 2 a WooCommerce. 
-Sembra semplice, vero? Lo pensavo anche io prima di rendermi conto si trattasse di terreno inesplorato senza una libreria, un plugin, una guida. Lasciatemi spiegare.
+Mi sono imbattuto in una sfida interessante: creare un plugin per WordPress che permettesse una migrazione senza soluzione di continuità degli utenti da Magento 2 a WooCommerce. Sembra semplice, vero? Lo pensavo anche io, prima di rendermi conto che mi trovavo di fronte a un terreno inesplorato, senza una libreria, un plugin o una guida a cui fare riferimento. Lasciatemi spiegare.
 
-## WooCommerce vs Magento: Perché scegliere WooCommerce?
+## WooCommerce vs Magento: perché scegliere WooCommerce?
 
-Quando si tratta di scegliere una piattaforma di e-commerce, WooCommerce e Magento sono due dei nomi più popolari che vengono in mente. Entrambi offrono un'ampia gamma di funzionalità che possono 
-aiutare a costruire un negozio online robusto. Tuttavia, ci sono diverse ragioni per cui potresti voler scegliere WooCommerce su Magento. Ecco alcuni dei vantaggi principali:
+Quando si tratta di scegliere una piattaforma di e-commerce, WooCommerce e Magento sono due dei nomi più popolari che vengono in mente. Entrambi offrono un'ampia gamma di funzionalità che possono aiutare a costruire un negozio online robusto. Tuttavia, ci sono diverse ragioni per cui potresti voler scegliere WooCommerce su Magento. Ecco alcuni dei vantaggi principali:
 
-### Facilità d'uso
+#### Facilità d'uso
 
-WooCommerce è noto per la sua facilità d'uso. È un plugin di WordPress, il che significa che si integra perfettamente con qualsiasi sito WordPress esistente. Se hai già familiarità con WordPress, 
-allora imparare a usare WooCommerce sarà un gioco da ragazzi. Magento, d'altra parte, ha una curva di apprendimento più ripida e può essere più complicato da configurare e gestire.
+WooCommerce è noto per la sua facilità d'uso. È un plugin di WordPress, il che significa che si integra perfettamente con qualsiasi sito WordPress esistente. Se hai già familiarità con WordPress, allora imparare a usare WooCommerce sarà un gioco da ragazzi. Magento, d'altra parte, ha una curva di apprendimento più ripida e può essere più complicato da configurare e gestire.
 
-### Flessibilità e personalizzazione
+#### Flessibilità e personalizzazione
 
-WooCommerce offre una grande flessibilità quando si tratta di personalizzare il tuo negozio. Ci sono migliaia di temi e plugin disponibili che ti permettono di aggiungere nuove funzionalità e 
-cambiare l'aspetto del tuo negozio con facilità. Magento offre anche molte opzioni di personalizzazione, ma può richiedere più competenze tecniche per apportare modifiche significative.
+WooCommerce offre una grande flessibilità quando si tratta di personalizzare il tuo negozio. Ci sono migliaia di temi e plugin disponibili che ti permettono di aggiungere nuove funzionalità e cambiare l'aspetto del tuo negozio con facilità. Magento offre anche molte opzioni di personalizzazione, ma può richiedere più competenze tecniche per apportare modifiche significative.
 
-### Costi
+#### Costi
 
-WooCommerce è un plugin gratuito, il che lo rende una scelta eccellente per le piccole imprese o per chi è alle prime armi con l'e-commerce. Anche se ci sono costi associati all'hosting del tuo sito
-e all'acquisto di temi o plugin premium, questi costi sono generalmente più bassi rispetto a quelli di Magento. Magento offre una versione gratuita (Magento Open Source), ma per accedere a tutte le 
-funzionalità e al supporto, dovrai optare per Magento Commerce, che ha un costo significativo.
+WooCommerce è un plugin gratuito, il che lo rende una scelta eccellente per le piccole imprese o per chi è alle prime armi con l'e-commerce. Anche se ci sono costi associati all'hosting del tuo sito e all'acquisto di temi o plugin premium, questi costi sono generalmente più bassi rispetto a quelli di Magento. Magento offre una versione gratuita (Magento Open Source), ma per accedere a tutte le funzionalità e al supporto dovrai optare per estensioni premium o a Magento Commerce, ad un costo significativo.
 
-### Supporto della comunità
+#### Supporto della comunità
 
-Sia WooCommerce che Magento hanno comunità di sviluppatori attive, ma la comunità di WordPress (e quindi di WooCommerce) è molto più grande. Questo significa che è più facile trovare risorse, 
-tutorial e soluzioni a problemi comuni con WooCommerce.
+Sia WooCommerce che Magento hanno comunità di sviluppatori attive, ma la comunità di WordPress (e quindi di WooCommerce) è molto più grande. Questo significa che è più facile trovare risorse, tutorial e soluzioni a problemi comuni con WooCommerce.
 
 ## Migrazione
 
-Mentre Magento può essere una scelta eccellente per le grandi imprese che necessitano di una soluzione di e-commerce robusta, WooCommerce offre una soluzione più accessibile e user-friendly 
-che è perfetta per le piccole imprese.
+Mentre Magento può essere una scelta eccellente per le grandi imprese che necessitano di una soluzione di e-commerce robusta, WooCommerce offre una soluzione più accessibile e user-friendly che è **perfetta per le piccole imprese**.
 
-Per questi motivi talvolta imprese di piccole dimensioni che hanno adottato Magento in prima battuta, si trovano in difficoltà e con costi e rigidità per loro difficilmente sostenibili ed optano
-per una attività di __replatforming__ per proseguire l'attività su WooCommerce.
+Per questi motivi, talvolta le imprese di piccole dimensioni che hanno adottato Magento inizialmente, si trovano in difficoltà con costi e rigidità difficilmente sostenibili ed optano per un'attività di **_replatforming_** per proseguire le vendite su WooCommerce.
 
-### I Vantaggi di una Transizione Fluida
+### I Vantaggi di una transizione fluida
 
-Una delle principali preoccupazioni quando si migra da una piattaforma all'altra è la frizione percepita dall'utente finale, che potrebbe incidere negativamente sulle conversioni. 
+Una delle principali preoccupazioni quando si migra da una piattaforma all'altra è la frizione percepita dall'utente finale, che potrebbe incidere negativamente sulle conversioni.
 
-Se mantenere la struttura generale del sito ecommerce familiare (o addirittura identica) ed il catalogo intatto è ragionevolmente semplice, non lo è quando si tratta di autenticazione. 
+Se mantenere la struttura generale del sito ecommerce familiare (o addirittura identica) ed il catalogo intatto è ragionevolmente semplice, non lo è quando si tratta di autenticazione.
 
 ### Magento 2 e WordPress: autenticazione a confronto
 
-WordPress utilizza una tecnologia chiamata `phpass` per l'hashing delle password. Si tratta di un framework di hashing delle password di dominio pubblico portatile per l'uso in applicazioni PHP. 
+WordPress utilizza una tecnologia chiamata `phpass` per l'hashing delle password. Si tratta di un framework di hashing delle password di dominio pubblico portatile per l'uso in applicazioni PHP.
 
-Magento 2, d'altra parte, utilizza **un algoritmo di hashing delle password più complesso**. Da un lato infatti utilizza `sodium` (incluso in PHP dalla versione 7.2), dall'altro utilizza 
-una tecnica chiamata __hash stretching__ per aumentare la sicurezza delle password hashate. Questo comporta l'hashing della password più volte (per di più con l'aggiunta di una stringa casuale 
-detta __salt__ che ne aumenta ulteriormente la complessità). 
+Magento 2, d'altra parte, utilizza un algoritmo di hashing delle password più complesso. Da un lato infatti utilizza `sodium` (incluso in PHP dalla versione 7.2), dall'altro utilizza una tecnica chiamata **_hash stretching_** per aumentare la sicurezza delle password hashate. Questo comporta l'hashing della password più volte (per di più con l'aggiunta di una stringa casuale detta **_salt_** che ne aumenta ulteriormente la complessità). 
 Questo approccio rende il processo di hashing estremamente intensivo dal punto di vista computazionale, il che può aiutare a rallentare un attaccante che sta cercando di indovinare la password.
 
-Questa sostanziale differenza nel processo di hashing delle password rende imppossibile la comprensione delle password importate da Magento a WordPress e viceversa.
+Questa sostanziale differenza nel processo di hashing delle password le rende incompatibili quando importate direttamente da Magento a WordPress e viceversa.
 
 ### Approcci comuni
 
 La soluzione più comune è quella di forzare il reset delle password degli utenti. Questo può essere un processo fastidioso per gli utenti e **può portare a una perdita di traffico e di fiducia**. 
 
-Un'altra soluzione diffusa è quella di introdurre un meccanismo che verifichi la correttezza della password attraverso un login remoto via API verso la vecchia piattaforma. Ciò però comporta 
-la **necessità di mantenere attiva ed accessibile a tempo indefinito la vecchia piattaforma**. Per di più in caso di down di quest'ultima il meccanismo fallirà.
+Un'altra soluzione diffusa è quella di introdurre un meccanismo che verifichi la correttezza della password attraverso un login via API verso la vecchia piattaforma. Ciò però comporta la **necessità di mantenere attiva ed accessibile a tempo indefinito la vecchia piattaforma**. Per di più in caso di down di quest'ultima il meccanismo fallirà.
 
 ## La mia soluzione: insegnare a WordPress come comprendere le password di Magento 
 
