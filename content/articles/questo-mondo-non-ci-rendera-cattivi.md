@@ -32,7 +32,7 @@ godibile da vedere tutto d'un fiato. **Zerocalcare è un ninja delle emozioni**:
 una gag in un continuo rollercoaster di sensazioni.
 Io ho visto dalla prima all'ultima puntata tutto d'un fiato, e sono certo sarà così per la gran parte degli spettatori.
 
-[![Guarda il trailer](https://img.youtube.com/vi/EIY7UF8B4II/default.jpg)](https://youtu.be/EIY7UF8B4II)
+[![Guarda il trailer](https://img.youtube.com/vi/EIY7UF8B4II/maxresdefault.jpg)](https://youtu.be/EIY7UF8B4II)
 
 ## La voce di una generazione
 
