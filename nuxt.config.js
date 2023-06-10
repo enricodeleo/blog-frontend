@@ -8,7 +8,10 @@ const createSitemapRoutes = async () => {
   const posts = await nuxtContent.$content('articles').fetch()
 
   for (const post of posts) {
-    routes.push(post.slug)
+    routes.push({
+      url: `/${post.slug}/`,
+      lastmod: post.updatedAt
+    })
   }
 
   return routes
