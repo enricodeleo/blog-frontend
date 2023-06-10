@@ -73,7 +73,7 @@ L'osservabilità, che comprende il monitoring, la tracciabilità e i log, sta di
 riguarda solo la raccolta di dati, ma anche la capacità di interpretarli e agire su di essi. Questa tendenza può aiutare a identificare
 e risolvere i problemi più rapidamente, migliorare la performance e ottimizzare l'esperienza dell'utente.
 
-![Coding](https://i2.wp.com/enricodeleo.s3.eu-south-1.amazonaws.com/images/pexels-mikhail-fesenko-9553905.jpg)
+![Coding](https://enricodeleo.s3.eu-south-1.amazonaws.com/images/pexels-mikhail-fesenko-9553905.jpg)
 
 ## Infrastruttura come Codice (IaC) e l'ascesa del GitOps
 
