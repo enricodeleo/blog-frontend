@@ -35,7 +35,7 @@
         </header>
 
         <!-- Begin Featured Image -->
-        <img v-if="post.coverImage" :src="post.coverImage + '?fit=1088,612&strip=all'" :alt="post.title" class="mb-6">
+        <img v-if="post.coverImage" :src="post.coverImage + '?w=1088&h=612&strip=all'" :alt="post.title" class="mb-6">
         <!-- End Featured Image -->
 
         <!-- Begin Post Content -->
