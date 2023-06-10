@@ -1,7 +1,7 @@
 <template>
   <article class="flex flex-wrap flex-col border-gray-300 dark:border-gray-600 border rounded-md">
     <NuxtLink :to="`/${post.slug}`" :title="post.title">
-      <img v-if="post.coverImage" :src="post.coverImage + '?w=544&h=306&strip=all'" :alt="post.title" class="rounded-t-md">
+      <img v-if="post.coverImage" :src="post.coverImage + '?crop=0,0,409px,229px&strip=all'" :alt="post.title" class="rounded-t-md">
       <div v-else class="flex flex-col justify-center items-center w-full h-72 bg-gradient-to-br from-green-400 to-blue-500 rounded-t-md text-white text-2xl font-semibold p-12">
         {{ post.title }}
       </div>
