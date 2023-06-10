@@ -9,7 +9,7 @@ tags:
   - "cartoni"
   - "fumetti"
 description: "La serie animata (di Zerocalcare) che ho atteso di più quest'anno è su Netflix"
-coverImage: "https://i2.wp.com/enricodeleo.s3.eu-south-1.amazonaws.com/images/questo-mondo-non-mi-rendera-cattivo.jpeg"
+coverImage: "https://i2.wp.com/enricodeleo.s3.eu-south-1.amazonaws.com/images/questo-mondo-non-mi-rendera-cattivo.jpeg?resize=1088,612"
 ---
 
 "_Questo mondo non mi renderà cattivo_" è la nuova serie animata creata da Zerocalcare che ha catturato il mio cuore più di quanto già non mi aspettassi. 
