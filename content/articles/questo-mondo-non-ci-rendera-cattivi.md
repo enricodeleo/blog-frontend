@@ -40,9 +40,9 @@ Si è detto tante volte, e questa non è una eccezione. Zerocalcare coglie perfe
 (sebbene questa volta credo siano in numero inferiore rispetto al solito) e per l'accurata scelta dei brani musicali che è quasi totalmente sovrapponibile ad una mia playlist su Spotify.
 Sarà per questo che questo autore riceve una quantità di affetto fuori dal comune: basta contare le persone ad un qualsiasi evento al quale partecipa.
 Io in particolare, come lui aggrappato al mio lavoro come fosse l'unico scoglio in un oceano infinito, mi immedesimo terribilmente nello _struggle_ che Zerocalcare rappresenta magistralmente
-con le sue metafore sempre azzeccate circa l'avere da un lato successo e al contempo avere questo senso di allontanamento.
+con le sue metafore sempre azzeccate circa l'avere parasossalmente successo e senso di inadeguatezza allo stesso tempo.
 
-Questa connessione la sento ancora più mia se penso che ormai da oltre 10 anni ho modo di collaborare in vario modo con BAO Publishing (la casa editrice che già dal primo libro ha creduto
+Questa connessione la sento ancora più mia se penso che ormai da oltre 10 anni ho modo di collaborare in diverse forme con BAO Publishing (la casa editrice che già dal primo libro ha creduto
 in Zerocalcare e che ha seguito anche il progetto delle serie Netflix con una capacità fuori dal comune di comprendere e valorizzare il diverso media).
 Nel mio piccolo(issimo) sono testimone oculare di un mix incredibile di umiltà, passione, grandissima qualità e sincerità sia dell'autore che dell'ecosistema Zerocalcare che credo siano unici e irripetibili
 (a proposito, devo correre a complimentarmi!)
