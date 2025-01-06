@@ -5,7 +5,7 @@
         Lisergico
       </h1>
       <p class="text-xl font-light">
-        Il blog di <a rel="noopener" href="https://enricodeleo.com" class="font-semibold text-green-600 hover:text-green-800">Enrico Deleo</a>. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant
+        Il blog di <a rel="noopener" href="https://enricodeleo.com" class="font-semibold text-green-600 hover:text-green-800">Enrico Deleo</a>. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant
       </p>
     </div>
 
