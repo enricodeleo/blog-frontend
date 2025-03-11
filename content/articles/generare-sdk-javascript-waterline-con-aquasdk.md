@@ -1,6 +1,6 @@
 ---
 title: "AquaSDK: Genera SDK JavaScript in stile Waterline da specifiche OpenAPI"
-date: "2024-12-15T09:00:00.000Z"
+date: "2025-03-11T17:00:00.000Z"
 categories:
   - "dev"
   - "tools"
