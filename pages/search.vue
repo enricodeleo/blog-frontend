@@ -1,10 +1,6 @@
 <template>
   <div class="py-12 mb-8 flex flex-col md:flex-row md:space-x-10">
-    <a rel="noopener noreferrer" href="https://amzn.to/2VrreCI" target="_blank" class="order-2 md:order-1 max-w-xs">
-      <img src="~/assets/images/point-of-vue.jpg" alt="Point Of Vue" class="border border-green-600 rounded-md">
-    </a>
-
-    <div class="flex-grow order-1 md:order-2">
+    <div>
       <h1 v-if="loaded && posts.length" class="text-3xl font-bold mb-5">
         Risultati della ricerca <em>{{ term }}</em>
       </h1>
@@ -16,7 +12,9 @@
       </h1>
 
       <!-- begin post -->
-      <lazy-post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
+        <lazy-post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
+      </div>
       <!-- end post -->
     </div>
   </div>

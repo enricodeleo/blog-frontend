@@ -6,22 +6,23 @@
       </span>
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
+    <div class="flex flex-col gap-6 py-4">
       <!-- begin post -->
-      <article v-for="post of featured" :key="post.id" class="flex flex-row border-gray-300 dark:border-gray-600 border rounded-md min-h-72">
-        <NuxtLink :to="`/${post.slug}`" :title="post.title" :lazy-background="post.coverImage" class="h-full w-1/3 bg-no-repeat bg-center bg-cover rounded-l-md">
-          &nbsp;
+      <article
+        v-for="post of featured"
+        :key="post.id"
+        class="flex items-center border-gray-300 dark:border-gray-600 border rounded-md min-h-72"
+      >
+        <NuxtLink :to="`/${post.slug}`" :title="post.title" class="h-full w-full bg-no-repeat bg-center bg-cover rounded-l-md">
+          <img :src="post.coverImage" :alt="post.title">
         </NuxtLink>
-        <div class="py-6 px-8 h-full w-2/3 flex flex-wrap flex-col place-content-between">
+        <div class="py-6 px-8 h-full flex flex-wrap flex-col place-content-between">
           <div>
             <NuxtLink :to="`/${post.slug}`">
               <h2 class="text-xl font-bold">
                 {{ post.title }}
               </h2>
             </NuxtLink>
-            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mt-2">
-              {{ post.description }}
-            </p>
           </div>
 
           <footer class="text-sm mt-4">
@@ -39,11 +40,6 @@
         </div>
       </article>
       <!-- end post -->
-      <!-- begin ad -->
-      <a rel="noopener noreferrer" href="https://amzn.to/2VrreCI" target="_blank">
-        <img src="~/assets/images/point-of-vue.jpg" fluid alt="Point Of Vue" class="border-gray-300 border">
-      </a>
-      <!-- end ad -->
     </div>
   </section>
 </template>

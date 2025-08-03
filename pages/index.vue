@@ -22,7 +22,7 @@
           Altre storie
         </span>
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
         <!-- begin post -->
         <lazy-post v-for="post of posts" :key="post.id" :post="post" />
         <!-- end post -->
@@ -43,7 +43,7 @@ export default {
     let featured
 
     try {
-      featured = await app.$content('articles', { text: true }).where({ sticky: true }).sortBy('date', 'desc').limit(3).fetch()
+      featured = await app.$content('articles', { text: true }).where({ sticky: true }).sortBy('date', 'desc').limit(2).fetch()
       posts = await app.$content('articles', { text: true }).sortBy('date', 'desc').limit(6).fetch()
     } catch (error) {
       app.$log.error(error)
