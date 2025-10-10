@@ -294,4 +294,4 @@ Di default, OpenWrt/FriendlyWrt non imposta:
 * IRQ affinity efficiente
 * RPS/XPS su tutti i core
 
-Con pochi accorgimenti, questo piccolo router passa da **midrange** a **full 2.5 Gbps router**.arà più lo stesso!
+Con pochi accorgimenti, questo piccolo router passa da **midrange** a **full 2.5 Gbps router**. In barba a cosa si possa pensare dei _soft router_.
