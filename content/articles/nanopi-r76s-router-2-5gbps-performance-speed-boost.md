@@ -13,7 +13,7 @@ tags:
   - "performance"
   - "tuning"
 description: "Come ho ottimizzato il NanoPi R76S con OpenWrt per passare da 600 Mbps a oltre 2 Gbps reali, sistemando IRQ, RPS/XPS e CPU governor per sfruttare al massimo il SoC Rockchip RK3576."
-coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/nanopi-r76s-performance.jpg"
+coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/nanopi-r76s-performance.png"
 sticky: false
 ---
 
@@ -80,27 +80,202 @@ La saturazione CPU era distribuita meglio, ma ancora incompleta: i pacchetti non
 
 ## 🔥 Tuning finale — IRQ affinity + CPU performance mode
 
-La seconda e definitiva ottimizzazione ha incluso:
+Perfetto ✅ — facciamo un **riepilogo completo e ordinato** di **tutti i file coinvolti** nel tuning che ti porta ai ~2 Gbps stabili sul **NanoPi R76S (RK3576)** con **FriendlyWrt/OpenWrt 24.10**.
+Ti mostro percorso, scopo e contenuto essenziale.
 
-- Mappatura manuale degli **IRQ** (`eth0`, `eth1`) su core differenti
-- Attivazione del **CPU governor “performance”**:
-  ```bash
-  for c in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do
-      echo performance > $c
+---
+
+### 🧩 1️⃣  Sysctl – Tuning del network stack
+
+📄 **`/etc/sysctl.d/60-rps.conf`**
+
+→ imposta le entry per i flussi RPS (Receive Packet Steering)
+
+```bash
+net.core.rps_sock_flow_entries = 65536
+```
+
+📄 **`/etc/sysctl.d/99-network-tune.conf`**
+
+→ parametri generali di rete + TCP tuning (coerenti con BBR)
+
+```bash
+# Fair Queueing + congestion control
+net.core.default_qdisc = fq
+net.ipv4.tcp_congestion_control = bbr
+
+# TCP tuning generali
+net.ipv4.tcp_fastopen = 3
+net.ipv4.tcp_tw_reuse = 2
+net.ipv4.ip_local_port_range = 10000 65535
+net.ipv4.tcp_fin_timeout = 30
+
+# Gestione traffico burst
+net.core.netdev_max_backlog = 250000
+```
+
+---
+
+### ⚙️ 2️⃣  Script principale – Applica RPS/XPS manualmente
+
+📄 **`/usr/local/sbin/apply-rpsxps.sh`**
+
+→ comando indipendente che puoi eseguire a mano o al boot
+(applica `MASK=ff` su `eth0` e `eth1`, e imposta i flussi globali)
+
+```bash
+#!/bin/sh
+MASK_HEX=ff
+FLOW_ENTRIES=65536
+DEVS="eth0 eth1"
+logger -t rpsxps "start apply (devs: $DEVS)"
+
+sysctl -q -w net.core.rps_sock_flow_entries="$FLOW_ENTRIES"
+
+for IF in $DEVS; do
+  for RX in /sys/class/net/$IF/queues/rx-*; do
+    [ -d "$RX" ] || continue
+    echo "$MASK_HEX" > "$RX/rps_cpus"
+    echo 32768 > "$RX/rps_flow_cnt" 2>/dev/null
   done
-  ```
+  for TX in /sys/class/net/$IF/queues/tx-*; do
+    [ -d "$TX" ] || continue
+    echo "$MASK_HEX" > "$TX/xps_cpus"
+  done
+done
+logger -t rpsxps "done apply (mask=$MASK_HEX, flows=$FLOW_ENTRIES)"
+```
 
-* Pulizia e consolidamento di tutti gli script hotplug in un solo file:
+📌  **Permessi:**
 
-  ```
-  /etc/hotplug.d/net/99-optimize-network
-  ```
+```bash
+chmod +x /usr/local/sbin/apply-rpsxps.sh
+```
 
-* Applicazione permanente di:
+---
 
-  ```bash
-  net.core.rps_sock_flow_entries = 65536
-  ```
+### 🔁 3️⃣  Hook NET – RPS/XPS automatico su ogni interfaccia
+
+📄 **`/etc/hotplug.d/net/99-optimize-network`**
+
+Si attiva ogni volta che nasce una nuova interfaccia (eth*, VLAN, PPPoE).
+Garantisce che anche `eth0.835` e `pppoe-wan` ricevano `rps_cpus=ff`.
+
+```bash
+#!/bin/sh
+[ "$ACTION" = "add" ] || exit 0
+case "$DEVICENAME" in eth*|pppoe-*) : ;; *) exit 0 ;; esac
+
+MASK_HEX=ff
+FLOW_ENTRIES=65536
+logger -t rpsxps "net hook: $DEVICENAME ACTION=$ACTION (mask=$MASK_HEX flows=$FLOW_ENTRIES)"
+sysctl -q -w net.core.rps_sock_flow_entries="$FLOW_ENTRIES"
+
+PARENT="$(basename "$(readlink -f /sys/class/net/$DEVICENAME/lower_* 2>/dev/null || true)")"
+[ -n "$PARENT" ] || PARENT="$DEVICENAME"
+
+apply_one() {
+  IF="$1"
+  for i in 1 2 3 4 5; do
+    [ -e "/sys/class/net/$IF/queues/rx-0/rps_cpus" ] && break
+    sleep 1
+  done
+  for RX in /sys/class/net/"$IF"/queues/rx-*; do
+    [ -e "$RX/rps_cpus" ] || continue
+    echo "$MASK_HEX" > "$RX/rps_cpus"
+    echo 32768 > "$RX/rps_flow_cnt" 2>/dev/null
+  done
+  for TX in /sys/class/net/"$IF"/queues/tx-*; do
+    [ -e "$TX/xps_cpus" ] || continue
+    echo "$MASK_HEX" > "$TX/xps_cpus"
+  done
+}
+
+apply_one "$PARENT"
+apply_one "$DEVICENAME"
+```
+
+📌  **Permessi:**
+
+```bash
+chmod +x /etc/hotplug.d/net/99-optimize-network
+```
+
+---
+
+### 🪝 4️⃣  Hook IFACE – Fallback su evento `ifup`
+
+📄 **`/etc/hotplug.d/iface/99-rpsxps`**
+
+Serve come “cintura di sicurezza” in caso di ricreazione PPPoE o WAN da script esterni (es. DDNS)
+
+```bash
+#!/bin/sh
+[ "$ACTION" = "ifup" ] || exit 0
+
+case "$INTERFACE" in
+  wan|lan)
+    /bin/sh -c "sleep 1; /usr/local/sbin/apply-rpsxps.sh"
+    ;;
+esac
+```
+
+📌  **Permessi:**
+
+```bash
+chmod +x /etc/hotplug.d/iface/99-rpsxps
+```
+
+---
+
+### 🚀 5️⃣  Esecuzione al boot (failsafe)
+
+📄 **`/etc/rc.local`**
+
+Garantisce che lo script venga lanciato anche all’avvio completo del sistema (dopo init)
+
+```bash
+/usr/local/sbin/apply-rpsxps.sh || true
+exit 0
+```
+
+---
+
+### 🧠 6️⃣  (Opzionale) CPU governor
+
+Se vuoi forzare il governor **conservative** o **performance** all’avvio:
+
+📄 **`/etc/rc.local`** (appendi sotto la riga `apply-rpsxps.sh`)
+
+```bash
+for g in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do
+    echo conservative > "$g"
+done
+```
+
+---
+
+### 🧾 7️⃣  Verifica post-boot
+
+Comandi di controllo:
+
+```bash
+logread -e rpsxps | tail -n 20
+grep . /sys/class/net/eth{0,1}/queues/{rx,tx}-*/rps_cpus
+sysctl net.core.rps_sock_flow_entries
+```
+
+Output atteso:
+
+```
+rpsxps: net hook: eth0.835 ACTION=add ...
+rpsxps: net hook: pppoe-wan ACTION=add ...
+...
+/sys/class/net/eth0.835/queues/rx-0/rps_cpus: ff
+/sys/class/net/eth0/queues/tx-0/xps_cpus: ff
+/sys/class/net/eth1/queues/tx-0/xps_cpus: ff
+net.core.rps_sock_flow_entries = 65536
+```
 
 ---
 
@@ -121,39 +296,5 @@ Di default, OpenWrt/FriendlyWrt non imposta:
 
 * IRQ affinity efficiente
 * RPS/XPS su tutti i core
-* CPU governor “performance”
 
-Con pochi accorgimenti, questo piccolo router passa da **midrange** a **full 2.5 Gbps router**.
-
-### TL;DR
-
-Per chi vuole replicare rapidamente:
-
-```bash
-# /etc/sysctl.d/60-rps.conf
-net.core.rps_sock_flow_entries = 65536
-
-# /etc/hotplug.d/net/99-optimize-network
-#!/bin/sh
-[ "$ACTION" = "add" ] || exit
-MASK_HEX=ff
-sysctl -w net.core.rps_sock_flow_entries=65536
-for IF in eth0 eth1; do
-  for Q in /sys/class/net/$IF/queues/rx-*; do
-    echo $MASK_HEX > "$Q/rps_cpus"
-    echo 32768    > "$Q/rps_flow_cnt"
-  done
-  for Q in /sys/class/net/$IF/queues/tx-*; do
-    echo $MASK_HEX > "$Q/xps_cpus"
-  done
-done
-logger -t rpsxps "RPS/XPS optimization applied to $IF"
-```
-
-Rendi lo script eseguibile:
-
-```bash
-chmod +x /etc/hotplug.d/net/99-optimize-network
-```
-
-E al reboot, il tuo NanoPi R76S non sarà più lo stesso!
+Con pochi accorgimenti, questo piccolo router passa da **midrange** a **full 2.5 Gbps router**.arà più lo stesso!
