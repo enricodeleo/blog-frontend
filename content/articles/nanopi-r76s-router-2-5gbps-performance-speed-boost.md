@@ -88,7 +88,7 @@ La seconda e definitiva ottimizzazione ha incluso:
   for c in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do
       echo performance > $c
   done
-````
+  ```
 
 * Pulizia e consolidamento di tutti gli script hotplug in un solo file:
 
