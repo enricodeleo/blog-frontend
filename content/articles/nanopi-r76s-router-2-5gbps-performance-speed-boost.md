@@ -80,10 +80,7 @@ La saturazione CPU era distribuita meglio, ma ancora incompleta: i pacchetti non
 
 ## 🔥 Tuning finale — IRQ affinity + CPU performance mode
 
-Perfetto ✅ — facciamo un **riepilogo completo e ordinato** di **tutti i file coinvolti** nel tuning che ti porta ai ~2 Gbps stabili sul **NanoPi R76S (RK3576)** con **FriendlyWrt/OpenWrt 24.10**.
-Ti mostro percorso, scopo e contenuto essenziale.
-
----
+Il tuning finale che porta ai ~2 Gbps stabili il **NanoPi R76S (RK3576)** con **FriendlyWrt/OpenWrt 24.10** richiede l'introduzione di diversi parametri finalizati prevalentemente a distribuire il carico sui (tanti) core disponibili e distribuire i flussi di rete coerentemente.
 
 ### 🧩 1️⃣  Sysctl – Tuning del network stack
 
