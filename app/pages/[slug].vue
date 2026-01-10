@@ -5,12 +5,12 @@
       <nav class="mb-6 text-sm" aria-label="Breadcrumb">
         <ol class="flex items-center gap-2">
           <li>
-            <NuxtLink to="/" class="text-gray-600 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 underline decoration-dotted underline-offset-4 transition-colors">
+            <NuxtLink to="/" class="text-[#3c4858] dark:text-gray-200 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors">
               Home
             </NuxtLink>
           </li>
           <li class="text-gray-400 dark:text-gray-500">/</li>
-          <li class="text-gray-900 dark:text-[#F8FAFC] font-medium">{{ post.title }}</li>
+          <li class="text-[#3c4858] dark:text-[#F8FAFC] font-medium">{{ post.title }}</li>
         </ol>
       </nav>
 
@@ -18,7 +18,7 @@
       <article class="prose">
         <!-- Header -->
         <header class="mb-8">
-          <h1 class="text-2xl md:text-3xl font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC] mb-4">
+          <h1 class="text-2xl md:text-3xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC] mb-4">
             {{ post.title }}
           </h1>
 
@@ -28,7 +28,7 @@
               v-for="(category, index) in post.categories"
               :key="index"
               :to="`/category/${category}`"
-              class="text-sm text-gray-600 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 underline decoration-dotted underline-offset-4 transition-colors"
+              class="text-sm text-[#3c4858] dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors"
             >
               {{ category.replace('-', ' ') }}
             </NuxtLink>
@@ -52,13 +52,13 @@
       </article>
 
       <!-- Tags -->
-      <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
-        <p class="text-lg mb-3 text-gray-900 dark:text-[#F8FAFC]">
+      <div class="mt-12 pt-8 border-t border-[#c0ccda] dark:border-gray-700">
+        <p class="text-lg mb-3 text-[#3c4858] dark:text-[#F8FAFC]">
           Pubblicato in
           <span v-for="(category, index) in (post.categories || [])" :key="index">
             <NuxtLink
               :to="`/category/${category}`"
-              class="underline decoration-dotted underline-offset-4 hover:text-amber-600 dark:hover:text-amber-500 transition-colors"
+              class="underline decoration-dotted underline-offset-4 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
             >
               {{ category.replace('-', ' ') }}
             </NuxtLink><span v-if="index+1 !== post.categories.length" class="mx-1">•</span>
@@ -69,7 +69,7 @@
             v-for="(tag, index) in post.tags"
             :key="index"
             :to="`/tag/${tag}`"
-            class="text-sm text-gray-600 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 underline decoration-dotted underline-offset-4 transition-colors"
+            class="text-sm text-[#3c4858] dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors"
           >
             #{{ tag }}
           </NuxtLink>
@@ -79,7 +79,7 @@
       <!-- Related Posts -->
       <div v-if="related && related.length" class="mt-12">
         <div class="border-l-4 border-amber-600 px-4 py-2 mb-6">
-          <h2 class="text-lg md:text-xl font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC]">
+          <h2 class="text-lg md:text-xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC]">
             Sullo stesso argomento
           </h2>
         </div>

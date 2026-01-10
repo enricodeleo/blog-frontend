@@ -95,25 +95,32 @@ blog-frontend/
 
 ### Brand Guidelines
 
-**Color Palette** (matching personal-landing):
+**Color Palette** (exact Brand Manual hex values):
 
 **Light Mode:**
-- Primary text: `gray-900` (#111827)
-- Secondary text: `gray-700` (#374151)
-- Tertiary text: `gray-600` (#4B5563)
-- Muted text: `gray-500` (#6B7280)
-- Background: `white` (#FFFFFF)
-- Borders: `gray-200` (#E5E7EB), `gray-300` (#D1D5DB)
-- Accent (sparingly): `amber-600` (#D97706)
+- Primary text: `#3c4858`
+- Secondary text: `#3c4858` (same, lighter via opacity)
+- Body text: `#3c4858`
+- Light surface: `#F5F5F5`
+- Form borders: `#c0ccda`
+- Link hover: `amber-700` (#b45309)
+- Section borders: `amber-600` (#d97706)
+- Focus ring: `blue-500`
 
 **Dark Mode:**
 - Primary text: `#F8FAFC`
 - Secondary text: `#E5E7EB`
-- Tertiary text: `gray-300` (#CBD5E1)
-- Muted text: `gray-400` (#94A3B8)
+- Body text: `#F8FAFC`, `gray-200` (#E5E7EB)
 - Background: `#0F172A` (main), `#111827` (secondary)
 - Borders: `gray-600` (#4B5563), `gray-700` (#374151)
-- Accent: `amber-500` (#F59E0B)
+- Link hover: `amber-400` (#fbbf24)
+- Section borders: `amber-600` (#d97706)
+
+**Social Link Hover Colors:**
+- Facebook: `#1877f2`
+- Instagram: `#e1306c`
+- LinkedIn: `#0077b5`
+- GitHub: `#333`
 
 **Typography Scale:**
 - H1 (Page titles): `text-2xl md:text-3xl font-extrabold leading-tight`
@@ -124,20 +131,20 @@ blog-frontend/
 
 **Layout Patterns:**
 - Content width: `max-w-prose` (65ch) for readability
-- Container: `container mx-auto px-5`
+- Container padding: `px-5 md:px-12`
 - Section headers: `border-l-4 border-amber-600 px-4 py-2`
-- Dividers: `border-b border-gray-200 dark:border-gray-700`
+- Dividers: `border-b border-[#c0ccda] dark:border-gray-700`
 - Spacing: `pb-3` for paragraphs, `mb-6 mt-4` for sections
 
 **Component Patterns:**
 - Cards: No cards, just clean dividers
 - Buttons: Minimal bordered buttons with hover states
-- Forms: Clean inputs with `border-gray-300 dark:border-gray-600`
+- Forms: Clean inputs with `border-[#c0ccda] dark:border-gray-600`
 - Accent borders: Use `border-l-4 border-amber-600` for callouts
 
 ### Content Structure
 
-**Articles Location**: `content/articles/*.md`
+**Content Directory**: All blog content/articles are stored in `./content/` directory, specifically `content/articles/*.md` for blog posts. This is managed by @nuxt/content module.
 
 **Article Frontmatter**:
 ```yaml
@@ -312,7 +319,7 @@ nitro: {
 **Section Header**:
 ```vue
 <div class="border-l-4 border-amber-600 px-4 py-2 mb-6">
-  <h2 class="text-lg md:text-xl font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC]">
+  <h2 class="text-lg md:text-xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC]">
     Section Title
   </h2>
 </div>
@@ -320,7 +327,7 @@ nitro: {
 
 **Link Style**:
 ```vue
-<NuxtLink to="/path" class="underline decoration-dotted underline-offset-4 hover:text-amber-600 dark:hover:text-amber-500 transition-colors">
+<NuxtLink to="/path" class="underline decoration-dotted underline-offset-4 text-[#3c4858] dark:text-[#F8FAFC] hover:text-amber-700 dark:hover:text-amber-400 transition-colors">
   Link Text
 </NuxtLink>
 ```
@@ -330,13 +337,13 @@ nitro: {
 <input
   type="text"
   placeholder="Placeholder..."
-  class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-[#111827] text-gray-900 dark:text-[#F8FAFC] placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+  class="px-4 py-2 border border-[#c0ccda] dark:border-gray-600 rounded-md bg-white dark:bg-[#111827] text-[#3c4858] dark:text-[#F8FAFC] placeholder-[#c0ccda] dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
 >
 ```
 
 **Button**:
 ```vue
-<button class="px-4 py-2 text-gray-900 dark:text-[#F8FAFC] border border-gray-300 dark:border-gray-600 rounded-md hover:text-amber-600 dark:hover:text-amber-500 hover:border-amber-600 dark:hover:border-amber-500 transition-colors">
+<button class="px-4 py-2 text-[#3c4858] dark:text-[#F8FAFC] border border-[#c0ccda] dark:border-gray-600 rounded-md hover:text-amber-700 dark:hover:text-amber-400 hover:border-amber-700 dark:hover:border-amber-400 transition-colors">
   Button Text
 </button>
 ```

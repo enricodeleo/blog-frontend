@@ -2,10 +2,10 @@
   <div class="space-y-8">
     <!-- Page Header -->
     <div class="border-l-4 border-amber-600 px-4 py-2">
-      <h1 class="text-2xl md:text-3xl font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC]">
+      <h1 class="text-2xl md:text-3xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC]">
         Pagina {{ page }}
       </h1>
-      <p class="text-lg text-gray-700 dark:text-gray-200 mt-2">Sfoglia tutti gli articoli del blog</p>
+      <p class="text-lg text-[#3c4858] dark:text-gray-200 mt-2">Sfoglia tutti gli articoli del blog</p>
     </div>
 
     <!-- Posts List -->
@@ -18,15 +18,15 @@
       <NuxtLink
         v-if="page > 1"
         :to="page === 2 ? '/' : `/page/${page-1}`"
-        class="px-4 py-2 text-gray-900 dark:text-[#F8FAFC] border border-gray-300 dark:border-gray-600 rounded-md hover:text-amber-600 dark:hover:text-amber-500 hover:border-amber-600 dark:hover:border-amber-500 transition-colors"
+        class="px-4 py-2 text-[#3c4858] dark:text-[#F8FAFC] border border-[#c0ccda] dark:border-gray-600 rounded-md hover:text-amber-700 dark:hover:text-amber-400 hover:border-amber-700 dark:hover:border-amber-400 transition-colors"
       >
         ← Indietro
       </NuxtLink>
-      <span class="text-gray-700 dark:text-gray-200 font-bold">{{ page }}</span>
+      <span class="text-[#3c4858] dark:text-gray-200 font-bold">{{ page }}</span>
       <NuxtLink
         v-if="hasMore"
         :to="`/page/${page+1}`"
-        class="px-4 py-2 text-gray-900 dark:text-[#F8FAFC] border border-gray-300 dark:border-gray-600 rounded-md hover:text-amber-600 dark:hover:text-amber-500 hover:border-amber-600 dark:hover:border-amber-500 transition-colors"
+        class="px-4 py-2 text-[#3c4858] dark:text-[#F8FAFC] border border-[#c0ccda] dark:border-gray-600 rounded-md hover:text-amber-700 dark:hover:text-amber-400 hover:border-amber-700 dark:hover:border-amber-400 transition-colors"
       >
         Avanti →
       </NuxtLink>
