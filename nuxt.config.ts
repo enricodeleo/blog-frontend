@@ -64,7 +64,8 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/scripts',
     '@vueuse/nuxt',
-    '@vite-pwa/nuxt'
+    '@vite-pwa/nuxt',
+    '@nuxtjs/critters'
   ],
 
   // Nuxt Content configuration
@@ -103,6 +104,13 @@ export default defineNuxtConfig({
     public: {
       siteUrl,
       googleAnalyticsId: process.env.NUXT_PUBLIC_GA_ID || ''
+    }
+  },
+
+  // Critters configuration for CSS optimization
+  critters: {
+    config: {
+      preload: 'swap'
     }
   }
 })

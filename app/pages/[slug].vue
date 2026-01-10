@@ -130,32 +130,21 @@ const readingTimeMinutes = computed(() => {
   return getReadingTimeMinutes(post.value.body || post.value.description)
 })
 
-// Fetch related posts
-const related = ref([])
-
-if (post.value) {
-  const category = post.value.categories?.[0]
-  if (category) {
+// Fetch related posts (deterministic for SSR/CSR)
+const { data: related } = await useAsyncData(
+  `related-${slug}`,
+  async () => {
+    const category = post.value?.categories?.[0]
+    if (!category || !post.value?.path) return []
     const categoryFilter = `%"${category}"%`
-    const total = Number(await queryCollection('articles')
-      .where('categories', 'LIKE', categoryFilter)
-      .where('path', '!=', post.value.path)
-      .count())
-
-    const maxSkip = total - 2
-    const skip = maxSkip > 0 ? Math.floor(maxSkip * Math.random()) : 0
-
-    const relatedPosts = await queryCollection('articles')
+    return queryCollection('articles')
       .where('categories', 'LIKE', categoryFilter)
       .where('path', '!=', post.value.path)
       .order('date', 'DESC')
-      .skip(skip)
       .limit(2)
       .all()
-
-    related.value = relatedPosts || []
   }
-}
+)
 
 // SEO Meta
 useSeoMeta({

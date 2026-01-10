@@ -6,6 +6,8 @@
           to="/"
           class="inline-svg inline-block max-w-16 fill-current text-gray-900 dark:[&>span]:text-[#E5E7EB]"
           aria-label="Lisergico logo"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <span class="block w-full" aria-hidden="true" v-html="logoSvg"/>
         </NuxtLink>
@@ -22,7 +24,7 @@
           :key="link.label"
           :href="link.href"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           class="inline-flex h-9 w-9 items-center justify-center transition-colors"
           :class="link.hoverColor"
           :aria-label="link.label"
@@ -33,7 +35,7 @@
     </div>
     <div class="max-w-prose mx-auto px-5 md:px-12 select-none">
       <p class="text-center mb-0 pb-0 text-gray-700 dark:text-gray-200">
-        Non dimenticare la mia <a rel="noopener" href="https://amzn.to/3fXQw59" target="_blank" class="text-amber-700 hover:text-amber-800 dark:text-amber-400 dark:hover:text-amber-300 underline decoration-dotted underline-offset-4"><strong>pagina autore su Amazon</strong></a>.
+        Non dimenticare la mia <a rel="noopener noreferrer" href="https://amzn.to/3fXQw59" target="_blank" class="text-amber-700 hover:text-amber-800 dark:text-amber-400 dark:hover:text-amber-300 underline decoration-dotted underline-offset-4"><strong>pagina autore su Amazon</strong></a>.
       </p>
     </div>
     <div class="max-w-xs mx-auto px-5 md:px-12 select-none">
@@ -44,15 +46,11 @@
       />
     </div>
     <nav class="mx-auto max-w-max text-gray-600 dark:text-[#94A3B8]">
-      <NuxtLink to="/" class="text-gray-600 hover:text-gray-800 dark:text-[#94A3B8] dark:hover:text-[#F8FAFC]">
-        Home
-      </NuxtLink>
-      <span class="mx-2">•</span>
-      <NuxtLink to="/bio" class="text-gray-600 hover:text-gray-800 dark:text-[#94A3B8] dark:hover:text-[#F8FAFC]">
+      <a href="https://enricodeleo.com/bio" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800 dark:text-[#94A3B8] dark:hover:text-[#F8FAFC]">
         Bio
-      </NuxtLink>
+      </a>
       <span class="mx-2">•</span>
-      <a href="https://blog.enricodeleo.com/" target="_blank" rel="noopener" class="text-gray-600 hover:text-gray-800 dark:text-[#94A3B8] dark:hover:text-[#F8FAFC]">
+      <a href="https://blog.enricodeleo.com/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800 dark:text-[#94A3B8] dark:hover:text-[#F8FAFC]">
         Blog
       </a>
     </nav>
@@ -64,13 +62,13 @@
         Copyright &copy; 2010-{{ currentYear }} Enrico Deleo
       </p>
       <nav class="mx-auto max-w-max mt-4 text-xs text-gray-600 dark:text-[#94A3B8]">
-        <NuxtLink to="/cookie-policy" class="text-gray-600 hover:text-gray-800 dark:text-[#94A3B8] dark:hover:text-[#F8FAFC]">
+        <a href="https://enricodeleo.com/cookie-policy" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800 dark:text-[#94A3B8] dark:hover:text-[#F8FAFC]">
           Cookie Policy
-        </NuxtLink>
+        </a>
         <span class="mx-2">•</span>
-        <NuxtLink to="/privacy-policy" class="text-gray-600 hover:text-gray-800 dark:text-[#94A3B8] dark:hover:text-[#F8FAFC]">
+        <a href="https://enricodeleo.com/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800 dark:text-[#94A3B8] dark:hover:text-[#F8FAFC]">
           Privacy Policy
-        </NuxtLink>
+        </a>
       </nav>
       <ClientOnly>
         <div class="mt-8 text-center text-xs">
