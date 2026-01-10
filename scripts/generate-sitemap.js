@@ -1,20 +1,16 @@
 import { writeFileSync } from 'fs'
-import { fileURLToPath } from 'url'
-import { dirname, join } from 'path'
+import { join } from 'path'
 import Database from 'better-sqlite3'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
 
 const siteUrl = process.env.NUXT_ENV_FRONTEND_URL || 'https://enricodeleo.com'
 
-// Read the content collection database from SQLite
-const contentDbPath = join(__dirname, '../.data/content/contents.sqlite')
+// Read the content collection database from SQLite (relative to project root)
+const contentDbPath = join(process.cwd(), '.data/content/contents.sqlite')
 let posts = []
 
 try {
   const db = new Database(contentDbPath, { readonly: true })
-  const stmt = db.prepare('SELECT * FROM _content_articles WHERE navigation = true')
+  const stmt = db.prepare("SELECT * FROM _content_articles WHERE navigation = 'true'")
   posts = stmt.all()
   db.close()
 } catch (error) {
@@ -54,7 +50,7 @@ function generateSitemap(posts) {
 
   // Dynamic pages from posts
   const postPages = posts
-    .filter(post => post.navigation !== false)
+    .filter(post => post.navigation === 'true')
     .map(post => ({
       url: post.path,
       lastmod: formatDate(post.date),
@@ -104,6 +100,6 @@ ${urls}
 
 // Generate and write sitemap.xml
 const sitemap = generateSitemap(posts)
-const outputPath = join(__dirname, '../static/sitemap.xml')
+const outputPath = join(process.cwd(), 'static/sitemap.xml')
 writeFileSync(outputPath, sitemap, 'utf-8')
 console.log(`✓ Generated sitemap.xml with ${posts.length} posts`)

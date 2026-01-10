@@ -10,7 +10,7 @@ let posts = []
 
 try {
   const db = new Database(contentDbPath, { readonly: true })
-  const stmt = db.prepare('SELECT * FROM _content_articles WHERE navigation = true ORDER BY date DESC')
+  const stmt = db.prepare("SELECT * FROM _content_articles WHERE navigation = 'true' ORDER BY date DESC")
   posts = stmt.all()
   db.close()
 } catch (error) {
@@ -39,7 +39,7 @@ function parseJSONField(field) {
 
 function generateRSS(posts) {
   const items = posts
-    .filter(post => post.navigation !== false)
+    .filter(post => post.navigation === 'true')
     .map(post => {
       const date = new Date(post.date).toUTCString()
       const categories = parseJSONField(post.categories)
@@ -71,6 +71,6 @@ ${items}
 
 // Generate and write feed.xml
 const rss = generateRSS(posts)
-const outputPath = join(__dirname, '../static/feed.xml')
+const outputPath = join(process.cwd(), 'static/feed.xml')
 writeFileSync(outputPath, rss, 'utf-8')
 console.log(`✓ Generated feed.xml with ${posts.length} items`)
