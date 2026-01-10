@@ -2,7 +2,7 @@
   <div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
       <!-- begin post -->
-      <lazy-post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
+      <Post v-for="post of posts" :key="post.slug" :post="post" class="mb-5" />
       <!-- end post -->
     </div>
     <div class="flex items-center">
@@ -35,48 +35,37 @@
   </div>
 </template>
 
-<script>
-export default {
-  async asyncData ({ app, params }) {
-    const limit = 6
-    const skip = limit * (params.page - 1)
-    let posts
+<script setup lang="ts">
+const route = useRoute()
+const page = parseInt(route.page as string)
+const limit = 6
+const skip = limit * (page - 1)
 
-    try {
-      posts = await app.$content('articles', { text: true }).sortBy('date', 'desc').limit(limit).skip(skip).fetch()
-    } catch (error) {
-      app.$log.error(error)
-    }
-    return {
-      currentArticles: skip + posts.length,
-      posts,
-      page: parseInt(params.page)
-    }
-  },
+// Fetch posts for current page
+const { data: posts } = await useAsyncData(
+  `page-${page}`,
+  () => queryContent('articles')
+    .sort({ date: -1 })
+    .limit(limit)
+    .skip(skip)
+    .find()
+)
 
-  data () {
-    return {
-      websiteUrl: process.env.NUXT_ENV_FRONTEND_URL,
-      posts: [],
-      category: {},
-      count: 0
-    }
-  },
+const currentArticles = computed(() => skip + (posts.value?.length || 0))
 
-  async mounted () {
-    try {
-      const articles = await this.$content('articles').only([]).fetch()
-      this.count = articles.length
-    } catch (error) {
-      this.$log.warn(error)
-    }
-  },
+// Fetch total count on mount
+const count = ref(0)
 
-  head ({ $seo }) {
-    return this.$seo({
-      title: `Tuttli gli articoli di pagina ${this.page}`,
-      description: 'Sfoglia tutti gli articoli del blog di Enrico'
-    })
-  }
-}
+onMounted(async () => {
+  const articles = await queryContent('articles').find()
+  count.value = articles.length || 0
+})
+
+// SEO Meta
+useSeoMeta({
+  title: `Tutti gli articoli di pagina ${page}`,
+  description: 'Sfoglia tutti gli articoli del blog di Enrico',
+  ogTitle: `Tutti gli articoli di pagina ${page}`,
+  ogDescription: 'Sfoglia tutti gli articoli del blog di Enrico'
+})
 </script>

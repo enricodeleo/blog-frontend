@@ -9,42 +9,30 @@
       </h1>
 
       <!-- begin post -->
-      <lazy-post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
+      <Post v-for="post of posts" :key="post.slug" :post="post" class="mb-5" />
       <!-- end post -->
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  async asyncData ({ app, params }) {
-    const category = params.slug
-    let posts
+<script setup lang="ts">
+const route = useRoute()
+const category = route.slug as string
 
-    try {
-      posts = await app.$content('articles', { text: true }).where({ categories: { $contains: category } }).sortBy('date', 'desc').fetch()
-    } catch (error) {
-      app.$log.error(error)
-    }
-    return {
-      posts,
-      category
-    }
-  },
+// Fetch posts by category
+const { data: posts } = await useAsyncData(
+  `category-${category}`,
+  () => queryContent('articles')
+    .where({ categories: { contains: category } })
+    .sort({ date: -1 })
+    .find()
+)
 
-  data () {
-    return {
-      websiteUrl: process.env.NUXT_ENV_FRONTEND_URL,
-      posts: [],
-      category: ''
-    }
-  },
-
-  head ({ $seo }) {
-    return this.$seo({
-      title: `Archivio categoria ${this.category}`,
-      description: `Sfoglia tutti gli articoli nella categoria "${this.category}"`
-    })
-  }
-}
+// SEO Meta
+useSeoMeta({
+  title: `Archivio categoria ${category}`,
+  description: `Sfoglia tutti gli articoli nella categoria "${category}"`,
+  ogTitle: `Archivio categoria ${category}`,
+  ogDescription: `Sfoglia tutti gli articoli nella categoria "${category}"`
+})
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="relative py-8 mb-8">
-    <div>
+    <div v-if="post">
       <!-- Begin Post -->
       <article>
         <header class="mb-6">
@@ -8,9 +8,9 @@
             {{ post.title }}
           </h1>
 
-          <time :datetime="post.date" class="text-gray-600 dark:text-gray-400">{{ post.dateLong }}</time>
+          <time :datetime="post.date" class="text-gray-600 dark:text-gray-400">{{ dateLong }}</time>
           <span class="text-gray-600 dark:text-gray-400 px-1">•</span>
-          <span class="text-gray-600 dark:text-gray-400">{{ Math.ceil((post.readingTime || {}).minutes) }} minuti di lettura</span>
+          <span class="text-gray-600 dark:text-gray-400">{{ Math.ceil(readingTimeMinutes) }} minuti di lettura</span>
         </header>
 
         <!-- Begin Featured Image -->
@@ -19,7 +19,7 @@
 
         <!-- Begin Post Content -->
         <div class="prose prose-xl prose-green dark:prose-dark max-w-none">
-          <nuxt-content :document="post" />
+          <ContentRenderer :value="post" />
         </div>
         <!-- End Post Content -->
       </article>
@@ -42,18 +42,18 @@
       <!-- End Tags -->
 
       <!-- Begin related posts -->
-      <div v-if="related.length" class="mt-10">
+      <div v-if="related && related.length" class="mt-10">
         <h4 class="text-2xl font-semibold mb-3">
           Sullo stesso argomento:
         </h4>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Post v-for="article of related" :key="article.id" :post="article" />
+          <Post v-for="article of related" :key="article.slug" :post="article" />
         </div>
       </div>
       <!-- End related posts -->
 
       <!-- Begin Disqus Comments -->
-      <client-only>
+      <ClientOnly>
         <div id="disqus_thread" class="mt-12" />
         <script>
           window.disqus_config = function () {
@@ -66,127 +66,107 @@
           s.setAttribute('data-timestamp', +new Date())
           ;(d.head || d.body).appendChild(s)
         </script>
-      </client-only>
+      </ClientOnly>
       <!-- End Disqus Comments -->
     </div>
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import readingTime from 'reading-time'
 
+const route = useRoute()
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl as string
+const slug = route.slug as string
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
-export default {
-  async asyncData ({ app, $content, params, error }) {
-    const slug = params.slug || 'index'
-    let post
-
-    try {
-      post = await $content('articles', slug, { text: true }).fetch()
-      const event = new Date(post.date)
-      post.dateLong = event.toLocaleDateString('it-IT', dateOptions)
-      post.readingTime = readingTime(post.text)
-    } catch (err) {
-      app.$log.warn(err)
-      error({ statusCode: 404, message: 'Pagina non trovata.' })
-    }
-
-    return {
-      post
-    }
-  },
-
-  data () {
-    return {
-      post: {},
-      related: []
-    }
-  },
-
-  computed: {
-    postUrl () {
-      return `${process.env.NUXT_ENV_FRONTEND_URL}${this.$route.path}`
-    },
-    postUrlEncoded () {
-      return encodeURIComponent(this.postUrl)
-    }
-  },
-
-  async mounted () {
-    try {
-      const itemsInThisCategory = await this.$content('articles')
-        .only(['slug'])
-        .where({ categories: { $contains: this.post.categories[0] }, slug: { $ne: this.post.slug } })
-        .fetch()
-      const maxSkip = itemsInThisCategory.length - 2 // do not skip too much, we need at least 2 items
-      const skip = maxSkip > 0 ? Math.floor(maxSkip * Math.random()) : 0 // skip by a random number of items
-      this.related = await this.$content('articles', { text: true })
-        .where({ categories: { $contains: this.post.categories[0] }, slug: { $ne: this.post.slug } })
-        .sortBy('date', 'desc')
-        .skip(skip)
-        .limit(2)
-        .fetch()
-    } catch (error) {
-      this.$log.error(error)
-    }
-
-    if (window && window.FB) {
-      window.FB.init({
-        appId: '103937073008677',
-        status: true,
-        xfbml: true,
-        version: 'v4.0'
+// Fetch post
+const { data: post, error } = await useAsyncData(
+  `post-${slug}`,
+  () => queryContent('articles', slug).findOne(),
+  {
+    onError: () => {
+      throw createError({
+        statusCode: 404,
+        message: 'Pagina non trovata.'
       })
-      setTimeout(window.FB.XFBML.parse, 100)
-    }
-  },
-
-  head () {
-    return {
-      ...this.$seo({
-        title: this.post.title,
-        description: this.post.description,
-        keywords: this.post.tags,
-        image: this.post.coverImage,
-        openGraph: {
-          type: 'article',
-          title: this.post.title,
-          description: this.post.description,
-          image: {
-            url: this.post.coverImage,
-            alt: this.post.title
-          }
-        }
-      }),
-      script: [
-        {
-          body: true,
-          async: true,
-          defer: true,
-          crossorigin: 'anonymous',
-          nonce: 'vqTA8MnR',
-          src: 'https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v9.0&appId=103937073008677&autoLogAppEvents=1'
-        }
-      ]
-    }
-  },
-
-  jsonld () {
-    return {
-      '@context': 'http://schema.org',
-      '@type': 'Article',
-      author: {
-        '@type': 'Person',
-        name: 'Enrico Deleo'
-      },
-      headline: this.post.title,
-      tags: this.post.tags,
-      wordcount: this.post.text.split(' ').length,
-      image: [this.post.coverImage],
-      datePublished: this.post.date,
-      description: this.post.description
     }
   }
+)
+
+// Format date
+const dateLong = computed(() => {
+  if (!post.value) return ''
+  const event = new Date(post.value.date)
+  return event.toLocaleDateString('it-IT', dateOptions)
+})
+
+// Calculate reading time
+const readingTimeMinutes = computed(() => {
+  if (!post.value) return 0
+  return readingTime(post.value.text).minutes || 0
+})
+
+// Fetch related posts on client side only
+const related = ref([])
+
+if (post.value) {
+  const itemsInThisCategory = await queryCollection('articles')
+    .where({ categories: { contains: post.value.categories[0] }, slug: { $ne: slug } })
+    .select('slug')
+    .all()
+
+  const maxSkip = itemsInThisCategory.length - 2
+  const skip = maxSkip > 0 ? Math.floor(maxSkip * Math.random()) : 0
+
+  const relatedPosts = await queryContent('articles')
+    .where({ categories: { contains: post.value.categories[0] }, slug: { $ne: slug } })
+    .sort({ date: -1 })
+    .skip(skip)
+    .limit(2)
+    .find()
+
+  related.value = relatedPosts || []
 }
+
+// SEO Meta
+useSeoMeta({
+  title: () => post.value?.title || '',
+  description: () => post.value?.description || '',
+  ogTitle: () => post.value?.title || '',
+  ogDescription: () => post.value?.description || '',
+  ogImage: () => post.value?.coverImage || '',
+  ogType: 'article',
+  twitterCard: 'summary_large_image'
+})
+
+// Structured data
+useSchemaOrg([
+  defineArticle({
+    author: {
+      '@type': 'Person',
+      name: 'Enrico Deleo'
+    },
+    headline: () => post.value?.title || '',
+    keywords: () => post.value?.tags || [],
+    wordcount: () => post.value?.text?.split(' ').length || 0,
+    image: () => [post.value?.coverImage || ''],
+    datePublished: () => post.value?.date || '',
+    description: () => post.value?.description || ''
+  })
+])
+
+// Initialize Facebook Pixel
+onMounted(() => {
+  if (window && (window as any).FB) {
+    ;(window as any).FB.init({
+      appId: '103937073008677',
+      status: true,
+      xfbml: true,
+      version: 'v4.0'
+    })
+    setTimeout(() => (window as any).FB.XFBML.parse(), 100)
+  }
+})
 </script>

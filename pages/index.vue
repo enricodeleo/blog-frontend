@@ -24,7 +24,7 @@
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
         <!-- begin post -->
-        <lazy-post v-for="post of posts" :key="post.id" :post="post" />
+        <Post v-for="post of posts" :key="post.slug" :post="post" />
         <!-- end post -->
       </div>
     </section>
@@ -36,55 +36,50 @@
   </div>
 </template>
 
-<script>
-export default {
-  async asyncData ({ app, params }) {
-    let posts
-    let featured
+<script setup lang="ts">
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl as string
 
-    try {
-      featured = await app.$content('articles', { text: true }).where({ sticky: true }).sortBy('date', 'desc').limit(2).fetch()
-      posts = await app.$content('articles', { text: true }).sortBy('date', 'desc').limit(6).fetch()
-    } catch (error) {
-      app.$log.error(error)
-    }
+// Fetch featured posts
+const { data: featured } = await useAsyncData(
+  'featured-posts',
+  () => queryContent('articles')
+    .where({ sticky: true })
+    .sort({ date: -1 })
+    .limit(2)
+    .find()
+)
 
-    return {
-      posts,
-      featured
-    }
-  },
+// Fetch recent posts
+const { data: posts } = await useAsyncData(
+  'recent-posts',
+  () => queryContent('articles')
+    .sort({ date: -1 })
+    .limit(6)
+    .find()
+)
 
-  data () {
-    return {
-      posts: [],
-      featured: []
-    }
-  },
+// SEO Meta
+useSeoMeta({
+  title: 'Il blog di Enrico Deleo',
+  ogTitle: 'Il blog di Enrico Deleo',
+  twitterCard: 'summary_large_image'
+})
 
-  head () {
-    return {
-      ...this.$seo({
-        title: 'Il blog di Enrico Deleo'
-      })
+// Structured data
+useSchemaOrg([
+  defineWebSite({
+    name: 'Lisergico',
+    author: {
+      '@type': 'Person',
+      name: 'Enrico Deleo'
+    },
+    url: siteUrl,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${siteUrl}/search?term={search_term_string}`,
+      'query-input': 'required name=search_term_string'
     }
-  },
-
-  jsonld () {
-    return {
-      '@context': 'http://schema.org',
-      '@type': 'WebSite',
-      author: {
-        '@type': 'Person',
-        name: 'Enrico Deleo'
-      },
-      url: process.env.NUXT_ENV_FRONTEND_URL,
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: `${process.env.NUXT_ENV_FRONTEND_URL}/search?term={search_term_string}`,
-        'query-input': 'required name=search_term_string'
-      }
-    }
-  }
-}
+  })
+])
 </script>

@@ -9,43 +9,30 @@
       </h1>
 
       <!-- begin post -->
-      <lazy-post v-for="post of posts" :key="post.id" :post="post" class="mb-5" />
+      <Post v-for="post of posts" :key="post.slug" :post="post" class="mb-5" />
       <!-- end post -->
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  async asyncData ({ app, params }) {
-    const tag = params.slug
-    let posts
+<script setup lang="ts">
+const route = useRoute()
+const tag = route.slug as string
 
-    try {
-      posts = await app.$content('articles', { text: true }).where({ tags: { $contains: tag } }).sortBy('date', 'desc').fetch()
-    } catch (error) {
-      app.$log.error(error)
-    }
+// Fetch posts by tag
+const { data: posts } = await useAsyncData(
+  `tag-${tag}`,
+  () => queryContent('articles')
+    .where({ tags: { contains: tag } })
+    .sort({ date: -1 })
+    .find()
+)
 
-    return {
-      posts,
-      tag
-    }
-  },
-
-  data () {
-    return {
-      websiteUrl: process.env.NUXT_ENV_FRONTEND_URL,
-      posts: [],
-      tag: ''
-    }
-  },
-
-  head ({ $seo }) {
-    return this.$seo({
-      title: `Articoli con tag #${this.tag}`,
-      description: `Sfoglia tutti gli articoli con tag "${this.tag}"`
-    })
-  }
-}
+// SEO Meta
+useSeoMeta({
+  title: `Articoli con tag #${tag}`,
+  description: `Sfoglia tutti gli articoli con tag "${tag}"`,
+  ogTitle: `Articoli con tag #${tag}`,
+  ogDescription: `Sfoglia tutti gli articoli con tag "${tag}"`
+})
 </script>
