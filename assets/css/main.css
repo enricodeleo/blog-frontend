@@ -5,8 +5,26 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-dark-bg-900: #1f2937;
-  --color-dark-text-50: #f9fafb;
-  --color-dark-text-300: #d1d5db;
-  --color-dark-text-400: #9ca3af;
+  --color-dark-bg-900: #0F172A;
+  --color-dark-bg-800: #111827;
+  --color-dark-text-50: #F8FAFC;
+  --color-dark-text-300: #CBD5E1;
+  --color-dark-text-400: #94A3B8;
+  --color-dark-logo: #E5E7EB;
+}
+
+/* Dark mode overrides */
+.dark {
+  background-color: #0F172A;
+}
+
+.dark body {
+  background-color: #0F172A;
+}
+
+.inline-svg svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
 }

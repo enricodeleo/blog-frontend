@@ -10,8 +10,8 @@
           title="Menu"
           @click.prevent="expanded = !expanded"
         >
-          <span v-if="expanded" class="text-xl">&times;</span>
-          <span v-else class="text-xl">&#9776;</span>
+          <Icon v-if="expanded" name="mdi:close" class="text-xl" />
+          <Icon v-else name="mdi:menu" class="text-xl" />
         </button>
       </div>
       <div class="flex flex-col lg:flex lg:flex-row lg:items-center" :class="{ hidden: !expanded }">

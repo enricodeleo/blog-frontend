@@ -10,7 +10,7 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@antfu/install-pkg@^1.0.0":
+"@antfu/install-pkg@^1.0.0", "@antfu/install-pkg@^1.1.0":
   version "1.1.0"
   resolved "https://registry.npmjs.org/@antfu/install-pkg/-/install-pkg-1.1.0.tgz"
   integrity sha512-MGQsmw10ZyI+EJo45CdSER4zEb+p31LpDAFp2Z3gkSd1yqVZGi0Ebx++YTEMonJy4oChEMLsxZ64j8FH6sSqtQ==
@@ -1010,6 +1010,13 @@
   dependencies:
     "@iconify/types" "*"
 
+"@iconify/collections@^1.0.636":
+  version "1.0.637"
+  resolved "https://registry.npmjs.org/@iconify/collections/-/collections-1.0.637.tgz"
+  integrity sha512-/RJlWW7VJsqwQufjIM5a3LZ8FpxNZ7IkXML+hOw358Eg2XriBrjJQqSepK9S4WvFfDsSObFYPg/wzQ30iFP/5g==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/types@*", "@iconify/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.npmjs.org/@iconify/types/-/types-2.0.0.tgz"
@@ -1028,6 +1035,22 @@
     kolorist "^1.8.0"
     local-pkg "^1.0.0"
     mlly "^1.7.4"
+
+"@iconify/utils@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@iconify/utils/-/utils-3.1.0.tgz"
+  integrity sha512-Zlzem1ZXhI1iHeeERabLNzBHdOa4VhQbqAcOQaMKuTuyZCpwKbC2R4Dd0Zo3g9EAc+Y4fiarO8HIHRAth7+skw==
+  dependencies:
+    "@antfu/install-pkg" "^1.1.0"
+    "@iconify/types" "^2.0.0"
+    mlly "^1.8.0"
+
+"@iconify/vue@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/@iconify/vue/-/vue-5.0.0.tgz"
+  integrity sha512-C+KuEWIF5nSBrobFJhT//JS87OZ++QDORB6f2q2Wm6fl2mueSTpFBeBsveK0KW9hWiZ4mNiPjsh6Zs4jjdROSg==
+  dependencies:
+    "@iconify/types" "^2.0.0"
 
 "@ioredis/commands@1.5.0":
   version "1.5.0"
@@ -1286,7 +1309,7 @@
     "@nuxt/schema" "^3.15.0"
     execa "^7.2.0"
 
-"@nuxt/devtools-kit@3.1.1":
+"@nuxt/devtools-kit@^3.1.1", "@nuxt/devtools-kit@3.1.1":
   version "3.1.1"
   resolved "https://registry.npmjs.org/@nuxt/devtools-kit/-/devtools-kit-3.1.1.tgz"
   integrity sha512-sjiKFeDCOy1SyqezSgyV4rYNfQewC64k/GhOsuJgRF+wR2qr6KTVhO6u2B+csKs74KrMrnJprQBgud7ejvOXAQ==
@@ -1430,6 +1453,26 @@
     vite-plugin-vue-inspector "^5.3.1"
     which "^3.0.1"
     ws "^8.18.0"
+
+"@nuxt/icon@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/@nuxt/icon/-/icon-2.2.0.tgz"
+  integrity sha512-B7Ly5g/nZxHqnjAsApW9zwDLtvaWOAJbNXY0TNIeAD8CZ25T+vYJs7++9o5P8E+pCSg3rwEyGsM4UPRYH3mk3Q==
+  dependencies:
+    "@iconify/collections" "^1.0.636"
+    "@iconify/types" "^2.0.0"
+    "@iconify/utils" "^3.1.0"
+    "@iconify/vue" "^5.0.0"
+    "@nuxt/devtools-kit" "^3.1.1"
+    "@nuxt/kit" "^4.2.2"
+    consola "^3.4.2"
+    local-pkg "^1.1.2"
+    mlly "^1.8.0"
+    ohash "^2.0.11"
+    pathe "^2.0.3"
+    picomatch "^4.0.3"
+    std-env "^3.10.0"
+    tinyglobby "^0.2.15"
 
 "@nuxt/image@^1.8.0":
   version "1.11.0"
@@ -10000,7 +10043,7 @@ vue-tsc@^2.1.10, "vue-tsc@~2.2.10 || ^3.0.0":
     "@volar/typescript" "2.4.15"
     "@vue/language-core" "2.2.12"
 
-"vue@^2.7.0 || ^3.2.25", vue@^3, vue@^3.0.0, vue@^3.2.0, vue@^3.2.25, vue@^3.3.4, vue@^3.4.37, vue@^3.5.0, vue@^3.5.13, vue@^3.5.25, "vue@>=2.7 || >=3", vue@>=3.5.18, vue@3.5.26:
+"vue@^2.7.0 || ^3.2.25", vue@^3, vue@^3.0.0, vue@^3.2.0, vue@^3.2.25, vue@^3.3.4, vue@^3.4.37, vue@^3.5.0, vue@^3.5.13, vue@^3.5.25, "vue@>=2.7 || >=3", vue@>=3, vue@>=3.5.18, vue@3.5.26:
   version "3.5.26"
   resolved "https://registry.npmjs.org/vue/-/vue-3.5.26.tgz"
   integrity sha512-SJ/NTccVyAoNUJmkM9KUqPcYlY+u8OVL1X5EW9RIs3ch5H2uERxyyIUI4MRxVCSOiEcupX9xNGde1tL9ZKpimA==
