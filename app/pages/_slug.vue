@@ -61,13 +61,13 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import readingTime from 'reading-time'
 
 const route = useRoute()
 const config = useRuntimeConfig()
-const siteUrl = config.public.siteUrl as string
-const slug = route.slug as string
+const siteUrl = config.public.siteUrl
+const slug = route.slug
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
 // Fetch post

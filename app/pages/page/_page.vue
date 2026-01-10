@@ -35,9 +35,9 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const route = useRoute()
-const page = parseInt(route.page as string)
+const page = parseInt(route.page)
 const limit = 6
 const skip = limit * (page - 1)
 

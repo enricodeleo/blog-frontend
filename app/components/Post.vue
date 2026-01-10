@@ -35,20 +35,15 @@
   </article>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import readingTime from 'reading-time'
 
-const props = defineProps<{
+const props = defineProps({
   post: {
-    date: string
-    text: string
-    categories?: string[]
-    slug: string
-    title: string
-    description: string
-    coverImage?: string
+    type: Object,
+    required: true
   }
-}>()
+})
 
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 

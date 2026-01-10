@@ -36,9 +36,9 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const config = useRuntimeConfig()
-const siteUrl = config.public.siteUrl as string
+const siteUrl = config.public.siteUrl
 
 // Fetch featured posts
 const { data: featured } = await useAsyncData(

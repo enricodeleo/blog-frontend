@@ -15,9 +15,9 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const route = useRoute()
-const category = route.slug as string
+const category = route.slug
 
 // Fetch posts by category
 const { data: posts } = await useAsyncData(

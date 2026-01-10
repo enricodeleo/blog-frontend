@@ -44,29 +44,24 @@
   </section>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import readingTime from 'reading-time'
 
-const props = defineProps<{
-  posts?: Array<{
-    id?: string
-    slug: string
-    date: string
-    text: string
-    categories?: string[]
-    title: string
-    coverImage: string
-  }>
-}>()
+const props = defineProps({
+  posts: {
+    type: Array,
+    default: () => []
+  }
+})
 
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
-const formatDate = (date: string) => {
+const formatDate = (date) => {
   const event = new Date(date)
   return event.toLocaleDateString('it-IT', dateOptions)
 }
 
-const calculateReadingTime = (text: string) => {
+const calculateReadingTime = (text) => {
   return readingTime(text).minutes || 0
 }
 

@@ -16,6 +16,6 @@
   </footer>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const currentYear = computed(() => new Date().getFullYear())
 </script>

@@ -20,9 +20,9 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const route = useRoute()
-const term = (route.query.term as string) || ''
+const term = (route.query.term) || ''
 const loaded = ref(false)
 
 // Search posts
