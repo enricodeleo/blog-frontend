@@ -147,6 +147,57 @@ useSeoMeta({
   twitterCard: 'summary_large_image'
 })
 
+// JSON-LD Structured Data
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl as string
+
+const jsonLd = computed(() => {
+  if (!post.value) return null
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.value.title,
+    description: post.value.description,
+    image: post.value.coverImage ? `${post.value.coverImage}?w=1088&h=612&strip=all` : undefined,
+    datePublished: post.value.date,
+    dateModified: post.value.date,
+    author: {
+      '@type': 'Person',
+      name: 'Enrico Deleo',
+      email: 'hello@enricodeleo.com',
+      url: 'https://enricodeleo.com'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Lisergico',
+      url: siteUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/logo.png`
+      }
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${siteUrl}${post.value.path}`
+    },
+    keywords: post.value.tags?.join(', ') || '',
+    articleSection: post.value.categories?.[0] || '',
+    inLanguage: 'it-IT'
+  }
+
+  return toJsonLd(schema)
+})
+
+useHead({
+  script: jsonLd.value ? [
+    {
+      type: 'application/ld+json',
+      children: jsonLd.value
+    }
+  ] : []
+})
+
 // Load Disqus using @nuxt/scripts
 if (import.meta.client) {
   const shortname = 'lisergico'
