@@ -16,13 +16,6 @@
   </footer>
 </template>
 
-<script>
-export default {
-  name: 'Footer',
-  data () {
-    return {
-      currentYear: new Date().getFullYear()
-    }
-  }
-}
+<script setup lang="ts">
+const currentYear = computed(() => new Date().getFullYear())
 </script>

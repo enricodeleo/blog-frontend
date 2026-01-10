@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-dark-bg-900: #1f2937;
+  --color-dark-text-50: #f9fafb;
+  --color-dark-text-300: #d1d5db;
+  --color-dark-text-400: #9ca3af;
+}

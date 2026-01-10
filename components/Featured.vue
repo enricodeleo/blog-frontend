@@ -9,8 +9,8 @@
     <div class="flex flex-col gap-6 py-4">
       <!-- begin post -->
       <article
-        v-for="post of featured"
-        :key="post.id"
+        v-for="post of featuredPosts"
+        :key="post.slug || post.id"
         class="flex items-center border-gray-300 dark:border-gray-600 border rounded-md min-h-72"
       >
         <NuxtLink :to="`/${post.slug}`" :title="post.title" class="h-full w-full bg-no-repeat bg-center bg-cover rounded-l-md">
@@ -33,9 +33,9 @@
               </span>
             </span>
             <br>
-            <time :datetime="post.date" class="text-gray-600 dark:text-gray-400">{{ post.dateLong }}</time>
+            <time :datetime="post.date" class="text-gray-600 dark:text-gray-400">{{ formatDate(post.date) }}</time>
             <span class="text-gray-600 dark:text-gray-400 px-1">•</span>
-            <span class="text-gray-600 dark:text-gray-400">{{ Math.ceil((post.readingTime || {}).minutes) }} minuti di lettura</span>
+            <span class="text-gray-600 dark:text-gray-400">{{ Math.ceil(calculateReadingTime(post.text)) }} minuti di lettura</span>
           </footer>
         </div>
       </article>
@@ -44,34 +44,37 @@
   </section>
 </template>
 
-<script>
+<script setup lang="ts">
 import readingTime from 'reading-time'
+
+const props = defineProps<{
+  posts: Array<{
+    id?: string
+    slug: string
+    date: string
+    text: string
+    categories: string[]
+    title: string
+    coverImage: string
+  }>
+}>()
 
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
-export default {
-  props: {
-    posts: {
-      type: Array,
-      default () { return [] },
-      required: true
-    }
-  },
-
-  data () {
-    return {
-      featured: []
-    }
-  },
-
-  mounted () {
-    this.featured = this.posts.map((post) => {
-      const event = new Date(post.date)
-      post.dateLong = event.toLocaleDateString('it-IT', dateOptions)
-      post.readingTime = readingTime(post.text)
-
-      return post
-    })
-  }
+const formatDate = (date: string) => {
+  const event = new Date(date)
+  return event.toLocaleDateString('it-IT', dateOptions)
 }
+
+const calculateReadingTime = (text: string) => {
+  return readingTime(text).minutes || 0
+}
+
+const featuredPosts = computed(() => {
+  return props.posts.map((post) => ({
+    ...post,
+    dateLong: formatDate(post.date),
+    readingTime: calculateReadingTime(post.text)
+  }))
+})
 </script>

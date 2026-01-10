@@ -27,38 +27,37 @@
           </span>
         </span>
         <br>
-        <time :datetime="post.date" class="text-gray-600 dark:text-gray-400">{{ post.dateLong }}</time>
+        <time :datetime="post.date" class="text-gray-600 dark:text-gray-400">{{ dateLong }}</time>
         <span class="text-gray-600 dark:text-gray-400 px-1">•</span>
-        <span class="text-gray-600 dark:text-gray-400">{{ Math.ceil((post.readingTime || {}).minutes) }} minuti di lettura</span>
+        <span class="text-gray-600 dark:text-gray-400">{{ Math.ceil(readingTimeMinutes) }} minuti di lettura</span>
       </footer>
     </div>
   </article>
 </template>
 
-<script>
+<script setup lang="ts">
 import readingTime from 'reading-time'
+
+const props = defineProps<{
+  post: {
+    date: string
+    text: string
+    categories: string[]
+    slug: string
+    title: string
+    description: string
+    coverImage?: string
+  }
+}>()
 
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
-export default {
-  props: {
-    post: {
-      type: Object,
-      default () { return {} },
-      required: true
-    }
-  },
+const dateLong = computed(() => {
+  const event = new Date(props.post.date)
+  return event.toLocaleDateString('it-IT', dateOptions)
+})
 
-  data () {
-    return {
-      categories: []
-    }
-  },
-
-  mounted () {
-    const event = new Date(this.post.date)
-    this.$set(this.post, 'dateLong', event.toLocaleDateString('it-IT', dateOptions))
-    this.$set(this.post, 'readingTime', readingTime(this.post.text))
-  }
-}
+const readingTimeMinutes = computed(() => {
+  return readingTime(props.post.text).minutes || 0
+})
 </script>
