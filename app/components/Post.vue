@@ -20,7 +20,7 @@
       </div>
 
       <footer class="text-sm pt-2">
-        <span>
+        <span v-if="post.categories && post.categories.length">
           Pubblicato in
           <span v-for="(category, index) of post.categories" :key="index">
             <NuxtLink :to="`/category/${category}`" class="capitalize text-green-600 hover:text-green-800">{{ category.replace('-', ' ') }}</NuxtLink><span v-if="index+1 !== post.categories.length">, </span>
@@ -42,7 +42,7 @@ const props = defineProps<{
   post: {
     date: string
     text: string
-    categories: string[]
+    categories?: string[]
     slug: string
     title: string
     description: string
