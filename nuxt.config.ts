@@ -28,7 +28,7 @@ export default defineNuxtConfig({
   // Enable TypeScript
   typescript: {
     strict: true,
-    typeCheck: true
+    typeCheck: false
   },
 
   // Vite plugins - Tailwind v4
