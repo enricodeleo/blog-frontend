@@ -1,88 +1,97 @@
 <template>
-  <div class="relative py-8 mb-8">
+  <div class="relative py-8 max-w-prose mx-auto">
     <div v-if="post">
       <!-- Breadcrumb -->
-      <div class="mb-6">
-        <ul class="steps steps-horizontal text-sm w-full">
-          <li class="step step-primary"><NuxtLink to="/">Home</NuxtLink></li>
-          <li class="step step-primary">{{ post.title }}</li>
-        </ul>
-      </div>
+      <nav class="mb-6 text-sm" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-2">
+          <li>
+            <NuxtLink to="/" class="text-gray-600 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 underline decoration-dotted underline-offset-4 transition-colors">
+              Home
+            </NuxtLink>
+          </li>
+          <li class="text-gray-400 dark:text-gray-500">/</li>
+          <li class="text-gray-900 dark:text-[#F8FAFC] font-medium">{{ post.title }}</li>
+        </ol>
+      </nav>
 
-      <!-- Begin Post -->
-      <article class="prose prose-lg max-w-none">
+      <!-- Article -->
+      <article class="prose">
+        <!-- Header -->
         <header class="mb-8">
-          <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+          <h1 class="text-2xl md:text-3xl font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC] mb-4">
             {{ post.title }}
           </h1>
 
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span v-for="(category, index) of (post.categories || [])" :key="index">
-              <NuxtLink :to="`/category/${category}`" class="badge badge-lg bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-none">
-                {{ category.replace('-', ' ') }}
-              </NuxtLink>
-            </span>
+          <!-- Categories -->
+          <div v-if="post.categories && post.categories.length" class="flex flex-wrap gap-2 mb-4">
+            <NuxtLink
+              v-for="(category, index) in post.categories"
+              :key="index"
+              :to="`/category/${category}`"
+              class="text-sm text-gray-600 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 underline decoration-dotted underline-offset-4 transition-colors"
+            >
+              {{ category.replace('-', ' ') }}
+            </NuxtLink>
           </div>
 
-          <div class="flex items-center gap-4 text-base-content/70">
+          <!-- Meta -->
+          <div class="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
             <time :datetime="post.date">{{ dateLong }}</time>
             <span>•</span>
             <span>{{ Math.ceil(readingTimeMinutes) }} minuti di lettura</span>
           </div>
         </header>
 
-        <!-- Begin Featured Image -->
-        <div v-if="post.coverImage" class="mb-8 rounded-xl overflow-hidden shadow-xl">
-          <img :src="post.coverImage + '?w=1088&h=612&strip=all'" :alt="post.title" class="w-full">
-        </div>
-        <!-- End Featured Image -->
+        <!-- Featured Image -->
+        <figure v-if="post.coverImage" class="mb-8">
+          <img :src="post.coverImage + '?w=1088&h=612&strip=all'" :alt="post.title" class="rounded-lg w-full">
+        </figure>
 
-        <!-- Begin Post Content -->
-        <div class="prose prose-lg max-w-none">
-          <ContentRenderer :value="post" />
-        </div>
-        <!-- End Post Content -->
+        <!-- Article Content -->
+        <ContentRenderer :value="post" />
       </article>
-      <!-- End Post -->
 
-      <div class="divider"></div>
-
-      <!-- Begin Tags -->
-      <div class="mt-8">
-        <p class="text-lg mb-4">
+      <!-- Tags -->
+      <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <p class="text-lg mb-3 text-gray-900 dark:text-[#F8FAFC]">
           Pubblicato in
-          <span v-for="(category, index) of (post.categories || [])" :key="index">
-            <NuxtLink :to="`/category/${category}`" class="badge badge-primary badge-lg bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-none hover:opacity-80">
+          <span v-for="(category, index) in (post.categories || [])" :key="index">
+            <NuxtLink
+              :to="`/category/${category}`"
+              class="underline decoration-dotted underline-offset-4 hover:text-amber-600 dark:hover:text-amber-500 transition-colors"
+            >
               {{ category.replace('-', ' ') }}
-            </NuxtLink><span v-if="index+1 !== post.categories.length" class="ml-1">•</span>
+            </NuxtLink><span v-if="index+1 !== post.categories.length" class="mx-1">•</span>
           </span>
         </p>
         <div v-if="post.tags && post.tags.length" class="flex flex-wrap gap-2 mt-4">
-          <NuxtLink v-for="(tag, index) of post.tags" :key="index" :to="`/tag/${tag}`" class="badge badge-outline hover:badge-primary">
+          <NuxtLink
+            v-for="(tag, index) in post.tags"
+            :key="index"
+            :to="`/tag/${tag}`"
+            class="text-sm text-gray-600 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 underline decoration-dotted underline-offset-4 transition-colors"
+          >
             #{{ tag }}
           </NuxtLink>
         </div>
       </div>
-      <!-- End Tags -->
 
-      <!-- Begin related posts -->
+      <!-- Related Posts -->
       <div v-if="related && related.length" class="mt-12">
-        <h4 class="text-2xl font-bold mb-6">
-          <span class="badge badge-lg badge-secondary bg-gradient-to-r from-pink-500 to-indigo-500 text-white border-none p-4">
+        <div class="border-l-4 border-amber-600 px-4 py-2 mb-6">
+          <h2 class="text-lg md:text-xl font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC]">
             Sullo stesso argomento
-          </span>
-        </h4>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Post v-for="article of related" :key="article.slug" :post="article" />
+          </h2>
+        </div>
+        <div class="space-y-0">
+          <Post v-for="article in related" :key="article.slug" :post="article" />
         </div>
       </div>
-      <!-- End related posts -->
 
-      <!-- Begin Disqus Comments -->
+      <!-- Disqus Comments -->
       <ClientOnly>
         <div id="disqus_thread" class="mt-12" />
       </ClientOnly>
-      <!-- End Disqus Comments -->
     </div>
   </div>
 </template>
@@ -123,7 +132,7 @@ const readingTimeMinutes = computed(() => {
   return Math.ceil(words / wordsPerMinute)
 })
 
-// Fetch related posts on client side only
+// Fetch related posts
 const related = ref([])
 
 if (post.value) {

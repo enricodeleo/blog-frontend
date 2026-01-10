@@ -1,10 +1,10 @@
 <template>
-  <header class="border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0F172A]">
-    <nav class="container mx-auto px-5 py-4">
+  <header class="border-b border-[#c0ccda] dark:border-gray-700 bg-white dark:bg-[#0F172A]">
+    <nav class="container mx-auto px-5 md:px-12 py-4">
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <div class="flex-shrink-0">
-          <NuxtLink to="/" class="text-xl md:text-2xl font-extrabold text-gray-900 dark:text-[#E5E7EB] hover:text-amber-600 dark:hover:text-amber-500 transition-colors">
+          <NuxtLink to="/" class="text-xl md:text-2xl font-extrabold text-[#3c4858] dark:text-[#E5E7EB] hover:text-amber-700 dark:hover:text-amber-400 transition-colors">
             Lisergico
           </NuxtLink>
         </div>
@@ -17,9 +17,9 @@
               type="text"
               name="term"
               placeholder="Cerca..."
-              class="px-3 py-1.5 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-[#111827] text-gray-900 dark:text-[#F8FAFC] placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-transparent"
+              class="px-3 py-1.5 border border-[#c0ccda] dark:border-gray-600 rounded-md bg-white dark:bg-[#111827] text-[#3c4858] dark:text-[#F8FAFC] placeholder-[#c0ccda] dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
-            <button type="submit" class="px-3 py-1.5 text-gray-900 dark:text-[#F8FAFC] hover:text-amber-600 dark:hover:text-amber-500 transition-colors" aria-label="Cerca">
+            <button type="submit" class="px-3 py-1.5 text-[#3c4858] dark:text-[#F8FAFC] hover:text-amber-700 dark:hover:text-amber-400 transition-colors" aria-label="Cerca">
               <Icon name="mdi:magnify" class="text-xl" />
             </button>
           </form>
@@ -30,7 +30,7 @@
               href="https://www.facebook.com/therealenricodeleo/"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-gray-900 dark:text-[#F8FAFC] hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
+              class="text-[#3c4858] dark:text-[#F8FAFC] hover:text-[#1877f2] dark:hover:text-[#1877f2] transition-colors"
               aria-label="Facebook"
             >
               <Icon name="mdi:facebook" class="text-xl" />
@@ -39,7 +39,7 @@
               href="https://www.instagram.com/enricodeleo/"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-gray-900 dark:text-[#F8FAFC] hover:text-pink-600 dark:hover:text-pink-500 transition-colors"
+              class="text-[#3c4858] dark:text-[#F8FAFC] hover:text-[#e1306c] dark:hover:text-[#e1306c] transition-colors"
               aria-label="Instagram"
             >
               <Icon name="mdi:instagram" class="text-xl" />
@@ -48,7 +48,7 @@
               href="https://www.linkedin.com/in/enricodeleo/"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-gray-900 dark:text-[#F8FAFC] hover:text-blue-700 dark:hover:text-blue-600 transition-colors"
+              class="text-[#3c4858] dark:text-[#F8FAFC] hover:text-[#0077b5] dark:hover:text-[#0077b5] transition-colors"
               aria-label="LinkedIn"
             >
               <Icon name="mdi:linkedin" class="text-xl" />
@@ -57,7 +57,7 @@
               href="https://github.com/enricodeleo/"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-gray-900 dark:text-[#F8FAFC] hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+              class="text-[#3c4858] dark:text-[#F8FAFC] hover:text-[#333] dark:hover:text-gray-300 transition-colors"
               aria-label="GitHub"
             >
               <Icon name="mdi:github" class="text-xl" />
@@ -69,7 +69,7 @@
         <div class="lg:hidden">
           <button
             @click="mobileMenuOpen = !mobileMenuOpen"
-            class="p-2 text-gray-900 dark:text-[#F8FAFC] hover:text-amber-600 dark:hover:text-amber-500 transition-colors"
+            class="p-2 text-[#3c4858] dark:text-[#F8FAFC] hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
             aria-label="Menu"
             aria-expanded="false"
           >
@@ -87,13 +87,13 @@
         leave-from-class="opacity-100 translate-y-0"
         leave-to-class="opacity-0 -translate-y-2"
       >
-        <div v-if="mobileMenuOpen" class="lg:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+        <div v-if="mobileMenuOpen" class="lg:hidden mt-4 pt-4 border-t border-[#c0ccda] dark:border-gray-700">
           <form action="/search" class="mb-4">
             <input
               type="text"
               name="term"
               placeholder="Cerca..."
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-[#111827] text-gray-900 dark:text-[#F8FAFC] placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+              class="w-full px-3 py-2 border border-[#c0ccda] dark:border-gray-600 rounded-md bg-white dark:bg-[#111827] text-[#3c4858] dark:text-[#F8FAFC] placeholder-[#c0ccda] dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
           </form>
 
@@ -102,7 +102,7 @@
               href="https://www.facebook.com/therealenricodeleo/"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 text-gray-900 dark:text-[#F8FAFC] hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
+              class="flex items-center gap-2 text-[#3c4858] dark:text-[#F8FAFC] hover:text-[#1877f2] dark:hover:text-[#1877f2] transition-colors"
             >
               <Icon name="mdi:facebook" class="text-xl" />
               <span>Facebook</span>
@@ -111,7 +111,7 @@
               href="https://www.instagram.com/enricodeleo/"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 text-gray-900 dark:text-[#F8FAFC] hover:text-pink-600 dark:hover:text-pink-500 transition-colors"
+              class="flex items-center gap-2 text-[#3c4858] dark:text-[#F8FAFC] hover:text-[#e1306c] dark:hover:text-[#e1306c] transition-colors"
             >
               <Icon name="mdi:instagram" class="text-xl" />
               <span>Instagram</span>
@@ -120,7 +120,7 @@
               href="https://www.linkedin.com/in/enricodeleo/"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 text-gray-900 dark:text-[#F8FAFC] hover:text-blue-700 dark:hover:text-blue-600 transition-colors"
+              class="flex items-center gap-2 text-[#3c4858] dark:text-[#F8FAFC] hover:text-[#0077b5] dark:hover:text-[#0077b5] transition-colors"
             >
               <Icon name="mdi:linkedin" class="text-xl" />
               <span>LinkedIn</span>
@@ -129,7 +129,7 @@
               href="https://github.com/enricodeleo/"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 text-gray-900 dark:text-[#F8FAFC] hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+              class="flex items-center gap-2 text-[#3c4858] dark:text-[#F8FAFC] hover:text-[#333] dark:hover:text-gray-300 transition-colors"
             >
               <Icon name="mdi:github" class="text-xl" />
               <span>GitHub</span>

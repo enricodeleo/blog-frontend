@@ -1,5 +1,5 @@
 <template>
-  <article class="border-b border-gray-200 dark:border-gray-700 pb-6 last:border-b-0">
+  <article class="border-b border-[#c0ccda] dark:border-gray-700 pb-6 last:border-b-0">
     <NuxtLink :to="`/${post.slug}`" :title="post.title">
       <!-- Cover Image -->
       <figure v-if="post.coverImage" class="mb-4">
@@ -12,12 +12,12 @@
       </figure>
 
       <!-- Title -->
-      <h2 class="text-xl md:text-2xl font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC] hover:text-amber-600 dark:hover:text-amber-500 transition-colors mb-2">
+      <h2 class="text-xl md:text-2xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC] hover:text-amber-700 dark:hover:text-amber-400 transition-colors mb-2">
         {{ post.title }}
       </h2>
 
       <!-- Description -->
-      <p v-if="post.description" class="text-lg text-gray-700 dark:text-gray-200 mb-3">
+      <p v-if="post.description" class="text-lg text-[#3c4858] dark:text-gray-200 mb-3">
         {{ post.description }}
       </p>
 
@@ -27,7 +27,7 @@
           v-for="(category, index) in post.categories"
           :key="index"
           :to="`/category/${category}`"
-          class="text-sm text-gray-600 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 underline decoration-dotted underline-offset-4 transition-colors"
+          class="text-sm text-[#3c4858] dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors"
         >
           {{ category.replace('-', ' ') }}
         </NuxtLink>

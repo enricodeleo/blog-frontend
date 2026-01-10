@@ -2,7 +2,7 @@
   <section class="mb-8">
     <!-- Section Header -->
     <div class="border-l-4 border-amber-600 px-4 py-2 mb-6">
-      <h2 class="text-lg md:text-xl font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC]">
+      <h2 class="text-lg md:text-xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC]">
         In primo piano
       </h2>
     </div>
@@ -12,7 +12,7 @@
       <article
         v-for="post in featuredPosts"
         :key="post.slug || post.id"
-        class="border-b border-gray-200 dark:border-gray-700 pb-6 last:border-b-0"
+        class="border-b border-[#c0ccda] dark:border-gray-700 pb-6 last:border-b-0"
       >
         <NuxtLink :to="`/${post.slug}`">
           <!-- Cover Image -->
@@ -26,7 +26,7 @@
           </figure>
 
           <!-- Title -->
-          <h2 class="text-2xl md:text-3xl font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC] hover:text-amber-600 dark:hover:text-amber-500 transition-colors mb-2">
+          <h2 class="text-2xl md:text-3xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC] hover:text-amber-700 dark:hover:text-amber-400 transition-colors mb-2">
             {{ post.title }}
           </h2>
 
@@ -36,7 +36,7 @@
               v-for="(category, index) in post.categories"
               :key="index"
               :to="`/category/${category}`"
-              class="text-sm text-gray-600 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 underline decoration-dotted underline-offset-4 transition-colors"
+              class="text-sm text-[#3c4858] dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors"
             >
               {{ category.replace('-', ' ') }}
             </NuxtLink>

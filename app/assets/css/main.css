@@ -3,13 +3,18 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* Dark mode colors - matching personal-landing */
+  /* Dark mode colors - matching brand manual */
   --color-dark-bg-900: #0F172A;
   --color-dark-bg-800: #111827;
   --color-dark-text-50: #F8FAFC;
   --color-dark-text-300: #CBD5E1;
   --color-dark-text-400: #94A3B8;
   --color-dark-logo: #E5E7EB;
+
+  /* Light mode colors - from brand manual */
+  --color-light-surface: #F5F5F5;
+  --color-light-text: #3c4858;
+  --color-light-border: #c0ccda;
 }
 
 /* Dark mode overrides - matching personal-landing */
@@ -29,14 +34,14 @@
   fill: currentColor;
 }
 
-/* Typography enhancements for article content - matching personal-landing style */
+/* Typography enhancements for article content - matching brand manual */
 .prose {
-  @apply text-gray-900 dark:text-[#F8FAFC];
+  @apply text-[#3c4858] dark:text-[#F8FAFC];
   max-width: 65ch;
 }
 
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-  @apply font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC];
+  @apply font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC];
 }
 
 .prose h1, .prose h2 {
@@ -48,11 +53,11 @@
 }
 
 .prose p {
-  @apply pb-3 text-lg text-gray-900 dark:text-[#F8FAFC];
+  @apply pb-3 text-lg text-[#3c4858] dark:text-[#F8FAFC];
 }
 
 .prose a {
-  @apply underline decoration-dotted underline-offset-4 text-gray-900 dark:text-[#F8FAFC] hover:text-amber-600 dark:hover:text-amber-500 transition-colors;
+  @apply underline decoration-dotted underline-offset-4 text-[#3c4858] dark:text-[#F8FAFC] hover:text-amber-700 dark:hover:text-amber-400 transition-colors;
 }
 
 .prose strong {
@@ -64,11 +69,11 @@
 }
 
 .prose code {
-  @apply bg-gray-100 dark:bg-[#111827]/50 px-1 py-0.5 rounded text-sm font-mono;
+  @apply bg-[#F5F5F5] dark:bg-[#111827]/50 px-1 py-0.5 rounded text-sm font-mono;
 }
 
 .prose pre {
-  @apply bg-gray-100 dark:bg-[#111827]/50 rounded-lg p-4 overflow-x-auto my-4;
+  @apply bg-[#F5F5F5] dark:bg-[#111827]/50 rounded-lg p-4 overflow-x-auto my-4;
 }
 
 .prose pre code {
@@ -84,19 +89,19 @@
 }
 
 .prose li {
-  @apply pb-3 text-lg text-gray-900 dark:text-[#F8FAFC];
+  @apply pb-3 text-lg text-[#3c4858] dark:text-[#F8FAFC];
 }
 
 .prose blockquote {
-  @apply border-l-4 border-amber-600 px-4 py-3 my-4 bg-gray-50 dark:bg-[#111827]/50;
+  @apply border-l-4 border-amber-600 px-4 py-3 my-4 bg-[#F5F5F5] dark:bg-[#111827]/50;
 }
 
 .prose table {
-  @apply min-w-full divide-y divide-gray-200 dark:divide-gray-700;
+  @apply min-w-full divide-y divide-[#c0ccda] dark:divide-gray-700;
 }
 
 .prose thead {
-  @apply bg-gray-50 dark:bg-[#111827]/50;
+  @apply bg-[#F5F5F5] dark:bg-[#111827]/50;
 }
 
 .prose th {
@@ -104,5 +109,5 @@
 }
 
 .prose td {
-  @apply px-4 py-2 border-t border-gray-200 dark:border-gray-700;
+  @apply px-4 py-2 border-t border-[#c0ccda] dark:border-gray-700;
 }

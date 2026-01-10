@@ -17,13 +17,27 @@ npm run typecheck
 # Build for production (static site generation)
 npm run build
 
+# Generate static site with CDN replacement
+npm run generate
+
 # Preview production build
 npm run preview
 ```
 
 ## Architecture Overview
 
-This is a **Nuxt 4 static site** blog using **@nuxt/content** for markdown-based article management. The site generates a static blog with SEO optimization, modern UI with Tailwind CSS v4 + DaisyUI, and social media integration.
+This is a **Nuxt 4 static site** blog using **@nuxt/content** for markdown-based article management. The site generates a static blog with SEO optimization and matches the minimal design style of the personal-landing site.
+
+### Design Philosophy
+
+**Minimal & Professional** - Clean, typography-focused design inspired by personal-landing style:
+- **No component library** - Pure Tailwind CSS v4 (no DaisyUI)
+- **Focus on readability** - max-w-prose (65ch) for content
+- **Subtle amber accents** - Used sparingly for borders and hover states
+- **Clean typography** - Font-extrabold headings, text-lg body
+- **Minimal borders** - Simple gray dividers, amber accent borders
+- **No gradients** - Flat, solid colors only
+- **No shadows** - Clean, flat design
 
 ### Project Structure
 
@@ -32,7 +46,7 @@ blog-frontend/
 ├── app/                      # Source directory (srcDir)
 │   ├── assets/
 │   │   ├── css/
-│   │   │   └── main.css      # Tailwind v4 + DaisyUI configuration
+│   │   │   └── main.css      # Tailwind v4 configuration + custom theme
 │   │   └── images/           # Asset images
 │   ├── components/           # Vue components (auto-imported)
 │   │   ├── Featured.vue      # Featured posts section
@@ -69,13 +83,9 @@ blog-frontend/
 - **Vue 3** - Using `<script setup>` syntax (JavaScript, not TypeScript)
 
 **Styling:**
-- **Tailwind CSS v4** - Via @tailwindcss/vite plugin with new CSS-first configuration
-- **DaisyUI v5.5.14** - Component library for accessible, pre-built components
-- **@tailwindcss/typography** - Enhanced typography for article content
-- **Design System**: Bold & Vibrant with Indigo/Pink gradients
-  - Primary: Indigo #6366f1 (light), #818cf8 (dark)
-  - Secondary: Pink #ec4899 (light), #f472b6 (dark)
-  - Accent: Amber #f59e0b (light), #fbbf24 (dark)
+- **Tailwind CSS v4** - Via @tailwindcss/vite plugin with CSS-first configuration
+- **NO DaisyUI** - Pure Tailwind CSS matching personal-landing style
+- **Custom dark mode** - Using `.dark` class with @custom-variant
 
 **Key Modules:**
 - **@nuxt/content** - Markdown-based content management
@@ -83,8 +93,47 @@ blog-frontend/
 - **@nuxt/scripts** - Third-party script management (Disqus)
 - **@vite-pwa/nuxt** - PWA support (minimal config, to be implemented later)
 
-**Utilities:**
-- **reading-time-estimator** - Browser-compatible reading time calculation with Italian locale
+### Brand Guidelines
+
+**Color Palette** (matching personal-landing):
+
+**Light Mode:**
+- Primary text: `gray-900` (#111827)
+- Secondary text: `gray-700` (#374151)
+- Tertiary text: `gray-600` (#4B5563)
+- Muted text: `gray-500` (#6B7280)
+- Background: `white` (#FFFFFF)
+- Borders: `gray-200` (#E5E7EB), `gray-300` (#D1D5DB)
+- Accent (sparingly): `amber-600` (#D97706)
+
+**Dark Mode:**
+- Primary text: `#F8FAFC`
+- Secondary text: `#E5E7EB`
+- Tertiary text: `gray-300` (#CBD5E1)
+- Muted text: `gray-400` (#94A3B8)
+- Background: `#0F172A` (main), `#111827` (secondary)
+- Borders: `gray-600` (#4B5563), `gray-700` (#374151)
+- Accent: `amber-500` (#F59E0B)
+
+**Typography Scale:**
+- H1 (Page titles): `text-2xl md:text-3xl font-extrabold leading-tight`
+- H2 (Section titles): `text-lg md:text-xl font-extrabold leading-tight`
+- Body: `text-lg`
+- Small/Meta: `text-sm`
+- Links: `underline decoration-dotted underline-offset-4`
+
+**Layout Patterns:**
+- Content width: `max-w-prose` (65ch) for readability
+- Container: `container mx-auto px-5`
+- Section headers: `border-l-4 border-amber-600 px-4 py-2`
+- Dividers: `border-b border-gray-200 dark:border-gray-700`
+- Spacing: `pb-3` for paragraphs, `mb-6 mt-4` for sections
+
+**Component Patterns:**
+- Cards: No cards, just clean dividers
+- Buttons: Minimal bordered buttons with hover states
+- Forms: Clean inputs with `border-gray-300 dark:border-gray-600`
+- Accent borders: Use `border-l-4 border-amber-600` for callouts
 
 ### Content Structure
 
@@ -112,24 +161,17 @@ sticky: true  # Optional: for homepage featured posts
 
 ### Page Routing
 
-**Nuxt 4 Dynamic Routes** (IMPORTANT - Different from Nuxt 2):
+**Nuxt 4 Dynamic Routes**:
 - File naming: `[slug].vue` NOT `_slug.vue`
 - Parameter access: `route.params.slug` NOT `route.slug`
 
 **Available Routes**:
-- `/` - Homepage (app/pages/index.vue)
-  - Hero section with gradient background
-  - Featured posts (sticky: true)
-  - Recent posts grid (3 columns)
-- `/:slug` - Single article (app/pages/[slug].vue)
-  - Full article with ContentRenderer
-  - Related posts from same category
-  - Disqus comments (ClientOnly)
-  - Breadcrumb navigation
-- `/category/:slug` - Category listing (app/pages/category/[slug].vue)
-- `/tag/:slug` - Tag listing (app/pages/tag/[slug].vue)
-- `/page/:page` - Paginated homepage (app/pages/page/[page].vue)
-- `/search` - Search functionality (app/pages/search.vue)
+- `/` - Homepage with featured and recent posts
+- `/:slug` - Single article with related posts
+- `/category/:slug` - Category listing
+- `/tag/:slug` - Tag listing
+- `/page/:page` - Paginated homepage
+- `/search` - Search functionality
 
 ### Component Architecture
 
@@ -139,74 +181,34 @@ sticky: true  # Optional: for homepage featured posts
 
 **Key Components**:
 
-**`app/components/Post.vue`** - Article card component
-- DaisyUI `card` component with hover lift effect
-- Gradient badges for categories
-- Clock icon for reading time
-- Used in all listing pages
+**`app/components/Post.vue`** - Article listing component
+- Minimal design with bottom border
+- No card container
+- Amber hover on title
+- Dotted underline links
 
 **`app/components/Featured.vue`** - Featured posts section
-- Large gradient badge "In primo piano"
-- Horizontal card layout (lg:card-side)
-- Secondary gradient badges (pink to indigo)
-- Only shown on homepage
+- Amber border section header
+- Larger headings (text-2xl md:text-3xl)
+- No special cards, just list
 
 **`app/components/Header.vue`** - Site navigation
-- DaisyUI `navbar` component
-- Sticky positioning with glass morphism
-- Gradient logo text
-- Search form with join pattern
-- Social links (Facebook, Instagram, LinkedIn, GitHub)
-- Responsive mobile dropdown menu
+- Clean bordered header
+- Minimal search input
+- Social links with colored hovers
+- Responsive mobile menu with transition
 
 **`app/components/Footer.vue`** - Site footer
-- DaisyUI `footer` component
-- Gradient copyright text
-- 2-column responsive layout
-
-### Styling Guidelines
-
-**DaisyUI Component Classes**:
-- `card` - Content cards with shadow
-- `badge` - Category labels, tags
-- `btn` - Buttons, links
-- `navbar` - Navigation
-- `footer` - Footer layout
-- `hero` - Hero sections
-- `divider` - Section separators
-- `input` - Form inputs
-- `dropdown` - Menus
-- `join` - Connected inputs/buttons
-
-**Gradient Usage**:
-```vue
-<!-- Text gradient -->
-<h1 class="bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
-  Title
-</h1>
-
-<!-- Background gradient -->
-<div class="bg-gradient-to-br from-indigo-50 via-white to-pink-50">
-  Content
-</div>
-
-<!-- Badge gradient -->
-<span class="badge badge-primary bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-none">
-  Category
-</span>
-```
-
-**Responsive Breakpoints**:
-- Mobile: Default (< 640px)
-- Tablet: `md:` (640px - 1024px)
-- Desktop: `lg:` (> 1024px)
+- Simple 2-column layout
+- Minimal borders
+- Dotted underline links
 
 ### Image Handling
 
 - **Storage**: AWS S3 at `enricodeleo.s3.eu-south-1.amazonaws.com`
 - **URL Construction**: Dynamic with resize parameters
-- **Example**: `coverImage + '?resize=409,229&crop=0,0,409px,229px&strip=all'`
-- **Fallback**: Gradient background when no cover image (indigo to pink)
+- **Example**: `coverImage + '?resize=800,450&crop=0,0,800px,450px&strip=all'`
+- **No fallback** - If no coverImage, don't show image placeholder
 
 ### SEO & Analytics
 
@@ -219,7 +221,7 @@ sticky: true  # Optional: for homepage featured posts
 **Removed Features**:
 - Facebook Pixel (completely removed)
 - iubenda privacy scripts (completely removed)
-- @nuxtjs/color-mode (dark mode to be re-implemented later)
+- @nuxtjs/color-mode (dark mode handled via .dark class)
 
 ### Development Notes
 
@@ -246,20 +248,27 @@ const slug = route.params.slug  // NOT route.slug
 
 **Reading Time Calculation**:
 ```javascript
-import { readingTimeEstimator } from 'reading-time-estimator'
-
+// Simple browser-compatible calculation
 const readingTimeMinutes = computed(() => {
-  return readingTimeEstimator(post.value.text || '', 'it').duration || 0
+  if (!post.value || !post.value.text) return 0
+  const wordsPerMinute = 200
+  const words = post.value.text.trim().split(/\s+/).length
+  return Math.ceil(words / wordsPerMinute)
 })
 ```
+
+**Dark Mode**:
+- Uses custom variant: `@custom-variant dark (&:where(.dark, .dark *))`
+- Dark background: `bg-[#0F172A]`
+- Toggle .dark class on html/body element
+- All colors have dark mode variants
 
 ### Build Process
 
 **Static Site Generation**:
 1. `npm run build` runs Nitro static preset
-2. Generates static HTML in `.output/public/`
-3. No CDN replacement script (removed)
-4. Ready for deployment to any static hosting
+2. `npm run generate` runs build + CDN replacement script
+3. Generates static HTML in `.output/public/`
 
 **Nitro Configuration**:
 ```typescript
@@ -281,9 +290,12 @@ nitro: {
 **DO**:
 - Use bracket notation for dynamic routes: `[slug].vue`
 - Access route params via `route.params.slug`
-- Use DaisyUI component classes over custom CSS
+- Use minimal, flat design (no shadows, gradients, or cards)
 - Use `<script setup>` syntax for all components
 - Use ClientOnly for client-side only features
+- Use max-w-prose for content readability
+- Use amber-600 border accents sparingly
+- Use dotted underlines for links: `decoration-dotted underline-offset-4`
 - Use npm (not yarn)
 
 **DON'T**:
@@ -291,16 +303,42 @@ nitro: {
 - Access `route.slug` directly (will be undefined)
 - Use TypeScript in components (user prefers JavaScript)
 - Commit changes (user handles all git operations manually)
-- Add dark mode, iubenda, or Facebook Pixel (removed per user request)
+- Add DaisyUI or component libraries
+- Use gradients or shadows
+- Use indigo/pink color scheme (old design)
 
 ### Common Patterns
 
-**Category Badge**:
+**Section Header**:
 ```vue
-<NuxtLink :to="`/category/${category}`"
-          class="badge badge-primary bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-none hover:opacity-80">
-  {{ category.replace('-', ' ') }}
+<div class="border-l-4 border-amber-600 px-4 py-2 mb-6">
+  <h2 class="text-lg md:text-xl font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC]">
+    Section Title
+  </h2>
+</div>
+```
+
+**Link Style**:
+```vue
+<NuxtLink to="/path" class="underline decoration-dotted underline-offset-4 hover:text-amber-600 dark:hover:text-amber-500 transition-colors">
+  Link Text
 </NuxtLink>
+```
+
+**Input Field**:
+```vue
+<input
+  type="text"
+  placeholder="Placeholder..."
+  class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-[#111827] text-gray-900 dark:text-[#F8FAFC] placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+>
+```
+
+**Button**:
+```vue
+<button class="px-4 py-2 text-gray-900 dark:text-[#F8FAFC] border border-gray-300 dark:border-gray-600 rounded-md hover:text-amber-600 dark:hover:text-amber-500 hover:border-amber-600 dark:hover:border-amber-500 transition-colors">
+  Button Text
+</button>
 ```
 
 **Date Formatting**:
@@ -337,18 +375,37 @@ const { data: post, error } = await useAsyncData(
 
 Make changes to files as requested, but let the user commit when ready.
 
-### Design Philosophy
+### Design System Alignment
 
-**Current Style**: Bold & Vibrant
-- Strong gradients (indigo to pink)
-- Enhanced visual hierarchy
-- Eye-catching colors
-- Modern glass morphism effects
-- Smooth hover transitions
-- Enhanced shadows and depth
+This blog matches the **personal-landing** design system:
 
-**Typography**:
-- Gradient text for key headings
-- Enhanced font weights
-- Better line heights
-- Larger heading sizes
+**Shared Characteristics:**
+- Same color palette (gray-900, amber-600 accents)
+- Same typography scale (font-extrabold headings)
+- Same minimal design philosophy
+- Same border patterns
+- Same link styles (dotted underlines)
+- Same dark mode implementation
+
+**Key Differences:**
+- Blog has more complex layouts (listings, cards)
+- Blog has image handling for articles
+- Blog has search functionality
+- Blog has pagination
+- Both use identical base styles and dark mode
+
+### Maintenance Notes
+
+**When updating styles:**
+1. Check personal-landing for consistency
+2. Use the same color values
+3. Follow the same spacing patterns
+4. Maintain minimal, flat design
+5. No shadows, gradients, or fancy effects
+
+**When adding features:**
+1. Keep it minimal and functional
+2. Use dotted underlines for links
+3. Use amber accents sparingly
+4. Maintain readability with max-w-prose
+5. Test both light and dark modes
