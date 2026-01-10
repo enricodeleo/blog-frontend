@@ -1,15 +1,11 @@
 import { writeFileSync } from 'fs'
-import { fileURLToPath } from 'url'
-import { dirname, join } from 'path'
+import { join } from 'path'
 import Database from 'better-sqlite3'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
 
 const siteUrl = process.env.NUXT_ENV_FRONTEND_URL || 'https://enricodeleo.com'
 
-// Read the content collection database from SQLite
-const contentDbPath = join(__dirname, '../.data/content/contents.sqlite')
+// Read the content collection database from SQLite (relative to project root)
+const contentDbPath = join(process.cwd(), '.data/content/contents.sqlite')
 let posts = []
 
 try {
