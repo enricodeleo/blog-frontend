@@ -1,17 +1,9 @@
 @import "tailwindcss";
-@plugin "daisyui";
-@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary-light: #6366f1;
-  --color-primary-dark: #818cf8;
-  --color-secondary-light: #ec4899;
-  --color-secondary-dark: #f472b6;
-  --color-accent-light: #f59e0b;
-  --color-accent-dark: #fbbf24;
-
+  /* Dark mode colors - matching personal-landing */
   --color-dark-bg-900: #0F172A;
   --color-dark-bg-800: #111827;
   --color-dark-text-50: #F8FAFC;
@@ -20,20 +12,7 @@
   --color-dark-logo: #E5E7EB;
 }
 
-/* Custom theme variables */
-:root {
-  --color-primary: #6366f1;
-  --color-secondary: #ec4899;
-  --color-accent: #f59e0b;
-}
-
-[data-theme="dark"] {
-  --color-primary: #818cf8;
-  --color-secondary: #f472b6;
-  --color-accent: #fbbf24;
-}
-
-/* Dark mode overrides */
+/* Dark mode overrides - matching personal-landing */
 .dark {
   background-color: #0F172A;
 }
@@ -42,6 +21,7 @@
   background-color: #0F172A;
 }
 
+/* Inline SVG helper */
 .inline-svg svg {
   display: block;
   width: 100%;
@@ -49,29 +29,46 @@
   fill: currentColor;
 }
 
-/* Typography enhancements */
+/* Typography enhancements for article content - matching personal-landing style */
 .prose {
-  @apply text-base-content/90;
+  @apply text-gray-900 dark:text-[#F8FAFC];
+  max-width: 65ch;
 }
 
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-  @apply font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent;
+  @apply font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC];
+}
+
+.prose h1, .prose h2 {
+  @apply text-2xl md:text-3xl mt-6 mb-4;
+}
+
+.prose h3, .prose h4, .prose h5, .prose h6 {
+  @apply text-lg md:text-xl mt-6 mb-4;
+}
+
+.prose p {
+  @apply pb-3 text-lg text-gray-900 dark:text-[#F8FAFC];
 }
 
 .prose a {
-  @apply text-indigo-600 dark:text-indigo-400 hover:text-pink-600 dark:hover:text-pink-400 underline transition-colors no-underline;
+  @apply underline decoration-dotted underline-offset-4 text-gray-900 dark:text-[#F8FAFC] hover:text-amber-600 dark:hover:text-amber-500 transition-colors;
 }
 
 .prose strong {
-  @apply font-bold text-base-content;
+  @apply font-bold;
+}
+
+.prose em {
+  @apply italic;
 }
 
 .prose code {
-  @apply bg-base-300 text-base-content rounded px-1.5 py-0.5 text-sm font-mono;
+  @apply bg-gray-100 dark:bg-[#111827]/50 px-1 py-0.5 rounded text-sm font-mono;
 }
 
 .prose pre {
-  @apply bg-base-300 rounded-lg p-4 overflow-x-auto;
+  @apply bg-gray-100 dark:bg-[#111827]/50 rounded-lg p-4 overflow-x-auto my-4;
 }
 
 .prose pre code {
@@ -79,134 +76,33 @@
 }
 
 .prose img {
-  @apply rounded-lg shadow-lg;
-}
-
-.prose blockquote {
-  @apply border-l-4 border-indigo-500 pl-4 italic bg-base-200/50 py-2 my-4;
+  @apply rounded-lg my-4;
 }
 
 .prose ul, .prose ol {
-  @apply ml-4;
+  @apply list-disc pl-5 my-4;
 }
 
 .prose li {
-  @apply my-1;
+  @apply pb-3 text-lg text-gray-900 dark:text-[#F8FAFC];
+}
+
+.prose blockquote {
+  @apply border-l-4 border-amber-600 px-4 py-3 my-4 bg-gray-50 dark:bg-[#111827]/50;
 }
 
 .prose table {
-  @apply min-w-full divide-y divide-base-300;
+  @apply min-w-full divide-y divide-gray-200 dark:divide-gray-700;
 }
 
 .prose thead {
-  @apply bg-base-200;
+  @apply bg-gray-50 dark:bg-[#111827]/50;
 }
 
 .prose th {
-  @apply px-4 py-2 text-left font-bold;
+  @apply px-4 py-2 text-left font-extrabold;
 }
 
 .prose td {
-  @apply px-4 py-2 border-t border-base-300;
-}
-
-/* Custom animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-out;
-}
-
-.animate-slide-in {
-  animation: slideInLeft 0.4s ease-out;
-}
-
-.animate-scale-in {
-  animation: scaleIn 0.3s ease-out;
-}
-
-/* Page transitions */
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Card hover effects */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-/* Badge hover */
-.badge {
-  transition: all 0.2s ease;
-}
-
-.badge:hover {
-  transform: scale(1.05);
-}
-
-/* Button transitions */
-.btn {
-  transition: all 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-}
-
-/* Link transitions */
-a {
-  transition: color 0.2s ease;
-}
-
-/* Input focus transitions */
-input:focus,
-textarea:focus,
-select:focus {
-  transition: all 0.2s ease;
+  @apply px-4 py-2 border-t border-gray-200 dark:border-gray-700;
 }

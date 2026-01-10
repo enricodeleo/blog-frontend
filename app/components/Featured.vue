@@ -1,53 +1,65 @@
 <template>
-  <section>
-    <div class="text-xl font-bold mb-6">
-      <span class="badge badge-lg badge-primary bg-gradient-to-r from-indigo-600 to-pink-600 text-white border-none p-4">
+  <section class="mb-8">
+    <!-- Section Header -->
+    <div class="border-l-4 border-amber-600 px-4 py-2 mb-6">
+      <h2 class="text-lg md:text-xl font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC]">
         In primo piano
-      </span>
+      </h2>
     </div>
 
-    <div class="flex flex-col gap-6 py-4">
+    <!-- Featured Posts -->
+    <div class="space-y-8">
       <article
-        v-for="post of featuredPosts"
+        v-for="post in featuredPosts"
         :key="post.slug || post.id"
-        class="card lg:card-side bg-base-100 shadow-xl hover:shadow-2xl transition-all"
+        class="border-b border-gray-200 dark:border-gray-700 pb-6 last:border-b-0"
       >
-        <figure class="relative">
-          <NuxtLink :to="`/${post.slug}`">
-            <img :src="post.coverImage" :alt="post.title" class="rounded-l-xl w-full lg:w-96 object-cover h-72">
-          </NuxtLink>
-        </figure>
-        <div class="card-body justify-between">
-          <div>
-            <NuxtLink :to="`/${post.slug}`">
-              <h2 class="card-title text-3xl font-bold hover:bg-gradient-to-r hover:from-indigo-600 hover:to-pink-600 hover:bg-clip-text hover:text-transparent transition-all">
-                {{ post.title }}
-              </h2>
+        <NuxtLink :to="`/${post.slug}`">
+          <!-- Cover Image -->
+          <figure v-if="post.coverImage" class="mb-4">
+            <img
+              :src="post.coverImage"
+              :alt="post.title"
+              class="rounded-lg w-full object-cover"
+              loading="lazy"
+            >
+          </figure>
+
+          <!-- Title -->
+          <h2 class="text-2xl md:text-3xl font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC] hover:text-amber-600 dark:hover:text-amber-500 transition-colors mb-2">
+            {{ post.title }}
+          </h2>
+
+          <!-- Categories -->
+          <div v-if="post.categories && post.categories.length" class="flex flex-wrap gap-2 mb-3">
+            <NuxtLink
+              v-for="(category, index) in post.categories"
+              :key="index"
+              :to="`/category/${category}`"
+              class="text-sm text-gray-600 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 underline decoration-dotted underline-offset-4 transition-colors"
+            >
+              {{ category.replace('-', ' ') }}
             </NuxtLink>
           </div>
 
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span v-for="(category, index) of (post.categories || [])" :key="index">
-              <NuxtLink :to="`/category/${category}`" class="badge badge-secondary bg-gradient-to-r from-pink-500 to-indigo-500 text-white border-none">
-                {{ category.replace('-', ' ') }}
-              </NuxtLink>
+          <!-- Meta -->
+          <div class="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
+            <time :datetime="post.date">{{ formatDate(post.date) }}</time>
+            <span>•</span>
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              {{ Math.ceil(calculateReadingTime(post.text)) }} minuti di lettura
             </span>
           </div>
-
-          <footer class="text-sm pt-2 border-t border-base-300">
-            <time :datetime="post.date" class="text-base-content/60">{{ formatDate(post.date) }}</time>
-            <span class="text-base-content/60 px-1">•</span>
-            <span class="text-base-content/60">{{ Math.ceil(calculateReadingTime(post.text)) }} minuti di lettura</span>
-          </footer>
-        </div>
+        </NuxtLink>
       </article>
     </div>
   </section>
 </template>
 
 <script setup>
-import readingTime from 'reading-time'
-
 const props = defineProps({
   posts: {
     type: Array,
@@ -62,18 +74,18 @@ const formatDate = (date) => {
   return event.toLocaleDateString('it-IT', dateOptions)
 }
 
+// Simple reading time calculation (200 words per minute average)
 const calculateReadingTime = (text) => {
-  return readingTime(text).minutes || 0
+  if (!text) return 0
+  const wordsPerMinute = 200
+  const words = text.trim().split(/\s+/).length
+  return Math.ceil(words / wordsPerMinute)
 }
 
 const featuredPosts = computed(() => {
   if (!props.posts || props.posts.length === 0) {
     return []
   }
-  return props.posts.map((post) => ({
-    ...post,
-    dateLong: formatDate(post.date),
-    readingTime: calculateReadingTime(post.text)
-  }))
+  return props.posts
 })
 </script>

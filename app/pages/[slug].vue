@@ -88,8 +88,6 @@
 </template>
 
 <script setup>
-import readingTime from 'reading-time'
-
 const route = useRoute()
 const config = useRuntimeConfig()
 const siteUrl = config.public.siteUrl
@@ -117,10 +115,12 @@ const dateLong = computed(() => {
   return event.toLocaleDateString('it-IT', dateOptions)
 })
 
-// Calculate reading time
+// Simple reading time calculation (200 words per minute average)
 const readingTimeMinutes = computed(() => {
-  if (!post.value) return 0
-  return readingTime(post.value.text).minutes || 0
+  if (!post.value || !post.value.text) return 0
+  const wordsPerMinute = 200
+  const words = post.value.text.trim().split(/\s+/).length
+  return Math.ceil(words / wordsPerMinute)
 })
 
 // Fetch related posts on client side only

@@ -1,36 +1,34 @@
 <template>
   <div class="space-y-8">
     <!-- Page Header -->
-    <div class="text-center">
-      <h1 class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mb-2">
+    <div class="border-l-4 border-amber-600 px-4 py-2">
+      <h1 class="text-2xl md:text-3xl font-extrabold leading-tight text-gray-900 dark:text-[#F8FAFC]">
         Pagina {{ page }}
       </h1>
-      <p class="text-base-content/70">Sfoglia tutti gli articoli del blog</p>
+      <p class="text-lg text-gray-700 dark:text-gray-200 mt-2">Sfoglia tutti gli articoli del blog</p>
     </div>
 
-    <!-- Posts Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
-      <Post v-for="post of posts" :key="post.slug" :post="post" />
+    <!-- Posts List -->
+    <div class="space-y-0">
+      <Post v-for="post in posts" :key="post.slug" :post="post" />
     </div>
 
     <!-- Pagination -->
-    <div class="join justify-center w-full">
+    <div class="flex justify-center items-center gap-4 pt-4">
       <NuxtLink
         v-if="page > 1"
         :to="page === 2 ? '/' : `/page/${page-1}`"
-        class="join-item btn btn-outline"
+        class="px-4 py-2 text-gray-900 dark:text-[#F8FAFC] border border-gray-300 dark:border-gray-600 rounded-md hover:text-amber-600 dark:hover:text-amber-500 hover:border-amber-600 dark:hover:border-amber-500 transition-colors"
       >
-        « Indietro
+        ← Indietro
       </NuxtLink>
-      <button class="join-item btn btn-active">
-        {{ page }}
-      </button>
+      <span class="text-gray-700 dark:text-gray-200 font-bold">{{ page }}</span>
       <NuxtLink
-        v-if="count > currentArticles"
+        v-if="hasMore"
         :to="`/page/${page+1}`"
-        class="join-item btn btn-primary bg-gradient-to-r from-indigo-600 to-pink-600 border-none hover:opacity-90"
+        class="px-4 py-2 text-gray-900 dark:text-[#F8FAFC] border border-gray-300 dark:border-gray-600 rounded-md hover:text-amber-600 dark:hover:text-amber-500 hover:border-amber-600 dark:hover:border-amber-500 transition-colors"
       >
-        Avanti »
+        Avanti →
       </NuxtLink>
     </div>
   </div>
@@ -52,14 +50,9 @@ const { data: posts } = await useAsyncData(
     .find()
 )
 
-const currentArticles = computed(() => skip + (posts.value?.length || 0))
-
-// Fetch total count on mount
-const count = ref(0)
-
-onMounted(async () => {
-  const articles = await queryContent('articles').find()
-  count.value = articles.length || 0
+// Check if there are more pages
+const hasMore = computed(() => {
+  return posts.value && posts.value.length === limit
 })
 
 // SEO Meta
