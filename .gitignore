@@ -92,3 +92,4 @@ sw.*
 
 # Nuxt Content database
 .data/
+static/robots.txt

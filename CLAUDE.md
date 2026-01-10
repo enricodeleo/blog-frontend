@@ -31,7 +31,7 @@ This is a **Nuxt 4 static site** blog using **@nuxt/content** for markdown-based
 ### Design Philosophy
 
 **Minimal & Professional** - Clean, typography-focused design inspired by personal-landing style:
-- **No component library** - Pure Tailwind CSS v4 (no DaisyUI)
+- **Component-light** - Prefer pure Tailwind CSS v4 utilities; DaisyUI 5 only when components help
 - **Focus on readability** - max-w-prose (65ch) for content
 - **Subtle amber accents** - Used sparingly for borders and hover states
 - **Clean typography** - Font-extrabold headings, text-lg body
@@ -45,14 +45,14 @@ This is a **Nuxt 4 static site** blog using **@nuxt/content** for markdown-based
 blog-frontend/
 ├── app/                      # Source directory (srcDir)
 │   ├── assets/
-│   │   ├── css/
-│   │   │   └── main.css      # Tailwind v4 configuration + custom theme
-│   │   └── images/           # Asset images
+│   │   └── css/
+│   │       └── main.css      # Tailwind v4 configuration + custom theme
 │   ├── components/           # Vue components (auto-imported)
 │   │   ├── Featured.vue      # Featured posts section
 │   │   ├── Footer.vue        # Site footer
 │   │   ├── Header.vue        # Site navigation
 │   │   └── Post.vue          # Article card component
+│   ├── composables/          # Auto-imported composables
 │   ├── layouts/
 │   │   ├── default.vue       # Main layout
 │   │   └── error.vue         # Error page (Composition API)
@@ -66,8 +66,11 @@ blog-frontend/
 │       │   └── [page].vue    # Paginated homepage
 │       ├── index.vue         # Homepage
 │       └── search.vue        # Search functionality
-├── content/                  # @nuxt/content markdown files
+├── content/                  # Nuxt Content v3 root
 │   └── articles/             # Blog posts in Markdown
+├── content.config.ts         # Content collection schema
+├── server/                   # Nitro server routes
+│   └── routes/               # Endpoints (feed.xml, robots.txt)
 ├── static/                   # Public assets (publicDir)
 ├── nuxt.config.ts            # Nuxt 4 configuration
 ├── package.json              # Dependencies
@@ -84,8 +87,8 @@ blog-frontend/
 
 **Styling:**
 - **Tailwind CSS v4** - Via @tailwindcss/vite plugin with CSS-first configuration
-- **NO DaisyUI** - Pure Tailwind CSS matching personal-landing style
-- **Custom dark mode** - Using `.dark` class with @custom-variant
+- **DaisyUI 5** - Used sparingly when components help, but prefer pure Tailwind utilities
+- **Custom dark mode** - Using `.dark` class with @custom-variant and `useColorMode` from `@vueuse/nuxt`
 
 **Key Modules:**
 - **@nuxt/content** - Markdown-based content management
@@ -144,7 +147,9 @@ blog-frontend/
 
 ### Content Structure
 
-**Content Directory**: All blog content/articles are stored in `./content/` directory, specifically `content/articles/*.md` for blog posts. This is managed by @nuxt/content module.
+**Content Directory**: All blog content/articles are stored in `./content/` directory, specifically `content/articles/*.md` for blog posts. This is managed by @nuxt/content v3 module.
+
+**Content Configuration**: `content.config.ts` defines the `articles` collection schema and path prefixing.
 
 **Article Frontmatter**:
 ```yaml
@@ -161,9 +166,11 @@ sticky: true  # Optional: for homepage featured posts
 ---
 ```
 
-**Content Access via @nuxt/content**:
-- Use `queryContent('articles', slug).findOne()` for single post
-- Use `queryContent('articles').where(...).sort(...).find()` for listings
+**Content Access via @nuxt/content v3**:
+- Use `queryCollection('articles').path(slug).first()` for single post
+- Use `queryCollection('articles').sort(...).skip(...).limit()` for listings
+- Use `queryCollectionSearchSections()` for search functionality
+- Use `<ContentRenderer>` component for rendering markdown content
 - Articles include `.text` property for full content (search, reading time)
 
 ### Page Routing
@@ -223,12 +230,12 @@ sticky: true  # Optional: for homepage featured posts
 - **Google Analytics**: ID G-TPN05GHCDK (via gtag)
 - **Disqus Comments**: Shortname 'lisergico' (loaded via @nuxt/scripts)
 - **Open Graph**: Dynamic meta tags per article
-- **RSS Feed**: `/feed.xml` (via NUXT_ENV_FRONTEND_URL)
+- **RSS Feed**: `/feed.xml` (generated via server routes)
 
 **Removed Features**:
 - Facebook Pixel (completely removed)
 - iubenda privacy scripts (completely removed)
-- @nuxtjs/color-mode (dark mode handled via .dark class)
+- @nuxtjs/color-mode (replaced with `useColorMode` from @vueuse/nuxt)
 
 ### Development Notes
 
@@ -239,11 +246,17 @@ sticky: true  # Optional: for homepage featured posts
 - Use `ref()` and `reactive()` for reactive state
 - Use `onMounted()` for client-side hooks
 
-**Async Data Fetching**:
+**Async Data Fetching (Nuxt Content v3)**:
 ```javascript
 const { data: post } = await useAsyncData(
   `post-${slug}`,
-  () => queryContent('articles', slug).findOne()
+  () => queryCollection('articles').path(slug).first()
+)
+
+// For listings
+const { data: posts } = await useAsyncData(
+  'posts',
+  () => queryCollection('articles').sort({ date: -1 }).skip(0).limit(10).all()
 )
 ```
 
@@ -266,8 +279,9 @@ const readingTimeMinutes = computed(() => {
 
 **Dark Mode**:
 - Uses custom variant: `@custom-variant dark (&:where(.dark, .dark *))`
+- Uses `useColorMode` from `@vueuse/nuxt` for state management
 - Dark background: `bg-[#0F172A]`
-- Toggle .dark class on html/body element
+- Toggles .dark class on html element
 - All colors have dark mode variants
 
 ### Build Process
@@ -299,20 +313,67 @@ nitro: {
 - Access route params via `route.params.slug`
 - Use minimal, flat design (no shadows, gradients, or cards)
 - Use `<script setup>` syntax for all components
+- Use `queryCollection` and `queryCollectionSearchSections` for content (Nuxt Content v3)
+- Use `<ContentRenderer>` for rendering markdown
+- Use `useColorMode` from `@vueuse/nuxt` for dark mode
 - Use ClientOnly for client-side only features
 - Use max-w-prose for content readability
 - Use amber-600 border accents sparingly
 - Use dotted underlines for links: `decoration-dotted underline-offset-4`
 - Use npm (not yarn)
+- Use Conventional Commits: `feat:`, `fix:`, `chore:`, `refactor:`
 
 **DON'T**:
 - Use underscore notation: `_slug.vue` (Nuxt 2 convention)
 - Access `route.slug` directly (will be undefined)
+- Use `queryContent` (old Nuxt Content v2 API)
+- Use `asyncData` (Nuxt 2 pattern, use `useAsyncData` instead)
 - Use TypeScript in components (user prefers JavaScript)
 - Commit changes (user handles all git operations manually)
-- Add DaisyUI or component libraries
+- Overuse DaisyUI components (prefer pure Tailwind utilities)
 - Use gradients or shadows
 - Use indigo/pink color scheme (old design)
+
+### Brand Voice & Messaging
+
+**Voice & Tone**:
+- Confident, pragmatic, Italian-first communication
+- Include key phrases: "Fractional CTO & AI Solutions Architect" and "AI pragmatica che accelera business e prodotti"
+- Professional, accessible, and business-focused
+
+### Testing Guidelines
+
+**No Automated Tests**: Manual verification required for:
+- Homepage (`/`)
+- Article pages (`/[slug]`)
+- Tag listings (`/tag/[slug]`)
+- Category listings (`/category/[slug]`)
+- Search functionality (`/search`)
+- Feed generation (`/feed.xml`)
+- Robots.txt (`/robots.txt`)
+
+**Pre-commit checks**:
+```bash
+npm run lint      # Lint code
+npm run typecheck # Type checking (optional)
+```
+
+### Conventional Commits
+
+Follow standard Conventional Commits format:
+- `feat:` - New features
+- `fix:` - Bug fixes
+- `chore:` - Maintenance, dependencies, config
+- `refactor:` - Code refactoring without behavior change
+- `docs:` - Documentation changes
+
+**Examples**:
+```bash
+feat(content): migrate to Nuxt Content v3 with queryCollection
+fix(routes): correct feed.xml generation in server route
+chore(deps): update @nuxt/content to latest version
+refactor(components): modernize Vue components with script setup
+```
 
 ### Common Patterns
 
@@ -357,11 +418,11 @@ const dateLong = computed(() => {
 })
 ```
 
-**Error Handling**:
+**Error Handling (Nuxt Content v3)**:
 ```javascript
 const { data: post, error } = await useAsyncData(
   `post-${slug}`,
-  () => queryContent('articles', slug).findOne(),
+  () => queryCollection('articles').path(slug).first(),
   {
     onError: () => {
       throw createError({
@@ -371,6 +432,27 @@ const { data: post, error } = await useAsyncData(
     }
   }
 )
+```
+
+**ContentRenderer Usage (Nuxt Content v3)**:
+```vue
+<template>
+  <ContentRenderer :value="post">
+    <h1>{{ post.title }}</h1>
+    <ContentRendererMarkdown :value="post" />
+  </ContentRenderer>
+</template>
+```
+
+**Search Functionality (Nuxt Content v3)**:
+```javascript
+import { queryCollectionSearchSections } from '#content/server'
+
+const searchResults = await queryCollectionSearchSections(app)
+  .where(query => query.includes('search-term', 'articles'))
+  .select()
+  .take(20)
+  .map(mapArticleProps)
 ```
 
 ### Git Workflow
@@ -416,3 +498,20 @@ This blog matches the **personal-landing** design system:
 3. Use amber accents sparingly
 4. Maintain readability with max-w-prose
 5. Test both light and dark modes
+6. Follow Nuxt Content v3 patterns (`queryCollection`, `<ContentRenderer>`)
+
+**Key Components Reference**:
+- `Header.vue` - Navigation with search, social links, mobile menu, theme toggle
+- `Footer.vue` - Social icons, theme toggle, minimal layout
+- `Post.vue` - Article listing with minimal borders
+- `Featured.vue` - Featured posts with amber accent header
+- Newsletter card component (for email capture)
+- Cookie banner + preferences modal (for consent management)
+- Callout border pattern (`border-l-4 border-amber-600`)
+
+**Layout Guidelines**:
+- Single-column, content-first design
+- Logo area with inline SVG using `fill-current` class, padding `p-12`
+- Typography: `leading-relaxed`, `max-w-prose` (65ch)
+- Container padding: `px-5` mobile, `md:px-12` desktop
+- Motion and accessibility: subtle transitions, `aria-*` attributes, skip links, focus rings
