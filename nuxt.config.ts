@@ -84,9 +84,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/icon',
     '@nuxtjs/color-mode',
-    '@nuxt/image',
     '@vite-pwa/nuxt',
-    'nuxt-simple-robots',
     'nuxt-simple-sitemap',
     'nuxt-schema-org'
   ],

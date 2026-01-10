@@ -19,18 +19,17 @@
   },
   "dependencies": {
     "@nuxt/icon": "^2.2.0",
+    "better-sqlite3": "^12.6.0",
     "nuxt": "^4.0.0",
     "reading-time": "^1.2.1"
   },
   "devDependencies": {
     "@nuxt/content": "^3.0.0",
-    "@nuxt/image": "^1.8.0",
     "@nuxtjs/color-mode": "^3.5.0",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
     "@vite-pwa/nuxt": "^0.10.2",
     "nuxt-schema-org": "^3.0.0",
-    "nuxt-simple-robots": "^4.0.0-rc.13",
     "nuxt-simple-sitemap": "^4.0.0-rc.13",
     "replace-in-files": "^3.0.0",
     "tailwindcss": "^4.0.0",
