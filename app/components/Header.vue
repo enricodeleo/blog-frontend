@@ -26,11 +26,11 @@
           <!-- Dark Mode Toggle -->
           <ClientOnly>
             <button
-              @click="colorMode.value = colorMode.value === 'dark' ? 'light' : 'dark'"
+              @click="toggleColorMode"
               class="btn btn-ghost btn-circle"
               title="Toggle dark mode"
             >
-              <Icon v-if="colorMode.value === 'dark'" name="mdi:weather-sunny" class="text-xl" />
+              <Icon v-if="colorMode === 'dark'" name="mdi:weather-sunny" class="text-xl" />
               <Icon v-else name="mdi:moon-waning-crescent" class="text-xl" />
             </button>
           </ClientOnly>
@@ -80,9 +80,9 @@
             </li>
             <li>
               <ClientOnly>
-                <a @click="colorMode.value = colorMode.value === 'dark' ? 'light' : 'dark'">
-                  <Icon :name="colorMode.value === 'dark' ? 'mdi:weather-sunny' : 'mdi:moon-waning-crescent'" />
-                  {{ colorMode.value === 'dark' ? 'Light Mode' : 'Dark Mode' }}
+                <a @click="toggleColorMode">
+                  <Icon :name="colorMode === 'dark' ? 'mdi:weather-sunny' : 'mdi:moon-waning-crescent'" />
+                  {{ colorMode === 'dark' ? 'Light Mode' : 'Dark Mode' }}
                 </a>
               </ClientOnly>
             </li>
@@ -98,7 +98,28 @@
 </template>
 
 <script setup>
-const colorMode = useColorMode()
+// Initialize colorMode only on client side to avoid SSR issues
+const colorMode = ref('light')
 const typing = ref(false)
 const expanded = ref(false)
+
+// Safe access to colorMode on mount
+onMounted(() => {
+  try {
+    colorMode.value = useColorMode().value
+  } catch (e) {
+    colorMode.value = 'light'
+  }
+})
+
+// Toggle function
+const toggleColorMode = () => {
+  try {
+    const mode = useColorMode()
+    mode.value = mode.value === 'dark' ? 'light' : 'dark'
+    colorMode.value = mode.value
+  } catch (e) {
+    console.error('Failed to toggle color mode:', e)
+  }
+}
 </script>
