@@ -6,10 +6,13 @@ const siteUrl = process.env.NUXT_ENV_FRONTEND_URL || 'https://enricodeleo.com'
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
 
+  // Set source directory to app/
+  srcDir: 'app',
+
   devtools: { enabled: true },
 
   // CSS
-  css: ['./assets/css/main.css'],
+  css: ['./app/assets/css/main.css'],
 
   // Nuxt 4 uses Nitro for static generation
   nitro: {
