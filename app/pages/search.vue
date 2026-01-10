@@ -22,7 +22,7 @@
           :value="term"
           @input="updateSearch($event.target.value)"
         >
-        <button class="px-4 py-2 text-[#3c4858] dark:text-[#F8FAFC] border border-[#c0ccda] dark:border-gray-600 rounded-md hover:text-amber-700 dark:hover:text-amber-400 hover:border-amber-700 dark:hover:border-amber-400 transition-colors" aria-label="Cerca">
+        <button class="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700/80 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md transition-colors cursor-pointer" aria-label="Cerca">
           <Icon name="mdi:magnify" class="text-xl" />
         </button>
       </div>
@@ -34,8 +34,8 @@
     </div>
 
     <!-- Results -->
-    <div v-if="loaded && posts && posts.length" class="space-y-0">
-      <Post v-for="post in posts" :key="post.slug" :post="post" />
+    <div v-if="loaded && posts && posts.length" class="space-y-8">
+      <Post v-for="post in posts" :key="post.path" :post="post" />
     </div>
 
     <!-- No Results -->
@@ -49,35 +49,52 @@
 <script setup>
 const route = useRoute()
 const router = useRouter()
-const term = (route.query.term) || ''
-const loaded = ref(false)
+const term = computed(() => String(route.query.term || '').trim())
 
 // Update search term
 const updateSearch = (value) => {
-  if (value) {
-    router.push({ path: '/search', query: { term: value } })
+  const nextTerm = value.trim()
+  if (nextTerm === term.value) return
+  if (nextTerm) {
+    router.push({ path: '/search', query: { term: nextTerm } })
+    return
   }
+  router.push({ path: '/search' })
 }
 
 // Search posts
-const { data: posts } = await useAsyncData(
-  `search-${term}`,
+const { data: posts, pending } = await useAsyncData(
+  () => `search-${term.value || 'all'}`,
   async () => {
-    loaded.value = false
-    try {
-      const results = await queryContent('articles')
-        .search(term)
-        .sort({ date: -1 })
-        .find()
-      loaded.value = true
-      return results
-    } catch (error) {
-      console.error(error)
-      loaded.value = true
-      return []
-    }
-  }
+    if (!term.value) return []
+    const sections = await queryCollectionSearchSections('articles')
+    const normalizedTerm = term.value.toLowerCase()
+    const matchedPaths = Array.from(new Set(
+      sections
+        .filter((section) => {
+          const content = [
+            section.title,
+            ...(section.titles || []),
+            section.content
+          ]
+            .filter(Boolean)
+            .join(' ')
+            .toLowerCase()
+          return content.includes(normalizedTerm)
+        })
+        .map((section) => section.id.split('#')[0])
+    ))
+
+    if (!matchedPaths.length) return []
+
+    return queryCollection('articles')
+      .where('path', 'IN', matchedPaths)
+      .order('date', 'DESC')
+      .all()
+  },
+  { watch: [term] }
 )
+const loaded = computed(() => !pending.value)
 
 // SEO Meta
 useSeoMeta({

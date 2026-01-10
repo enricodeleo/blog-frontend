@@ -11,8 +11,8 @@
     </div>
 
     <!-- Posts List -->
-    <div v-if="posts && posts.length" class="space-y-0">
-      <Post v-for="post in posts" :key="post.slug" :post="post" />
+    <div v-if="posts && posts.length" class="space-y-8">
+      <Post v-for="post in posts" :key="post.path" :post="post" />
     </div>
 
     <!-- No Results -->
@@ -25,15 +25,16 @@
 
 <script setup>
 const route = useRoute()
-const tag = route.params.slug
+const tag = String(route.params.slug)
+const tagFilter = `%"${tag}"%`
 
 // Fetch posts by tag
 const { data: posts } = await useAsyncData(
   `tag-${tag}`,
-  () => queryContent('articles')
-    .where({ tags: { contains: tag } })
-    .sort({ date: -1 })
-    .find()
+  () => queryCollection('articles')
+    .where('tags', 'LIKE', tagFilter)
+    .order('date', 'DESC')
+    .all()
 )
 
 // SEO Meta

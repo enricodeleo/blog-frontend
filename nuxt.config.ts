@@ -63,19 +63,21 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/icon',
     '@nuxt/scripts',
+    '@vueuse/nuxt',
     '@vite-pwa/nuxt'
   ],
 
   // Nuxt Content configuration
   content: {
-    highlight: {
-      theme: {
-        default: 'github-light',
-        dark: 'github-dark'
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: 'github-light',
+            dark: 'github-dark'
+          }
+        }
       }
-    },
-    navigation: {
-      fields: ['image', 'description']
     }
   },
 

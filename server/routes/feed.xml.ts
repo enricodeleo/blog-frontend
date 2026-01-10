@@ -3,15 +3,15 @@ export default defineEventHandler(async (event) => {
   const siteUrl = config.public.siteUrl as string
 
   // Fetch all posts
-  const posts = await queryContent('articles')
-    .sort({ date: -1 })
-    .find()
+  const posts = await queryCollection(event, 'articles')
+    .order('date', 'DESC')
+    .all()
 
   // Generate RSS XML
   const feedItems = posts.map((post: any) => ({
     title: post.title,
-    id: `${siteUrl}/${post.slug}`,
-    link: `${siteUrl}/${post.slug}`,
+    id: `${siteUrl}${post.path}`,
+    link: `${siteUrl}${post.path}`,
     description: post.description,
     date: new Date(post.date),
     category: post.categories,

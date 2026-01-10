@@ -11,8 +11,8 @@
     </div>
 
     <!-- Posts List -->
-    <div v-if="posts && posts.length" class="space-y-0">
-      <Post v-for="post in posts" :key="post.slug" :post="post" />
+    <div v-if="posts && posts.length" class="space-y-8">
+      <Post v-for="post in posts" :key="post.path" :post="post" />
     </div>
 
     <!-- No Results -->
@@ -25,7 +25,8 @@
 
 <script setup>
 const route = useRoute()
-const category = route.params.slug
+const category = String(route.params.slug)
+const categoryFilter = `%"${category}"%`
 
 // Display category with proper formatting
 const categoryDisplay = computed(() => {
@@ -35,10 +36,10 @@ const categoryDisplay = computed(() => {
 // Fetch posts by category
 const { data: posts } = await useAsyncData(
   `category-${category}`,
-  () => queryContent('articles')
-    .where({ categories: { contains: category } })
-    .sort({ date: -1 })
-    .find()
+  () => queryCollection('articles')
+    .where('categories', 'LIKE', categoryFilter)
+    .order('date', 'DESC')
+    .all()
 )
 
 // SEO Meta

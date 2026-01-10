@@ -1,20 +1,29 @@
 <template>
   <div class="space-y-12">
+    <section class="space-y-2">
+      <h1 class="text-2xl md:text-3xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC]">
+        Lisergico
+      </h1>
+      <p class="text-lg text-[#3c4858] dark:text-gray-200">
+        Il blog di <a href="https://enricodeleo.com" rel="noopener" class="underline decoration-dotted underline-offset-4 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">Enrico Deleo</a>. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant
+      </p>
+    </section>
+
     <!-- Bento Grid - Sticky Posts -->
     <section v-if="featured && featured.length">
-      <div class="border-l-4 border-amber-600 px-4 py-2 mb-6">
-        <h1 class="text-2xl md:text-3xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC]">
+      <div class="border-l-2 border-amber-600/70 px-4 py-1 mb-4">
+        <h2 class="text-sm md:text-base font-semibold tracking-wide uppercase text-[#3c4858] dark:text-[#CBD5E1]">
           In primo piano
-        </h1>
+        </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 gap-6">
         <article
           v-for="post in featured"
-          :key="post.slug"
+          :key="post.path"
           class="border border-[#c0ccda] dark:border-gray-700 rounded-lg p-6 hover:border-amber-700 dark:hover:border-amber-400 transition-colors"
         >
-          <NuxtLink :to="`/${post.slug}`">
+          <NuxtLink :to="post.path" class="block">
             <!-- Cover Image -->
             <figure v-if="post.coverImage" class="mb-4">
               <img
@@ -35,18 +44,6 @@
               {{ post.description }}
             </p>
 
-            <!-- Categories -->
-            <div v-if="post.categories && post.categories.length" class="flex flex-wrap gap-2 mb-3">
-              <NuxtLink
-                v-for="(category, index) in post.categories"
-                :key="index"
-                :to="`/category/${category}`"
-                class="text-sm text-[#3c4858] dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors"
-              >
-                {{ category.replace('-', ' ') }}
-              </NuxtLink>
-            </div>
-
             <!-- Meta -->
             <div class="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
               <time :datetime="post.date">{{ formatDate(post.date) }}</time>
@@ -55,24 +52,36 @@
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                {{ Math.ceil(calculateReadingTime(post.text)) }} min
+                {{ getReadingTimeMinutes(post.body || post.description) }} min
               </span>
             </div>
           </NuxtLink>
+
+          <!-- Categories -->
+          <div v-if="post.categories && post.categories.length" class="flex flex-wrap gap-2 mt-4">
+            <NuxtLink
+              v-for="(category, index) in post.categories"
+              :key="index"
+              :to="`/category/${category}`"
+              class="text-sm text-[#3c4858] dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors"
+            >
+              {{ category.replace('-', ' ') }}
+            </NuxtLink>
+          </div>
         </article>
       </div>
     </section>
 
     <!-- Recent Posts -->
     <section>
-      <div class="border-l-4 border-amber-600 px-4 py-2 mb-6">
-        <h2 class="text-lg md:text-xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC]">
+      <div class="border-l-2 border-amber-600/70 px-4 py-1 mb-4">
+        <h2 class="text-sm md:text-base font-semibold tracking-wide uppercase text-[#3c4858] dark:text-[#CBD5E1]">
           Altre storie
         </h2>
       </div>
 
-      <div class="space-y-0">
-        <Post v-for="post in posts" :key="post.slug" :post="post" />
+      <div class="space-y-8">
+        <Post v-for="post in posts" :key="post.path" :post="post" />
       </div>
     </section>
 
@@ -89,8 +98,8 @@
 </template>
 
 <script setup>
-const config = useRuntimeConfig()
-const siteUrl = config.public.siteUrl
+import { getReadingTimeMinutes } from '~/utils/content'
+
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
 // Format date
@@ -99,31 +108,23 @@ const formatDate = (date) => {
   return event.toLocaleDateString('it-IT', dateOptions)
 }
 
-// Calculate reading time
-const calculateReadingTime = (text) => {
-  if (!text) return 0
-  const wordsPerMinute = 200
-  const words = text.trim().split(/\s+/).length
-  return Math.ceil(words / wordsPerMinute)
-}
-
 // Fetch 4 most recent sticky posts for bento grid
 const { data: featured } = await useAsyncData(
   'featured-posts',
-  () => queryContent('articles')
-    .where({ sticky: true })
-    .sort({ date: -1 })
-    .limit(4)
-    .find()
+  () => queryCollection('articles')
+    .where('sticky', '=', true)
+    .order('date', 'DESC')
+    .limit(2)
+    .all()
 )
 
 // Fetch recent posts
 const { data: posts } = await useAsyncData(
   'recent-posts',
-  () => queryContent('articles')
-    .sort({ date: -1 })
+  () => queryCollection('articles')
+    .order('date', 'DESC')
     .limit(6)
-    .find()
+    .all()
 )
 
 // SEO Meta

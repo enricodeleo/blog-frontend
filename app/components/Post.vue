@@ -1,6 +1,6 @@
 <template>
   <article class="border-b border-[#c0ccda] dark:border-gray-700 pb-6 last:border-b-0">
-    <NuxtLink :to="`/${post.slug}`" :title="post.title">
+    <NuxtLink :to="post.path" :title="post.title" class="block">
       <!-- Cover Image -->
       <figure v-if="post.coverImage" class="mb-4">
         <img
@@ -21,18 +21,6 @@
         {{ post.description }}
       </p>
 
-      <!-- Categories -->
-      <div v-if="post.categories && post.categories.length" class="flex flex-wrap gap-2 mb-3">
-        <NuxtLink
-          v-for="(category, index) in post.categories"
-          :key="index"
-          :to="`/category/${category}`"
-          class="text-sm text-[#3c4858] dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors"
-        >
-          {{ category.replace('-', ' ') }}
-        </NuxtLink>
-      </div>
-
       <!-- Meta -->
       <div class="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
         <time :datetime="post.date">{{ dateLong }}</time>
@@ -41,14 +29,28 @@
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
-          {{ Math.ceil(readingTimeMinutes) }} min
+          {{ readingTimeMinutes }} min
         </span>
       </div>
     </NuxtLink>
+
+    <!-- Categories -->
+    <div v-if="post.categories && post.categories.length" class="flex flex-wrap gap-2 mt-3">
+      <NuxtLink
+        v-for="(category, index) in post.categories"
+        :key="index"
+        :to="`/category/${category}`"
+        class="text-sm text-[#3c4858] dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors"
+      >
+        {{ category.replace('-', ' ') }}
+      </NuxtLink>
+    </div>
   </article>
 </template>
 
 <script setup>
+import { getReadingTimeMinutes } from '~/utils/content'
+
 const props = defineProps({
   post: {
     type: Object,
@@ -64,10 +66,5 @@ const dateLong = computed(() => {
 })
 
 // Simple reading time calculation (200 words per minute average)
-const readingTimeMinutes = computed(() => {
-  if (!props.post.text) return 0
-  const wordsPerMinute = 200
-  const words = props.post.text.trim().split(/\s+/).length
-  return Math.ceil(words / wordsPerMinute)
-})
+const readingTimeMinutes = computed(() => getReadingTimeMinutes(props.post.body || props.post.description))
 </script>

@@ -78,13 +78,13 @@
 
       <!-- Related Posts -->
       <div v-if="related && related.length" class="mt-12">
-        <div class="border-l-4 border-amber-600 px-4 py-2 mb-6">
-          <h2 class="text-lg md:text-xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC]">
+        <div class="border-l-2 border-amber-600/70 px-4 py-1 mb-4">
+          <h2 class="text-sm md:text-base font-semibold tracking-wide uppercase text-[#3c4858] dark:text-[#CBD5E1]">
             Sullo stesso argomento
           </h2>
         </div>
-        <div class="space-y-0">
-          <Post v-for="article in related" :key="article.slug" :post="article" />
+        <div class="space-y-8">
+          <Post v-for="article in related" :key="article.path" :post="article" />
         </div>
       </div>
 
@@ -97,25 +97,25 @@
 </template>
 
 <script setup>
+import { getReadingTimeMinutes } from '~/utils/content'
+
 const route = useRoute()
-const config = useRuntimeConfig()
-const siteUrl = config.public.siteUrl
-const slug = route.params.slug
+const slug = String(route.params.slug)
+const path = `/${slug}`
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
 // Fetch post
-const { data: post, error } = await useAsyncData(
+const { data: post } = await useAsyncData(
   `post-${slug}`,
-  () => queryContent('articles', slug).findOne(),
-  {
-    onError: () => {
-      throw createError({
-        statusCode: 404,
-        message: 'Pagina non trovata.'
-      })
-    }
-  }
+  () => queryCollection('articles').path(path).first()
 )
+
+if (!post.value) {
+  throw createError({
+    statusCode: 404,
+    message: 'Pagina non trovata.'
+  })
+}
 
 // Format date
 const dateLong = computed(() => {
@@ -126,32 +126,35 @@ const dateLong = computed(() => {
 
 // Simple reading time calculation (200 words per minute average)
 const readingTimeMinutes = computed(() => {
-  if (!post.value || !post.value.text) return 0
-  const wordsPerMinute = 200
-  const words = post.value.text.trim().split(/\s+/).length
-  return Math.ceil(words / wordsPerMinute)
+  if (!post.value) return 0
+  return getReadingTimeMinutes(post.value.body || post.value.description)
 })
 
 // Fetch related posts
 const related = ref([])
 
 if (post.value) {
-  const itemsInThisCategory = await queryCollection('articles')
-    .where({ categories: { contains: post.value.categories[0] }, slug: { $ne: slug } })
-    .select('slug')
-    .all()
+  const category = post.value.categories?.[0]
+  if (category) {
+    const categoryFilter = `%"${category}"%`
+    const total = Number(await queryCollection('articles')
+      .where('categories', 'LIKE', categoryFilter)
+      .where('path', '!=', post.value.path)
+      .count())
 
-  const maxSkip = itemsInThisCategory.length - 2
-  const skip = maxSkip > 0 ? Math.floor(maxSkip * Math.random()) : 0
+    const maxSkip = total - 2
+    const skip = maxSkip > 0 ? Math.floor(maxSkip * Math.random()) : 0
 
-  const relatedPosts = await queryContent('articles')
-    .where({ categories: { contains: post.value.categories[0] }, slug: { $ne: slug } })
-    .sort({ date: -1 })
-    .skip(skip)
-    .limit(2)
-    .find()
+    const relatedPosts = await queryCollection('articles')
+      .where('categories', 'LIKE', categoryFilter)
+      .where('path', '!=', post.value.path)
+      .order('date', 'DESC')
+      .skip(skip)
+      .limit(2)
+      .all()
 
-  related.value = relatedPosts || []
+    related.value = relatedPosts || []
+  }
 }
 
 // SEO Meta
@@ -166,14 +169,44 @@ useSeoMeta({
 })
 
 // Load Disqus using @nuxt/scripts
-const { onScriptLoaded } = useScriptDisqus({
-  shortname: 'lisergico'
-})
+if (import.meta.client) {
+  const shortname = 'lisergico'
+  const scriptSrc = `https://${shortname}.disqus.com/embed.js`
 
-onScriptLoaded(() => {
-  window.disqus_config = function () {
-    this.page.url = window.location.href
-    this.page.identifier = window.location.pathname
+  const setDisqusConfig = () => {
+    window.disqus_config = function () {
+      this.page.url = window.location.href
+      this.page.identifier = window.location.pathname
+    }
   }
-})
+
+  const resetDisqus = () => {
+    if (window.DISQUS) {
+      window.DISQUS.reset({
+        reload: true,
+        config: window.disqus_config
+      })
+    }
+  }
+
+  const disqusScript = useScript({
+    src: scriptSrc,
+    defer: true,
+    'data-timestamp': String(Date.now())
+  }, {
+    trigger: 'client',
+    beforeInit: () => {
+      setDisqusConfig()
+    }
+  })
+
+  disqusScript.onLoaded(() => {
+    resetDisqus()
+  })
+
+  watch(() => route.fullPath, () => {
+    setDisqusConfig()
+    resetDisqus()
+  })
+}
 </script>
