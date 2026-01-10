@@ -65,21 +65,4 @@ useSeoMeta({
   ogTitle: 'Il blog di Enrico Deleo',
   twitterCard: 'summary_large_image'
 })
-
-// Structured data
-useSchemaOrg([
-  defineWebSite({
-    name: 'Lisergico',
-    author: {
-      '@type': 'Person',
-      name: 'Enrico Deleo'
-    },
-    url: siteUrl,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${siteUrl}/search?term={search_term_string}`,
-      'query-input': 'required name=search_term_string'
-    }
-  })
-])
 </script>

@@ -93,9 +93,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxtjs/color-mode',
     '@nuxt/scripts',
-    '@vite-pwa/nuxt',
-    'nuxt-simple-sitemap',
-    'nuxt-schema-org'
+    '@vite-pwa/nuxt'
   ],
 
   // Nuxt Content configuration
@@ -147,18 +145,6 @@ export default defineNuxtConfig({
       siteUrl,
       googleAnalyticsId: process.env.NUXT_PUBLIC_GA_ID || '',
       facebookPixelId: process.env.NUXT_PUBLIC_FB_PIXEL_ID || '103937073008677'
-    }
-  },
-
-  // Third-party scripts
-  scripts: {
-    registry: {
-      googleAnalytics: {
-        id: () => useRuntimeConfig().public.googleAnalyticsId || ''
-      },
-      facebookPixel: {
-        id: () => useRuntimeConfig().public.facebookPixelId || ''
-      }
     }
   }
 })

@@ -1,7 +1,3 @@
-import MarkdownIt from 'markdown-it'
-
-const md = new MarkdownIt()
-
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const siteUrl = config.public.siteUrl as string
@@ -23,8 +19,7 @@ export default defineEventHandler(async (event) => {
       name: 'Enrico Deleo',
       email: 'hello@enricodeleo.com',
       link: 'https://enricodeleo.com'
-    },
-    content: md.render(post.text)
+    }
   }))
 
   const feed = {
@@ -60,11 +55,10 @@ function generateRSS(feed: any): string {
     <pubDate>${item.date.toUTCString()}</pubDate>
     <author>${escapeXML(item.author.email)} (${escapeXML(item.author.name)})</author>
     ${item.category ? item.category.map((cat: string) => `<category>${escapeXML(cat)}</category>`).join('') : ''}
-    <content:encoded><![CDATA[${item.content}]]></content:encoded>
   </item>`).join('\n')
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>${escapeXML(feed.title)}</title>
     <atom:link href="${escapeXML(feed.feedLinks.rss)}" rel="self" type="application/rss+xml" />

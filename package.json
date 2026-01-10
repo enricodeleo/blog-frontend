@@ -30,8 +30,6 @@
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
     "@vite-pwa/nuxt": "^0.10.2",
-    "nuxt-schema-org": "^3.0.0",
-    "nuxt-simple-sitemap": "^4.0.0-rc.13",
     "replace-in-files": "^3.0.0",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.7.2"

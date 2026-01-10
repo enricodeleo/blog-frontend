@@ -140,20 +140,4 @@ useSeoMeta({
   ogType: 'article',
   twitterCard: 'summary_large_image'
 })
-
-// Structured data
-useSchemaOrg([
-  defineArticle({
-    author: {
-      '@type': 'Person',
-      name: 'Enrico Deleo'
-    },
-    headline: () => post.value?.title || '',
-    keywords: () => post.value?.tags || [],
-    wordcount: () => post.value?.text?.split(' ').length || 0,
-    image: () => [post.value?.coverImage || ''],
-    datePublished: () => post.value?.date || '',
-    description: () => post.value?.description || ''
-  })
-])
 </script>
