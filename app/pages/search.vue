@@ -1,11 +1,13 @@
 <template>
   <div class="py-8 space-y-8">
     <!-- Search Header -->
-    <div class="border-l-4 border-amber-600 px-4 py-2">
-      <h1 class="text-2xl md:text-3xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC]">
-        Cerca nel Blog
-      </h1>
-      <p v-if="term" class="text-lg text-[#3c4858] dark:text-gray-200 mt-2">
+    <div class="space-y-2">
+      <div class="border-l-2 border-amber-600/70 px-4 py-1">
+        <h1 class="text-sm md:text-base font-semibold tracking-wide uppercase text-[#3c4858] dark:text-[#CBD5E1]">
+          Cerca nel Blog
+        </h1>
+      </div>
+      <p v-if="term" class="text-sm text-[#3c4858] dark:text-gray-200">
         {{ loaded && posts && posts.length ? `${posts.length} risultati per` : loaded && (!posts || !posts.length) ? `Nessun risultato per` : `Cerco` }}
         <span class="font-bold">{{ term }}</span>
       </p>

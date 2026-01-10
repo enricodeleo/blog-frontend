@@ -37,8 +37,6 @@
           <!-- Meta -->
           <div class="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
             <time :datetime="post.date">{{ dateLong }}</time>
-            <span>•</span>
-            <span>{{ Math.ceil(readingTimeMinutes) }} minuti di lettura</span>
           </div>
         </header>
 
@@ -97,8 +95,6 @@
 </template>
 
 <script setup>
-import { getReadingTimeMinutes } from '~/utils/content'
-
 const route = useRoute()
 const slug = String(route.params.slug)
 const path = `/${slug}`
@@ -122,12 +118,6 @@ const dateLong = computed(() => {
   if (!post.value) return ''
   const event = new Date(post.value.date)
   return event.toLocaleDateString('it-IT', dateOptions)
-})
-
-// Simple reading time calculation (200 words per minute average)
-const readingTimeMinutes = computed(() => {
-  if (!post.value) return 0
-  return getReadingTimeMinutes(post.value.body || post.value.description)
 })
 
 // Fetch related posts (deterministic for SSR/CSR)

@@ -1,8 +1,8 @@
 <template>
   <section class="mb-8">
     <!-- Section Header -->
-    <div class="border-l-4 border-amber-600 px-4 py-2 mb-6">
-      <h2 class="text-lg md:text-xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC]">
+    <div class="border-l-2 border-amber-600/70 px-4 py-1 mb-4">
+      <h2 class="text-sm md:text-base font-semibold tracking-wide uppercase text-[#3c4858] dark:text-[#CBD5E1]">
         In primo piano
       </h2>
     </div>
@@ -33,13 +33,6 @@
           <!-- Meta -->
           <div class="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
             <time :datetime="post.date">{{ formatDate(post.date) }}</time>
-            <span>•</span>
-            <span class="flex items-center gap-1">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              {{ getReadingTimeMinutes(post.body || post.description) }} minuti di lettura
-            </span>
           </div>
         </NuxtLink>
 
@@ -60,8 +53,6 @@
 </template>
 
 <script setup>
-import { getReadingTimeMinutes } from '~/utils/content'
-
 const props = defineProps({
   posts: {
     type: Array,
