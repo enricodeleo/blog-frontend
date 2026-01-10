@@ -1,21 +1,25 @@
-import { readFileSync, writeFileSync } from 'fs'
+import { writeFileSync } from 'fs'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
+import Database from 'better-sqlite3'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 const siteUrl = process.env.NUXT_ENV_FRONTEND_URL || 'https://enricodeleo.com'
 
-// Read the content collection database
-const contentDbPath = join(__dirname, '../.data/content.db')
+// Read the content collection database from SQLite
+const contentDbPath = join(__dirname, '../.data/content/contents.sqlite')
 let posts = []
 
 try {
-  const contentDb = JSON.parse(readFileSync(contentDbPath, 'utf-8'))
-  posts = contentDb.articles || []
+  const db = new Database(contentDbPath, { readonly: true })
+  const stmt = db.prepare('SELECT * FROM _content_articles WHERE navigation = true')
+  posts = stmt.all()
+  db.close()
 } catch (error) {
   console.warn('Content database not found, skipping sitemap generation')
+  console.error(error.message)
   process.exit(0)
 }
 
@@ -26,6 +30,15 @@ function escapeXML(str) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&apos;')
+}
+
+function parseJSONField(field) {
+  if (!field) return []
+  try {
+    return JSON.parse(field)
+  } catch {
+    return []
+  }
 }
 
 function formatDate(date) {
@@ -41,7 +54,7 @@ function generateSitemap(posts) {
 
   // Dynamic pages from posts
   const postPages = posts
-    .filter(post => post.published !== false)
+    .filter(post => post.navigation !== false)
     .map(post => ({
       url: post.path,
       lastmod: formatDate(post.date),
@@ -54,8 +67,8 @@ function generateSitemap(posts) {
   const tags = new Set()
 
   posts.forEach(post => {
-    post.categories?.forEach(cat => categories.add(cat))
-    post.tags?.forEach(tag => tags.add(tag))
+    parseJSONField(post.categories).forEach(cat => categories.add(cat))
+    parseJSONField(post.tags).forEach(tag => tags.add(tag))
   })
 
   const categoryPages = Array.from(categories).map(cat => ({

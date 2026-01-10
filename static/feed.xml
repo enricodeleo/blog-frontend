@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lisergico</title>
+    <atom:link href="https://enricodeleo.com/feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://enricodeleo.com</link>
+    <description>Il blog di Enrico Deleo. Digital Entrepreneur // Web &amp; Mobile Developer | DevOps | UI/UX // Teacher // Consultant</description>
+    <language>it-IT</language>
+    <managingEditor>hello@enricodeleo.com (Enrico Deleo)</managingEditor>
+
+  </channel>
+</rss>

@@ -114,36 +114,11 @@ export default defineNuxtConfig({
     }
   },
 
-  // Nitro configuration for static file generation
+  // Nitro configuration
   nitro: {
     preset: 'static',
     prerender: {
-      failOnError: false,
-      hooks: {
-        'done': async () => {
-          const { exec } = await import('child_process')
-          const { promisify } = await import('util')
-
-          const execAsync = promisify(exec)
-
-          console.log('\n🔧 Generating static files...')
-
-          try {
-            // Generate feed.xml
-            await execAsync('node scripts/generate-feed.js')
-
-            // Generate sitemap.xml
-            await execAsync('node scripts/generate-sitemap.js')
-
-            // Generate robots.txt
-            await execAsync('node scripts/generate-robots.js')
-
-            console.log('✓ Static files generated successfully\n')
-          } catch (error) {
-            console.error('✗ Error generating static files:', error)
-          }
-        }
-      }
+      failOnError: false
     }
   }
 })

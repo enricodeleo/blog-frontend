@@ -12,7 +12,8 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
-    "generate": "nuxt generate && node replace-cdn.cjs",
+    "generate": "nuxt generate && node scripts/generate-static.js && node replace-cdn.cjs",
+    "generate:static": "node scripts/generate-static.js",
     "preview": "nuxt preview",
     "lint": "eslint .",
     "typecheck": "nuxt typecheck"
