@@ -6,9 +6,6 @@
           Copyright &copy; 2010-{{ currentYear }}
           <a rel="noopener" href="https://enricodeleo.com" class="hover:underline">Enrico Deleo</a>
         </p>
-        <p class="mt-2">
-          <a href="https://www.iubenda.com/privacy-policy/13699998" class="link link-hover link-primary">Privacy Policy</a>
-        </p>
       </div>
       <div class="text-right">
         <p class="text-base-content/70">Storie di musica, startup, digital, coding e qualsiasi cosa mi venga in mente.</p>

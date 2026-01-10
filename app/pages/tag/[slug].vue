@@ -5,7 +5,7 @@
     </a>
     <div class="flex-grow order-1 md:order-2">
       <h1 class="text-3xl font-bold mb-5">
-        Post nella categoria <em class="text-capitalize ">{{ category }}</em>
+        Post con tag <em class="text-capitalize ">{{ tag }}</em>
       </h1>
 
       <!-- begin post -->
@@ -17,22 +17,22 @@
 
 <script setup>
 const route = useRoute()
-const category = route.slug
+const tag = route.params.slug
 
-// Fetch posts by category
+// Fetch posts by tag
 const { data: posts } = await useAsyncData(
-  `category-${category}`,
+  `tag-${tag}`,
   () => queryContent('articles')
-    .where({ categories: { contains: category } })
+    .where({ tags: { contains: tag } })
     .sort({ date: -1 })
     .find()
 )
 
 // SEO Meta
 useSeoMeta({
-  title: `Archivio categoria ${category}`,
-  description: `Sfoglia tutti gli articoli nella categoria "${category}"`,
-  ogTitle: `Archivio categoria ${category}`,
-  ogDescription: `Sfoglia tutti gli articoli nella categoria "${category}"`
+  title: `Articoli con tag #${tag}`,
+  description: `Sfoglia tutti gli articoli con tag "${tag}"`,
+  ogTitle: `Articoli con tag #${tag}`,
+  ogDescription: `Sfoglia tutti gli articoli con tag "${tag}"`
 })
 </script>

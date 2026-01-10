@@ -23,18 +23,6 @@
             </div>
           </form>
 
-          <!-- Dark Mode Toggle -->
-          <ClientOnly>
-            <button
-              @click="toggleColorMode"
-              class="btn btn-ghost btn-circle"
-              title="Toggle dark mode"
-            >
-              <Icon v-if="colorMode === 'dark'" name="mdi:weather-sunny" class="text-xl" />
-              <Icon v-else name="mdi:moon-waning-crescent" class="text-xl" />
-            </button>
-          </ClientOnly>
-
           <a href="https://www.facebook.com/therealenricodeleo/"
              target="_blank"
              rel="noopener noreferrer"
@@ -78,14 +66,6 @@
                 </div>
               </form>
             </li>
-            <li>
-              <ClientOnly>
-                <a @click="toggleColorMode">
-                  <Icon :name="colorMode === 'dark' ? 'mdi:weather-sunny' : 'mdi:moon-waning-crescent'" />
-                  {{ colorMode === 'dark' ? 'Light Mode' : 'Dark Mode' }}
-                </a>
-              </ClientOnly>
-            </li>
             <li><a href="https://www.facebook.com/therealenricodeleo/" target="_blank" class="hover:text-blue-500"><Icon name="mdi:facebook" /> Facebook</a></li>
             <li><a href="https://www.instagram.com/enricodeleo/" target="_blank" class="hover:text-pink-500"><Icon name="mdi:instagram" /> Instagram</a></li>
             <li><a href="https://www.linkedin.com/in/enricodeleo/" target="_blank" class="hover:text-blue-700"><Icon name="mdi:linkedin" /> LinkedIn</a></li>
@@ -98,28 +78,6 @@
 </template>
 
 <script setup>
-// Initialize colorMode only on client side to avoid SSR issues
-const colorMode = ref('light')
 const typing = ref(false)
 const expanded = ref(false)
-
-// Safe access to colorMode on mount
-onMounted(() => {
-  try {
-    colorMode.value = useColorMode().value
-  } catch (e) {
-    colorMode.value = 'light'
-  }
-})
-
-// Toggle function
-const toggleColorMode = () => {
-  try {
-    const mode = useColorMode()
-    mode.value = mode.value === 'dark' ? 'light' : 'dark'
-    colorMode.value = mode.value
-  } catch (e) {
-    console.error('Failed to toggle color mode:', e)
-  }
-}
 </script>

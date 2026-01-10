@@ -1,48 +1,54 @@
 <template>
-  <div class="h-100">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col pt-5">
-          <section v-if="error.statusCode === 404">
-            <h1>
-              🔍 Ops, non ho trovato questa pagina.
-            </h1>
-            <p class="lead">
-              Ho cercato anche sotto il tappeto, eppure non ho trovato
-              il contenuto che stavi cercando. Controlla l'indirizzo
-              oppure utilizza continua a sfogliare il blog.
-            </p>
-          </section>
-          <section v-else>
-            <h1>
-              💥 Houston, abbiamo un problema.
-            </h1>
-            <p class="lead">
-              Colpa mia, a quanto pare non ho gestito l'errore che si è
-              appena presentato. Nessun problema, comunque, puoi continuare
-              a sfogliare il blog e leggere altri contenuti.
-            </p>
-          </section>
-          <div class="row">
-            <div class="col text-center">
-              <NuxtLink to="/" class="btn btn-lg btn-primary">
-                Torna alla home page
-              </NuxtLink>
-            </div>
-          </div>
+  <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-950 py-12">
+    <div class="container max-w-4xl mx-auto px-4">
+      <div class="text-center space-y-6">
+        <!-- Error Icon -->
+        <div v-if="error.statusCode === 404" class="text-8xl">
+          🔍
         </div>
+        <div v-else class="text-8xl">
+          💥
+        </div>
+
+        <!-- Error Message -->
+        <div v-if="error.statusCode === 404" class="space-y-4">
+          <h1 class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+            Ops, non ho trovato questa pagina
+          </h1>
+          <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+            Ho cercato anche sotto il tappeto, eppure non ho trovato
+            il contenuto che stavi cercando. Controlla l'indirizzo
+            oppure continua a sfogliare il blog.
+          </p>
+        </div>
+
+        <div v-else class="space-y-4">
+          <h1 class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+            Houston, abbiamo un problema
+          </h1>
+          <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+            Colpa mia, a quanto pare non ho gestito l'errore che si è
+            appena presentato. Nessun problema, comunque, puoi continuare
+            a sfogliare il blog e leggere altri contenuti.
+          </p>
+        </div>
+
+        <!-- Back Button -->
+        <NuxtLink to="/" class="btn btn-primary btn-lg bg-gradient-to-r from-indigo-600 to-pink-600 border-none hover:opacity-90">
+          Torna alla home page
+        </NuxtLink>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    error: {
-      type: Number,
-      default: 404
-    }
+<script setup>
+const props = defineProps({
+  error: {
+    type: Object,
+    required: true
   }
-}
+})
+
+const error = computed(() => props.error)
 </script>

@@ -22,7 +22,9 @@ export default defineNuxtConfig({
   // Nuxt 4 uses Nitro for static generation
   nitro: {
     preset: 'static',
-    trailingSlash: false
+    prerender: {
+      failOnError: false
+    }
   },
 
   // Enable TypeScript
@@ -48,43 +50,10 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'author', content: 'Enrico Deleo' },
-        { name: 'color-scheme', content: 'light dark' },
         { name: 'alternate', type: 'application/rss+xml', title: 'Lisergico &raquo; Feed', href: `${siteUrl}/feed.xml` }
       ],
       link: [
-        { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-        { rel: 'dns-prefetch', href: 'https://connect.facebook.net' }
-      ],
-      script: [
-        {
-          innerHTML: `
-            (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);
-          `,
-          type: 'text/javascript',
-          charset: 'utf-8',
-          body: true
-        },
-        {
-          innerHTML: `
-            var _iub = _iub || [];
-            _iub.csConfiguration = {"consentOnContinuedBrowsing":false,"ccpaAcknowledgeOnDisplay":true,"whitelabel":false,"lang":"it","siteId":2076706,"enableCcpa":true,"countryDetection":true,"perPurposeConsent":true,"gdprAppliesGlobally":false,"cookiePolicyId":13699998, "banner":{ "position":"float-top-center","acceptButtonDisplay":true,"customizeButtonDisplay":true }};
-          `,
-          type: 'text/javascript',
-          charset: 'utf-8',
-          body: true
-        },
-        {
-          type: 'text/javascript',
-          charset: 'utf-8',
-          src: '//cdn.iubenda.com/cs/ccpa/stable/stub.js',
-          body: true
-        },
-        {
-          type: 'text/javascript',
-          charset: 'utf-8',
-          src: '//cdn.iubenda.com/cs/stable/iubenda_cs.js',
-          body: true
-        }
+        { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' }
       ]
     }
   },
@@ -93,7 +62,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/icon',
-    '@nuxtjs/color-mode',
     '@nuxt/scripts',
     '@vite-pwa/nuxt'
   ],
@@ -111,30 +79,17 @@ export default defineNuxtConfig({
     }
   },
 
-  // Color mode
-  colorMode: {
-    classSuffix: '',
-    preference: 'system',
-    fallback: 'light',
-    storageKey: 'color-mode'
-  },
-
-  // PWA Configuration
+  // PWA Configuration (disabled for now - will implement later)
   pwa: {
     registerType: 'autoUpdate',
     includeAssets: ['*.jpg', '*.svg'],
     manifest: {
       name: 'Lisergico',
       short_name: 'Lisergico',
-      description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant',
-      theme_color: '#000000',
-      background_color: '#000000',
+      theme_color: '#6366f1',
+      background_color: '#ffffff',
       display: 'standalone',
-      lang: 'it',
-      icons: [
-        { src: '/icon.png', sizes: '192x192', type: 'image/png' },
-        { src: '/icon.png', sizes: '512x512', type: 'image/png' }
-      ]
+      lang: 'it'
     },
     workbox: {
       globPatterns: ['**/*.{js,css,html,png,jpg,svg,woff2}']
@@ -145,8 +100,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       siteUrl,
-      googleAnalyticsId: process.env.NUXT_PUBLIC_GA_ID || '',
-      facebookPixelId: process.env.NUXT_PUBLIC_FB_PIXEL_ID || '103937073008677'
+      googleAnalyticsId: process.env.NUXT_PUBLIC_GA_ID || ''
     }
   }
 })
