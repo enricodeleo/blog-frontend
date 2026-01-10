@@ -5,7 +5,7 @@
         Lisergico
       </h1>
       <p class="text-lg text-[#3c4858] dark:text-gray-200">
-        Il blog di <a href="https://enricodeleo.com" rel="noopener" class="underline decoration-dotted underline-offset-4 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">Enrico Deleo</a>. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant
+        Il blog di <a href="https://enricodeleo.com" target="_blank" rel="noopener noreferrer" class="underline decoration-dotted underline-offset-4 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">Enrico Deleo</a>. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant
       </p>
     </section>
 
