@@ -26,7 +26,7 @@
           </div>
 
           <footer class="text-sm mt-4">
-            <span>
+            <span v-if="post.categories && post.categories.length">
               Pubblicato in
               <span v-for="(category, index) of post.categories" :key="index">
                 <NuxtLink :to="`/category/${category}`" class="capitalize text-green-600">{{ category.replace('-', ' ') }}</NuxtLink><span v-if="index+1 !== post.categories.length">, </span>
@@ -48,12 +48,12 @@
 import readingTime from 'reading-time'
 
 const props = defineProps<{
-  posts: Array<{
+  posts?: Array<{
     id?: string
     slug: string
     date: string
     text: string
-    categories: string[]
+    categories?: string[]
     title: string
     coverImage: string
   }>
@@ -71,6 +71,9 @@ const calculateReadingTime = (text: string) => {
 }
 
 const featuredPosts = computed(() => {
+  if (!props.posts || props.posts.length === 0) {
+    return []
+  }
   return props.posts.map((post) => ({
     ...post,
     dateLong: formatDate(post.date),
