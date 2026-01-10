@@ -35,7 +35,9 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       tailwindcss()
-    ]
+    ],
+    // Disable vite-plugin-checker to avoid vue-tsc dependency
+    checker: false
   },
 
   // Global page headers

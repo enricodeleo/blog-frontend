@@ -55,17 +55,6 @@
       <!-- Begin Disqus Comments -->
       <ClientOnly>
         <div id="disqus_thread" class="mt-12" />
-        <script>
-          window.disqus_config = function () {
-          this.page.url = window.location.href
-          this.page.identifier = window.location.pathname
-          }
-          const d = document
-          const s = d.createElement('script')
-          s.src = 'https://lisergico.disqus.com/embed.js'
-          s.setAttribute('data-timestamp', +new Date())
-          ;(d.head || d.body).appendChild(s)
-        </script>
       </ClientOnly>
       <!-- End Disqus Comments -->
     </div>
@@ -139,5 +128,18 @@ useSeoMeta({
   ogImage: () => post.value?.coverImage || '',
   ogType: 'article',
   twitterCard: 'summary_large_image'
+})
+
+// Load Disqus on client side
+onMounted(() => {
+  window.disqus_config = function () {
+    this.page.url = window.location.href
+    this.page.identifier = window.location.pathname
+  }
+  const d = document
+  const s = d.createElement('script')
+  s.src = 'https://lisergico.disqus.com/embed.js'
+  s.setAttribute('data-timestamp', +new Date())
+  ;(d.head || d.body).appendChild(s)
 })
 </script>
