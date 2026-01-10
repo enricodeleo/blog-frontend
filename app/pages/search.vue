@@ -1,29 +1,65 @@
 <template>
-  <div class="py-12 mb-8 flex flex-col md:flex-row md:space-x-10">
-    <div>
-      <h1 v-if="loaded && posts && posts.length" class="text-3xl font-bold mb-5">
-        Risultati della ricerca <em>{{ term }}</em>
+  <div class="py-8 space-y-8">
+    <!-- Search Header -->
+    <div class="text-center">
+      <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+        Cerca nel Blog
       </h1>
-      <h1 v-if="!loaded" class="text-3xl font-bold mb-5">
-        🤓 Sto cercando articoli su <em>{{ term }}</em> che possano interessarti...
-      </h1>
-      <h1 v-if="loaded && (!posts || !posts.length)" class="text-3xl font-bold mb-5">
-        😵 Mi spiace non ho nulla su <em>{{ term }}</em>, prova un altro termine
-      </h1>
+      <p v-if="term" class="text-lg text-base-content/70">
+        {{ loaded && posts && posts.length ? `${posts.length} risultati per` : loaded && (!posts || !posts.length) ? `Nessun risultato per` : `Cerco` }} <span class="font-bold">{{ term }}</span>
+      </p>
+    </div>
 
-      <!-- begin post -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
-        <Post v-for="post of posts" :key="post.slug" :post="post" class="mb-5" />
+    <!-- Search Box -->
+    <div class="form-control max-w-2xl mx-auto">
+      <div class="join w-full">
+        <input
+          type="text"
+          name="term"
+          placeholder="Cerca articoli..."
+          class="input input-bordered join-item w-full text-lg"
+          :value="term"
+          @input="updateSearch($event.target.value)"
+        >
+        <button class="btn btn-primary join-item">
+          <Icon name="mdi:magnify" class="text-xl" />
+        </button>
       </div>
-      <!-- end post -->
+    </div>
+
+    <!-- Loading State -->
+    <div v-if="!loaded" class="flex justify-center">
+      <span class="loading loading-spinner loading-lg text-primary"></span>
+    </div>
+
+    <!-- Results -->
+    <div v-if="loaded && posts && posts.length" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <Post v-for="post of posts" :key="post.slug" :post="post" />
+    </div>
+
+    <!-- No Results -->
+    <div v-if="loaded && (!posts || !posts.length)" class="alert alert-warning max-w-2xl mx-auto">
+      <Icon name="mdi:alert" class="text-2xl" />
+      <div>
+        <h3 class="font-bold">Nessun risultato trovato!</h3>
+        <div class="text-xs">Prova con un altro termine di ricerca</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 const route = useRoute()
+const router = useRouter()
 const term = (route.query.term) || ''
 const loaded = ref(false)
+
+// Update search term
+const updateSearch = (value) => {
+  if (value) {
+    router.push({ path: '/search', query: { term: value } })
+  }
+}
 
 // Search posts
 const { data: posts } = await useAsyncData(

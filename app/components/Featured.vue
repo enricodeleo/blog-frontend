@@ -1,45 +1,46 @@
 <template>
   <section>
-    <h2 class="text-xl font-bold border-gray-300 dark:border-gray-500 border-b leading-10">
-      <span class="border-gray-700 dark:border-gray-300 border-b-2 py-2 pr-1">
+    <div class="text-xl font-bold mb-6">
+      <span class="badge badge-lg badge-primary bg-gradient-to-r from-indigo-600 to-pink-600 text-white border-none p-4">
         In primo piano
       </span>
-    </h2>
+    </div>
 
     <div class="flex flex-col gap-6 py-4">
-      <!-- begin post -->
       <article
         v-for="post of featuredPosts"
         :key="post.slug || post.id"
-        class="flex items-center border-gray-300 dark:border-gray-600 border rounded-md min-h-72"
+        class="card lg:card-side bg-base-100 shadow-xl hover:shadow-2xl transition-all"
       >
-        <NuxtLink :to="`/${post.slug}`" :title="post.title" class="h-full w-full bg-no-repeat bg-center bg-cover rounded-l-md">
-          <img :src="post.coverImage" :alt="post.title">
-        </NuxtLink>
-        <div class="py-6 px-8 h-full flex flex-wrap flex-col place-content-between">
+        <figure class="relative">
+          <NuxtLink :to="`/${post.slug}`">
+            <img :src="post.coverImage" :alt="post.title" class="rounded-l-xl w-full lg:w-96 object-cover h-72">
+          </NuxtLink>
+        </figure>
+        <div class="card-body justify-between">
           <div>
             <NuxtLink :to="`/${post.slug}`">
-              <h2 class="text-xl font-bold">
+              <h2 class="card-title text-3xl font-bold hover:bg-gradient-to-r hover:from-indigo-600 hover:to-pink-600 hover:bg-clip-text hover:text-transparent transition-all">
                 {{ post.title }}
               </h2>
             </NuxtLink>
           </div>
 
-          <footer class="text-sm mt-4">
-            <span v-if="post.categories && post.categories.length">
-              Pubblicato in
-              <span v-for="(category, index) of post.categories" :key="index">
-                <NuxtLink :to="`/category/${category}`" class="capitalize text-green-600">{{ category.replace('-', ' ') }}</NuxtLink><span v-if="index+1 !== post.categories.length">, </span>
-              </span>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span v-for="(category, index) of (post.categories || [])" :key="index">
+              <NuxtLink :to="`/category/${category}`" class="badge badge-secondary bg-gradient-to-r from-pink-500 to-indigo-500 text-white border-none">
+                {{ category.replace('-', ' ') }}
+              </NuxtLink>
             </span>
-            <br>
-            <time :datetime="post.date" class="text-gray-600 dark:text-gray-400">{{ formatDate(post.date) }}</time>
-            <span class="text-gray-600 dark:text-gray-400 px-1">•</span>
-            <span class="text-gray-600 dark:text-gray-400">{{ Math.ceil(calculateReadingTime(post.text)) }} minuti di lettura</span>
+          </div>
+
+          <footer class="text-sm pt-2 border-t border-base-300">
+            <time :datetime="post.date" class="text-base-content/60">{{ formatDate(post.date) }}</time>
+            <span class="text-base-content/60 px-1">•</span>
+            <span class="text-base-content/60">{{ Math.ceil(calculateReadingTime(post.text)) }} minuti di lettura</span>
           </footer>
         </div>
       </article>
-      <!-- end post -->
     </div>
   </section>
 </template>

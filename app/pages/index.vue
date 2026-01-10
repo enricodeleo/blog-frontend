@@ -1,38 +1,39 @@
 <template>
-  <div class="mb-8">
-    <div class="py-6">
-      <h1 class="text-4xl font-semibold mb-2">
-        Lisergico
-      </h1>
-      <p class="text-xl font-light">
-        Il blog di <a rel="noopener" href="https://enricodeleo.com" class="font-semibold text-green-600 hover:text-green-800">Enrico Deleo</a>. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant
-      </p>
+  <div class="space-y-12">
+    <!-- Hero Section -->
+    <div class="hero min-h-[400px] bg-gradient-to-r from-indigo-600 to-pink-600 rounded-box">
+      <div class="hero-content text-center text-white">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl font-bold mb-4">Benvenuto su Lisergico</h1>
+          <p class="text-xl mb-4">
+            Il blog di <a rel="noopener" href="https://enricodeleo.com" class="font-bold underline hover:opacity-80">Enrico Deleo</a>
+          </p>
+          <p class="text-lg opacity-90">Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant</p>
+        </div>
+      </div>
     </div>
 
-    <!-- Begin Featured
-    ================================================== -->
+    <div class="divider divider-primary text-lg font-bold">In Evidenza</div>
+
+    <!-- Begin Featured -->
     <Featured :posts="featured" />
-    <!-- End Featured
-    ================================================== -->
-    <!-- Begin List Posts
-    ================================================== -->
+    <!-- End Featured -->
+
+    <div class="divider divider-secondary text-lg font-bold">Altre Storie</div>
+
+    <!-- Begin List Posts -->
     <section class="recent-posts">
-      <h2 class="text-xl font-bold border-gray-300 dark:border-gray-500 border-b leading-10">
-        <span class="border-gray-700 dark:border-gray-300 border-b-2 py-2 pr-1">
-          Altre storie
-        </span>
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
-        <!-- begin post -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
         <Post v-for="post of posts" :key="post.slug" :post="post" />
-        <!-- end post -->
       </div>
     </section>
-    <!-- End List Posts
-    ================================================== -->
-    <NuxtLink to="/page/2" class="border border-green-600 hover:border-green-800 text-green-600 hover:text-green-800 text-center p-3 w-full text-lg rounded-md block mt-6 font-semibold">
-      Altri post
-    </NuxtLink>
+    <!-- End List Posts -->
+
+    <div class="flex justify-center mt-8">
+      <NuxtLink to="/page/2" class="btn btn-primary btn-lg bg-gradient-to-r from-indigo-600 to-pink-600 border-none hover:opacity-90">
+        Altri post
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
