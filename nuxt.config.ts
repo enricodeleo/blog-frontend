@@ -9,6 +9,11 @@ export default defineNuxtConfig({
   // Set source directory to app/
   srcDir: 'app',
 
+  // Use legacy static/ folder for public assets
+  dir: {
+    public: 'static'
+  },
+
   devtools: { enabled: true },
 
   // CSS
@@ -87,6 +92,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/icon',
     '@nuxtjs/color-mode',
+    '@nuxt/scripts',
     '@vite-pwa/nuxt',
     'nuxt-simple-sitemap',
     'nuxt-schema-org'
@@ -116,18 +122,43 @@ export default defineNuxtConfig({
   // PWA Configuration
   pwa: {
     registerType: 'autoUpdate',
+    includeAssets: ['*.jpg', '*.svg'],
     manifest: {
       name: 'Lisergico',
       short_name: 'Lisergico',
+      description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant',
+      theme_color: '#000000',
+      background_color: '#000000',
+      display: 'standalone',
       lang: 'it',
-      theme_color: '#000000'
+      icons: [
+        { src: '/icon.png', sizes: '192x192', type: 'image/png' },
+        { src: '/icon.png', sizes: '512x512', type: 'image/png' }
+      ]
+    },
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,png,jpg,svg,woff2}']
     }
   },
 
   // Runtime config
   runtimeConfig: {
     public: {
-      siteUrl
+      siteUrl,
+      googleAnalyticsId: process.env.NUXT_PUBLIC_GA_ID || '',
+      facebookPixelId: process.env.NUXT_PUBLIC_FB_PIXEL_ID || '103937073008677'
+    }
+  },
+
+  // Third-party scripts
+  scripts: {
+    registry: {
+      googleAnalytics: {
+        id: () => useRuntimeConfig().public.googleAnalyticsId || ''
+      },
+      facebookPixel: {
+        id: () => useRuntimeConfig().public.facebookPixelId || ''
+      }
     }
   }
 })

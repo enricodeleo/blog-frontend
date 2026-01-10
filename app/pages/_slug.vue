@@ -156,17 +156,4 @@ useSchemaOrg([
     description: () => post.value?.description || ''
   })
 ])
-
-// Initialize Facebook Pixel
-onMounted(() => {
-  if (window && (window as any).FB) {
-    ;(window as any).FB.init({
-      appId: '103937073008677',
-      status: true,
-      xfbml: true,
-      version: 'v4.0'
-    })
-    setTimeout(() => (window as any).FB.XFBML.parse(), 100)
-  }
-})
 </script>
