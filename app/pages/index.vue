@@ -117,6 +117,10 @@ const { data: posts } = await useAsyncData(
     .all()
 )
 
+// Runtime config for siteUrl
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+
 // SEO Meta
 useSeoMeta({
   title: 'Il blog di Enrico Deleo',
@@ -133,10 +137,6 @@ useHead({
     href: siteUrl
   }]
 })
-
-// JSON-LD Structured Data for homepage
-const config = useRuntimeConfig()
-const siteUrl = config.public.siteUrl
 
 const homepageJsonLd = computed(() => {
   // Stable entity IDs (matching article page IDs)
