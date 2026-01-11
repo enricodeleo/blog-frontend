@@ -92,5 +92,18 @@ if (import.meta.client) {
       loadDisqus()
     }
   }, { immediate: true })
+
+  // Reset Disqus when article changes (SPA navigation)
+  watch(
+    () => [props.identifier, props.url, props.title],
+    () => {
+      if (canShowDisqus.value && window.DISQUS) {
+        // Update config first
+        setDisqusConfig()
+        // Then reset Disqus to reload with new config
+        resetDisqus()
+      }
+    }
+  )
 }
 </script>
