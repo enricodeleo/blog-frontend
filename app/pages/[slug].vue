@@ -151,7 +151,7 @@ useSeoMeta({
 
 // JSON-LD Structured Data
 const config = useRuntimeConfig()
-const siteUrl = config.public.siteUrl as string
+const siteUrl = config.public.siteUrl
 
 const jsonLd = computed(() => {
   if (!post.value) return null
@@ -162,7 +162,7 @@ const jsonLd = computed(() => {
   const postId = `${siteUrl}${post.value.path}#blogposting`
 
   // Build schema with only valid values
-  const schema: Record<string, any> = {
+  const schema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     '@id': postId,

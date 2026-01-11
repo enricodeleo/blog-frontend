@@ -129,7 +129,7 @@ useSeoMeta({
 
 // JSON-LD Structured Data for homepage
 const config = useRuntimeConfig()
-const siteUrl = config.public.siteUrl as string
+const siteUrl = config.public.siteUrl
 
 const homepageJsonLd = computed(() => {
   // Stable entity IDs (matching article page IDs)
