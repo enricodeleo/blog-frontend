@@ -4,10 +4,12 @@
       <!-- Cover Image -->
       <figure v-if="post.coverImage" class="mb-4">
         <img
-          :src="post.coverImage + '?resize=800,450&crop=0,0,800px,450px&strip=all'"
+          :src="post.coverImage + '?resize=680,382&crop=0,0,680px,382px&strip=all'"
           :alt="post.title"
           class="rounded-lg w-full object-cover"
           loading="lazy"
+          width="680"
+          height="382"
         >
       </figure>
 

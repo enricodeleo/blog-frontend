@@ -30,8 +30,10 @@
                 :src="post.coverImage + '?resize=800,450&crop=0,0,800px,450px&strip=all'"
                 :alt="post.title"
                 class="rounded-lg w-full object-cover h-48"
-                :loading="index === 0 ? 'eager' : 'lazy'"
+                loading="eager"
                 :fetchpriority="index === 0 ? 'high' : 'auto'"
+                width="800"
+                height="450"
               >
             </figure>
 

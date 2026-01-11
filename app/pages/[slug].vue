@@ -48,6 +48,8 @@
             class="rounded-lg w-full"
             loading="eager"
             fetchpriority="high"
+            width="1088"
+            height="612"
           >
         </figure>
 
