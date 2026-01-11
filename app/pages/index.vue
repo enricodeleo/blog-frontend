@@ -200,5 +200,6 @@ const homepageJsonLd = computed(() => {
   return schema
 })
 
-useJsonLd(homepageJsonLd)
+// Note: useJsonLd not needed here as structured data is inlined during build
+// The JSON-LD is already included in the HTML via server rendering
 </script>

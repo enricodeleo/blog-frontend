@@ -121,7 +121,8 @@ export default defineNuxtConfig({
     workbox: {
       globPatterns: ['**/*.{js,css,html,png,jpg,svg,woff2}'],
       navigateFallbackDenylist: [
-        /\/[^/?]+\.[^/?]+$/,
+        /^\/$/,  // Exclude root path from navigation fallback
+        /\/[^/?]+\.[^/?]+$/,  // Exclude files with extensions
       ],
       // Force cache update
       cleanupOutdatedCaches: true,
