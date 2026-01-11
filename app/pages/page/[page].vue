@@ -55,6 +55,10 @@ const hasMore = computed(() => {
   return posts.value && posts.value.length === limit
 })
 
+// Runtime config for canonical URL
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+
 // SEO Meta
 useSeoMeta({
   title: `Pagina ${page} - Articoli del blog`,
@@ -63,5 +67,13 @@ useSeoMeta({
   ogDescription: `Sfoglia gli articoli del blog di Enrico Deleo - Pagina ${page}. Articoli su sviluppo web, DevOps, AI, architettura software e molto altro.`,
   // Prevent indexing of pagination pages to avoid duplicate content issues
   robots: () => page === 1 ? 'index, follow' : 'noindex, follow'
+})
+
+// Canonical URL
+useHead({
+  link: [{
+    rel: 'canonical',
+    href: () => page === 1 ? siteUrl : `${siteUrl}/page/${page}`
+  }]
 })
 </script>

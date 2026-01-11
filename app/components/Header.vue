@@ -30,8 +30,8 @@
           <button
             @click="mobileMenuOpen = !mobileMenuOpen"
             class="px-3 py-1.5 text-sm text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700/80 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md transition-colors cursor-pointer"
-            aria-label="Menu"
-            aria-expanded="false"
+            :aria-label="mobileMenuOpen ? 'Chiudi menu' : 'Menu'"
+            :aria-expanded="mobileMenuOpen"
           >
             <Icon :name="mobileMenuOpen ? 'mdi:close' : 'mdi:menu'" class="text-2xl" />
           </button>

@@ -98,6 +98,10 @@ const { data: posts, pending } = await useAsyncData(
 )
 const loaded = computed(() => !pending.value)
 
+// Runtime config for canonical URL
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+
 // SEO Meta
 useSeoMeta({
   title: 'Cerca nel blog - Lisergico',
@@ -106,5 +110,13 @@ useSeoMeta({
   ogDescription: 'Cerca tra gli articoli del blog di Enrico Deleo. Trova tutorial, guide e approfondimenti su sviluppo web, DevOps, AI, architettura software e altro.',
   // Prevent indexing of search results
   robots: 'noindex, follow'
+})
+
+// Canonical URL
+useHead({
+  link: [{
+    rel: 'canonical',
+    href: `${siteUrl}/search`
+  }]
 })
 </script>

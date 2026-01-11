@@ -49,10 +49,7 @@ const props = defineProps({
   }
 })
 
-const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
+const { formatDateLong } = useFormatDate()
 
-const dateLong = computed(() => {
-  const event = new Date(props.post.date)
-  return event.toLocaleDateString('it-IT', dateOptions)
-})
+const dateLong = computed(() => formatDateLong(props.post.date))
 </script>

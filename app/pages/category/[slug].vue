@@ -44,11 +44,23 @@ const { data: posts } = await useAsyncData(
     .all()
 )
 
+// Runtime config for canonical URL
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+
 // SEO Meta
 useSeoMeta({
   title: () => `Categoria: ${categoryDisplay.value} - Articoli del blog`,
   description: () => `Esplora gli articoli nella categoria "${categoryDisplay.value}" del blog di Enrico Deleo. Scopri guide, tutorial e approfondimenti su ${categoryDisplay.value.toLowerCase()}.`,
   ogTitle: () => `Categoria: ${categoryDisplay.value}`,
   ogDescription: () => `Esplora gli articoli nella categoria "${categoryDisplay.value}" del blog di Enrico Deleo. Scopri guide, tutorial e approfondimenti su ${categoryDisplay.value.toLowerCase()}.`
+})
+
+// Canonical URL
+useHead({
+  link: [{
+    rel: 'canonical',
+    href: () => `${siteUrl}/category/${category}`
+  }]
 })
 </script>

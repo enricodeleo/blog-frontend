@@ -39,6 +39,10 @@ const { data: posts } = await useAsyncData(
     .all()
 )
 
+// Runtime config for canonical URL
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+
 // SEO Meta
 useSeoMeta({
   title: () => `Tag: #${tag} - Articoli del blog`,
@@ -47,5 +51,13 @@ useSeoMeta({
   ogDescription: () => `Scopri tutti gli articoli tagged con "${tag}" nel blog di Enrico Deleo. Approfondimenti, tutorial e risorse su ${tag}.`,
   // Prevent indexing of tag archives to avoid thin content
   robots: 'noindex, follow'
+})
+
+// Canonical URL
+useHead({
+  link: [{
+    rel: 'canonical',
+    href: () => `${siteUrl}/tag/${tag}`
+  }]
 })
 </script>

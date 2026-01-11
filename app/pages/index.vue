@@ -47,7 +47,7 @@
 
             <!-- Meta -->
             <div class="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
-              <time :datetime="post.date">{{ formatDate(post.date) }}</time>
+              <time :datetime="post.date">{{ formatDateLong(post.date) }}</time>
             </div>
           </NuxtLink>
 
@@ -94,15 +94,10 @@
 <script setup>
 import { toJsonLd } from '~/utils/jsonld'
 
-const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
-
 // Format date
-const formatDate = (date) => {
-  const event = new Date(date)
-  return event.toLocaleDateString('it-IT', dateOptions)
-}
+const { formatDateLong } = useFormatDate()
 
-// Fetch 4 most recent sticky posts for bento grid
+// Fetch 2 most recent sticky posts for bento grid
 const { data: featured } = await useAsyncData(
   'featured-posts',
   () => queryCollection('articles')
@@ -128,6 +123,14 @@ useSeoMeta({
   ogTitle: 'Il blog di Enrico Deleo',
   ogDescription: 'Il blog di Enrico Deleo. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant. Articoli su sviluppo web, DevOps, AI e molto altro.',
   twitterCard: 'summary_large_image'
+})
+
+// Canonical URL
+useHead({
+  link: [{
+    rel: 'canonical',
+    href: siteUrl
+  }]
 })
 
 // JSON-LD Structured Data for homepage

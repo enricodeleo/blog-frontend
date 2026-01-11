@@ -100,7 +100,6 @@ import { toJsonLd } from '~/utils/jsonld'
 const route = useRoute()
 const slug = String(route.params.slug)
 const path = `/${slug}`
-const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
 // Fetch post
 const { data: post } = await useAsyncData(
@@ -116,10 +115,10 @@ if (!post.value) {
 }
 
 // Format date
+const { formatDateLong } = useFormatDate()
 const dateLong = computed(() => {
   if (!post.value) return ''
-  const event = new Date(post.value.date)
-  return event.toLocaleDateString('it-IT', dateOptions)
+  return formatDateLong(post.value.date)
 })
 
 // Fetch related posts (deterministic for SSR/CSR)

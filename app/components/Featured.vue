@@ -32,7 +32,7 @@
 
           <!-- Meta -->
           <div class="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
-            <time :datetime="post.date">{{ formatDate(post.date) }}</time>
+            <time :datetime="post.date">{{ formatDateLong(post.date) }}</time>
           </div>
         </NuxtLink>
 
@@ -60,12 +60,7 @@ const props = defineProps({
   }
 })
 
-const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
-
-const formatDate = (date) => {
-  const event = new Date(date)
-  return event.toLocaleDateString('it-IT', dateOptions)
-}
+const { formatDateLong } = useFormatDate()
 
 const featuredPosts = computed(() => {
   if (!props.posts || props.posts.length === 0) {

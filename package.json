@@ -22,7 +22,6 @@
     "@nuxt/icon": "^2.2.0",
     "@vueuse/core": "^12.0.0",
     "@vueuse/nuxt": "^14.1.0",
-    "better-sqlite3": "^12.6.0",
     "nuxt": "^4.0.0"
   },
   "devDependencies": {
@@ -31,6 +30,7 @@
     "@nuxtjs/critters": "^0.9.0",
     "@tailwindcss/vite": "^4.1.18",
     "@vite-pwa/nuxt": "^0.10.2",
+    "better-sqlite3": "^12.6.0",
     "replace-in-files": "^3.0.0",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.7.2"
