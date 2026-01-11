@@ -91,6 +91,8 @@
 </template>
 
 <script setup>
+import { toJsonLd } from '~/utils/jsonld'
+
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
 // Format date
@@ -123,5 +125,65 @@ useSeoMeta({
   title: 'Il blog di Enrico Deleo',
   ogTitle: 'Il blog di Enrico Deleo',
   twitterCard: 'summary_large_image'
+})
+
+// JSON-LD Structured Data for homepage
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl as string
+
+const homepageJsonLd = computed(() => {
+  // Stable entity IDs (matching article page IDs)
+  const authorId = `${siteUrl}#/schema/person/enrico-deleo`
+  const publisherId = `${siteUrl}#/schema/org/lisergico`
+  const websiteId = `${siteUrl}#/schema/website`
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': websiteId,
+        url: siteUrl,
+        name: 'Lisergico',
+        description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant',
+        publisher: {
+          '@id': publisherId
+        },
+        inLanguage: 'it-IT'
+      },
+      {
+        '@type': 'Organization',
+        '@id': publisherId,
+        name: 'Lisergico',
+        url: siteUrl,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}/logo.png`
+        }
+      },
+      {
+        '@type': 'Person',
+        '@id': authorId,
+        name: 'Enrico Deleo',
+        url: 'https://enricodeleo.com',
+        email: 'hello@enricodeleo.com',
+        jobTitle: 'Fractional CTO & AI Solutions Architect',
+        worksFor: {
+          '@id': publisherId
+        }
+      }
+    ]
+  }
+
+  return toJsonLd(schema)
+})
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: homepageJsonLd.value
+    }
+  ]
 })
 </script>

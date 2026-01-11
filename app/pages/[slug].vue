@@ -95,6 +95,8 @@
 </template>
 
 <script setup>
+import { toJsonLd } from '~/utils/jsonld'
+
 const route = useRoute()
 const slug = String(route.params.slug)
 const path = `/${slug}`
@@ -154,37 +156,58 @@ const siteUrl = config.public.siteUrl as string
 const jsonLd = computed(() => {
   if (!post.value) return null
 
-  const schema = {
+  // Stable entity IDs
+  const authorId = `${siteUrl}#/schema/person/enrico-deleo`
+  const publisherId = `${siteUrl}#/schema/org/lisergico`
+  const postId = `${siteUrl}${post.value.path}#blogposting`
+
+  // Build schema with only valid values
+  const schema: Record<string, any> = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    '@id': postId,
     headline: post.value.title,
-    description: post.value.description,
-    image: post.value.coverImage ? `${post.value.coverImage}?w=1088&h=612&strip=all` : undefined,
     datePublished: post.value.date,
     dateModified: post.value.date,
     author: {
       '@type': 'Person',
+      '@id': authorId,
       name: 'Enrico Deleo',
-      email: 'hello@enricodeleo.com',
       url: 'https://enricodeleo.com'
     },
     publisher: {
       '@type': 'Organization',
+      '@id': publisherId,
       name: 'Lisergico',
-      url: siteUrl,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${siteUrl}/logo.png`
-      }
+      url: siteUrl
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${siteUrl}${post.value.path}`
-    },
-    keywords: post.value.tags?.join(', ') || '',
-    articleSection: post.value.categories?.[0] || '',
-    inLanguage: 'it-IT'
+    }
   }
+
+  // Add optional fields only if they have valid values
+  if (post.value.description) {
+    schema.description = post.value.description
+  }
+
+  if (post.value.coverImage) {
+    schema.image = post.value.coverImage.startsWith('http')
+      ? post.value.coverImage
+      : `${siteUrl}${post.value.coverImage}`
+  }
+
+  if (post.value.tags && post.value.tags.length > 0) {
+    schema.keywords = post.value.tags.join(', ')
+  }
+
+  if (post.value.categories && post.value.categories.length > 0) {
+    schema.articleSection = post.value.categories[0]
+  }
+
+  // Use BCP-47 language code
+  schema.inLanguage = 'it-IT'
 
   return toJsonLd(schema)
 })
