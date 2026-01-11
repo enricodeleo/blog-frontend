@@ -92,7 +92,6 @@
 </template>
 
 <script setup>
-import { toJsonLd } from '~/utils/jsonld'
 
 // Format date
 const { formatDateLong } = useFormatDate()
@@ -181,7 +180,7 @@ const homepageJsonLd = computed(() => {
     ]
   }
 
-  return toJsonLd(schema)
+  return schema
 })
 
 useHead({

@@ -75,6 +75,8 @@ export default defineNuxtConfig({
   content: {
     build: {
       markdown: {
+        // Disable anchor links on headings
+        anchorLinks: false,
         highlight: {
           theme: {
             default: 'github-light',
