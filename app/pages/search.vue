@@ -101,13 +101,15 @@ const loaded = computed(() => !pending.value)
 // Runtime config for canonical URL
 const config = useRuntimeConfig()
 const siteUrl = config.public.siteUrl
+const pageTitle = 'Cerca nel blog - Lisergico'
+const pageDescription = 'Cerca tra gli articoli del blog di Enrico Deleo. Trova tutorial, guide e approfondimenti su sviluppo web, DevOps, AI, architettura software e altro.'
 
 // SEO Meta
 useSeoMeta({
-  title: 'Cerca nel blog - Lisergico',
-  description: 'Cerca tra gli articoli del blog di Enrico Deleo. Trova tutorial, guide e approfondimenti su sviluppo web, DevOps, AI, architettura software e altro.',
-  ogTitle: 'Cerca nel blog - Lisergico',
-  ogDescription: 'Cerca tra gli articoli del blog di Enrico Deleo. Trova tutorial, guide e approfondimenti su sviluppo web, DevOps, AI, architettura software e altro.',
+  title: pageTitle,
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
   // Prevent indexing of search results
   robots: 'noindex, follow'
 })
@@ -119,4 +121,42 @@ useHead({
     href: `${siteUrl}/search`
   }]
 })
+
+const searchUrl = computed(() => {
+  if (!term.value) return `${siteUrl}/search`
+  return `${siteUrl}/search?term=${encodeURIComponent(term.value)}`
+})
+
+const searchJsonLd = computed(() => {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'SearchResultsPage',
+    '@id': `${searchUrl.value}#search`,
+    url: searchUrl.value,
+    name: term.value ? `Risultati per "${term.value}" - Lisergico` : pageTitle,
+    description: pageDescription,
+    isPartOf: { '@id': `${siteUrl}#/schema/website` },
+    inLanguage: 'it-IT'
+  }
+
+  if (posts.value && posts.value.length) {
+    schema.mainEntity = {
+      '@type': 'ItemList',
+      itemListElement: posts.value.map((post, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'BlogPosting',
+          '@id': `${siteUrl}${post.path}#blogposting`,
+          url: `${siteUrl}${post.path}`,
+          headline: post.title
+        }
+      }))
+    }
+  }
+
+  return schema
+})
+
+useJsonLd(searchJsonLd)
 </script>

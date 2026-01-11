@@ -36,6 +36,25 @@ useSeoMeta({
   robots: 'noindex, nofollow'
 })
 
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+
+const notFoundJsonLd = computed(() => {
+  const pageUrl = `${siteUrl}/404`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${pageUrl}#webpage`,
+    url: pageUrl,
+    name: '404 - Pagina non trovata',
+    description: 'Pagina non trovata sul blog di Enrico Deleo.',
+    isPartOf: { '@id': `${siteUrl}#/schema/website` },
+    inLanguage: 'it-IT'
+  }
+})
+
+useJsonLd(notFoundJsonLd)
+
 // Set proper 404 status code on server
 if (import.meta.server) {
   setResponseStatus(404)

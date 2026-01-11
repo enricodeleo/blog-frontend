@@ -63,4 +63,42 @@ useHead({
     href: () => `${siteUrl}/category/${category}`
   }]
 })
+
+const categoryJsonLd = computed(() => {
+  const pageUrl = `${siteUrl}/category/${category}`
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${pageUrl}#collection`,
+    url: pageUrl,
+    name: `Categoria: ${categoryDisplay.value} - Lisergico`,
+    description: `Esplora gli articoli nella categoria "${categoryDisplay.value}" del blog di Enrico Deleo. Scopri guide, tutorial e approfondimenti su ${categoryDisplay.value.toLowerCase()}.`,
+    isPartOf: { '@id': `${siteUrl}#/schema/website` },
+    inLanguage: 'it-IT',
+    about: {
+      '@type': 'Thing',
+      name: categoryDisplay.value
+    }
+  }
+
+  if (posts.value && posts.value.length) {
+    schema.mainEntity = {
+      '@type': 'ItemList',
+      itemListElement: posts.value.map((post, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'BlogPosting',
+          '@id': `${siteUrl}${post.path}#blogposting`,
+          url: `${siteUrl}${post.path}`,
+          headline: post.title
+        }
+      }))
+    }
+  }
+
+  return schema
+})
+
+useJsonLd(categoryJsonLd)
 </script>

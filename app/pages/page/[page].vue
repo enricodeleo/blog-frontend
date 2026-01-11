@@ -58,6 +58,7 @@ const hasMore = computed(() => {
 // Runtime config for canonical URL
 const config = useRuntimeConfig()
 const siteUrl = config.public.siteUrl
+const canonicalUrl = computed(() => page === 1 ? siteUrl : `${siteUrl}/page/${page}`)
 
 // SEO Meta
 useSeoMeta({
@@ -73,7 +74,40 @@ useSeoMeta({
 useHead({
   link: [{
     rel: 'canonical',
-    href: () => page === 1 ? siteUrl : `${siteUrl}/page/${page}`
+    href: () => canonicalUrl.value
   }]
 })
+
+const pageJsonLd = computed(() => {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${canonicalUrl.value}#collection`,
+    url: canonicalUrl.value,
+    name: `Pagina ${page} - Articoli del blog`,
+    description: `Sfoglia gli articoli del blog di Enrico Deleo - Pagina ${page}. Articoli su sviluppo web, DevOps, AI, architettura software e molto altro.`,
+    isPartOf: { '@id': `${siteUrl}#/schema/website` },
+    inLanguage: 'it-IT'
+  }
+
+  if (posts.value && posts.value.length) {
+    schema.mainEntity = {
+      '@type': 'ItemList',
+      itemListElement: posts.value.map((post, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'BlogPosting',
+          '@id': `${siteUrl}${post.path}#blogposting`,
+          url: `${siteUrl}${post.path}`,
+          headline: post.title
+        }
+      }))
+    }
+  }
+
+  return schema
+})
+
+useJsonLd(pageJsonLd)
 </script>

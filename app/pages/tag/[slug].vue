@@ -60,4 +60,42 @@ useHead({
     href: () => `${siteUrl}/tag/${tag}`
   }]
 })
+
+const tagJsonLd = computed(() => {
+  const pageUrl = `${siteUrl}/tag/${tag}`
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${pageUrl}#collection`,
+    url: pageUrl,
+    name: `Tag: #${tag} - Lisergico`,
+    description: `Scopri tutti gli articoli tagged con "${tag}" nel blog di Enrico Deleo. Approfondimenti, tutorial e risorse su ${tag}.`,
+    isPartOf: { '@id': `${siteUrl}#/schema/website` },
+    inLanguage: 'it-IT',
+    about: {
+      '@type': 'Thing',
+      name: tag
+    }
+  }
+
+  if (posts.value && posts.value.length) {
+    schema.mainEntity = {
+      '@type': 'ItemList',
+      itemListElement: posts.value.map((post, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'BlogPosting',
+          '@id': `${siteUrl}${post.path}#blogposting`,
+          url: `${siteUrl}${post.path}`,
+          headline: post.title
+        }
+      }))
+    }
+  }
+
+  return schema
+})
+
+useJsonLd(tagJsonLd)
 </script>

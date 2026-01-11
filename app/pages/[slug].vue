@@ -236,12 +236,5 @@ const jsonLd = computed(() => {
   return schema
 })
 
-useHead({
-  script: jsonLd.value ? [
-    {
-      type: 'application/ld+json',
-      children: jsonLd.value
-    }
-  ] : []
-})
+useJsonLd(jsonLd)
 </script>

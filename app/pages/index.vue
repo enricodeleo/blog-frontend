@@ -200,12 +200,5 @@ const homepageJsonLd = computed(() => {
   return schema
 })
 
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      children: homepageJsonLd.value
-    }
-  ]
-})
+useJsonLd(homepageJsonLd)
 </script>
