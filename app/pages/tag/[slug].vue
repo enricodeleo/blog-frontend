@@ -41,9 +41,11 @@ const { data: posts } = await useAsyncData(
 
 // SEO Meta
 useSeoMeta({
-  title: () => `Tag: #${tag}`,
-  description: () => `Sfoglia tutti gli articoli con tag "${tag}"`,
+  title: () => `Tag: #${tag} - Articoli del blog`,
+  description: () => `Scopri tutti gli articoli tagged con "${tag}" nel blog di Enrico Deleo. Approfondimenti, tutorial e risorse su ${tag}.`,
   ogTitle: () => `Tag: #${tag}`,
-  ogDescription: () => `Sfoglia tutti gli articoli con tag "${tag}"`
+  ogDescription: () => `Scopri tutti gli articoli tagged con "${tag}" nel blog di Enrico Deleo. Approfondimenti, tutorial e risorse su ${tag}.`,
+  // Prevent indexing of tag archives to avoid thin content
+  robots: 'noindex, follow'
 })
 </script>

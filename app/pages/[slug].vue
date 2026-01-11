@@ -138,6 +138,10 @@ const { data: related } = await useAsyncData(
   }
 )
 
+// Runtime config for SEO
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+
 // SEO Meta
 useSeoMeta({
   title: () => post.value?.title || '',
@@ -149,9 +153,17 @@ useSeoMeta({
   twitterCard: 'summary_large_image'
 })
 
+// Canonical URL
+useHead({
+  link: [
+    {
+      rel: 'canonical',
+      href: () => `${siteUrl}${post.value?.path || ''}`
+    }
+  ]
+})
+
 // JSON-LD Structured Data
-const config = useRuntimeConfig()
-const siteUrl = config.public.siteUrl
 
 const jsonLd = computed(() => {
   if (!post.value) return null

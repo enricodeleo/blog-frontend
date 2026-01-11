@@ -46,9 +46,9 @@ const { data: posts } = await useAsyncData(
 
 // SEO Meta
 useSeoMeta({
-  title: () => `Categoria: ${categoryDisplay.value}`,
-  description: () => `Sfoglia tutti gli articoli nella categoria "${categoryDisplay.value}"`,
+  title: () => `Categoria: ${categoryDisplay.value} - Articoli del blog`,
+  description: () => `Esplora gli articoli nella categoria "${categoryDisplay.value}" del blog di Enrico Deleo. Scopri guide, tutorial e approfondimenti su ${categoryDisplay.value.toLowerCase()}.`,
   ogTitle: () => `Categoria: ${categoryDisplay.value}`,
-  ogDescription: () => `Sfoglia tutti gli articoli nella categoria "${categoryDisplay.value}"`
+  ogDescription: () => `Esplora gli articoli nella categoria "${categoryDisplay.value}" del blog di Enrico Deleo. Scopri guide, tutorial e approfondimenti su ${categoryDisplay.value.toLowerCase()}.`
 })
 </script>

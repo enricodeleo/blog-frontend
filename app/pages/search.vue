@@ -100,9 +100,11 @@ const loaded = computed(() => !pending.value)
 
 // SEO Meta
 useSeoMeta({
-  title: 'Cerca un articolo',
-  description: 'Cerca tra gli articoli scritti da Enrico',
-  ogTitle: 'Cerca un articolo',
-  ogDescription: 'Cerca tra gli articoli scritti da Enrico'
+  title: 'Cerca nel blog - Lisergico',
+  description: 'Cerca tra gli articoli del blog di Enrico Deleo. Trova tutorial, guide e approfondimenti su sviluppo web, DevOps, AI, architettura software e altro.',
+  ogTitle: 'Cerca nel blog - Lisergico',
+  ogDescription: 'Cerca tra gli articoli del blog di Enrico Deleo. Trova tutorial, guide e approfondimenti su sviluppo web, DevOps, AI, architettura software e altro.',
+  // Prevent indexing of search results
+  robots: 'noindex, follow'
 })
 </script>
