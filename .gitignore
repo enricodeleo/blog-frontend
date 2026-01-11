@@ -93,4 +93,6 @@ sw.*
 # Nuxt Content database
 .data/
 static/robots.txt
+static/sitemap.xml
+static/feed.xml
 .output/

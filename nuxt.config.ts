@@ -16,6 +16,15 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  // Ensure NuxtLink doesn't add trailing slashes
+  experimental: {
+    defaults: {
+      nuxtLink: {
+        trailingSlash: 'remove'
+      }
+    }
+  },
+
   // CSS
   css: ['./app/assets/css/main.css'],
 
@@ -24,7 +33,8 @@ export default defineNuxtConfig({
     preset: 'static',
     trailingSlash: false,
     prerender: {
-      failOnError: false
+      failOnError: false,
+      autoSubfolderIndex: false
     }
   },
 
