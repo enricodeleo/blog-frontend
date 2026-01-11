@@ -53,7 +53,7 @@
         <button
           v-if="!chatLoaded"
           type="button"
-          class="fixed bottom-6 right-6 z-40 w-16 h-16 flex items-center justify-center bg-black rounded-full shadow-lg hover:bg-gray-900 transition-all duration-300 ease-out cursor-pointer"
+          class="fixed bottom-6 right-6 z-50 w-16 h-16 flex items-center justify-center bg-black rounded-full shadow-lg hover:bg-gray-900 transition-all duration-300 ease-out cursor-pointer"
           aria-label="Apri chat con AI"
           @click="loadChatWidget"
         >

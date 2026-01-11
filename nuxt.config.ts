@@ -89,15 +89,14 @@ export default defineNuxtConfig({
 
   // Nuxt Content configuration
   content: {
-    build: {
-      markdown: {
-        // Disable anchor links on headings
-        anchorLinks: false,
-        highlight: {
-          theme: {
-            default: 'github-light',
-            dark: 'github-dark'
-          }
+    renderer: {
+      anchorLinks: false
+    },
+    markdown: {
+      highlight: {
+        theme: {
+          default: 'github-light',
+          dark: 'github-dark'
         }
       }
     }
