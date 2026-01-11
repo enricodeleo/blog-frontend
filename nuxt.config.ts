@@ -50,7 +50,10 @@ export default defineNuxtConfig({
       tailwindcss()
     ],
     // Disable vite-plugin-checker to avoid vue-tsc dependency
-    checker: false
+    checker: false,
+    build: {
+      sourcemap: process.env.NODE_ENV !== 'production'
+    }
   },
 
   // Global page headers
