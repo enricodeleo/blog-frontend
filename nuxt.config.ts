@@ -124,6 +124,22 @@ export default defineNuxtConfig({
       // Force cache update
       cleanupOutdatedCaches: true,
       clientsClaim: true,
+      // Deduplicate precache entries to avoid conflicts
+      manifestTransforms: [
+        (entries) => {
+          const seen = new Map()
+          const unique = entries.filter((entry) => {
+            const url = entry.url
+            if (seen.has(url)) {
+              console.warn(`[PWA] Duplicate precache entry removed: ${url}`)
+              return false
+            }
+            seen.set(url, true)
+            return true
+          })
+          return { manifest: unique, warnings: [] }
+        }
+      ]
     },
   },
 
