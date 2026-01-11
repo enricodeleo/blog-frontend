@@ -22,6 +22,7 @@ export default defineNuxtConfig({
   // Nitro configuration
   nitro: {
     preset: 'static',
+    trailingSlash: false,
     prerender: {
       failOnError: false
     }

@@ -48,17 +48,12 @@
         </div>
       </Transition>
     </ClientOnly>
-
-    <PreferencesDialog
-      :is-open="showDialog"
-      @close="close"
-    />
   </div>
 </template>
 
 <script setup>
 const { prefs, acceptAll, rejectAll } = useConsentCookie()
-const { showDialog, open, close } = useCookiePreferencesDialog()
+const { open } = useCookiePreferencesDialog()
 const hasMounted = ref(false)
 
 onMounted(() => {

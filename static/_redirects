@@ -1,0 +1,9 @@
+# Remove trailing slashes (canonical URLs without trailing slash)
+/:splat/ /:splat 301
+
+# Feed redirects (old to new)
+/feed/ /feed.xml 301
+/rss/ /feed.xml 301
+
+# Fallback for 404
+/* /404.html 404

@@ -32,12 +32,19 @@
         </button>
       </Transition>
     </ClientOnly>
+
+    <ClientOnly>
+      <PreferencesDialog
+        :is-open="showDialog"
+        @close="close"
+      />
+    </ClientOnly>
   </div>
 </template>
 
 <script setup>
 const { prefs } = useConsentCookie()
-const { open } = useCookiePreferencesDialog()
+const { showDialog, open, close } = useCookiePreferencesDialog()
 const config = useRuntimeConfig()
 const googleAnalyticsId = config.public.googleAnalyticsId
 
