@@ -95,8 +95,6 @@
 </template>
 
 <script setup>
-import { toJsonLd } from '~/utils/jsonld'
-
 const route = useRoute()
 const slug = String(route.params.slug)
 const path = `/${slug}`
@@ -220,7 +218,7 @@ const jsonLd = computed(() => {
   // Use BCP-47 language code
   schema.inLanguage = 'it-IT'
 
-  return toJsonLd(schema)
+  return schema
 })
 
 useHead({
