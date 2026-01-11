@@ -67,7 +67,6 @@ export default defineNuxtConfig({
   // Modules
   modules: [
     '@nuxt/content',
-    '@nuxt/icon',
     '@nuxt/scripts',
     '@vueuse/nuxt',
     '@vite-pwa/nuxt',
