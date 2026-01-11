@@ -110,6 +110,9 @@ export default defineNuxtConfig({
       navigateFallbackDenylist: [
         /\/[^/?]+\.[^/?]+$/,
       ],
+      // Force cache update
+      cleanupOutdatedCaches: true,
+      clientsClaim: true,
     },
   },
 
