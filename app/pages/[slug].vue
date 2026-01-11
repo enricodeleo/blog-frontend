@@ -42,7 +42,13 @@
 
         <!-- Featured Image -->
         <figure v-if="post.coverImage" class="mb-8">
-          <img :src="post.coverImage + '?w=1088&h=612&strip=all'" :alt="post.title" class="rounded-lg w-full">
+          <img
+            :src="post.coverImage + '?w=1088&h=612&strip=all'"
+            :alt="post.title"
+            class="rounded-lg w-full"
+            loading="eager"
+            fetchpriority="high"
+          >
         </figure>
 
         <!-- Article Content -->

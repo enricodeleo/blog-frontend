@@ -56,7 +56,10 @@ export default defineNuxtConfig({
         { name: 'alternate', type: 'application/rss+xml', title: 'Lisergico &raquo; Feed', href: `${siteUrl}/feed.xml` }
       ],
       link: [
-        { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' }
+        { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
+        { rel: 'preconnect', href: 'https://enricodeleo.s3.eu-south-1.amazonaws.com' },
+        { rel: 'preconnect', href: 'https://lisergico.disqus.com' },
+        { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' }
       ]
     }
   },
