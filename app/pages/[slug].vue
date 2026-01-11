@@ -262,6 +262,7 @@ if (import.meta.client) {
   const disqusScript = useScript({
     src: scriptSrc,
     defer: true,
+    crossorigin: false,
     'data-timestamp': String(Date.now())
   }, {
     trigger: 'client',
