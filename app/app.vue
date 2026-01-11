@@ -39,6 +39,28 @@
         @close="close"
       />
     </ClientOnly>
+
+    <!-- AI Chat Button -->
+    <ClientOnly>
+      <Transition
+        enter-active-class="transition-all duration-300 ease-out"
+        enter-from-class="translate-y-10 opacity-0"
+        enter-to-class="translate-y-0 opacity-100"
+        leave-active-class="transition-all duration-200 ease-in"
+        leave-from-class="translate-y-0 opacity-100"
+        leave-to-class="translate-y-10 opacity-0"
+      >
+        <button
+          v-if="!chatLoaded"
+          type="button"
+          class="fixed bottom-6 right-6 z-40 w-16 h-16 flex items-center justify-center bg-black rounded-full shadow-lg hover:bg-gray-900 transition-all duration-300 ease-out cursor-pointer"
+          aria-label="Apri chat con AI"
+          @click="loadChatWidget"
+        >
+          <span class="text-2xl">💬</span>
+        </button>
+      </Transition>
+    </ClientOnly>
   </div>
 </template>
 
@@ -61,12 +83,38 @@ if (googleAnalyticsId) {
   })
 }
 
-// AI Chat Widget - always loads in body (essential functionality)
-useScript({
-  src: 'https://cdn.jsdelivr.net/gh/Autocust/ai-chat-widget@3.2.13/dist/chat-widget.min.js',
-  tagPosition: 'bodyClose',
-  defer: true,
-  'data-api-url': 'https://assistant.aisa.tractiontools.it',
-  'data-agent-id': 'f991cc4b-610b-4c57-bfca-6e1f8d9a1852'
-})
+// AI Chat Widget - load on demand and control via API
+const chatLoaded = ref(false)
+const chatScriptLoaded = ref(false)
+
+async function loadChatWidget() {
+  if (chatLoaded.value) {
+    // Already loaded, just open it
+    if (window.autocustChatWidget) {
+      window.autocustChatWidget.open()
+    }
+    return
+  }
+
+  chatLoaded.value = true
+
+  // Load the script
+  await useScript({
+    src: 'https://cdn.jsdelivr.net/gh/Autocust/ai-chat-widget@3.2.13/dist/chat-widget.min.js',
+    tagPosition: 'bodyClose',
+    defer: true,
+    'data-api-url': 'https://assistant.aisa.tractiontools.it',
+    'data-agent-id': 'f991cc4b-610b-4c57-bfca-6e1f8d9a1852'
+  })
+
+  chatScriptLoaded.value = true
+
+  // Wait for the API to be available, then open
+  const checkAPI = setInterval(() => {
+    if (window.autocustChatWidget) {
+      clearInterval(checkAPI)
+      window.autocustChatWidget.open()
+    }
+  }, 100)
+}
 </script>
