@@ -1,22 +1,20 @@
 <template>
   <div class="mt-12">
-    <ClientOnly>
-      <!-- Fallback message when cookies not accepted -->
-      <div v-if="!canShowDisqus" class="border-l-4 border-amber-600 px-6 py-4 bg-amber-50 dark:bg-amber-900/10">
-        <p class="text-sm text-[#3c4858] dark:text-[#F8FAFC]">
-          Per visualizzare i commenti è necessario accettare i cookie di terze parti.
-          <button
-            @click="openPreferences"
-            class="ml-2 underline decoration-dotted underline-offset-4 hover:text-amber-700 dark:hover:text-amber-400 transition-colors cursor-pointer"
-          >
-            Gestisci preferenze
-          </button>
-        </p>
-      </div>
+    <!-- Fallback message when cookies not accepted -->
+    <div v-if="!canShowDisqus" class="border-l-4 border-amber-600 px-6 py-4 bg-amber-50 dark:bg-amber-900/10">
+      <p class="text-sm text-[#3c4858] dark:text-[#F8FAFC]">
+        Per visualizzare i commenti è necessario accettare i cookie di terze parti.
+        <button
+          @click="openPreferences"
+          class="ml-2 underline decoration-dotted underline-offset-4 hover:text-amber-700 dark:hover:text-amber-400 transition-colors cursor-pointer"
+        >
+          Gestisci preferenze
+        </button>
+      </p>
+    </div>
 
-      <!-- Disqus thread (loaded only when consent given) -->
-      <div v-show="canShowDisqus" id="disqus_thread" />
-    </ClientOnly>
+    <!-- Disqus thread (loaded only when consent given) -->
+    <div v-show="canShowDisqus" id="disqus_thread" />
   </div>
 </template>
 

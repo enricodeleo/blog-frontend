@@ -95,11 +95,13 @@
       </div>
 
       <!-- Disqus Comments -->
-      <Disqus
-        :identifier="slug"
-        :url="fullUrl"
-        :title="post.title"
-      />
+      <ClientOnly>
+        <Disqus
+          :identifier="slug"
+          :url="fullUrl"
+          :title="post.title"
+        />
+      </ClientOnly>
     </div>
   </div>
 </template>
