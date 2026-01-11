@@ -4,8 +4,10 @@
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <div class="flex-shrink-0">
-          <NuxtLink to="/" class="text-xl md:text-2xl font-extrabold text-[#3c4858] dark:text-[#E5E7EB] hover:text-amber-700 dark:hover:text-amber-400 transition-colors">
-            Lisergico
+          <NuxtLink to="/" class="text-xl md:text-2xl font-extrabold leading-tight hover:scale-105 transition-transform duration-300">
+            <span class="bg-gradient-to-r from-purple-500 via-pink-400 to-yellow-400 bg-clip-text text-transparent dark:from-purple-400 dark:via-pink-300 dark:to-yellow-300 hover:from-purple-400 hover:via-pink-300 hover:to-yellow-300 dark:hover:from-purple-300 dark:hover:via-pink-200 dark:hover:to-yellow-200 bg-[length:200%_200%] animate-gradient">
+              Lisergico
+            </span>
           </NuxtLink>
         </div>
 
@@ -76,3 +78,18 @@
 <script setup>
 const mobileMenuOpen = ref(false)
 </script>
+
+<style>
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 3s ease infinite;
+}
+</style>
