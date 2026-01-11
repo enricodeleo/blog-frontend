@@ -4,12 +4,17 @@
       <!-- Cover Image -->
       <figure v-if="post.coverImage" class="mb-4">
         <img
-          :src="post.coverImage + '?resize=680,382&crop=0,0,680px,382px&strip=all'"
+          :src="post.coverImage + '?resize=650,366&crop=0,0,650px,366px&strip=all'"
+          :srcset="`
+            ${post.coverImage}?resize=400,225&crop=0,0,400px,225px&strip=all 400w,
+            ${post.coverImage}?resize=650,366&crop=0,0,650px,366px&strip=all 650w
+          `"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 650px"
           :alt="post.title"
           class="rounded-lg w-full object-cover"
           loading="lazy"
-          width="680"
-          height="382"
+          width="650"
+          height="366"
         >
       </figure>
 

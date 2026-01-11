@@ -28,6 +28,11 @@
             <figure v-if="post.coverImage" class="mb-4">
               <img
                 :src="post.coverImage + '?resize=800,450&crop=0,0,800px,450px&strip=all'"
+                :srcset="`
+                  ${post.coverImage}?resize=400,225&crop=0,0,400px,225px&strip=all 400w,
+                  ${post.coverImage}?resize=800,450&crop=0,0,800px,450px&strip=all 800w
+                `"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
                 :alt="post.title"
                 class="rounded-lg w-full object-cover h-48"
                 loading="eager"
