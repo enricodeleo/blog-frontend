@@ -56,7 +56,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const { prefs, acceptAll, rejectAll } = useConsentCookie()
 const { showDialog, open, close } = useCookiePreferencesDialog()
 const hasMounted = ref(false)

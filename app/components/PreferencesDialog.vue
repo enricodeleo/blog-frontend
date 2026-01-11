@@ -133,7 +133,7 @@
   </ClientOnly>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const props = defineProps({
   isOpen: {
     type: Boolean,
