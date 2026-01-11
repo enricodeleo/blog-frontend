@@ -57,9 +57,12 @@ const { open } = useCookiePreferencesDialog()
 const hasMounted = ref(false)
 
 onMounted(() => {
-  setTimeout(() => {
-    hasMounted.value = true
-  }, 500)
+  // Use double requestAnimationFrame to ensure banner shows after paint cycle
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      hasMounted.value = true
+    })
+  })
 })
 
 const showBanner = computed(() => !prefs.value.resolved && hasMounted.value)

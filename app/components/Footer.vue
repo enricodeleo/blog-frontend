@@ -105,7 +105,7 @@ import youtubeSvg from '~/assets/youtube.svg?raw'
 const currentYear = ref(new Date().getFullYear())
 
 const mode = useColorMode({
-  emitAuto: true,
+  emitAuto: false,
   modes: {
     dark: 'dark',
     light: '',
@@ -114,9 +114,11 @@ const mode = useColorMode({
 
 const { state, next } = useCycleList(['auto', 'light', 'dark'], { initialValue: mode })
 
-watchEffect(() => {
-  mode.value = state.value
-})
+watch(state, (newState) => {
+  if (import.meta.client) {
+    mode.value = newState
+  }
+}, { flush: 'post' })
 
 const resolvedMode = computed(() => (state.value === 'auto' ? mode.state.value : state.value))
 const stateLabel = computed(() => {

@@ -3,7 +3,9 @@
     "allow": [
       "mcp__web-reader__webReader",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "mcp__plugin_playwright_playwright__browser_run_code",
+      "mcp__plugin_playwright_playwright__browser_navigate"
     ]
   }
 }

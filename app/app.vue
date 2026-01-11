@@ -98,23 +98,20 @@ async function loadChatWidget() {
 
   chatLoaded.value = true
 
-  // Load the script
+  // Load the script with onload callback to avoid polling
   await useScript({
     src: 'https://cdn.jsdelivr.net/gh/Autocust/ai-chat-widget@3.2.13/dist/chat-widget.min.js',
     tagPosition: 'bodyClose',
     defer: true,
     'data-api-url': 'https://assistant.aisa.tractiontools.it',
-    'data-agent-id': 'f991cc4b-610b-4c57-bfca-6e1f8d9a1852'
-  })
-
-  chatScriptLoaded.value = true
-
-  // Wait for the API to be available, then open
-  const checkAPI = setInterval(() => {
-    if (window.autocustChatWidget) {
-      clearInterval(checkAPI)
-      window.autocustChatWidget.open()
+    'data-agent-id': 'f991cc4b-610b-4c57-bfca-6e1f8d9a1852',
+    onload: () => {
+      chatScriptLoaded.value = true
+      // Open immediately when script loads
+      if (window.autocustChatWidget) {
+        window.autocustChatWidget.open()
+      }
     }
-  }, 100)
+  })
 }
 </script>
