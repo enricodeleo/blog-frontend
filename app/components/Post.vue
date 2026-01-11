@@ -3,19 +3,29 @@
     <NuxtLink :to="post.path" :title="post.title" class="block">
       <!-- Cover Image -->
       <figure v-if="post.coverImage" class="mb-4">
-        <img
-          :src="post.coverImage + '?resize=650,366&crop=0,0,650px,366px&strip=all'"
-          :srcset="`
-            ${post.coverImage}?resize=400,225&crop=0,0,400px,225px&strip=all 400w,
-            ${post.coverImage}?resize=650,366&crop=0,0,650px,366px&strip=all 650w
-          `"
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 650px"
-          :alt="post.title"
-          class="rounded-lg w-full object-cover"
-          loading="lazy"
-          width="650"
-          height="366"
-        >
+        <picture>
+          <source
+            :srcset="`
+              ${post.coverImage}?resize=400,225&crop=0,0,400px,225px&strip=all&quality=80&format=webp 400w,
+              ${post.coverImage}?resize=650,366&crop=0,0,650px,366px&strip=all&quality=80&format=webp 650w
+            `"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 650px"
+            type="image/webp"
+          >
+          <img
+            :src="post.coverImage + '?resize=650,366&crop=0,0,650px,366px&strip=all&quality=80'"
+            :srcset="`
+              ${post.coverImage}?resize=400,225&crop=0,0,400px,225px&strip=all&quality=80 400w,
+              ${post.coverImage}?resize=650,366&crop=0,0,650px,366px&strip=all&quality=80 650w
+            `"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 650px"
+            :alt="post.title"
+            class="rounded-lg w-full object-cover"
+            loading="lazy"
+            width="650"
+            height="366"
+          >
+        </picture>
       </figure>
 
       <!-- Title -->

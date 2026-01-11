@@ -1,5 +1,5 @@
 <template>
-  <div class="relative py-8 max-w-prose mx-auto">
+  <div class="relative max-w-prose mx-auto">
     <div v-if="post">
       <!-- Breadcrumb -->
       <nav class="mb-6 text-sm" aria-label="Breadcrumb">
@@ -10,7 +10,7 @@
             </NuxtLink>
           </li>
           <li class="text-gray-400 dark:text-gray-500">/</li>
-          <li class="text-[#3c4858] dark:text-[#F8FAFC] font-medium">{{ post.title }}</li>
+          <li class="text-[#3c4858] dark:text-[#F8FAFC] font-medium truncate">{{ post.title }}</li>
         </ol>
       </nav>
 
