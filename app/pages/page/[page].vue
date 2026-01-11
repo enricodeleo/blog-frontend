@@ -57,9 +57,9 @@ const hasMore = computed(() => {
 
 // SEO Meta
 useSeoMeta({
-  title: `Pagina ${page} - Tutti gli articoli`,
-  description: 'Sfoglia tutti gli articoli del blog di Enrico',
-  ogTitle: `Pagina ${page} - Tutti gli articoli`,
-  ogDescription: 'Sfoglia tutti gli articoli del blog di Enrico'
+  title: `Pagina ${page} - Articoli del blog`,
+  description: `Sfoglia gli articoli del blog di Enrico Deleo - Pagina ${page}. Articoli su sviluppo web, DevOps, AI, architettura software e molto altro.`,
+  ogTitle: `Pagina ${page} - Articoli del blog`,
+  ogDescription: `Sfoglia gli articoli del blog di Enrico Deleo - Pagina ${page}. Articoli su sviluppo web, DevOps, AI, architettura software e molto altro.`
 })
 </script>

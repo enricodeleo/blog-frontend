@@ -1,0 +1,27 @@
+/* TEAM */
+
+  Founder: Enrico Deleo
+  Role: Fractional CTO & AI Solutions Architect
+  Contact: hello@enricodeleo.com
+  Twitter: @enricodeleo
+  From: Italy
+
+/* SITE */
+
+  Name: Lisergico
+  URL: https://enricodeleo.com
+  Launched: 2010
+  Description: Il blog di Enrico Deleo. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant
+  Technologies: Nuxt 4, Vue 3, Tailwind CSS v4, Nitro
+
+/* SOCIAL */
+
+  GitHub: https://github.com/enricodeleo
+  LinkedIn: https://linkedin.com/in/enricodeleo
+  Twitter: https://twitter.com/enricodeleo
+
+/* ACKNOWLEDGMENTS */
+
+  Built with Nuxt 4 - https://nuxt.com
+  Styled with Tailwind CSS v4 - https://tailwindcss.com
+  Content management with @nuxt/content - https://content.nuxt.com

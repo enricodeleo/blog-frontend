@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   // CSS
   css: ['./app/assets/css/main.css'],
 
-  // Nuxt 4 uses Nitro for static generation
+  // Nitro configuration
   nitro: {
     preset: 'static',
     prerender: {
@@ -45,6 +45,9 @@ export default defineNuxtConfig({
   // Global page headers
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'it'
+      },
       title: 'Lisergico',
       meta: [
         { charset: 'utf-8' },
@@ -82,21 +85,28 @@ export default defineNuxtConfig({
     }
   },
 
-  // PWA Configuration (disabled for now - will implement later)
+  // PWA configuration with @vite-pwa/nuxt
   pwa: {
     registerType: 'autoUpdate',
     includeAssets: ['*.jpg', '*.svg'],
     manifest: {
-      name: 'Lisergico',
+      name: 'Lisergico - Il blog di Enrico Deleo',
       short_name: 'Lisergico',
-      theme_color: '#6366f1',
+      description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant',
+      theme_color: '#ffffff',
       background_color: '#ffffff',
       display: 'standalone',
-      lang: 'it'
+      lang: 'it',
+      icons: [
+        { src: '/icon.png', sizes: '192x192', type: 'image/png' },
+      ],
     },
     workbox: {
-      globPatterns: ['**/*.{js,css,html,png,jpg,svg,woff2}']
-    }
+      globPatterns: ['**/*.{js,css,html,png,jpg,svg,woff2}'],
+      navigateFallbackDenylist: [
+        /\/[^/?]+\.[^/?]+$/,
+      ],
+    },
   },
 
   // Runtime config
@@ -114,11 +124,38 @@ export default defineNuxtConfig({
     }
   },
 
-  // Nitro configuration
-  nitro: {
-    preset: 'static',
-    prerender: {
-      failOnError: false
+  // Route rules for headers and caching
+  routeRules: {
+    // Static assets - long cache
+    '/**/*.{js,css,png,jpg,jpeg,gif,svg,ico,woff,woff2}': {
+      headers: {
+        'Cache-Control': 'public, max-age=31536000, immutable'
+      }
+    },
+    // Feed and sitemap - short cache
+    '/feed.xml': {
+      headers: {
+        'Content-Type': 'application/xml; charset=utf-8',
+        'Cache-Control': 'public, max-age=3600'
+      }
+    },
+    '/sitemap.xml': {
+      headers: {
+        'Content-Type': 'application/xml; charset=utf-8',
+        'Cache-Control': 'public, max-age=3600'
+      }
+    },
+    '/robots.txt': {
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'public, max-age=86400'
+      }
+    },
+    // HTML pages - no cache for fresh content
+    '/**': {
+      headers: {
+        'Cache-Control': 'public, max-age=0, must-revalidate'
+      }
     }
   }
 })

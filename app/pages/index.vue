@@ -19,8 +19,8 @@
 
       <div class="grid grid-cols-1 gap-6">
         <article
-          v-for="post in featured"
-          :key="post.path"
+          v-for="(post, index) in featured"
+          :key="`${post.path}-${index}`"
           class="border border-[#c0ccda] dark:border-gray-700 rounded-lg p-6 hover:border-amber-700 dark:hover:border-amber-400 transition-colors"
         >
           <NuxtLink :to="post.path" class="block">
@@ -30,7 +30,8 @@
                 :src="post.coverImage + '?resize=800,450&crop=0,0,800px,450px&strip=all'"
                 :alt="post.title"
                 class="rounded-lg w-full object-cover h-48"
-                loading="lazy"
+                :loading="index === 0 ? 'eager' : 'lazy'"
+                :fetchpriority="index === 0 ? 'high' : 'auto'"
               >
             </figure>
 
@@ -123,7 +124,9 @@ const { data: posts } = await useAsyncData(
 // SEO Meta
 useSeoMeta({
   title: 'Il blog di Enrico Deleo',
+  description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant. Articoli su sviluppo web, DevOps, AI e molto altro.',
   ogTitle: 'Il blog di Enrico Deleo',
+  ogDescription: 'Il blog di Enrico Deleo. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant. Articoli su sviluppo web, DevOps, AI e molto altro.',
   twitterCard: 'summary_large_image'
 })
 
