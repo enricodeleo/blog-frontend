@@ -81,7 +81,7 @@
             Sullo stesso argomento
           </h2>
         </div>
-        <div class="space-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Post v-for="article in related" :key="article.path" :post="article" />
         </div>
       </div>
