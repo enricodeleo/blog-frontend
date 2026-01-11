@@ -95,9 +95,11 @@
       </div>
 
       <!-- Disqus Comments -->
-      <ClientOnly>
-        <div id="disqus_thread" class="mt-12" />
-      </ClientOnly>
+      <Disqus
+        :identifier="slug"
+        :url="fullUrl"
+        :title="post.title"
+      />
     </div>
   </div>
 </template>
@@ -146,6 +148,9 @@ const { data: related } = await useAsyncData(
 // Runtime config for SEO
 const config = useRuntimeConfig()
 const siteUrl = config.public.siteUrl
+
+// Full URL for Disqus
+const fullUrl = computed(() => `${siteUrl}${post.value?.path || ''}`)
 
 // SEO Meta
 useSeoMeta({
@@ -237,47 +242,4 @@ useHead({
     }
   ] : []
 })
-
-// Load Disqus using @nuxt/scripts
-if (import.meta.client) {
-  const shortname = 'lisergico'
-  const scriptSrc = `https://${shortname}.disqus.com/embed.js`
-
-  const setDisqusConfig = () => {
-    window.disqus_config = function () {
-      this.page.url = window.location.href
-      this.page.identifier = window.location.pathname
-    }
-  }
-
-  const resetDisqus = () => {
-    if (window.DISQUS) {
-      window.DISQUS.reset({
-        reload: true,
-        config: window.disqus_config
-      })
-    }
-  }
-
-  const disqusScript = useScript({
-    src: scriptSrc,
-    defer: true,
-    crossorigin: false,
-    'data-timestamp': String(Date.now())
-  }, {
-    trigger: 'client',
-    beforeInit: () => {
-      setDisqusConfig()
-    }
-  })
-
-  disqusScript.onLoaded(() => {
-    resetDisqus()
-  })
-
-  watch(() => route.fullPath, () => {
-    setDisqusConfig()
-    resetDisqus()
-  })
-}
 </script>
