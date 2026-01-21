@@ -159,21 +159,5 @@ export default defineNuxtConfig({
     config: {
       preload: 'swap'
     }
-  },
-
-  // Route rules for headers and caching
-  routeRules: {
-    // Static assets - long cache
-    '/**/*.{js,css,png,jpg,jpeg,gif,svg,ico,woff,woff2}': {
-      headers: {
-        'Cache-Control': 'public, max-age=31536000, immutable'
-      }
-    },
-    // HTML pages - no cache for fresh content
-    '/**': {
-      headers: {
-        'Cache-Control': 'public, max-age=0, must-revalidate'
-      }
-    }
   }
 })
