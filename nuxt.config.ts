@@ -169,25 +169,6 @@ export default defineNuxtConfig({
         'Cache-Control': 'public, max-age=31536000, immutable'
       }
     },
-    // Feed and sitemap - short cache
-    '/feed.xml': {
-      headers: {
-        'Content-Type': 'application/xml; charset=utf-8',
-        'Cache-Control': 'public, max-age=3600'
-      }
-    },
-    '/sitemap.xml': {
-      headers: {
-        'Content-Type': 'application/xml; charset=utf-8',
-        'Cache-Control': 'public, max-age=3600'
-      }
-    },
-    '/robots.txt': {
-      headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
-        'Cache-Control': 'public, max-age=86400'
-      }
-    },
     // HTML pages - no cache for fresh content
     '/**': {
       headers: {
