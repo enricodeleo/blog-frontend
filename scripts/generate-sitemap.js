@@ -100,6 +100,6 @@ ${urls}
 
 // Generate and write sitemap.xml
 const sitemap = generateSitemap(posts)
-const outputPath = join(process.cwd(), 'static/sitemap.xml')
+const outputPath = join(process.cwd(), '.output/public/sitemap.xml')
 writeFileSync(outputPath, sitemap, 'utf-8')
 console.log(`✓ Generated sitemap.xml with ${posts.length} posts`)

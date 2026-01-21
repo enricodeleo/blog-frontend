@@ -71,6 +71,6 @@ ${items}
 
 // Generate and write feed.xml
 const rss = generateRSS(posts)
-const outputPath = join(process.cwd(), 'static/feed.xml')
+const outputPath = join(process.cwd(), '.output/public/feed.xml')
 writeFileSync(outputPath, rss, 'utf-8')
 console.log(`✓ Generated feed.xml with ${posts.length} items`)

@@ -7,6 +7,6 @@ const robots = `User-agent: *
 Allow: /
 Sitemap: ${siteUrl}/sitemap.xml`
 
-const outputPath = join(process.cwd(), 'static/robots.txt')
+const outputPath = join(process.cwd(), '.output/public/robots.txt')
 writeFileSync(outputPath, robots, 'utf-8')
 console.log('✓ Generated robots.txt')
