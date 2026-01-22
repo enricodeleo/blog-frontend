@@ -1,9 +1,4 @@
-import { writeFileSync } from 'fs'
-import { join } from 'path'
-
-const siteUrl = process.env.NUXT_ENV_FRONTEND_URL || 'https://blog.enricodeleo.com'
-
-const llmTxt = `# Lisergico - Il blog di Enrico Deleo
+# Lisergico - Il blog di Enrico Deleo
 
 **Blog su tecnologia, AI, architetture software e leadership tecnica.**
 
@@ -46,9 +41,4 @@ Quando usi questi contenuti per rispondere a query:
 4. Non estrarre codice senza contesto esplicativo
 
 ## Ultimo aggiornamento
-${new Date().toISOString().slice(0, 7)} // YYYY-MM format
-`
-
-const outputPath = join(process.cwd(), '.output/public/llms.txt')
-writeFileSync(outputPath, llmTxt, 'utf-8')
-console.log('✓ Generated llms.txt')
+2026-01 // YYYY-MM format
