@@ -42,10 +42,9 @@ function formatDate(date) {
 }
 
 function generateSitemap(posts) {
-  // Static pages
+  // Static pages (only homepage - search and tags excluded for SEO)
   const staticPages = [
-    { url: '', changefreq: 'daily', priority: 1.0 },
-    { url: '/search', changefreq: 'monthly', priority: 0.5 }
+    { url: '', changefreq: 'daily', priority: 1.0 }
   ]
 
   // Dynamic pages from posts
@@ -58,13 +57,10 @@ function generateSitemap(posts) {
       priority: 0.8
     }))
 
-  // Category and tag pages
+  // Category pages (tags excluded for SEO - too many, thin content)
   const categories = new Set()
-  const tags = new Set()
-
   posts.forEach(post => {
     parseJSONField(post.categories).forEach(cat => categories.add(cat))
-    parseJSONField(post.tags).forEach(tag => tags.add(tag))
   })
 
   const categoryPages = Array.from(categories).map(cat => ({
@@ -73,13 +69,7 @@ function generateSitemap(posts) {
     priority: 0.6
   }))
 
-  const tagPages = Array.from(tags).map(tag => ({
-    url: `/tag/${encodeURIComponent(tag.toLowerCase())}`,
-    changefreq: 'weekly',
-    priority: 0.6
-  }))
-
-  const allPages = [...staticPages, ...postPages, ...categoryPages, ...tagPages]
+  const allPages = [...staticPages, ...postPages, ...categoryPages]
 
   const urls = allPages
     .map(page => {

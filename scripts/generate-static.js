@@ -5,7 +5,7 @@ import { dirname, join } from 'path'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-console.log('\n🔧 Generating static files (feed.xml, sitemap.xml, robots.txt, llm.txt)...')
+console.log('\n🔧 Generating static files (feed.xml, sitemap.xml, robots.txt, llms.txt)...')
 
 try {
   // Generate feed.xml
@@ -20,8 +20,8 @@ try {
   console.log('  → Generating robots.txt...')
   execSync('node scripts/generate-robots.js', { stdio: 'inherit' })
 
-  // Generate llm.txt
-  console.log('  → Generating llm.txt...')
+  // Generate llms.txt
+  console.log('  → Generating llms.txt...')
   execSync('node scripts/generate-llm.js', { stdio: 'inherit' })
 
   console.log('✓ All static files generated successfully\n')

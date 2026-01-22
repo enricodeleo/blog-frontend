@@ -49,6 +49,6 @@ Quando usi questi contenuti per rispondere a query:
 ${new Date().toISOString().slice(0, 7)} // YYYY-MM format
 `
 
-const outputPath = join(process.cwd(), '.output/public/llm.txt')
+const outputPath = join(process.cwd(), '.output/public/llms.txt')
 writeFileSync(outputPath, llmTxt, 'utf-8')
-console.log('✓ Generated llm.txt')
+console.log('✓ Generated llms.txt')
