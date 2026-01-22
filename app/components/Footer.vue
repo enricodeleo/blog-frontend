@@ -91,6 +91,8 @@
 </template>
 
 <script setup>
+import { useColorMode, useCycleList } from '@vueuse/core'
+
 import behanceSvg from '~/assets/behance.svg?raw'
 import bloggingSvg from '~/assets/blogging.svg?raw'
 import dividerShapeSvg from '~/assets/divider-shape.svg?raw'

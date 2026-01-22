@@ -82,7 +82,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/scripts',
-    '@vueuse/nuxt',
     '@vite-pwa/nuxt',
     '@nuxtjs/critters'
   ],
