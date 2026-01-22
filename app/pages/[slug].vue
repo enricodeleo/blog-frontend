@@ -28,6 +28,7 @@
               v-for="(category, index) in post.categories"
               :key="index"
               :to="`/category/${category}`"
+              :prefetch="false"
               class="text-sm text-[#3c4858] dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors"
             >
               {{ category.replace('-', ' ') }}
@@ -64,6 +65,7 @@
           <span v-for="(category, index) in (post.categories || [])" :key="index">
             <NuxtLink
               :to="`/category/${category}`"
+              :prefetch="false"
               class="underline decoration-dotted underline-offset-4 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
             >
               {{ category.replace('-', ' ') }}
@@ -75,6 +77,7 @@
             v-for="(tag, index) in post.tags"
             :key="index"
             :to="`/tag/${tag}`"
+            :prefetch="false"
             class="text-sm text-[#3c4858] dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors"
           >
             #{{ tag }}
