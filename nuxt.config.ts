@@ -82,7 +82,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/scripts',
-    '@vite-pwa/nuxt',
     '@nuxtjs/critters'
   ],
 
@@ -99,50 +98,6 @@ export default defineNuxtConfig({
         }
       }
     }
-  },
-
-  // PWA configuration with @vite-pwa/nuxt
-  pwa: {
-    registerType: 'autoUpdate',
-    includeAssets: ['*.jpg', '*.svg'],
-    manifest: {
-      name: 'Lisergico - Il blog di Enrico Deleo',
-      short_name: 'Lisergico',
-      description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant',
-      theme_color: '#ffffff',
-      background_color: '#ffffff',
-      display: 'standalone',
-      lang: 'it',
-      icons: [
-        { src: '/icon.png', sizes: '192x192', type: 'image/png' },
-      ],
-    },
-    workbox: {
-      globPatterns: ['**/*.{js,css,html,png,jpg,svg,woff2}'],
-      navigateFallbackDenylist: [
-        /^\/$/,  // Exclude root path from navigation fallback
-        /\/[^/?]+\.[^/?]+$/,  // Exclude files with extensions
-      ],
-      // Force cache update
-      cleanupOutdatedCaches: true,
-      clientsClaim: true,
-      // Deduplicate precache entries to avoid conflicts
-      manifestTransforms: [
-        (entries) => {
-          const seen = new Map()
-          const unique = entries.filter((entry) => {
-            const url = entry.url
-            if (seen.has(url)) {
-              console.warn(`[PWA] Duplicate precache entry removed: ${url}`)
-              return false
-            }
-            seen.set(url, true)
-            return true
-          })
-          return { manifest: unique, warnings: [] }
-        }
-      ]
-    },
   },
 
   // Runtime config

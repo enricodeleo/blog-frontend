@@ -27,7 +27,6 @@
     "@nuxt/scripts": "^0.13.2",
     "@nuxtjs/critters": "^0.9.0",
     "@tailwindcss/vite": "^4.1.18",
-    "@vite-pwa/nuxt": "^0.10.2",
     "better-sqlite3": "^12.6.0",
     "replace-in-files": "^3.0.0",
     "tailwindcss": "^4.0.0",
