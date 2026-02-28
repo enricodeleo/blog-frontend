@@ -22,6 +22,7 @@
 
 ## Brand, UI, and Content Guidelines
 - Voice: confident, pragmatic, Italian-first; include "Fractional CTO & AI Solutions Architect" and "AI pragmatica che accelera business e prodotti".
+- Blog writing guide: follow `docs/blog-style-guide.md` (2023+ core with early-years spark).
 - Layout: single-column, content-first; `max-w-prose`, `leading-relaxed`, `px-5` / `md:px-12`, logo area `p-12` with inline SVG `fill-current`.
 - Typography/colors: Tailwind sans stack; follow Brand Manual sizes and palette (hex neutrals, amber accents, `blue-500` focus, social hovers).
 - Components: newsletter card, callout border, cookie banner + prefs modal, footer with social icons and theme toggle; subtle motion and a11y (`aria-*`, skip link, focus rings).

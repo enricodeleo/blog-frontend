@@ -1,5 +1,9 @@
 # lisergico
 
+## Documentation
+
+- Blogging style guide: [docs/blog-style-guide.md](docs/blog-style-guide.md)
+
 ## Build Setup
 
 ```bash
