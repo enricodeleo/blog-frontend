@@ -31,7 +31,7 @@ This is a **Nuxt 4 static site** blog using **@nuxt/content** for markdown-based
 ### Design Philosophy
 
 **Minimal & Professional** - Clean, typography-focused design inspired by personal-landing style:
-- **Component-light** - Prefer pure Tailwind CSS v4 utilities; DaisyUI 5 only when components help
+- **Component-light** - Prefer pure Tailwind CSS v4 utilities
 - **Focus on readability** - max-w-prose (65ch) for content
 - **Subtle amber accents** - Used sparingly for borders and hover states
 - **Clean typography** - Font-extrabold headings, text-lg body
@@ -74,7 +74,6 @@ blog-frontend/
 ├── static/                   # Public assets (publicDir)
 ├── nuxt.config.ts            # Nuxt 4 configuration
 ├── package.json              # Dependencies
-├── tailwind.config.js        # Legacy (not used, v4 uses CSS)
 └── CLAUDE.md                 # This file
 ```
 
@@ -87,14 +86,16 @@ blog-frontend/
 
 **Styling:**
 - **Tailwind CSS v4** - Via @tailwindcss/vite plugin with CSS-first configuration
-- **DaisyUI 5** - Used sparingly when components help, but prefer pure Tailwind utilities
-- **Custom dark mode** - Using `.dark` class with @custom-variant and `useColorMode` from `@vueuse/nuxt`
+- **Custom dark mode** - Using `.dark` class with @custom-variant and `useColorMode` from `@vueuse/core`
 
 **Key Modules:**
 - **@nuxt/content** - Markdown-based content management
-- **@nuxt/icon** - Icon components (MDI, etc.)
 - **@nuxt/scripts** - Third-party script management (Disqus)
-- **@vite-pwa/nuxt** - PWA support (minimal config, to be implemented later)
+- **@nuxtjs/critters** - Critical CSS inlining
+
+**Key Dependencies:**
+- **@vueuse/core** - Composables including `useColorMode` for dark mode
+- **better-sqlite3** - Required by @nuxt/content for local database queries
 
 ### Brand Guidelines
 
@@ -235,7 +236,7 @@ sticky: true  # Optional: for homepage featured posts
 **Removed Features**:
 - Facebook Pixel (completely removed)
 - iubenda privacy scripts (completely removed)
-- @nuxtjs/color-mode (replaced with `useColorMode` from @vueuse/nuxt)
+- @nuxtjs/color-mode (replaced with `useColorMode` from @vueuse/core)
 
 ### Development Notes
 
@@ -279,7 +280,7 @@ const readingTimeMinutes = computed(() => {
 
 **Dark Mode**:
 - Uses custom variant: `@custom-variant dark (&:where(.dark, .dark *))`
-- Uses `useColorMode` from `@vueuse/nuxt` for state management
+- Uses `useColorMode` from `@vueuse/core` for state management
 - Dark background: `bg-[#0F172A]`
 - Toggles .dark class on html element
 - All colors have dark mode variants
@@ -315,7 +316,7 @@ nitro: {
 - Use `<script setup>` syntax for all components
 - Use `queryCollection` and `queryCollectionSearchSections` for content (Nuxt Content v3)
 - Use `<ContentRenderer>` for rendering markdown
-- Use `useColorMode` from `@vueuse/nuxt` for dark mode
+- Use `useColorMode` from `@vueuse/core` for dark mode
 - Use ClientOnly for client-side only features
 - Use max-w-prose for content readability
 - Use amber-600 border accents sparingly
@@ -330,7 +331,7 @@ nitro: {
 - Use `asyncData` (Nuxt 2 pattern, use `useAsyncData` instead)
 - Use TypeScript in components (user prefers JavaScript)
 - Commit changes (user handles all git operations manually)
-- Overuse DaisyUI components (prefer pure Tailwind utilities)
+- Overuse component libraries (prefer pure Tailwind utilities)
 - Use gradients or shadows
 - Use indigo/pink color scheme (old design)
 
@@ -505,8 +506,9 @@ This blog matches the **personal-landing** design system:
 - `Footer.vue` - Social icons, theme toggle, minimal layout
 - `Post.vue` - Article listing with minimal borders
 - `Featured.vue` - Featured posts with amber accent header
-- Newsletter card component (for email capture)
-- Cookie banner + preferences modal (for consent management)
+- `Disqus.vue` - Disqus comment integration
+- `CookieBanner.vue` - Cookie consent banner
+- `PreferencesDialog.vue` - Cookie preferences modal
 - Callout border pattern (`border-l-4 border-amber-600`)
 
 **Layout Guidelines**:
