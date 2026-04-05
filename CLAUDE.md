@@ -5,23 +5,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Common Development Commands
 
 ```bash
-# Install dependencies (uses npm as package manager)
-npm install
+# Install dependencies (uses bun as package manager)
+bun install
 
 # Development server with hot reload at localhost:3000
-npm run dev
+bun run dev
 
 # Type checking (optional, disabled by default)
-npm run typecheck
+bun run typecheck
 
 # Build for production (static site generation)
-npm run build
+bun run build
 
 # Generate static site with CDN replacement
-npm run generate
+bun run generate
 
 # Preview production build
-npm run preview
+bun run preview
 ```
 
 ## Architecture Overview
@@ -288,8 +288,8 @@ const readingTimeMinutes = computed(() => {
 ### Build Process
 
 **Static Site Generation**:
-1. `npm run build` runs Nitro static preset
-2. `npm run generate` runs build + CDN replacement script
+1. `bun run build` runs Nitro static preset
+2. `bun run generate` runs build + CDN replacement script
 3. Generates static HTML in `.output/public/`
 
 **Nitro Configuration**:
@@ -321,7 +321,7 @@ nitro: {
 - Use max-w-prose for content readability
 - Use amber-600 border accents sparingly
 - Use dotted underlines for links: `decoration-dotted underline-offset-4`
-- Use npm (not yarn)
+- Use bun (not npm or yarn)
 - Use Conventional Commits: `feat:`, `fix:`, `chore:`, `refactor:`
 
 **DON'T**:
@@ -355,8 +355,8 @@ nitro: {
 
 **Pre-commit checks**:
 ```bash
-npm run lint      # Lint code
-npm run typecheck # Type checking (optional)
+bun run lint      # Lint code
+bun run typecheck # Type checking (optional)
 ```
 
 ### Conventional Commits

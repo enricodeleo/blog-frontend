@@ -12,12 +12,13 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
-    "generate": "nuxt generate && node scripts/generate-static.js && node scripts/replace-cdn.cjs",
-    "generate:static": "node scripts/generate-static.js",
+    "generate": "nuxt generate && bun run scripts/generate-static.js && bun run scripts/replace-cdn.cjs",
+    "generate:static": "bun run scripts/generate-static.js",
     "preview": "nuxt preview",
     "lint": "eslint .",
     "typecheck": "nuxt typecheck"
   },
+  "packageManager": "bun@1.3.10",
   "dependencies": {
     "@vueuse/core": "^12.0.0",
     "nuxt": "^4.0.0"
