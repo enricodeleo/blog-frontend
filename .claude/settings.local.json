@@ -9,7 +9,19 @@
       "Bash(test:*)",
       "Bash(sqlite3:*)",
       "mcp__plugin_playwright_playwright__browser_network_requests",
-      "mcp__plugin_playwright_playwright__browser_evaluate"
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} %{redirect_url} %{size_download}\" \"https://blog.enricodeleo.com/come-scegliere-un-cto-per-una-startup/\")",
+      "Bash(curl -sI \"https://blog.enricodeleo.com/category/design/\")",
+      "Bash(curl -sI \"https://blog.enricodeleo.com/come-scegliere-un-cto-per-una-startup\")",
+      "Bash(curl -sI \"https://blog.enricodeleo.com/questo-mondo-non-ci-rendera-cattivi\")",
+      "Bash(curl -s \"https://blog.enricodeleo.com/come-scegliere-un-cto-per-una-startup\")",
+      "Bash(curl -s \"https://blog.enricodeleo.com/questo-mondo-non-ci-rendera-cattivi\")",
+      "Bash(curl -s \"https://blog.enricodeleo.com/sitemap.xml\")",
+      "Bash(curl -sI \"https://blog.enricodeleo.com/sitemap.xml\")",
+      "Bash(curl -sI \"https://blog.enricodeleo.com/feed.xml\")",
+      "Bash(curl -s \"https://blog.enricodeleo.com/\")",
+      "Bash(bun run *)",
+      "Bash(NUXT_ENV_FRONTEND_URL=https://blog.enricodeleo.com bun run generate)"
     ]
   }
 }

@@ -2,7 +2,7 @@ import { writeFileSync } from 'fs'
 import { join } from 'path'
 import Database from 'better-sqlite3'
 
-const siteUrl = process.env.NUXT_ENV_FRONTEND_URL || 'https://enricodeleo.com'
+const siteUrl = process.env.NUXT_ENV_FRONTEND_URL || 'https://blog.enricodeleo.com'
 
 // Read the content collection database from SQLite (relative to project root)
 const contentDbPath = join(process.cwd(), '.data/content/contents.sqlite')
@@ -73,4 +73,9 @@ ${items}
 const rss = generateRSS(posts)
 const outputPath = join(process.cwd(), '.output/public/feed.xml')
 writeFileSync(outputPath, rss, 'utf-8')
+
+// Also write to static/ as fallback for deployment
+const staticPath = join(process.cwd(), 'static/feed.xml')
+writeFileSync(staticPath, rss, 'utf-8')
+
 console.log(`✓ Generated feed.xml with ${posts.length} items`)

@@ -1,6 +1,6 @@
 import tailwindcss from '@tailwindcss/vite'
 
-const siteUrl = process.env.NUXT_ENV_FRONTEND_URL || 'https://enricodeleo.com'
+const siteUrl = process.env.NUXT_ENV_FRONTEND_URL || 'https://blog.enricodeleo.com'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -34,7 +34,8 @@ export default defineNuxtConfig({
     trailingSlash: false,
     prerender: {
       failOnError: false,
-      autoSubfolderIndex: false
+      autoSubfolderIndex: false,
+      routes: ['/sitemap.xml', '/feed.xml']
     }
   },
 
