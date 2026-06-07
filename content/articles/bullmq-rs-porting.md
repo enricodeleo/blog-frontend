@@ -35,6 +35,22 @@ Risultato concreto: il tooling esterno non funzionava. Bull Board non vedeva le 
 
 L'API Rust era pulita. Quello che usciva da Redis era un'altra cosa.
 
+## Lo scenario per cui serve
+
+Per essere concreti, lo scenario tipico è questo.
+
+Hai un sistema Node con BullMQ in produzione. Funziona. Bull Board ti mostra le code, gli alert sono cablati, l'SRE sa dove guardare quando qualcosa fuma di notte.
+
+A un certo punto un tipo di job smette di reggere. Encoding di video. Image processing. Una pipeline CPU-bound. Il worker Node fa quello che può, ma il throughput non basta più. Vorresti riscrivere _solo quel worker_ in Rust, lasciando il resto dell'infrastruttura dov'è.
+
+Senza wire compatibility, le opzioni sono due. Riscrivere tutto in Rust e perdere il tooling Node. Oppure tenere un layer di traduzione tra i due e portarsi dietro la complessità di mantenerlo allineato a ogni release di BullMQ.
+
+Con wire compatibility, c'è una terza opzione. Lo stesso job prodotto da un producer Node viene processato da un worker Rust. La dashboard non sa che la stanno chiamando da due runtime diversi. Le metriche non cambiano forma. L'SRE che riceve la pagine alle tre vede le stesse cose che vedeva prima.
+
+C'è anche una proprietà che in Rust emerge naturalmente e in Node non esiste: il payload del job è tipizzato. Scrivi `Job<EncodingTask>` e il worker riceve la `EncodingTask` già deserializzata, controllata a compile time. Se cambi lo schema, il compilatore ti ferma prima del deploy. Per i job dove la correttezza del payload conta davvero — pagamenti, side effect costosi, transizioni di stato critiche — è una garanzia concreta, non un dettaglio estetico.
+
+Non è un caso d'uso da keynote. È uno di quelli che fa la differenza dopo il deploy.
+
 ## Hyrum's Law applicata al porting
 
 C'è una formulazione attribuita a Hyrum Wright, che ha lavorato a lungo in Google sul tooling di refactor su larga scala:
