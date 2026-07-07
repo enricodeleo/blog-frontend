@@ -1,6 +1,7 @@
 ---
 title: "Esperimenti live a Catania"
 date: "2012-02-14T12:31:28.000Z"
+legacy: true
 categories:
   - "flusso"
   - "musica"

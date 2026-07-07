@@ -1,6 +1,7 @@
 ---
 title: "Ciao Ciao 2011"
 date: "2011-12-31T03:55:12.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

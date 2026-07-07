@@ -1,6 +1,7 @@
 ---
 title: "La nuova rivoluzione di Verticalismi"
 date: "2013-05-01T10:17:02.000Z"
+legacy: true
 categories:
   - "fumetti"
 tags:

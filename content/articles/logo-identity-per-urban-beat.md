@@ -1,6 +1,7 @@
 ---
 title: "Logo Identity per Urban Beat!"
 date: "2011-01-27T17:09:12.000Z"
+legacy: true
 categories:
   - "design"
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "LSD* is growing"
 date: "2011-05-30T11:34:48.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

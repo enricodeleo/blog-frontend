@@ -1,6 +1,7 @@
 ---
 title: "The Walking Dead: un vero horror, a puntate"
 date: "2010-11-04T17:03:26.000Z"
+legacy: true
 categories:
   - "serie-tv"
 tags:

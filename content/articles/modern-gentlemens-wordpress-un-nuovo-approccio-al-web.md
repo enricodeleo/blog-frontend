@@ -1,6 +1,7 @@
 ---
 title: "Modern Gentlemen's WordPress: Come sviluppare applicazioni WordPress oggi (2016)"
 date: "2016-08-26T00:00:00.000Z"
+legacy: true
 categories:
   - "dev"
 tags:

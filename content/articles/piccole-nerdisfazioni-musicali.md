@@ -1,6 +1,7 @@
 ---
 title: "Piccole nerdisfazioni musicali: Spotify sul terminale ?"
 date: "2018-03-08T18:27:25.000Z"
+legacy: true
 categories:
   - "musica"
   - "nerd"

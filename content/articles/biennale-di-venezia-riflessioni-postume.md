@@ -1,6 +1,7 @@
 ---
 title: "Biennale di Venezia, riflessioni postume"
 date: "2010-11-13T00:34:49.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

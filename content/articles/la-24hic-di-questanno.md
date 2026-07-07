@@ -1,6 +1,7 @@
 ---
 title: "La 24hic di quest'anno..."
 date: "2011-11-14T11:27:33.000Z"
+legacy: true
 categories:
   - "fumetti"
 tags:

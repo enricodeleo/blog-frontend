@@ -1,6 +1,7 @@
 ---
 title: "Stickybuds [Ghetto Funk/Funk/Dancehall]"
 date: "2010-12-08T18:26:13.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

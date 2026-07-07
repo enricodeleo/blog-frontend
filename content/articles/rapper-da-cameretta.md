@@ -1,6 +1,7 @@
 ---
 title: "Rapper da cameretta"
 date: "2020-11-28T00:28:43.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

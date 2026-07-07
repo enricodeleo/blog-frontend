@@ -1,6 +1,7 @@
 ---
 title: "Proud to be: Punk version"
 date: "2010-11-09T10:32:08.000Z"
+legacy: true
 categories:
   - "design"
 tags:

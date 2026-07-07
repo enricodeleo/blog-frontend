@@ -1,6 +1,7 @@
 ---
 title: "Google e quel qualcosa in \"Plus\""
 date: "2011-07-01T21:42:24.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

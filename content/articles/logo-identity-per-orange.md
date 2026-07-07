@@ -1,6 +1,7 @@
 ---
 title: "Logo identity per Orange"
 date: "2011-01-24T19:20:02.000Z"
+legacy: true
 categories:
   - "design"
 tags:

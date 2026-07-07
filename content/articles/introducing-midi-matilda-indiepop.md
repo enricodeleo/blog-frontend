@@ -1,6 +1,7 @@
 ---
 title: "Introducing: Midi Matilda [Indie/Pop]"
 date: "2012-01-22T12:31:29.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

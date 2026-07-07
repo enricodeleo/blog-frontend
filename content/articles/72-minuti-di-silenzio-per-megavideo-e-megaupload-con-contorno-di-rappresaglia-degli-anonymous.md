@@ -1,6 +1,7 @@
 ---
 title: "72 minuti di silenzio per Megavideo e Megaupload con contorno di rappresaglia degli Anonymous"
 date: "2012-01-20T00:02:51.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

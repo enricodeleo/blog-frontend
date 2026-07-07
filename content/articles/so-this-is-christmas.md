@@ -1,6 +1,7 @@
 ---
 title: "So this is Christmas"
 date: "2010-12-24T03:14:58.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

@@ -1,9 +1,10 @@
 ---
-title: "Marketing Engineering: software mindset applicato al business"
-description: "Quando il problema non è tecnico, ma il metodo sì: software mindset, dati e AI pragmatica per passare da investimenti a pioggia a scelte di marketing mirate."
+title: "Marketing Engineering: mindset da developer per il business"
+description: "Quando il problema non è tecnico, ma il metodo sì: dati e AI pragmatica per scelte di marketing mirate, non a pioggia."
 date: "2026-02-28T10:00:00.000Z"
+updated: "2026-07-08"
 categories:
-  - "AI"
+  - "ai"
   - "Marketing"
   - "Data Science"
 tags:

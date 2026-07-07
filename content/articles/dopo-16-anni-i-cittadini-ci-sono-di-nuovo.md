@@ -1,6 +1,7 @@
 ---
 title: "Dopo 16 anni i cittadini ci sono di nuovo"
 date: "2011-06-14T08:12:26.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Verticalismi Miglior Webcomic al Premio Micheluzzi - Comicon 2014"
 date: "2014-05-10T16:22:38.000Z"
+legacy: true
 categories:
   - "flusso"
   - "fumetti"

@@ -1,6 +1,7 @@
 ---
 title: "Introducing 2Pigeons [Electro]"
 date: "2012-05-04T02:22:18.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

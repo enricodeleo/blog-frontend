@@ -1,6 +1,7 @@
 ---
 title: "THISISNOTBEATMAP: Verticalismi spacca gli impianti con il nuovo contest feat. Markantonio"
 date: "2012-02-29T11:57:26.000Z"
+legacy: true
 categories:
   - "flusso"
   - "fumetti"

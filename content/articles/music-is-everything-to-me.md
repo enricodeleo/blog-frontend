@@ -1,6 +1,7 @@
 ---
 title: "Music is everything to me"
 date: "2011-02-11T00:55:09.000Z"
+legacy: true
 categories:
   - "design"
 tags:

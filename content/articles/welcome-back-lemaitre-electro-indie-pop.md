@@ -1,6 +1,7 @@
 ---
 title: "Welcome back Lemâitre [Electro Indie Pop]"
 date: "2012-01-20T13:01:02.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

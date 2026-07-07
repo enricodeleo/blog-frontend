@@ -1,6 +1,7 @@
 ---
 title: "No al Nucleare [si sulla scheda]: il punto di vista di un italiano medio"
 date: "2011-06-10T21:28:01.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

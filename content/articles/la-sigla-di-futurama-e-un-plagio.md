@@ -1,6 +1,7 @@
 ---
 title: "La sigla di Futurama è un plagio?"
 date: "2011-04-03T23:14:17.000Z"
+legacy: true
 categories:
   - "flusso"
   - "musica"

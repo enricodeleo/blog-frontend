@@ -1,6 +1,7 @@
 ---
 title: "Dimitri From Paris [Funk/House]"
 date: "2010-11-10T08:44:58.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

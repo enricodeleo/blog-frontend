@@ -1,6 +1,7 @@
 ---
 title: "Christmas Reloaded"
 date: "2011-12-15T00:52:57.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

@@ -38,11 +38,13 @@ export default defineEventHandler((event) => {
   ]
 
   // Article pages
+  // `legacy` posts (pre-2023 personal archive, or later personal posts flagged
+  // manually) get a lower crawl priority so they don't compete with current content.
   const postPages = posts.map(post => ({
     url: post.path,
     lastmod: post.date ? new Date(post.date).toISOString() : undefined,
-    changefreq: 'weekly',
-    priority: 0.8
+    changefreq: post.legacy ? 'yearly' : 'weekly',
+    priority: post.legacy ? 0.4 : 0.8
   }))
 
   // Category pages

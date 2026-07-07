@@ -1,6 +1,7 @@
 ---
 title: "Dimmi che smartphone hai e ti dirò chi sei"
 date: "2010-11-05T15:12:17.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Misfits"
 date: "2010-11-14T23:07:48.000Z"
+legacy: true
 categories:
   - "serie-tv"
 tags:

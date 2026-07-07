@@ -1,6 +1,7 @@
 ---
 title: "Ci siamo"
 date: "2010-11-04T11:39:20.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

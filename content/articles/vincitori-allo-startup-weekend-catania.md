@@ -1,6 +1,7 @@
 ---
 title: "Vincitori allo Startup Weekend Catania"
 date: "2013-05-27T16:43:22.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

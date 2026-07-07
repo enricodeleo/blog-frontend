@@ -1,6 +1,7 @@
 ---
 title: "Email promozionali performanti con Emailurgency"
 date: "2018-07-04T15:15:28.000Z"
+legacy: true
 categories:
   - "digital-life"
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Perché Saga sarà un cult (e perché lo è già)"
 date: "2017-01-31T10:38:45.000Z"
+legacy: true
 categories:
   - "fumetti"
 tags:

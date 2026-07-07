@@ -1,6 +1,7 @@
 ---
 title: "Rare Exports Inc."
 date: "2011-03-01T12:23:51.000Z"
+legacy: true
 categories:
   - "film"
 tags:

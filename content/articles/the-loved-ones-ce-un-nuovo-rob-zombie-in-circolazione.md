@@ -1,6 +1,7 @@
 ---
 title: "The Loved Ones: c'è un nuovo Rob Zombie in circolazione"
 date: "2010-11-19T00:37:55.000Z"
+legacy: true
 categories:
   - "film"
 tags:

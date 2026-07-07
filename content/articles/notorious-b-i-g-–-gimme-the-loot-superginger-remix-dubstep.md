@@ -1,6 +1,7 @@
 ---
 title: "Notorious B.I.G. – Gimme The Loot (Superginger Remix) [Dubstep]"
 date: "2011-05-22T19:21:22.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

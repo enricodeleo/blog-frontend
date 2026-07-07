@@ -1,6 +1,7 @@
 ---
 title: "It's my f#*@in’ Bday"
 date: "2011-06-04T09:45:11.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

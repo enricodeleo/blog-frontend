@@ -1,6 +1,7 @@
 ---
 title: "Alla (ri)scoperta della musica classica: Chopin [Piano/Classical]"
 date: "2010-11-22T01:15:46.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Accendi il Natale"
 date: "2010-12-19T23:14:26.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

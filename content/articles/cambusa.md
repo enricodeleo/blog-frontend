@@ -1,6 +1,7 @@
 ---
-title: "Scopri Cambusa: il nuovo web framework Bun developer-friendly e performante"
+title: "Cambusa: il framework Bun per applicazioni web moderne"
 date: "2024-09-21T00:02:51.000Z"
+updated: "2026-07-08"
 categories:
   - "dev"
 tags:
@@ -9,7 +10,7 @@ tags:
   - "nodejs"
   - "api"
   - "framework"
-description: "Un Moderno Framework Bun Open-Source per lo Sviluppo Web Efficiente"
+description: "Cambusa è un framework open source su Bun per costruire applicazioni web moderne, modulari e performanti."
 ---
 
 Nel panorama in continua evoluzione dello sviluppo web, avere gli strumenti giusti è fondamentale per costruire applicazioni robuste, scalabili e manutenibili. Oggi siamo entusiasti di presentare **Cambusa**, un nuovo framework open source basato su Bun che promette di semplificare il processo di sviluppo, offrendo una struttura modulare e potente per creare applicazioni moderne.

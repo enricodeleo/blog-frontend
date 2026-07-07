@@ -1,6 +1,7 @@
 ---
 title: "The Get Up Kids – Shatter Your Lungs [Indie]"
 date: "2011-02-22T14:26:09.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Terminato il nuovo sito dell'AIA Agrigento"
 date: "2010-12-02T16:20:42.000Z"
+legacy: true
 categories:
   - "design"
 tags:

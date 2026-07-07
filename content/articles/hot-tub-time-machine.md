@@ -1,6 +1,7 @@
 ---
 title: "Hot Tub Time Machine"
 date: "2010-11-04T12:36:56.000Z"
+legacy: true
 categories:
   - "film"
 tags:

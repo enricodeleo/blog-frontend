@@ -1,6 +1,7 @@
 ---
 title: "La Wind e gli eventi Fringe"
 date: "2011-11-16T11:36:51.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

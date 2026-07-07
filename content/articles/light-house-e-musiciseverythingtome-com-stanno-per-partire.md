@@ -1,6 +1,7 @@
 ---
 title: "Light House e musiciseverythingtome.com stanno per partire"
 date: "2011-01-13T16:49:54.000Z"
+legacy: true
 categories:
   - "design"
 tags:

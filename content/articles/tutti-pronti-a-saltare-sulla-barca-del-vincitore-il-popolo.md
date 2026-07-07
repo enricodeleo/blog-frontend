@@ -1,6 +1,7 @@
 ---
 title: "Tutti pronti a saltare sulla barca del vincitore (il popolo)"
 date: "2011-06-13T12:45:34.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

@@ -1,6 +1,7 @@
 ---
-title: "AquaSDK: Genera SDK JavaScript in stile Waterline da specifiche OpenAPI"
+title: "AquaSDK: da OpenAPI a SDK JavaScript in stile Waterline"
 date: "2025-03-11T17:00:00.000Z"
+updated: "2026-07-08"
 categories:
   - "dev"
   - "tools"
@@ -11,7 +12,7 @@ tags:
   - "sdk"
   - "rest"
   - "developer-tools"
-description: "Come trasformare qualsiasi specifica OpenAPI in un SDK JavaScript intuitivo con sintassi simile a Waterline ORM: la soluzione per integrazioni API veloci e senza boilerplate"
+description: "AquaSDK genera SDK JavaScript in stile Waterline da qualsiasi specifica OpenAPI: integrazioni API rapide, senza boilerplate."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/aquasdk-cover.jpg"
 sticky: true
 ---

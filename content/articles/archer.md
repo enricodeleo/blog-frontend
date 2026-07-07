@@ -1,6 +1,7 @@
 ---
 title: "Archer"
 date: "2011-03-11T11:02:41.000Z"
+legacy: true
 categories:
   - "serie-tv"
 tags:

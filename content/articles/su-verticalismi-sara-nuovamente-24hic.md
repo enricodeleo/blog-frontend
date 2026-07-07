@@ -1,6 +1,7 @@
 ---
 title: "Su Verticalismi  sarà nuovamente 24hic"
 date: "2011-10-26T13:14:58.000Z"
+legacy: true
 categories:
   - "fumetti"
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Civilization - Justice"
 date: "2011-03-28T12:36:12.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

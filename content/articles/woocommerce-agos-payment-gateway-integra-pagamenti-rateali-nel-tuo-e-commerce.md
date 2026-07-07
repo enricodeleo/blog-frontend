@@ -1,6 +1,7 @@
 ---
-title: "WooCommerce Agos Payment Gateway: Integra pagamenti rateali nel tuo e-commerce"
+title: "WooCommerce Agos: pagamenti rateali per il tuo shop"
 date: "2024-12-01T09:00:00.000Z"
+updated: "2026-07-08"
 categories:
   - "dev"
   - "ecommerce"
@@ -11,7 +12,7 @@ tags:
   - "ecommerce"
   - "agos"
   - "fintech"
-description: "Come integrare pagamenti rateali Agos nel tuo store WooCommerce: una soluzione completa per aumentare le conversioni offrendo finanziamenti flessibili ai tuoi clienti"
+description: "Come integrare Agos in WooCommerce per offrire pagamenti rateali flessibili e aumentare le conversioni del tuo e-commerce."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/agos-woocommerce.jpg"
 sticky: true
 ---

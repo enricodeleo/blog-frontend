@@ -1,6 +1,7 @@
 ---
 title: "La Biennale di Venezia"
 date: "2010-11-08T12:03:47.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

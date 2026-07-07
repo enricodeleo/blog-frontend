@@ -2,7 +2,7 @@
 title: "Le scelte DevOps che influenzeranno il tuo prossimo progetto"
 date: "2023-05-29T00:02:51.000Z"
 categories:
-  - "Dev"
+  - "dev"
 tags:
   - "devops"
   - "sviluppo"

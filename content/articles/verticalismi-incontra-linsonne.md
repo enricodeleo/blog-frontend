@@ -1,6 +1,7 @@
 ---
 title: "Verticalismi incontra \"L'Insonne\""
 date: "2010-11-11T10:57:19.000Z"
+legacy: true
 categories:
   - "fumetti"
 tags:

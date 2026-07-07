@@ -1,6 +1,7 @@
 ---
 title: "Lemâitre [electro/pop]"
 date: "2010-11-05T18:28:10.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Proud to be: una serie di wallpapers e forse…"
 date: "2010-11-04T17:00:48.000Z"
+legacy: true
 categories:
   - "design"
 tags:

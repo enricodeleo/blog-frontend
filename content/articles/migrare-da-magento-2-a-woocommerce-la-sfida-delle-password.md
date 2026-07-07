@@ -2,7 +2,7 @@
 title: "Migrare da Magento 2 a WooCommerce: La Sfida delle Password"
 date: "2023-06-07T12:27:00.000Z"
 categories:
-  - "Dev"
+  - "dev"
 tags:
   - "sviluppo"
   - "magento"

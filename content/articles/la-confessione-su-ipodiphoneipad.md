@@ -1,6 +1,7 @@
 ---
 title: "La confessione su iPod/iPhone/iPad"
 date: "2011-02-06T11:25:01.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

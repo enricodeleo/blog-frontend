@@ -1,6 +1,7 @@
 ---
 title: "Nuovo wallpaper: Typeflow"
 date: "2011-02-01T14:27:52.000Z"
+legacy: true
 categories:
   - "design"
 tags:

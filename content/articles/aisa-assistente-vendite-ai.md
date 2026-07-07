@@ -1,6 +1,7 @@
 ---
-title: "AISA: Ho creato l'assistente alle vendite AI che dialoga con i tuoi clienti e potenzia le conversioni"
+title: "AISA: l'assistente vendite AI per l'e-commerce"
 date: "2025-07-27T18:45:00.000Z"
+updated: "2026-07-08"
 categories:
   - "ai"
   - "dev"
@@ -11,7 +12,7 @@ tags:
   - "marketing-automation"
   - "ecommerce"
   - "chatbot"
-description: "Vi presento AISA, il mio nuovo progetto: un assistente vendite basato su AI che trasforma l'interazione con i clienti, aumentando le conversioni e offrendo un'esperienza utente senza precedenti."
+description: "AISA, l'assistente vendite basato su AI che dialoga con i clienti e aumenta le conversioni del tuo e-commerce."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/aisa.png"
 sticky: false
 ---

@@ -128,6 +128,7 @@ const { data: featured } = await useAsyncData(
 const { data: posts } = await useAsyncData(
   'recent-posts',
   () => queryCollection('articles')
+    .where('legacy', '=', false)
     .order('date', 'DESC')
     .limit(6)
     .all()

@@ -1,6 +1,7 @@
 ---
 title: "Questo mondo non ci renderà cattivi"
 date: "2023-06-10T10:06:29.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

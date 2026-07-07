@@ -12,10 +12,12 @@ export default defineContentConfig({
         title: z.string(),
         description: z.string(),
         date: z.string(),
+        updated: z.string().optional(),
         categories: z.array(z.string()),
         tags: z.array(z.string()),
         coverImage: z.string().optional(),
-        sticky: z.boolean().default(false)
+        sticky: z.boolean().default(false),
+        legacy: z.boolean().default(false)
       })
     })
   }

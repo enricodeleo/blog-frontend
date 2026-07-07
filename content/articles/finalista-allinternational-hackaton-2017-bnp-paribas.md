@@ -1,6 +1,7 @@
 ---
 title: "Finalista all'International Hackaton 2017 BNP Paribas"
 date: "2017-12-08T01:40:48.000Z"
+legacy: true
 categories:
   - "digital-life"
   - "rewards"

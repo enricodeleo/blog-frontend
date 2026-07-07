@@ -1,6 +1,7 @@
 ---
 title: "Biennale di Venezia sto arrivando"
 date: "2010-11-05T10:30:29.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

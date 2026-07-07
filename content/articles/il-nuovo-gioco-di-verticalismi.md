@@ -1,6 +1,7 @@
 ---
 title: "Il nuovo gioco di Verticalismi"
 date: "2010-12-02T18:18:04.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

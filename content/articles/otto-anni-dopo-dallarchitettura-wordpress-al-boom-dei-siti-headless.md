@@ -1,6 +1,7 @@
 ---
-title: "Otto anni dopo: dall’architettura WordPress al boom dei siti headless"
+title: "Da WordPress a headless: 8 anni di evoluzione web"
 date: "2024-12-11T12:00:00.000Z"
+updated: "2026-07-08"
 categories:
   - "dev"
 tags:
@@ -10,7 +11,7 @@ tags:
   - "vue3"
   - "frontend"
   - "cms"
-description: "Una retrospettiva sull'evoluzione delle applicazioni WordPress dal 2016 al 2024 e la rivoluzione dei siti headless con Nuxt3."
+description: "Una retrospettiva su WordPress e la svolta verso i siti headless con Nuxt 3: cosa cambia per sviluppo, performance e manutenzione."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/otto-anni-dopo-dallarchitettura-wordpress-al-boom-dei-siti-headles.jpg"
 sticky: true
 ---

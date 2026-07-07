@@ -1,6 +1,7 @@
 ---
-title: "Ottimizzare le prestazioni del router NanoPi R76S con OpenWrt: da 600 Mbps a oltre 2 Gbps"
+title: "NanoPi R76S: da 600 Mbps a 2 Gbps con OpenWrt"
 date: "2025-10-05T09:00:00.000Z"
+updated: "2026-07-08"
 categories:
   - "networking"
   - "devops"
@@ -12,7 +13,7 @@ tags:
   - "linux"
   - "performance"
   - "tuning"
-description: "Come ho ottimizzato il NanoPi R76S con OpenWrt per passare da 600 Mbps a oltre 2 Gbps reali, sistemando IRQ, RPS/XPS e CPU governor per sfruttare al massimo il SoC Rockchip RK3576."
+description: "Come ottimizzare il NanoPi R76S con OpenWrt: tuning di IRQ, RPS/XPS e CPU governor per passare da 600 Mbps a oltre 2 Gbps reali."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/nanopi-r76s-performance.png"
 sticky: false
 ---

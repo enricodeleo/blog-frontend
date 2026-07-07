@@ -3,7 +3,7 @@ title: "L'interfaccia che non si vede"
 description: "Un porting non è una traduzione. È un esercizio di scoperta su cosa, in un sistema, è davvero il contratto. Quasi sempre non è quello che pensi."
 date: "2026-06-07T10:00:00.000Z"
 categories:
-  - "Dev"
+  - "dev"
   - "Open Source"
 tags:
   - "rust"

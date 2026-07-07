@@ -1,6 +1,7 @@
 ---
 title: "Morto un talebano se ne fa un altro"
 date: "2011-05-18T09:52:40.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

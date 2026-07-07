@@ -1,6 +1,7 @@
 ---
 title: "Verticalismi in nomination ai Premi Attilio Micheluzzi-COMICON 2013"
 date: "2013-04-06T02:34:50.000Z"
+legacy: true
 categories:
   - "fumetti"
 tags:

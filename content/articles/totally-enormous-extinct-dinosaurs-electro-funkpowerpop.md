@@ -1,6 +1,7 @@
 ---
 title: "Totally Enormous Extinct Dinosaurs [Electro Funk/Powerpop]"
 date: "2011-01-03T18:04:58.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

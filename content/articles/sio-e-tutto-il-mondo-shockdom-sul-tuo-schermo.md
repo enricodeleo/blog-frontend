@@ -1,6 +1,7 @@
 ---
 title: "#Sio e tutto il mondo Shockdom sul tuo schermo"
 date: "2018-04-02T01:50:59.000Z"
+legacy: true
 categories:
   - "fumetti"
 tags:

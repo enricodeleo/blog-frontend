@@ -1,6 +1,7 @@
 ---
 title: "Un paese che si risveglia"
 date: "2011-06-12T21:53:02.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

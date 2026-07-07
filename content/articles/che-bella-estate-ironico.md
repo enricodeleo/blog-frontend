@@ -1,6 +1,7 @@
 ---
 title: "Che bella estate (ironico)"
 date: "2011-08-20T19:14:34.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

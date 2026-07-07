@@ -1,6 +1,7 @@
 ---
 title: "Design Flavour - il nuovo wallpaper ufficiale LSD"
 date: "2011-04-17T16:23:09.000Z"
+legacy: true
 categories:
   - "design"
 tags:

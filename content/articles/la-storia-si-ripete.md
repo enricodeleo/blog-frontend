@@ -3,7 +3,7 @@ title: "La storia si ripete"
 description: "Nel 2015 i graph database erano il futuro. Oggi uso Postgres per quasi tutto. Nel mezzo: MongoDB, ObjectId misti, e il solito conto arrivato dopo. Sta succedendo di nuovo con i vector database."
 date: "2026-03-30T10:00:00.000Z"
 categories:
-  - "Dev"
+  - "dev"
 tags:
   - "postgres"
   - "database"

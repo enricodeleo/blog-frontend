@@ -1,6 +1,7 @@
 ---
 title: "Proud to be: DA BALLER"
 date: "2010-11-17T15:20:07.000Z"
+legacy: true
 categories:
   - "design"
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Benvenuto Deeds"
 date: "2011-11-24T14:08:25.000Z"
+legacy: true
 categories:
   - "design"
 tags:

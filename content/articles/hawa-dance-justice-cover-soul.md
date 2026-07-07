@@ -1,6 +1,7 @@
 ---
 title: "Hawa - DANCE (Justice Cover) [Soul]"
 date: "2011-05-29T15:40:36.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

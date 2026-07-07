@@ -1,6 +1,7 @@
 ---
 title: "Lysergic Studio incontra la magia del teatro"
 date: "2011-01-08T15:33:12.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

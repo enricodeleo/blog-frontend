@@ -3,8 +3,8 @@ title: "Velocità senza giudizio"
 description: "Il vibe coding non ha inventato il codice scritto male. Ha solo tolto l'attrito. E la velocità, senza il tempo di valutare, produce solo errori più rapidi."
 date: "2026-04-03T10:00:00.000Z"
 categories:
-  - "Dev"
-  - "AI"
+  - "dev"
+  - "ai"
 tags:
   - "ai"
   - "vibe-coding"

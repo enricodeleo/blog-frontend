@@ -190,12 +190,11 @@ const jsonLd = computed(() => {
 
   // Build schema with only valid values
   const schema = {
-    '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     '@id': postId,
     headline: post.value.title,
     datePublished: post.value.date,
-    dateModified: post.value.date,
+    dateModified: post.value.updated || post.value.date,
     author: {
       '@type': 'Person',
       '@id': authorId,
@@ -236,7 +235,19 @@ const jsonLd = computed(() => {
   // Use BCP-47 language code
   schema.inLanguage = 'it-IT'
 
-  return schema
+  const breadcrumb = {
+    '@type': 'BreadcrumbList',
+    '@id': `${siteUrl}${post.value.path}#breadcrumb`,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+      { '@type': 'ListItem', position: 2, name: post.value.title, item: `${siteUrl}${post.value.path}` }
+    ]
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [schema, breadcrumb]
+  }
 })
 
 useJsonLd(jsonLd)

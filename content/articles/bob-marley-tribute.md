@@ -1,6 +1,7 @@
 ---
 title: "Bob Marley Tribute"
 date: "2011-05-11T10:50:12.000Z"
+legacy: true
 categories:
   - "flusso"
   - "musica"

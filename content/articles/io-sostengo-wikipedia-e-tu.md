@@ -1,6 +1,7 @@
 ---
 title: "Io sostengo Wikipedia, e tu?"
 date: "2010-11-19T14:39:35.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

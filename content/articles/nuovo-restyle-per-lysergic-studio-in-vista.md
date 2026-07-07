@@ -1,6 +1,7 @@
 ---
 title: "Nuovo restyle per Lysergic Studio in vista"
 date: "2010-11-06T00:12:32.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

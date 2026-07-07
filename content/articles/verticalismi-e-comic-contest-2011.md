@@ -1,6 +1,7 @@
 ---
 title: "Verticalismi E-Comic Contest 2011"
 date: "2011-06-30T22:55:31.000Z"
+legacy: true
 categories:
   - "fumetti"
 tags:

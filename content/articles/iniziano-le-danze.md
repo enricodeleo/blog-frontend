@@ -1,6 +1,7 @@
 ---
 title: "Iniziano le danze"
 date: "2010-11-04T01:10:30.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

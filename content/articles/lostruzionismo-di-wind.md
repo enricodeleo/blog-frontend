@@ -1,6 +1,7 @@
 ---
 title: "L'ostruzionismo di Wind"
 date: "2012-01-13T15:54:27.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:

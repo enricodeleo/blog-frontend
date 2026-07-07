@@ -1,6 +1,7 @@
 ---
 title: "Moths - <3 [Electro Chill Out]"
 date: "2011-02-23T09:51:54.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Garage e Deeds.it presentano: infosession for Red Bull Music Academy 2012"
 date: "2012-03-03T11:37:07.000Z"
+legacy: true
 categories:
   - "flusso"
   - "musica"

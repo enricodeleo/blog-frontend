@@ -1,6 +1,7 @@
 ---
 title: "Visual Studio Code: i 10 migliori plugin per qualsiasi front-end developer"
 date: "2019-09-27T21:18:09.000Z"
+legacy: true
 categories:
   - "dev"
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "La mia playlist Dubstep di questo inizio Luglio [Dubstep]"
 date: "2011-07-02T10:16:00.000Z"
+legacy: true
 categories:
   - "musica"
 tags:

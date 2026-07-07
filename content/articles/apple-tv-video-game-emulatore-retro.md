@@ -1,6 +1,8 @@
 ---
-title: "La tua Apple TV potrebbe essere diventata uno dei migliori dispositivi per il retro gaming dall'oggi al domani"
+title: "Apple TV: la console retro gaming perfetta con RetroArch"
 date: "2024-07-06T16:06:29.000Z"
+updated: "2026-07-07"
+legacy: true
 categories:
   - "flusso"
 tags:
@@ -10,7 +12,7 @@ tags:
   - "emulatori"
   - "retro"
   - "vintage"
-description: "Apple TV diventa una potente console di retro gaming con RetroArch e il suo supporto a ben 78 emulatori."
+description: "Con RetroArch, Apple TV diventa un'ottima console per il retro gaming: decine di emulatori supportati, senza jailbreak."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/Default_A_vibrant_Apple_TV_amidst_a_retro_gaming_scene_surroun_0.jpg"
 ---
 

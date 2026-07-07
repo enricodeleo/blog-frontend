@@ -1,14 +1,15 @@
 ---
-title: "GitIngest: repository GitHub in testo per sfruttare al massimo gli LLM nell'analisi, debug e documentazione del codice"
+title: "GitIngest: trasforma repo GitHub in testo per gli LLM"
 date: "2025-01-06T22:12:00.000Z"
+updated: "2026-07-07"
 categories:
   - "dev"
 tags:
-  - "AI"
+  - "ai"
   - "LLM"
   - "dev"
   - "coding"
-description: "Scopri come GitIngest trasforma i repository GitHub in testo leggibile per modelli di linguaggio (LLM), facilitando analisi, debug e generazione automatica di documentazione del codice."
+description: "Come usare GitIngest per trasformare qualsiasi repository GitHub in testo pronto per ChatGPT, Claude e altri LLM."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/gitingest.jpg"
 sticky: false
 ---

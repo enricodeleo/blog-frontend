@@ -3,8 +3,8 @@ title: "Il CMS in C che non ho mai scritto"
 description: "Nel 2015 avrei potuto scrivere un CMS in C. Ho scelto WordPress. Sei mesi dopo avevo 9.000 signup, app del mese su App Store Italia e 400k raccolti dagli investitori. Team di sviluppo: io."
 date: "2026-03-28T10:00:00.000Z"
 categories:
-  - "Dev"
-  - "Startup"
+  - "dev"
+  - "startup"
 tags:
   - "wordpress"
   - "startup"

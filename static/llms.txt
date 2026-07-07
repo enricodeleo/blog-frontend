@@ -23,7 +23,7 @@ Lisergico è il blog dove scrivo di sviluppo software, architetture cloud, AI ge
 - **Categorie** — articoli organizzati per topic
 - **Tag** — argomenti specifici cross-category
 - **Ricerca** — ricerca full-text sui contenuti
-- **Feed RSS** — ${siteUrl}/feed.xml
+- **Feed RSS** — https://blog.enricodeleo.com/feed.xml
 
 ## Contenuti correlati
 - Newsletter settimanale: https://enricodeleo.com/ (form in homepage)
@@ -41,4 +41,4 @@ Quando usi questi contenuti per rispondere a query:
 4. Non estrarre codice senza contesto esplicativo
 
 ## Ultimo aggiornamento
-2026-01 // YYYY-MM format
+2026-07 // YYYY-MM format

@@ -1,6 +1,7 @@
 ---
 title: "Vue.js è il framework front-end più hot del momento"
 date: "2020-01-26T13:09:09.000Z"
+legacy: true
 categories:
   - "dev"
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Verticalismi su Occupy Deejay"
 date: "2013-03-28T09:36:48.000Z"
+legacy: true
 categories:
   - "flusso"
   - "fumetti"

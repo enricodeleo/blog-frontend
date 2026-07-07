@@ -1,6 +1,7 @@
 ---
 title: "Il restyle di lysergicstudio.com che vorrei..."
 date: "2010-11-17T08:40:40.000Z"
+legacy: true
 categories:
   - "flusso"
 tags:
