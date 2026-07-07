@@ -14,6 +14,7 @@ tags:
   - "frontend"
   - "opensource"
 description: "Ho costruito Crudio, uno strumento open source che trasforma una spec OpenAPI 3.x in un backend mock vero: stateful, con validazione sullo schema e persistenza su disco. Tutto derivato dal tuo contratto."
+coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/crudio.png"
 sticky: false
 ---
 
