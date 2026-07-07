@@ -14,7 +14,7 @@ tags:
   - "frontend"
   - "opensource"
 description: "Ho costruito Crudio, uno strumento open source che trasforma una spec OpenAPI 3.x in un backend mock vero: stateful, con validazione sullo schema e persistenza su disco. Tutto derivato dal tuo contratto."
-sticky: true
+sticky: false
 ---
 
 _In questo post voglio raccontarti perché ho costruito **Crudio** e il problema preciso che risolve: avere un backend finto che però si comporta come un backend vero, derivandolo interamente dalla tua spec OpenAPI._

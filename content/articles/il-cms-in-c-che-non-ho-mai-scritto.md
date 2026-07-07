@@ -12,7 +12,7 @@ tags:
   - "indie"
   - "build-in-public"
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/la-500-che-vinceva.png"
-sticky: false
+sticky: true
 ---
 
 _Nel 2015 valevi quanto il linguaggio che usavi. Questa è la storia di come ho ignorato quella regola e cosa è successo dopo._
