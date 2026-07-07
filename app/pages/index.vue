@@ -192,9 +192,22 @@ const homepageJsonLd = computed(() => {
         url: 'https://enricodeleo.com',
         email: 'hello@enricodeleo.com',
         jobTitle: 'Fractional CTO & AI Solutions Architect',
-        worksFor: {
-          '@id': publisherId
-        }
+        sameAs: [
+          'https://enricodeleo.com',
+          'https://www.linkedin.com/in/enricodeleo',
+          'https://x.com/errikodotit',
+          'https://www.threads.com/@enricodeleo',
+          'https://www.facebook.com/therealenricodeleo',
+          'https://github.com/enricodeleo',
+          'https://www.behance.net/lysergic',
+          'https://www.instagram.com/enricodeleo/',
+          'https://www.twitch.tv/enricodeleo',
+          'https://www.youtube.com/c/EnricoDeleoOfficial'
+        ],
+        worksFor: [
+          { '@type': 'Organization', name: 'Traction Group', url: 'https://www.tractiongroup.it/' },
+          { '@type': 'Organization', name: 'AutoCust', url: 'https://www.autocust.it/' }
+        ]
       }
     ]
   }
@@ -202,6 +215,5 @@ const homepageJsonLd = computed(() => {
   return schema
 })
 
-// Note: useJsonLd not needed here as structured data is inlined during build
-// The JSON-LD is already included in the HTML via server rendering
+useJsonLd(homepageJsonLd)
 </script>
