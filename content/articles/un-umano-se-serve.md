@@ -11,7 +11,7 @@ tags:
   - "ai-native"
   - "engineering"
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/umano-se-serve.png"
-sticky: false
+sticky: true
 ---
 
 Ogni volta che esce un modello nuovo, il feed si riempie di recensioni. "L'ho provato. Ecco le mie impressioni." Screenshot, benchmark casalinghi, verdetti.

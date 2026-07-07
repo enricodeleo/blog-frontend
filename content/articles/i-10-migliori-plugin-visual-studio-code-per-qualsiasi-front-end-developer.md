@@ -14,7 +14,6 @@ tags:
   - "vscode"
 description: "A grande richiesta 10 dei plugin che più raccomando per una esperinza di coding veramente zen."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/vscode-plugins.jpg"
-sticky: true
 ---
 
 Tutti amiamo Visual Studio Code: l'**editor gratuito e moderno** sviluppato da Microsoft pensato per scrivere, ottimizzare e debuggare applicazioni web e cloud.
