@@ -88,6 +88,6 @@ Never:
 7. Lane 2 only: does it fully answer the query in the title?
 8. Would Enrico read it without embarrassment?
 
-## Open positioning note
+## Positioning note
 
-SOUL introduces Enrico as "CTO e co-founder di Traction Group / technical founder"; the sites (landing, blog tagline, llms.txt, JSON-LD) currently say "Fractional CTO & AI Solutions Architect". These are different frames. Until reconciled deliberately: blog content follows SOUL's voice (founder, not consultant); site-level positioning strings stay as they are. Do not mix the two inside a post.
+SOUL was extracted from a company-context session, so it introduces Enrico through Traction Group. The blog and the sites are the **personal** brand, where the company is one of several things he has built. Resolution: SOUL governs voice, tone, structure, and lexicon; identity/positioning on personal properties stays "Fractional CTO & AI Solutions Architect". Inside a post, Traction is an example drawn from experience, never the subject of the byline.
