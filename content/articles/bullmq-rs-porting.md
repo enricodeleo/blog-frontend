@@ -17,6 +17,8 @@ sticky: false
 
 _Un porting non è una traduzione. È un esercizio di scoperta su cosa, in un sistema, è davvero il contratto. Quasi sempre non è quello che pensi._
 
+_(Also available in English: [A port is not a translation](/a-port-is-not-a-translation).)_
+
 Qualche giorno fa è stato mergiato in upstream un PR che ho aperto su `bullmq-rs`, il porting Rust di BullMQ. Il diff è grosso — circa undicimila righe in più, duemila in meno — ed esce come release v2.0.0 breaking.
 
 Quando ho riletto la description del PR a cose fatte, mi sono accorto che la sezione più informativa non era quella di cosa il PR includeva. Era quella di **cosa avevo deliberatamente lasciato fuori**.
