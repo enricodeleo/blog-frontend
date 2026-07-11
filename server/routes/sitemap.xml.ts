@@ -42,7 +42,7 @@ export default defineEventHandler((event) => {
   // manually) get a lower crawl priority so they don't compete with current content.
   const postPages = posts.map(post => ({
     url: post.path,
-    lastmod: post.date ? new Date(post.date).toISOString() : undefined,
+    lastmod: (post.updated || post.date) ? new Date(post.updated || post.date).toISOString() : undefined,
     changefreq: post.legacy ? 'yearly' : 'weekly',
     priority: post.legacy ? 0.4 : 0.8
   }))
