@@ -5,7 +5,7 @@ legacy: true
 categories:
   - "musica"
 tags:
-description: ""
+description: "Appena tornato dal concerto de Il Teatro degli Orrori mi sono messo subito alla ricerca del gruppo che li ha preceduti riscaldando (e non poco!) il palco."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/l_cbe85887b719459796d9054862718055.jpg"
 ---
 

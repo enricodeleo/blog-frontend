@@ -16,7 +16,7 @@ tags:
   - "sfondo"
   - "visual-art"
   - "wallpaper"
-description: ""
+description: "In questi giorni di lavoro intenso sul restyling di Lysergic Studio, che verrà pubblicato a breve, ho deciso di sfornare il primo wallpaper ufficiale di…"
 ---
 
 In questi giorni di lavoro intenso sul restyling di [Lysergic Studio](http://www.lysergicstudio.com "LSD// Lysergic Studio"), che verrà pubblicato a breve, ho deciso di sfornare il primo **wallpaper ufficiale di LSD** (_Lysergic Studio Deleo_).

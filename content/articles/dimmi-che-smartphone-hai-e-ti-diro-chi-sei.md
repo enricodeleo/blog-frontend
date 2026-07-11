@@ -9,7 +9,7 @@ tags:
   - "smartphone"
   - "tecnologia"
   - "umorismo"
-description: ""
+description: "C-Section Comics ha pubblicato oggi un'immagine divertente che visualizza come gli utenti smartphone vedono se stessi e come si vedono tra loro."
 ---
 
 [C-Section Comics](http://www.csectioncomics.com/) ha pubblicato oggi un'immagine divertente che visualizza **come gli utenti smartphone vedono se stessi e come si vedono tra loro**.

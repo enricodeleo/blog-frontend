@@ -11,7 +11,7 @@ tags:
   - "riflessioni"
   - "sfondo"
   - "wallpaper"
-description: ""
+description: "Cari amici ebbene si, è Natale. L'unico pensiero che mi viene in mente è ’cazzo è passato una anno!’."
 ---
 
 Cari amici ebbene si, **è Natale**.

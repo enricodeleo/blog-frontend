@@ -12,7 +12,7 @@ tags:
   - "musical"
   - "siti"
   - "teatro"
-description: ""
+description: "Qualche mese fa sono stato contattato da alcuni amici di Agrigento che mi proponevano di realizzare un sito internet per una compagnia teatrale."
 ---
 
 Qualche mese fa sono stato contattato da alcuni amici di Agrigento che mi proponevano di realizzare un sito internet per una compagnia teatrale.

@@ -14,7 +14,7 @@ tags:
   - "spiderman"
   - "uomo-ragno"
   - "verticalismi"
-description: ""
+description: "Anche quest'anno Mirko Oliveri ci ha fatto un bel regalo riproponendo Verticalismi l'idea che già l'anno scorso ci aveva riempito di soddisfazioni: la…"
 ---
 
 Anche quest'anno Mirko Oliveri ci ha fatto un bel regalo riproponendo [Verticalismi](http://www.verticalismi.it) l'idea che già l'anno scorso ci aveva riempito di soddisfazioni: la **24hic online**!

@@ -10,7 +10,7 @@ tags:
   - "sms"
   - "viber-voip"
   - "wind"
-description: ""
+description: "Il nostro simpatico operatore (dicono) low cost, già tristemente noto per gli eventi Fringe che genera, è tornato di nuovo nelle mie preghierine serali da…"
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/01/wind.jpg"
 ---
 

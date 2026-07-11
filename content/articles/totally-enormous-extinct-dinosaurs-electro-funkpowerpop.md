@@ -8,7 +8,7 @@ tags:
   - "electro"
   - "funk"
   - "musica-2"
-description: ""
+description: "Questo post se lo meritava non fosse altro per il nome: Totally Enormous Extinct Dinosaurs."
 ---
 
 Questo post se lo meritava non fosse altro per il nome: **[Totally Enormous Extinct Dinosaurs](http://www.myspace.com/totallyenormousextinctdinosaurs)**.

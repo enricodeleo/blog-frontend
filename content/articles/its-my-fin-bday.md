@@ -9,7 +9,7 @@ tags:
   - "birthday"
   - "compleanno"
   - "enrico"
-description: ""
+description: "...e 23! \[...\] \[...\] \[...\] Ehm... Cosa dovevo dire? Non lo so, questo post di oggi lo butto così."
 ---
 
 ![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/06/fckbday-565x289.png "fckbday")

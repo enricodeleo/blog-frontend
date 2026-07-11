@@ -6,7 +6,7 @@ categories:
   - "flusso"
   - "fumetti"
 tags:
-description: ""
+description: "Su Verticalismi abbiamo aperto da poco il primo contest del 2012, stavolta portiamo la techno."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/thisisnotbeatmap.jpg"
 ---
 

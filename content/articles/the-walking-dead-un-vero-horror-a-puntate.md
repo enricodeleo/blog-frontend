@@ -10,7 +10,7 @@ tags:
   - "serie-tv-2"
   - "telefilm"
   - "zombie"
-description: ""
+description: "The Walking Dead nasce come serie horror a fumetti nel 2003, creata da Robert Kirkman."
 ---
 
 **_The Walking Dead_** nasce come serie horror a fumetti nel 2003, creata da Robert Kirkman. Chi lo ha letto o ne ha sentito parlare sa già che si tratta di una serie che tratta di zombie.

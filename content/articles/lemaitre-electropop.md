@@ -9,7 +9,7 @@ tags:
   - "musica-2"
   - "novita"
   - "pop"
-description: ""
+description: "Ascolto un bel po' di generi musicali. Certo sarebbe banale e falso dire ’ascolto tutti i generi’, credo sia come dire nessuno, ma preparatevi perchè non…"
 ---
 
 Ascolto un bel po' di generi musicali. Certo sarebbe banale e falso dire "ascolto tutti i generi", credo sia come dire nessuno, ma preparatevi perchè non so ancora con che genere mi verrete spuntar fuori la prossima volta :)

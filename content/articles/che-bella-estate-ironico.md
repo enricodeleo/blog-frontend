@@ -5,7 +5,7 @@ legacy: true
 categories:
   - "flusso"
 tags:
-description: ""
+description: "Per noi universitari l'Estate si può considerare già finita. Esami i primi di settembre e via sui libri con 37° all'ombra."
 ---
 
 Per noi universitari l'Estate si può considerare già finita. Esami i primi di settembre e via sui libri con 37° all'ombra. E **meno male** direi.

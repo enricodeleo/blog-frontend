@@ -10,7 +10,7 @@ tags:
   - "micheluzzi"
   - "premio"
   - "verticalismi"
-description: ""
+description: "Verticalismi quest'anno concorre in nomination nella categoria ’miglior blog o webcomic’ per i Premi Attilio Micheluzzi-COMICON 2013."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/varticalismi_micheluzzi-2013.png"
 ---
 

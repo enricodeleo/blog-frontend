@@ -11,7 +11,7 @@ tags:
   - "google-plus"
   - "prova"
   - "social-network"
-description: ""
+description: "Oggi sono entrato su invito in Google Plus, l'alternativa Googoliana allo strapotere di Facebook."
 ---
 
 Oggi sono entrato su invito in **Google Plus**, l'alternativa Googoliana allo strapotere di Facebook.

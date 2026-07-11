@@ -11,7 +11,7 @@ tags:
   - "novita"
   - "rivoluzione"
   - "webcomic"
-description: ""
+description: "Sicuramente saprete quanto teniamo alla novità su Verticalismi."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/20130501-121458.jpg"
 ---
 

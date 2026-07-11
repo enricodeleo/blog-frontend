@@ -5,7 +5,7 @@ legacy: true
 categories:
   - "serie-tv"
 tags:
-description: ""
+description: "Non parlo di una serie nuovissima. Difatti siamo già alla seconda stagione, ma era il caso di parlarne vista la poca diffusione che sta avendo in Italia,…"
 ---
 
 Non parlo di una serie nuovissima. Difatti siamo già alla seconda stagione, ma era il caso di parlarne vista la poca diffusione che sta avendo in Italia, e che invece ci starebbe tutta.

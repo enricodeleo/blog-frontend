@@ -16,7 +16,7 @@ tags:
   - "streaming"
   - "usa"
   - "web"
-description: ""
+description: "’72 minuti di silenzio per Megavideo’, questo il tormentone alle prime ore dalla chiusura del colosso mondiale dello streaming e del file sharing."
 ---
 
 _**"72 minuti di silenzio per Megavideo"**_, questo il tormentone alle prime ore dalla **chiusura del colosso mondiale dello streaming e del file sharing**.

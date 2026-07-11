@@ -46,7 +46,8 @@ useSeoMeta({
   ogTitle: 'Lisergico in English — essays by Enrico Deleo',
   ogDescription: 'Selected essays in English by Enrico Deleo, Fractional CTO & AI Solutions Architect: pragmatic AI, software architecture, and engineering judgment.',
   ogLocale: 'en',
-  twitterCard: 'summary_large_image'
+  ogImage: 'https://enricodeleo.com/enricodeleo.jpg',
+  twitterCard: 'summary'
 })
 
 // Canonical + hreflang pair with the Italian homepage

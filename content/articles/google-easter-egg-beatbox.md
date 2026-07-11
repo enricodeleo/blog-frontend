@@ -11,7 +11,7 @@ tags:
   - "hip-hop"
   - "suoni"
   - "trucco"
-description: ""
+description: "Google ogni tanto regala qualche piccola sorpresa. A volte propone itinerari a piedi di percorsi come Palermo - New York, altre volte sorprese sonore come…"
 ---
 
 Google ogni tanto regala qualche piccola sorpresa. A volte propone itinerari a piedi di percorsi come Palermo - New York, altre volte _sorprese sonore_ come questa.

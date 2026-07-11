@@ -9,7 +9,7 @@ tags:
   - "film-2"
   - "opinione"
   - "recensione"
-description: ""
+description: "Ieri sera io, mio compare Giuliana ed un altro paio di amici ci siamo ritrovati a vedere (rigorosamente subbato) il film Hot Tub Time Machine, un film…"
 ---
 
 Ieri sera io, mio compare [Giuliana](http://twitter.com/#!/Uggiuliana) ed un altro paio di amici ci siamo ritrovati a vedere (rigorosamente subbato) il film **Hot Tub Time Machine**, un film commedia/sci-fi/di intrattenimento con **John Cusack** che ci ha fatto fare grasse risate.

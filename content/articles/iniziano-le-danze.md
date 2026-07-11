@@ -8,7 +8,7 @@ tags:
   - "benvenuto"
   - "introduzione"
   - "news"
-description: ""
+description: "Probabilmente sarà il post meno letto della storia. Pazienza :) Perchè lo scrivo allora?"
 ---
 
 Probabilmente sarà il post meno letto della storia. Pazienza :)

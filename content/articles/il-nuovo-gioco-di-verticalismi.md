@@ -10,7 +10,7 @@ tags:
   - "gioco"
   - "grafica"
   - "verticalismi"
-description: ""
+description: "In questi giorni mi sa che il fresco mi ha dato alla testa. In un raptus di puro autolesionismo mi sono detto: ’ma che sarebbe fico mettere un giochino…"
 ---
 
 In questi giorni mi sa che il fresco mi ha dato alla testa. In un raptus di puro autolesionismo mi sono detto: "_**ma che sarebbe fico mettere un giochino nella bacheca di [Verticalismi](http://www.verticalismi.it)**_". Ecco. Detto - Fatto.

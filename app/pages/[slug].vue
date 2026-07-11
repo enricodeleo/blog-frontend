@@ -164,9 +164,9 @@ useSeoMeta({
   description: () => post.value?.description || '',
   ogTitle: () => post.value?.title || '',
   ogDescription: () => post.value?.description || '',
-  ogImage: () => post.value?.coverImage || '',
+  ogImage: () => post.value?.coverImage || 'https://enricodeleo.com/enricodeleo.jpg',
   ogType: 'article',
-  twitterCard: 'summary_large_image'
+  twitterCard: () => post.value?.coverImage ? 'summary_large_image' : 'summary'
 })
 
 // Canonical URL + per-post language + hreflang pair when a translation exists

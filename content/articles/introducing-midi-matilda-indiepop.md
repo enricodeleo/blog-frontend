@@ -11,7 +11,7 @@ tags:
   - "musica-2"
   - "new"
   - "pop"
-description: ""
+description: "Un gruppo molto promettente, i Midi Matilda. Parte da San Francisco questo duo indie/pop composto da Skyler Kilborn e Logan Grimé e nonostante il numero…"
 ---
 
 ![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2012/01/matidla.jpg "matidla")

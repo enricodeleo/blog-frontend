@@ -131,10 +131,10 @@ useSeoMeta({
   description: () => post.value?.description || '',
   ogTitle: () => post.value?.title || '',
   ogDescription: () => post.value?.description || '',
-  ogImage: () => post.value?.coverImage || '',
+  ogImage: () => post.value?.coverImage || 'https://enricodeleo.com/enricodeleo.jpg',
   ogType: 'article',
   ogLocale: 'en',
-  twitterCard: 'summary_large_image'
+  twitterCard: () => post.value?.coverImage ? 'summary_large_image' : 'summary'
 })
 
 // Canonical + hreflang alternates (x-default points to the Italian original)

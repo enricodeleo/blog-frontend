@@ -9,7 +9,7 @@ tags:
   - "funk"
   - "ghetto-funk"
   - "musica-2"
-description: ""
+description: "Un genere che non sapevo neanche esistesse, il Ghetto Funk, un nuovo artista che ho scoperto per caso girovagando sul web: Stickybuds."
 ---
 
 Un genere che non sapevo neanche esistesse, il _**Ghetto Funk**_, un nuovo artista che ho scoperto per caso girovagando sul web: **[Stickybuds](http://www.stickybuds.com/)**.

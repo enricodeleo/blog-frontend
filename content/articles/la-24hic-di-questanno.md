@@ -11,7 +11,7 @@ tags:
   - "marvel"
   - "sara-pichelli"
   - "verticalismi"
-description: ""
+description: "Come avevo preannunciato Sabato scorso si è tenuta la 24 hour italy comics su verticalismi.it."
 ---
 
 [Come avevo preannunciato](http://blog.enricodeleo.com/su-verticalismi-sara-nuovamente-24hic/) Sabato scorso si è tenuta la **24 hour italy comics** su verticalismi.it. Devo dire che quest'anno la manifestazione ha suscitato grandi soddisfazioni sia da parte nostra che da parte dei partecipanti che sono accorsi numerosi per affrontare questa sfida.

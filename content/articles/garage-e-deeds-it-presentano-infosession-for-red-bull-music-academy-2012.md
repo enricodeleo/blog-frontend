@@ -6,7 +6,7 @@ categories:
   - "flusso"
   - "musica"
 tags:
-description: ""
+description: "Continua la sperimentazione del Lunedì a Catania, questa volta il Garage e Deeds.it incontrano Red Bull Music Academy."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/478395_3154764882006_1651720365_2727919_242013595_o1.jpg"
 ---
 

@@ -11,7 +11,7 @@ tags:
   - "sci-fi"
   - "supereroi"
   - "telefilm"
-description: ""
+description: "In occasione dell'inizio della seconda stagione, di cui ho già avuto modo di vedere il primo episodio, mi è venuto in mente di scrivere due righe sulla…"
 ---
 
 In occasione dell'inizio della seconda stagione, di cui ho già avuto modo di vedere il primo episodio, mi è venuto in mente di scrivere due righe sulla serie tv **[Misfits](http://www.channel4.com/programmes/misfits)**.

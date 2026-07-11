@@ -10,7 +10,7 @@ tags:
   - "proud-to-be"
   - "sfondo"
   - "wallpaper"
-description: ""
+description: "Nel precedente wallpaper Giovanni ha suggerito di portare il nostro amichetto nel mondo dello sport."
 ---
 
 Nel [precedente wallpaper](http://blog.enricodeleo.com/proud-to-be-punk-version/) Giovanni ha suggerito di portare il nostro amichetto nel mondo dello sport. Visto che è un grandissimo giocatore di basket (Giovanni, non il personaggio dei wallpapers) ho pensato di fare un'incursione nel basketball, che non so se lo sapete, viene anche detto anche _b-ball_ e _the rock_. Mica pugnette...

@@ -10,7 +10,7 @@ tags:
   - "musica-2"
   - "underground"
   - "web-design"
-description: ""
+description: "E' appena andato online Deeds.it - Audiolisteners Gude to Galaxy, la mia ultima fatica disegnata da quel guascone di Givanni Phamà e spinta da una…"
 ---
 
 E' appena andato online **[Deeds.it](http://deeds.it/)** - _Audiolisteners Gude to Galaxy_, la mia ultima fatica disegnata da quel guascone di Givanni Phamà e spinta da [una redazione](http://deeds.it/about-us/) di quelle che te le sogni.

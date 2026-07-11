@@ -11,7 +11,7 @@ tags:
   - "logo"
   - "mockup"
   - "orange"
-description: ""
+description: "Il mio grandissimo amico Calogero mi ha chiesto di realizzare il logo per la sua associazione."
 ---
 
 Il mio grandissimo amico Calogero mi ha chiesto di realizzare il logo per la sua associazione. Ovviamente **non potevo deluderlo**.

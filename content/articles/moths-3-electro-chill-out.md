@@ -10,7 +10,7 @@ tags:
   - "electro"
   - "musica-2"
   - "video"
-description: ""
+description: "Generalmente non mi piacciono i video musicali presi ’pari pari’ da spezzoni di vecchi film, ma devo dire che in questo caso il risultato è indubbiamente…"
 ---
 
 ![](https://enricodeleo.s3.eu-south-1.amazonaws.com/uploads/2011/02/1648007_300.jpg "Moths")

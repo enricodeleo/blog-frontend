@@ -9,7 +9,7 @@ tags:
   - "musica-2"
   - "novita"
   - "review"
-description: ""
+description: "Oggi c'è il sole a Catania, e con gli amici abbiamo decretato che l'Estate sta per arrivare."
 ---
 
 Oggi c'è il sole a Catania, e con gli amici abbiamo decretato che **l'Estate sta per arrivare**. Per questo condivido con voi un brano che sa un po' di mare, tratto da _**There are Rules**_, uscito lo scorso mese sotto l'etichetta **Quality Hill Recordings**.

@@ -12,7 +12,7 @@ tags:
   - "startup"
   - "sviluppo"
   - "verticalismi"
-description: ""
+description: "L'esperienza di Verticalismi continua a dare grandi soddisfazioni."
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/cover.jpg"
 ---
 

@@ -9,7 +9,7 @@ tags:
   - "grafica"
   - "idee"
   - "web"
-description: ""
+description: "Non ho avuto proprio tempo di mettermi davvero a lavoro su lysergicstudio.com per rinnovarlo, e probabilmente di tempo ce ne vorrà ancora."
 ---
 
 Non ho avuto proprio tempo di mettermi davvero a [lavoro su lysergicstudio.com per rinnovarlo](http://blog.enricodeleo.com/nuovo-restyle-per-lysergic-studio-in-vista/), e probabilmente di tempo ce ne vorrà ancora.

@@ -11,7 +11,7 @@ tags:
   - "proud-to-be"
   - "sfondo"
   - "wallpaper"
-description: ""
+description: "In questi giorni i pensieri mi prevaricano. Si tratta di cose più o meno personali e molto noise per cui tralasciamo."
 ---
 
 In questi giorni i pensieri mi prevaricano. Si tratta di cose più o meno personali e molto noise per cui tralasciamo.

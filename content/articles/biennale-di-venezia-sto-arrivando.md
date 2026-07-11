@@ -10,7 +10,7 @@ tags:
   - "biennale"
   - "venezia"
   - "viaggio"
-description: ""
+description: "Domani alle 7.15 partenza per Venezia. Io, quello psicopatico del Giuliana ed altri amici ci andremo a trascorrere il fine settimana."
 ---
 
 Domani alle 7.15 **partenza per Venezia**. Io, quello psicopatico del [Giuliana](http://twitter.com/#!/Uggiuliana) ed altri amici ci andremo a trascorrere il fine settimana.

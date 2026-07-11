@@ -11,7 +11,7 @@ tags:
   - "intervista-tv"
   - "occupy-deejay"
   - "verticalismi"
-description: ""
+description: "Magari gli avventori di questo blog sanno già cos'è Verticalismi e, spero, fanno già parte della rivoluzione verticale, ma voglio comunque condividere…"
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/524160_10151422820959947_973497252_n.jpg"
 ---
 

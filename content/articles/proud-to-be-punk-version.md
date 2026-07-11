@@ -11,7 +11,7 @@ tags:
   - "sfondo"
   - "t-shirt"
   - "wallpaper"
-description: ""
+description: "Dopo aver creato il wallpaper dedicato ai nerd, era giusto controbilanciare con qualcosa di un po' più cazzuto."
 ---
 
 Dopo aver creato [il wallpaper dedicato ai nerd](http://blog.enricodeleo.com/proud-to-be-una-serie-di-wallpapers-e-forse/), era giusto controbilanciare con qualcosa di un po' più cazzuto.

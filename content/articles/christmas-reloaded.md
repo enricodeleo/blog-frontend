@@ -10,7 +10,7 @@ tags:
   - "natale"
   - "renna"
   - "xmas"
-description: ""
+description: "Come ogni anno in questo periodo mi va di spendere un paio di parole sul (Santo?) Natale."
 ---
 
 Come ogni anno in questo periodo mi va di spendere un paio di parole sul (Santo?) Natale.

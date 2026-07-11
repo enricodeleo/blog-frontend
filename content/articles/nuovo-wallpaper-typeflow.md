@@ -13,7 +13,7 @@ tags:
   - "tipografia"
   - "urban"
   - "wallpaper"
-description: ""
+description: "Sarà perchè ascoltavo un po' di musica urban style o perchè in questi giorni sto scoprendo il piacere di utilizzare la tipografia nel design, fatto stà…"
 ---
 
 Sarà perchè ascoltavo un po' di musica _urban style_ o perchè in questi giorni sto scoprendo il piacere di utilizzare la **tipografia nel design**, fatto stà che oggi dopo pranzi è uscito sto flash.

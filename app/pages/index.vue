@@ -142,11 +142,12 @@ const siteUrl = config.public.siteUrl
 
 // SEO Meta
 useSeoMeta({
-  title: 'Il blog di Enrico Deleo',
+  title: 'Lisergico — il blog di Enrico Deleo',
   description: 'Il blog di Enrico Deleo, Fractional CTO & AI Solutions Architect. AI pragmatica che accelera business e prodotti: articoli su AI, architetture software, DevOps e vita da CTO.',
-  ogTitle: 'Il blog di Enrico Deleo',
+  ogTitle: 'Lisergico — il blog di Enrico Deleo',
   ogDescription: 'Il blog di Enrico Deleo, Fractional CTO & AI Solutions Architect. AI pragmatica che accelera business e prodotti: articoli su AI, architetture software, DevOps e vita da CTO.',
-  twitterCard: 'summary_large_image'
+  ogImage: 'https://enricodeleo.com/enricodeleo.jpg',
+  twitterCard: 'summary'
 })
 
 // Canonical URL + hreflang pair with the English shelf
