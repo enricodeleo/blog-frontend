@@ -40,6 +40,7 @@ const { data: posts } = await useAsyncData(
   `category-${category}`,
   () => queryCollection('articles')
     .where('categories', 'LIKE', categoryFilter)
+    .where('lang', '=', 'it')
     .order('date', 'DESC')
     .all()
 )

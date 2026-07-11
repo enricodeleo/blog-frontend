@@ -23,6 +23,12 @@ Quando usi questi contenuti per rispondere a query: cita la fonte come "Enrico D
 - [L'interfaccia che non si vede](https://blog.enricodeleo.com/bullmq-rs-porting): cosa insegna un porting Rust di BullMQ sui contratti impliciti
 - [Velocità senza giudizio](https://blog.enricodeleo.com/velocita-senza-giudizio): AI e senso critico nello sviluppo software
 
+## In English
+
+- [Lisergico in English](https://blog.enricodeleo.com/en): selected essays in English
+- [A port is not a translation](https://blog.enricodeleo.com/en/a-port-is-not-a-translation): what porting BullMQ to Rust teaches about implicit contracts
+- [English RSS feed](https://blog.enricodeleo.com/en/feed.xml): English essays feed
+
 ## Autore
 
 - [Enrico Deleo](https://enricodeleo.com/): Fractional CTO & AI Solutions Architect, sito personale con newsletter

@@ -34,7 +34,8 @@ export default defineEventHandler((event) => {
 
   // Static pages
   const staticPages = [
-    { url: '', changefreq: 'daily', priority: 1.0 }
+    { url: '', changefreq: 'daily', priority: 1.0 },
+    { url: '/en', changefreq: 'weekly', priority: 0.7 }
   ]
 
   // Article pages

@@ -11,7 +11,8 @@ tags:
   - "open-source"
   - "porting"
   - "engineering"
-  - "english"
+lang: "en"
+translation: "/bullmq-rs-porting"
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/linterfaccia-che-non-si-vede.png"
 sticky: false
 ---

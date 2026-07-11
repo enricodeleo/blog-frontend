@@ -44,6 +44,7 @@ const skip = limit * (page - 1)
 const { data: posts } = await useAsyncData(
   `page-${page}`,
   () => queryCollection('articles')
+    .where('lang', '=', 'it')
     .order('date', 'DESC')
     .limit(limit)
     .skip(skip)

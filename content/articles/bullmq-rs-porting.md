@@ -11,13 +11,14 @@ tags:
   - "open-source"
   - "porting"
   - "engineering"
+translation: "/en/a-port-is-not-a-translation"
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/linterfaccia-che-non-si-vede.png"
 sticky: false
 ---
 
 _Un porting non è una traduzione. È un esercizio di scoperta su cosa, in un sistema, è davvero il contratto. Quasi sempre non è quello che pensi._
 
-_(Also available in English: [A port is not a translation](/a-port-is-not-a-translation).)_
+_(Also available in English: [A port is not a translation](/en/a-port-is-not-a-translation).)_
 
 Qualche giorno fa è stato mergiato in upstream un PR che ho aperto su `bullmq-rs`, il porting Rust di BullMQ. Il diff è grosso — circa undicimila righe in più, duemila in meno — ed esce come release v2.0.0 breaking.
 

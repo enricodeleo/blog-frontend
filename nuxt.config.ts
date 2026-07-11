@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     prerender: {
       failOnError: false,
       autoSubfolderIndex: false,
-      routes: ['/sitemap.xml', '/feed.xml']
+      routes: ['/sitemap.xml', '/feed.xml', '/en', '/en/feed.xml']
     }
   },
 

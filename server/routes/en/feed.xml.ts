@@ -26,7 +26,7 @@ export default defineEventHandler((event) => {
 
   try {
     const db = new Database(dbPath, { readonly: true })
-    posts = db.prepare("SELECT * FROM _content_articles WHERE navigation = 'true' AND (lang IS NULL OR lang != 'en') ORDER BY date DESC").all()
+    posts = db.prepare("SELECT * FROM _content_articles WHERE navigation = 'true' AND lang = 'en' ORDER BY date DESC").all()
     db.close()
   } catch {
     // Fallback: return empty feed
@@ -51,11 +51,11 @@ export default defineEventHandler((event) => {
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>${escapeXML('Lisergico')}</title>
-    <atom:link href="${escapeXML(`${siteUrl}/feed.xml`)}" rel="self" type="application/rss+xml" />
-    <link>${escapeXML(siteUrl)}</link>
-    <description>${escapeXML('Il blog di Enrico Deleo, Fractional CTO & AI Solutions Architect. AI pragmatica che accelera business e prodotti.')}</description>
-    <language>it-IT</language>
+    <title>${escapeXML('Lisergico in English')}</title>
+    <atom:link href="${escapeXML(`${siteUrl}/en/feed.xml`)}" rel="self" type="application/rss+xml" />
+    <link>${escapeXML(`${siteUrl}/en`)}</link>
+    <description>${escapeXML('Selected essays in English by Enrico Deleo, Fractional CTO & AI Solutions Architect: pragmatic AI, software architecture, and engineering judgment.')}</description>
+    <language>en</language>
     <managingEditor>${escapeXML('hello@enricodeleo.com')} (${escapeXML('Enrico Deleo')})</managingEditor>
 ${items}
   </channel>

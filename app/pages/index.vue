@@ -119,6 +119,7 @@ const { data: featured } = await useAsyncData(
   'featured-posts',
   () => queryCollection('articles')
     .where('sticky', '=', true)
+    .where('lang', '=', 'it')
     .order('date', 'DESC')
     .limit(2)
     .all()
@@ -129,6 +130,7 @@ const { data: posts } = await useAsyncData(
   'recent-posts',
   () => queryCollection('articles')
     .where('legacy', '=', false)
+    .where('lang', '=', 'it')
     .order('date', 'DESC')
     .limit(6)
     .all()
@@ -147,12 +149,14 @@ useSeoMeta({
   twitterCard: 'summary_large_image'
 })
 
-// Canonical URL
+// Canonical URL + hreflang pair with the English shelf
 useHead({
-  link: [{
-    rel: 'canonical',
-    href: siteUrl
-  }]
+  link: [
+    { rel: 'canonical', href: siteUrl },
+    { rel: 'alternate', hreflang: 'it-IT', href: siteUrl },
+    { rel: 'alternate', hreflang: 'en', href: `${siteUrl}/en` },
+    { rel: 'alternate', hreflang: 'x-default', href: siteUrl }
+  ]
 })
 
 const homepageJsonLd = computed(() => {

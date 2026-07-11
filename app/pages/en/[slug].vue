@@ -5,8 +5,8 @@
       <nav class="mb-6 text-sm" aria-label="Breadcrumb">
         <ol class="flex items-center gap-2">
           <li>
-            <NuxtLink to="/" class="text-[#3c4858] dark:text-gray-200 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors">
-              Home
+            <NuxtLink to="/en" class="text-[#3c4858] dark:text-gray-200 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors">
+              English
             </NuxtLink>
           </li>
           <li class="text-gray-400 dark:text-gray-500">/</li>
@@ -21,19 +21,6 @@
           <h1 class="text-2xl md:text-3xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC] mb-4">
             {{ post.title }}
           </h1>
-
-          <!-- Categories -->
-          <div v-if="post.categories && post.categories.length" class="flex flex-wrap gap-2 mb-4">
-            <NuxtLink
-              v-for="(category, index) in post.categories"
-              :key="index"
-              :to="`/category/${category.toLowerCase()}`"
-              :prefetch="false"
-              class="text-sm text-[#3c4858] dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors"
-            >
-              {{ category.replace('-', ' ') }}
-            </NuxtLink>
-          </div>
 
           <!-- Meta -->
           <div class="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
@@ -58,38 +45,25 @@
         <ContentRenderer :value="post" />
       </article>
 
-      <!-- Tags -->
-      <div class="mt-12 pt-8 border-t border-[#c0ccda] dark:border-gray-700">
-        <p class="text-lg mb-3 text-[#3c4858] dark:text-[#F8FAFC]">
-          Pubblicato in
-          <span v-for="(category, index) in (post.categories || [])" :key="index">
-            <NuxtLink
-              :to="`/category/${category.toLowerCase()}`"
-              :prefetch="false"
-              class="underline decoration-dotted underline-offset-4 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
-            >
-              {{ category.replace('-', ' ') }}
-            </NuxtLink><span v-if="index+1 !== post.categories.length" class="mx-1">•</span>
-          </span>
-        </p>
-        <div v-if="post.tags && post.tags.length" class="flex flex-wrap gap-2 mt-4">
+      <!-- Italian original -->
+      <div v-if="post.translation" class="mt-12 pt-8 border-t border-[#c0ccda] dark:border-gray-700">
+        <p class="text-lg text-[#3c4858] dark:text-[#F8FAFC]">
+          Also available in Italian:
           <NuxtLink
-            v-for="(tag, index) in post.tags"
-            :key="index"
-            :to="`/tag/${tag}`"
+            :to="post.translation"
             :prefetch="false"
-            class="text-sm text-[#3c4858] dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors"
+            class="underline decoration-dotted underline-offset-4 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
           >
-            #{{ tag }}
+            read the original
           </NuxtLink>
-        </div>
+        </p>
       </div>
 
       <!-- Related Posts -->
       <div v-if="related && related.length" class="mt-12">
         <div class="border-l-2 border-amber-600/70 px-4 py-1 mb-4">
           <h2 class="text-sm md:text-base font-semibold tracking-wide uppercase text-[#3c4858] dark:text-[#CBD5E1]">
-            Sullo stesso argomento
+            More in English
           </h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -100,7 +74,7 @@
       <!-- Disqus Comments -->
       <ClientOnly>
         <Disqus
-          :identifier="slug"
+          :identifier="`en-${slug}`"
           :url="fullUrl"
           :title="post.title"
         />
@@ -112,43 +86,36 @@
 <script setup>
 const route = useRoute()
 const slug = String(route.params.slug)
-const path = `/${slug}`
+const path = `/en/${slug}`
 
 // Fetch post
 const { data: post } = await useAsyncData(
-  `post-${slug}`,
+  `post-en-${slug}`,
   () => queryCollection('articles').path(path).first()
 )
 
-if (!post.value) {
+if (!post.value || post.value.lang !== 'en') {
   throw createError({
     statusCode: 404,
-    message: 'Pagina non trovata.'
+    message: 'Page not found.'
   })
 }
 
-// Format date
-const { formatDateLong } = useFormatDate()
+// Format date (English locale)
 const dateLong = computed(() => {
   if (!post.value) return ''
-  return formatDateLong(post.value.date)
+  return new Date(post.value.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
 })
 
-// Fetch related posts (deterministic for SSR/CSR)
+// Fetch related English posts
 const { data: related } = await useAsyncData(
-  `related-${slug}`,
-  async () => {
-    const category = post.value?.categories?.[0]
-    if (!category || !post.value?.path) return []
-    const categoryFilter = `%"${category}"%`
-    return queryCollection('articles')
-      .where('categories', 'LIKE', categoryFilter)
-      .where('lang', '=', post.value.lang || 'it')
-      .where('path', '!=', post.value.path)
-      .order('date', 'DESC')
-      .limit(2)
-      .all()
-  }
+  `related-en-${slug}`,
+  () => queryCollection('articles')
+    .where('lang', '=', 'en')
+    .where('path', '!=', path)
+    .order('date', 'DESC')
+    .limit(2)
+    .all()
 )
 
 // Runtime config for SEO
@@ -166,23 +133,24 @@ useSeoMeta({
   ogDescription: () => post.value?.description || '',
   ogImage: () => post.value?.coverImage || '',
   ogType: 'article',
+  ogLocale: 'en',
   twitterCard: 'summary_large_image'
 })
 
-// Canonical URL + per-post language + hreflang pair when a translation exists
+// Canonical + hreflang alternates (x-default points to the Italian original)
 useHead({
   htmlAttrs: {
-    lang: () => post.value?.lang || 'it'
+    lang: 'en'
   },
   link: computed(() => {
     const links = [
-      { rel: 'canonical', href: `${siteUrl}${post.value?.path || ''}` }
+      { rel: 'canonical', href: `${siteUrl}${post.value?.path || ''}` },
+      { rel: 'alternate', hreflang: 'en', href: `${siteUrl}${post.value?.path || ''}` }
     ]
     if (post.value?.translation) {
       links.push(
-        { rel: 'alternate', hreflang: 'it-IT', href: `${siteUrl}${post.value.path}` },
-        { rel: 'alternate', hreflang: 'en', href: `${siteUrl}${post.value.translation}` },
-        { rel: 'alternate', hreflang: 'x-default', href: `${siteUrl}${post.value.path}` }
+        { rel: 'alternate', hreflang: 'it-IT', href: `${siteUrl}${post.value.translation}` },
+        { rel: 'alternate', hreflang: 'x-default', href: `${siteUrl}${post.value.translation}` }
       )
     }
     return links
@@ -190,22 +158,20 @@ useHead({
 })
 
 // JSON-LD Structured Data
-
 const jsonLd = computed(() => {
   if (!post.value) return null
 
-  // Stable entity IDs
   const authorId = `${siteUrl}#/schema/person/enrico-deleo`
   const publisherId = `${siteUrl}#/schema/org/lisergico`
   const postId = `${siteUrl}${post.value.path}#blogposting`
 
-  // Build schema with only valid values
   const schema = {
     '@type': 'BlogPosting',
     '@id': postId,
     headline: post.value.title,
     datePublished: post.value.date,
     dateModified: post.value.updated || post.value.date,
+    inLanguage: 'en',
     author: {
       '@type': 'Person',
       '@id': authorId,
@@ -224,7 +190,6 @@ const jsonLd = computed(() => {
     }
   }
 
-  // Add optional fields only if they have valid values
   if (post.value.description) {
     schema.description = post.value.description
   }
@@ -239,19 +204,12 @@ const jsonLd = computed(() => {
     schema.keywords = post.value.tags.join(', ')
   }
 
-  if (post.value.categories && post.value.categories.length > 0) {
-    schema.articleSection = post.value.categories[0]
-  }
-
-  // Use BCP-47 language code
-  schema.inLanguage = post.value.lang === 'en' ? 'en' : 'it-IT'
-
   if (post.value.translation) {
-    schema.workTranslation = {
+    schema.translationOfWork = {
       '@type': 'BlogPosting',
       '@id': `${siteUrl}${post.value.translation}#blogposting`,
       url: `${siteUrl}${post.value.translation}`,
-      inLanguage: 'en'
+      inLanguage: 'it-IT'
     }
   }
 
@@ -259,7 +217,7 @@ const jsonLd = computed(() => {
     '@type': 'BreadcrumbList',
     '@id': `${siteUrl}${post.value.path}#breadcrumb`,
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+      { '@type': 'ListItem', position: 1, name: 'English', item: `${siteUrl}/en` },
       { '@type': 'ListItem', position: 2, name: post.value.title, item: `${siteUrl}${post.value.path}` }
     ]
   }

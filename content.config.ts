@@ -17,7 +17,9 @@ export default defineContentConfig({
         tags: z.array(z.string()),
         coverImage: z.string().optional(),
         sticky: z.boolean().default(false),
-        legacy: z.boolean().default(false)
+        legacy: z.boolean().default(false),
+        lang: z.string().default('it'),
+        translation: z.string().optional()
       })
     })
   }

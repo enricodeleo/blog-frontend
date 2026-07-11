@@ -35,6 +35,7 @@ const { data: posts } = await useAsyncData(
   `tag-${tag}`,
   () => queryCollection('articles')
     .where('tags', 'LIKE', tagFilter)
+    .where('lang', '=', 'it')
     .order('date', 'DESC')
     .all()
 )
