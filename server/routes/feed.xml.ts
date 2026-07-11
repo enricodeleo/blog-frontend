@@ -54,7 +54,7 @@ export default defineEventHandler((event) => {
     <title>${escapeXML('Lisergico')}</title>
     <atom:link href="${escapeXML(`${siteUrl}/feed.xml`)}" rel="self" type="application/rss+xml" />
     <link>${escapeXML(siteUrl)}</link>
-    <description>${escapeXML('Il blog di Enrico Deleo. Digital Entrepreneur // Web & Mobile Developer | DevOps | UI/UX // Teacher // Consultant')}</description>
+    <description>${escapeXML('Il blog di Enrico Deleo, Fractional CTO & AI Solutions Architect. AI pragmatica che accelera business e prodotti.')}</description>
     <language>it-IT</language>
     <managingEditor>${escapeXML('hello@enricodeleo.com')} (${escapeXML('Enrico Deleo')})</managingEditor>
 ${items}

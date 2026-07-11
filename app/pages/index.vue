@@ -5,7 +5,7 @@
         Lisergico
       </h1>
       <p class="text-lg text-[#3c4858] dark:text-gray-200">
-        Il blog di <a href="https://enricodeleo.com" target="_blank" rel="noopener noreferrer" class="underline decoration-dotted underline-offset-4 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">Enrico Deleo</a>. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant
+        Il blog di <a href="https://enricodeleo.com" target="_blank" rel="noopener noreferrer" class="underline decoration-dotted underline-offset-4 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">Enrico Deleo</a>, Fractional CTO &amp; AI Solutions Architect. AI pragmatica che accelera business e prodotti.
       </p>
     </section>
 
@@ -141,9 +141,9 @@ const siteUrl = config.public.siteUrl
 // SEO Meta
 useSeoMeta({
   title: 'Il blog di Enrico Deleo',
-  description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant. Articoli su sviluppo web, DevOps, AI e molto altro.',
+  description: 'Il blog di Enrico Deleo, Fractional CTO & AI Solutions Architect. AI pragmatica che accelera business e prodotti: articoli su AI, architetture software, DevOps e vita da CTO.',
   ogTitle: 'Il blog di Enrico Deleo',
-  ogDescription: 'Il blog di Enrico Deleo. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant. Articoli su sviluppo web, DevOps, AI e molto altro.',
+  ogDescription: 'Il blog di Enrico Deleo, Fractional CTO & AI Solutions Architect. AI pragmatica che accelera business e prodotti: articoli su AI, architetture software, DevOps e vita da CTO.',
   twitterCard: 'summary_large_image'
 })
 
@@ -169,7 +169,7 @@ const homepageJsonLd = computed(() => {
         '@id': websiteId,
         url: siteUrl,
         name: 'Lisergico',
-        description: 'Il blog di Enrico Deleo. Digital Entrepreneur // Holistic Developer | DevOps | Fractional CTO | UI/UX // Teacher // Consultant',
+        description: 'Il blog di Enrico Deleo, Fractional CTO & AI Solutions Architect. AI pragmatica che accelera business e prodotti.',
         publisher: {
           '@id': publisherId
         },
