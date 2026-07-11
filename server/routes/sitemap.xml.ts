@@ -34,8 +34,8 @@ export default defineEventHandler((event) => {
 
   // Static pages
   const staticPages = [
-    { url: '', changefreq: 'daily', priority: 1.0 },
-    { url: '/en', changefreq: 'weekly', priority: 0.7 }
+    { url: '', changefreq: 'weekly', priority: 1.0 },
+    { url: '/en', changefreq: 'monthly', priority: 0.7 }
   ]
 
   // Article pages
@@ -44,7 +44,7 @@ export default defineEventHandler((event) => {
   const postPages = posts.map(post => ({
     url: post.path,
     lastmod: (post.updated || post.date) ? new Date(post.updated || post.date).toISOString() : undefined,
-    changefreq: post.legacy ? 'yearly' : 'weekly',
+    changefreq: post.legacy ? 'yearly' : 'monthly',
     priority: post.legacy ? 0.4 : 0.8
   }))
 
@@ -56,7 +56,7 @@ export default defineEventHandler((event) => {
 
   const categoryPages = Array.from(categories).map(cat => ({
     url: `/category/${encodeURIComponent(cat)}`,
-    changefreq: 'weekly',
+    changefreq: 'monthly',
     priority: 0.6
   }))
 
