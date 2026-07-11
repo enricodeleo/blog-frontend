@@ -1,6 +1,11 @@
 <template>
   <div class="relative max-w-prose mx-auto">
     <div v-if="post">
+      <div v-if="post.translation" class="flex justify-center mb-6">
+        <ClientOnly>
+          <LanguageSwitcher locale="en" :target="post.translation" />
+        </ClientOnly>
+      </div>
       <!-- Breadcrumb -->
       <nav class="mb-6 text-sm" aria-label="Breadcrumb">
         <ol class="flex items-center gap-2">

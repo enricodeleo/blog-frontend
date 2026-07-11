@@ -1,5 +1,10 @@
 <template>
   <div class="space-y-12">
+    <div class="flex justify-center">
+      <ClientOnly>
+        <LanguageSwitcher locale="en" target="/" />
+      </ClientOnly>
+    </div>
     <section class="space-y-2">
       <h1 class="text-2xl md:text-3xl font-extrabold leading-tight text-[#3c4858] dark:text-[#F8FAFC]">
         Lisergico — in English
