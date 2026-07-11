@@ -198,6 +198,7 @@ const homepageJsonLd = computed(() => {
         email: 'hello@enricodeleo.com',
         jobTitle: 'Fractional CTO & AI Solutions Architect',
         sameAs: [
+          'https://enricodeleo.com/#person',
           'https://enricodeleo.com',
           'https://www.linkedin.com/in/enricodeleo',
           'https://x.com/errikodotit',
