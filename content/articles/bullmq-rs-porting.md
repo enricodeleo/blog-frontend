@@ -4,7 +4,7 @@ description: "Un porting non è una traduzione. È un esercizio di scoperta su c
 date: "2026-06-07T10:00:00.000Z"
 categories:
   - "dev"
-  - "Open Source"
+  - "open-source"
 tags:
   - "rust"
   - "bullmq"

@@ -5,8 +5,8 @@ date: "2026-02-28T10:00:00.000Z"
 updated: "2026-07-08"
 categories:
   - "ai"
-  - "Marketing"
-  - "Data Science"
+  - "marketing"
+  - "data-science"
 tags:
   - "marketing"
   - "fractional-cto"

@@ -27,7 +27,7 @@
 
 <script setup>
 const route = useRoute()
-const category = String(route.params.slug)
+const category = String(route.params.slug).toLowerCase()
 const categoryFilter = `%"${category}"%`
 
 // Display category with proper formatting

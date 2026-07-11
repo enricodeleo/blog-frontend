@@ -41,7 +41,7 @@
           <NuxtLink
             v-for="(category, index) in post.categories"
             :key="index"
-            :to="`/category/${category}`"
+            :to="`/category/${category.toLowerCase()}`"
             :prefetch="false"
             class="text-sm text-[#3c4858] dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-400 underline decoration-dotted underline-offset-4 transition-colors"
           >
