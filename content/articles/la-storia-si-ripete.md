@@ -10,11 +10,14 @@ tags:
   - "engineering"
   - "tech-debt"
   - "build-in-public"
+translation: "/en/history-repeats-itself"
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/la-storia-si-ripete.png"
 sticky: false
 ---
 
 _Graph database, MongoDB, vector database dedicati. Il pattern è sempre lo stesso. Solo i nomi cambiano._
+
+_(Also available in English: [History repeats itself](/en/history-repeats-itself).)_
 
 Nel [post precedente](/il-cms-in-c-che-non-ho-mai-scritto) ho raccontato di come nel 2015 ho scelto "il solito" WordPress per creare una piattaforma usata da decine di migliaia di persone. Ma c'è un'altra storia di quegli anni che vale la pena raccontare.
 

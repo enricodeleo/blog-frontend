@@ -10,11 +10,14 @@ tags:
   - "vibe-coding"
   - "engineering"
   - "build-in-public"
+translation: "/en/speed-without-judgment"
 coverImage: "https://enricodeleo.s3.eu-south-1.amazonaws.com/images/velocita-senza-giudizio.png"
 sticky: false
 ---
 
 _Il vibe coding non ha inventato il codice scritto male. Ha solo tolto l'attrito._
+
+_(Anche disponibile in inglese: [Speed without judgment](/en/speed-without-judgment).)_
 
 Ho visto un backend con l'autenticazione hardcodata nel frontend. Password admin in chiaro, visibile a chiunque aprisse DevTools. Non era vibe coding — era 2018, dev umani, trovati su Upwork.
 
