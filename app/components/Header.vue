@@ -4,7 +4,7 @@
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <div class="flex-shrink-0">
-          <NuxtLink to="/" class="text-xl md:text-2xl font-extrabold leading-tight hover:scale-105 transition-transform duration-300">
+          <NuxtLink :to="homeLink" class="text-xl md:text-2xl font-extrabold leading-tight hover:scale-105 transition-transform duration-300">
             <span class="bg-gradient-to-r from-purple-500 via-pink-400 to-yellow-400 bg-clip-text text-transparent dark:from-purple-400 dark:via-pink-300 dark:to-yellow-300 hover:from-purple-400 hover:via-pink-300 hover:to-yellow-300 dark:hover:from-purple-300 dark:hover:via-pink-200 dark:hover:to-yellow-200 bg-[length:200%_200%] animate-gradient">
               Lisergico
             </span>
@@ -77,6 +77,9 @@
 
 <script setup>
 const mobileMenuOpen = ref(false)
+
+const route = useRoute()
+const homeLink = computed(() => (route.path === '/en' || route.path.startsWith('/en/')) ? '/en' : '/')
 </script>
 
 <style>
