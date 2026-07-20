@@ -75,7 +75,7 @@ Never:
 - `description`: always filled, ~120–155 chars, reads like a natural sentence (it's the SERP snippet and the social preview).
 - `coverImage`: strongly preferred; without it the site falls back to the default portrait for social cards.
 - `lang: "en"` + `translation: "/<italian-slug>"` for English adaptations (file goes in `content/articles/en/`), with the reciprocal `translation` field on the Italian original.
-- English adaptations are Lane 1 only, chosen deliberately for international distribution — see the porting selection criteria in the visibility playbook.
+- English adaptations are Lane 1 only, chosen deliberately for international distribution — see the porting selection criteria in the [visibility playbook](./visibility-playbook.md).
 
 ## Pre-publish checklist (SOUL §20, adapted)
 
