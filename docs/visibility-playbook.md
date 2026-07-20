@@ -23,7 +23,7 @@ Not every Lane 1 essay gets international treatment. A post is a candidate for t
 Two sourcing pipelines feed this:
 
 - **Ported essays** — an Italian Lane 1 essay, adapted into English, `translation` frontmatter pointing back to the original. This is the default and covers most of the `/en` section today.
-- **English-first essays** — written directly in English, no Italian original, no `translation` field. Reserved for pieces where the underlying event is itself international: an open-source contribution, a bug found and reported upstream, a released library. `bullmq-rust-official-vs-bullmq-rs` is the first of these — it exists because the event it describes (a race condition found in `bullmq-rs`, reproduced and proposed as a fix in [bogardt/bullmq-rs#21](https://github.com/bogardt/bullmq-rs/pull/21), compared against BullMQ's newly-released official Rust client) has no Italian audience to begin with.
+- **English-first essays** — written directly in English, no Italian original, no `translation` field. Reserved for pieces where the underlying event is itself international: an open-source contribution, a bug found and reported upstream, a released library. `narrowed-not-superseded` (published as "BullMQ in Rust: what the official client leaves me to build") is the first of these — it exists because the event it describes (a race condition found in `bullmq-rs`, reproduced and proposed as a fix in [bogardt/bullmq-rs#21](https://github.com/bogardt/bullmq-rs/pull/21), compared against BullMQ's newly-released official Rust client) has no Italian audience to begin with.
 
 ## Per-article distribution checklist
 
