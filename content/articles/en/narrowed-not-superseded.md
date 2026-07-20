@@ -17,21 +17,23 @@ A queue worker that claims a job before it has capacity to run it can execute th
 
 Its Redis lock expires while it waits behind a saturated worker. The stalled-job check puts it back on the queue. A second worker runs it. Then the first worker gets capacity and runs the stale in-memory copy it was already holding. One job, two executions — emails sent twice, cards charged twice, state written twice.
 
-I found exactly that race in `bullmq-rs`, the Rust port of BullMQ I've contributed to since before there was an alternative. Months before BullMQ shipped its own Rust client, `bullmq-rs` was the only way to run Rust workers against a BullMQ queue, and I'd put real work into its wire compatibility — the Lua scripts, the state transitions, the parts of the protocol a README never mentions. Then BullMQ shipped [`bullmq-official`](https://bullmq.io/news/260712/rust-release/), built by the team that owns that protocol.
+I found exactly that race in `bullmq-rs`, the Rust port of BullMQ I've contributed to since before there was an alternative — [PR #21](https://github.com/bogardt/bullmq-rs/pull/21) proposes the fix, open at the time of writing. That bug is real, but it isn't what this piece is about.
 
-That's the question this piece actually answers, and it's narrower than "which client is better": does the port still deserve the effort, or did the official client make it moot? I went looking for a real answer instead of a comfortable one, and found the race along the way — reproduced in [PR #21](https://github.com/bogardt/bullmq-rs/pull/21), which proposes the repair. At the time of writing, that PR is open: this is a defect in a crate I helped build, not a victory lap about a fix that has shipped.
+Months before BullMQ shipped its own Rust client, `bullmq-rs` was the only way to run Rust workers against a BullMQ queue, and I'd put real work into its wire compatibility — the Lua scripts, the state transitions, the parts of the protocol a README never mentions. Then BullMQ shipped [`bullmq-official`](https://bullmq.io/news/260712/rust-release/), built by the team that owns that protocol. The real question became whether an independent fork still earns its keep once the vendor ships one, or whether it's just a slower shadow permanently chasing a protocol race it can't win.
 
-That incident clarified a distinction that feature checklists tend to hide: in a distributed queue, the client is not a thin wrapper around Redis. It participates in the protocol that decides whether work is claimed, retried, recovered, or run again. The API can be elegant and still be the wrong thing to trust with side effects.
+It doesn't win that race — more on that below. What it can do instead is something the official client structurally can't, and the clearest proof isn't an opinion, it's a number I found in a head-to-head benchmark: the fork beats the official client outright on parallel adds. That's the case worth making, more than any single bug.
+
+That incident clarified a distinction that feature checklists tend to hide, though: in a distributed queue, the client is not a thin wrapper around Redis. It participates in the protocol that decides whether work is claimed, retried, recovered, or run again. The API can be elegant and still be the wrong thing to trust with side effects.
 
 BullMQ has been my default queue for about five years, keeping request paths small — work that doesn't need to determine the HTTP response goes to the queue. `bullmq-rs` is where I put that experience into Rust. This is not a neutral audit: I have helped build one side of the comparison. But the conclusion held up anyway.
 
-**For a new system where BullMQ compatibility is the contract, use the official client.** Not because its Rust orchestration has had more time in production — it has not — but because its authors own the state-transition protocol. For a Rust-only system, `bullmq-rs` still has the better type ergonomics. Those are different kinds of confidence, and only one of them was ever a fight fresh eyes could win against the team that writes the scripts.
+**For a new system where BullMQ compatibility is the contract, use the official client.** Not because its Rust orchestration has had more time in production — it has not — but because its authors own the state-transition protocol. For a Rust-only system, `bullmq-rs` still has the better type ergonomics, and that gap can grow rather than just persist.
 
-The race, the type trade-off, and a benchmark of both clients are what actually answered my question.
+The bug, the type trade-off, and a benchmark of both clients are the evidence. The bug first, briefly — it's the least interesting part, but dismissing it would undersell what maintaining a fork actually costs.
 
 ## A double-execution race in the worker loop
 
-This is where the audit started, and finding it in code I'd helped write was not a comfortable moment.
+Here's the bug, briefly.
 
 The official worker creates N fetch/process loops. Each loop first reserves its concurrency slot and **then** executes the Redis fetch/`moveToActive` path. When `moveToFinished` returns another job, the worker can chain straight into it without another round trip.
 
@@ -81,15 +83,11 @@ The fetch loop claims job #11 through `moveToActive`, then blocks waiting for a 
 
 > **If job #11 waits for capacity longer than its lock duration, its lock is not renewed, even though the worker has already transitioned it to `active`.**
 
-The stalled check then assumes the job was abandoned, re-queues it, and another worker picks it up and runs it. Meanwhile the original worker still holds the in-memory `Job<T>` — and once a slot frees up, it runs that stale copy too. **One job, two executions.** In default config that needs the worker saturated and a job waiting past `lockDuration`; uncommon, but exactly what sustained load produces. And jobs have side effects — emails sent, cards charged, rows written.
+The stalled check then assumes the job was abandoned, re-queues it, and another worker runs it — while the original worker still holds the in-memory `Job<T>` and runs its own stale copy once a slot frees up. **One job, two executions.** Repro, fix, and regression test: [`tests/lock_renewal_race.rs`](https://github.com/bogardt/bullmq-rs/blob/ea1e3457be366ed004f885095753be1a32e49327/tests/lock_renewal_race.rs) in [PR #21](https://github.com/bogardt/bullmq-rs/pull/21) — reserve capacity first, then claim, mirroring the official ordering. Open at the time of writing. Routine maintenance an independent fork owes its users, and not, on its own, a reason to keep maintaining one.
 
-I wrote a repro: [`tests/lock_renewal_race.rs`](https://github.com/bogardt/bullmq-rs/blob/ea1e3457be366ed004f885095753be1a32e49327/tests/lock_renewal_race.rs) — two workers, `concurrency=1`, short `lockDuration`, a blocker holding the permit while the victim is claimed and left unrenewed. On v2.2.0 the victim is processed **twice**. [PR #21](https://github.com/bogardt/bullmq-rs/pull/21) proposes the correct ordering — permit before claim — and adds that file as an ignored, Redis-backed regression test. It becomes a fix for users only when it is merged and released.
+## Why the official client wins on protocol fidelity
 
-The fix itself was straightforward: reserve capacity first, then claim, mirroring the official ordering. The harder question was what the bug implied about the port's odds against a team that owns the protocol outright.
-
-## Why the official client wins anyway
-
-Despite that fix being simple, `bullmq-official` has one overwhelming advantage that has little to do with API taste or who found which bug first: **it owns the protocol.**
+`bullmq-official` has one overwhelming advantage that has little to do with API taste or who found which bug first: **it owns the protocol.**
 
 ```text
 BullMQ changes protocol
@@ -103,11 +101,13 @@ BullMQ changes protocol
 
 Both libraries are clients around a Redis state machine of Lua scripts. The hard part of BullMQ isn't `Queue::add()`; it is preserving atomic transitions across `wait`, `active`, `delayed`, `completed`, `failed`, priority sets, locks, dedup keys, schedulers, rate-limit keys, and parent dependencies. `bullmq-official` lives in the main BullMQ repo and uses the *same scripts* as the Node, Python and Elixir clients — change a script and the Rust client ships in the same release. `bullmq-rs` independently vendors v5 scripts and has to chase every upstream change forever. It does that well (23 ported scripts, bidirectional Node↔Rust CI), but "forever" is the cost.
 
-That gap is tiny when maintainers are active. Over five years, it becomes the maintenance budget. It's also the honest answer to whether `bullmq-rs` still needs to compete on wire compatibility: no. That was never a fight fresh eyes were going to win against the team that writes the scripts.
+That gap is tiny when maintainers are active. Over five years, it becomes the maintenance budget, and it's the honest answer to whether `bullmq-rs` should compete on wire compatibility: no. That was never the fight worth having. The fight worth having is what a fork gets to do once it stops trying to win that one.
 
-## The one thing bullmq-rs got right: typed jobs
+## What a fork gets to do that a vendor can't
 
-The port isn't just a slower-moving shadow of the original, though. There's one place fresh eyes did better than battle-tested experience: typed jobs.
+This is where the case for keeping `bullmq-rs` alive actually lives, and the clearest evidence isn't an opinion, it's a number: in a parallel-add benchmark, `bullmq-rs` beats the official client by a wide margin — ≈118k vs ≈95k jobs/s (methodology and full numbers below). That's not a fluke of the harness. It's proof the port's own connection multiplexes concurrent requests well — better than the official one's does, on this path — so the fork isn't behind on the plumbing, it just hasn't spent that capability everywhere yet. Its own `add_bulk` doesn't use it internally, and loses badly for it, which the benchmark section below covers too.
+
+An official client also has to stay legible across Node, Python, Elixir, and Rust — one shape for every language runtime it serves. A Rust-only fork doesn't owe anyone that, and the second place it shows is typed jobs.
 
 It makes the worker generic: `Worker<T>` / `Job<T>`, with `T` deserialized into your own Rust type. The official client deliberately doesn't — its processor hands you a `Job` and expects a `serde_json::Value` back, which is friendlier for FFI and cross-language neutrality but pushes schema validation into your code. I prefer the typed side for something like:
 
@@ -121,7 +121,7 @@ struct SendInvoice {
 
 You get compile-time expectations and one predictable deserialization boundary. The trade-off is real: a heterogeneous queue (`send-email`, `generate-pdf`, `sync-customer`) maps more naturally to the official's untyped `Value`; with `bullmq-rs` you'd wrap the variants in an enum, which is usually a *good* design but is a stronger opinion than BullMQ itself imposes.
 
-**My take:** for a Rust-only service, `bullmq-rs` has the nicer API. For a polyglot shared queue, the official client's neutrality is arguably more appropriate.
+**My take:** for a Rust-only service, `bullmq-rs` has the nicer API. For a polyglot shared queue, the official client's neutrality is arguably more appropriate. Typed jobs is the first proof of what an unconstrained fork can do, not the last use of it.
 
 ## The rest, in one table
 
@@ -146,11 +146,11 @@ For completeness: the official client also leads on dynamic/global rate limiting
 
 The official announcement benchmarks its Rust client against Node.js (≈6,900 jobs/s sequential, up to 27,000 jobs/s at high concurrency on an M2 Pro), not against `bullmq-rs`. There was no head-to-head between the two, so I ran one — same Redis, same payloads, same scenarios as the official suite, raw data committed: [bullmq-rust-bench](https://github.com/enricodeleo/bullmq-rust-bench).
 
-The comparison covers `bullmq-official` 1.1.0, released `bullmq-rs` 2.2.0, and an unreleased build with the race fix applied. On an M4, the median of five runs says: the official client leads sequential adds (≈18.3k vs ≈13–15k jobs/s); `bullmq-rs` wins parallel adds (≈118k vs ≈95k jobs/s); and under a steady producer both sit at sub-millisecond p50 latency. These are localhost measurements of client-side overhead, not production capacity figures.
+The comparison covers `bullmq-official` 1.1.0, released `bullmq-rs` 2.2.0, and an unreleased build with the race fix applied. On an M4, the median of five runs says: the official client leads sequential adds (≈18.3k vs ≈13–15k jobs/s); `bullmq-rs` wins parallel adds (≈118k vs ≈95k jobs/s) — the number from the top of this piece; and under a steady producer both sit at sub-millisecond p50 latency. These are localhost measurements of client-side overhead, not production capacity figures.
 
-Bulk adds are where the comparison stops being about numbers and starts being about years. `bullmq-rs` is cleverer on paper there — it reserves every job id with a single `INCRBY`, one fewer Redis command per job — and still loses 2.6×. Both sources say why: the port's `add_bulk` awaits each job's script call in a for-loop, one round trip at a time, while the official's builds all the calls and runs them concurrently over its multiplexed connection — the code even carries the comment "for maximum throughput". A port can reach protocol parity, even out-optimize the visible metric. Knowing where to spend concurrency is what five years of profiling buys, and it lives in exactly the lines a feature checklist never shows.
+Bulk adds are where that same win goes missing, and the gap explains itself. `bullmq-rs` is cleverer on paper there too — it reserves every job id with a single `INCRBY`, one fewer Redis command per job — and still loses 2.6×. The reason: the port's own connection multiplexes concurrent requests fine, which is exactly why it wins parallel adds, but its `add_bulk` doesn't use that capability — it awaits each job's script call in a for-loop, one round trip at a time. The official's builds all the calls up front and runs them concurrently over its multiplexed connection — the code even carries the comment "for maximum throughput". Same underlying capability, spent in one place and left on the table in another. That gap, not a rewrite, is next on the list.
 
-The other dramatic gap — worker throughput on a pre-filled queue — is not slow processing but a single 5-second `BZPOPMIN` cold-start stall in the `bullmq-rs` fetch loop. After it wakes, it drains at a rate comparable to the official client. The patched build avoided that stall in three of five runs at concurrency 100, but not in the concurrency-10 scenario, so it is not a repair for the underlying cold-start behavior. And Redis commands per job came out identical everywhere, which is worth sitting with: the official client's edge is not wire efficiency, it is orchestration. The parallel-add win shows the trade still cuts both ways.
+The other dramatic gap — worker throughput on a pre-filled queue — is not slow processing but a single 5-second `BZPOPMIN` cold-start stall in the `bullmq-rs` fetch loop. After it wakes, it drains at a rate comparable to the official client. The patched build avoided that stall in three of five runs at concurrency 100, but not in the concurrency-10 scenario, so it is not a repair for the underlying cold-start behavior. And Redis commands per job came out identical everywhere, which is worth sitting with: the official client's edge is not wire efficiency, it is orchestration — except in the one place the port already spends it well.
 
 ## So which should you actually use?
 
@@ -162,11 +162,13 @@ And if you already run `bullmq-rs` in production, don't migrate just because an 
 
 ## What I'm doing with bullmq-rs from here
 
-Getting the race repair merged and released is the immediate task. Past that, I'm treating `bullmq-rs` as a compatibility contract rather than a feature race it can win: version-map releases to upstream BullMQ, port every script and API change, and make bidirectional Node↔Rust checks the evidence behind every compatibility claim. Upstream owns the protocol; my job is to make drift from it visible and expensive, not to pretend the port can out-run it.
+First, the concrete one: bring `add_bulk` up to the same standard as the parallel-add path — build every call up front and run it concurrently over the multiplexed connection, instead of awaiting one round trip at a time. The capability is already proven; it just isn't spent everywhere yet.
 
-The opportunity is the typed side of that contract — typed input *and* typed output (`Worker<TInput, TOutput>`), ergonomic enums, structured errors, Tokio-native cancellation. Parity gets users through the door; a better Rust API is the reason to stay.
+Past that, the interesting work isn't chasing upstream parity — it's the typed side of the contract: typed input *and* typed output (`Worker<TInput, TOutput>`), ergonomic enums, structured errors, Tokio-native cancellation. That's where a Rust-only fork can move faster and more opinionated than a client built to stay uniform across four languages. Parity gets users through the door; enhancements they can't get anywhere else are the reason to stay, and the reason I'm still contributing.
 
-That's the answer to the question I started with. Not superseded — narrowed. A queue doesn't care whether its client has a pleasant API when it decides a lost job is safe to rerun; it cares about the state machine, and that one belongs to the team that wrote it. What's still mine to build is a faithful, well-typed way to work with it.
+The race repair is the smaller, more mundane part of that: get it merged and released, then keep version-mapping releases to upstream BullMQ so protocol drift stays visible and expensive rather than silent. That's table stakes, not the point.
+
+That's the answer to the question I started with. A queue doesn't care whether its client has a pleasant API when it decides a lost job is safe to rerun; it cares about the state machine, and that one belongs to the team that wrote it. What's mine to build is everything upstream never has to: a Rust-only client free to be more opinionated than a vendor's has any reason to be.
 
 ## Sources
 
