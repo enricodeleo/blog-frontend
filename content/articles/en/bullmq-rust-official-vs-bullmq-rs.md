@@ -1,5 +1,5 @@
 ---
-title: "BullMQ in Rust: bullmq-official vs bullmq-rs"
+title: "BullMQ in Rust: what the official client leaves me to build"
 date: "2026-07-19T09:00:00.000Z"
 categories:
   - "dev"
