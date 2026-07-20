@@ -96,3 +96,7 @@ static/sitemap.xml
 static/feed.xml
 .output/
 .omc
+.codegraph/
+
+# Transitory planning docs (superpowers brainstorming/writing-plans skills)
+docs/superpowers/
